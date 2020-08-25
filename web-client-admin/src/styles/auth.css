@@ -1,0 +1,11 @@
+.auth-hero {
+  background-position: center;
+  background-size: contain;
+  background: url(/auth-bg.jpg);
+}
+
+.auth-content {
+  background-position: center;
+  background-size: cover;
+  background: url(/auth-bg.jpg);
+}

@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  margin: 0 !important;
+}
+
+input[type="radio"].jo-radio {
+  transition: background .2s,
+      transform .2s;
+}
+
+input[type="radio"]:checked.jo-radio {
+  background: #4299E1;
+}
+
+.jo-auto-complete .input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.jo-auto-complete .spinner {
+  animation-name: spinner;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.jo-spinner .spinner {
+  border-radius: 50%;
+  animation-name: spinner;
+  animation-duration: 1200ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

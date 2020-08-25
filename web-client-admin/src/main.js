@@ -1,6 +1,7 @@
-import App from './App.svelte';
+import Main from './components/index.svelte';
+import './styles/index.css';
 
-const app = new App({
+const app = new Main({
 	target: document.body,
 	props: {
 		name: 'world'

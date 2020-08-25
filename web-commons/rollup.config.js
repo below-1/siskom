@@ -17,5 +17,5 @@ export default {
     svelte(),
     resolve()
   ],
-  external: ["svelte-icons", "@popperjs/core", 'svelte-icons/md/MdWarning.svelte', 'svelte-icons/fa/FaSpinner.svelte']
+  external: ["svelte-icons", "@popperjs/core", "svelte-icons"]
 };

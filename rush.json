@@ -380,6 +380,10 @@
     {
       "packageName": "siskom-web-commons",
       "projectFolder": "web-commons"
+    },
+    {
+      "packageName": "siskom-web-admin",
+      "projectFolder": "web-client-admin"
     }
     // {
     //   /**

@@ -1,0 +1,27 @@
+{
+  "name": "siskom-web-commons",
+  "version": "1.0.0",
+  "description": "",
+  "svelte": "src/index.js",
+  "module": "src/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "rollup": "^2.26.5",
+    "rollup-plugin-svelte": "^5.2.3"
+  },
+  "peerDependencies": {
+    "svelte": "^3.24.1",
+    "@popperjs/core": "^2.4.4",
+    "svelte-icons": "^2.1.0"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

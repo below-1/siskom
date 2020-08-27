@@ -163,7 +163,7 @@
         <td>{student.tahunMasuk}</td>
         <td>{student.pa.nama}</td>
         <td class="text-xs flex items-center justify-end">
-          <JoLink to={`/#/admin/data/mahasiswa/${student.id}/update`} cls="mr-2">
+          <JoLink to={`/#/admin/data/mahasiswa/edit/${student.id}`} cls="mr-2">
             <div class="h-4 w-4 text-blue-700">
               <MdCreate />
             </div>

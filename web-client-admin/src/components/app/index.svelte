@@ -1,6 +1,9 @@
 <script>
-  import NavBar from './NavBar.svelte';
+  import Navigation from './Navigation.svelte';
+  import Routes from './Routes.svelte';
 </script>
 
-<NavBar/>
-<div>App</div>
+<Navigation/>
+<main class="ml-56">
+  <Routes/>
+</main>

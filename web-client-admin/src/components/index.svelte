@@ -12,20 +12,18 @@
     notification,
     warning
   } from 'siskom-web-admin/stores/index.js';
+  import updateSession from 'siskom-web-admin/services/updateSession.js';
 
   const routes = {
     '/': Login,
     '/admin': App,
     '/admin/*': App
   }
-</script>
 
-<style type="text/css">
-body {
-  margin: 0 !important;
-  overflow-x: hidden !important;
-}
-</style>
+  onMount(async () => {
+    await updateSession();
+  });
+</script>
 
 <JoNotification {notification}></JoNotification>
 <JoWarning {warning}></JoWarning>

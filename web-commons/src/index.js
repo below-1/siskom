@@ -13,3 +13,4 @@ export { default as JoSelect } from './JoSelect.svelte';
 export { default as JoWarning } from './JoWarning.svelte';
 export { default as allIsNull } from './utils/allIsNull.js';
 export { default as formatJk } from './format/formatJk.js';
+export { default as formatMk } from './format/formatMk.js';

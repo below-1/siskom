@@ -1,11 +1,13 @@
 <script>
   import ContentWrapper from 'siskom-web-admin/components/commons/ContentWrapper.svelte';
   import List from './List.svelte';
+  import Create from './Create.svelte';
   import TrainingSVG from 'siskom-web-admin/icons/training.svg';
 
   const prefix = '/admin/data/dosen';
   const routes = {
-    '/': List
+    '/': List,
+    '/create': Create
   }
 </script>
 

@@ -12,3 +12,4 @@ export { default as JoRadioGroup } from './JoRadioGroup.svelte';
 export { default as JoSelect } from './JoSelect.svelte';
 export { default as JoWarning } from './JoWarning.svelte';
 export { default as allIsNull } from './utils/allIsNull.js';
+export { default as formatJk } from './format/formatJk.js';

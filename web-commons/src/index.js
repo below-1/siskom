@@ -1,3 +1,4 @@
+export { default as JoAutoComplete } from './JoAutoComplete.svelte';
 export { default as JoInput } from './JoInput.svelte';
 export { default as JoAsyncContent } from './JoAsyncContent.svelte';
 export { default as JoSpinner } from './JoSpinner.svelte';
@@ -14,3 +15,7 @@ export { default as JoWarning } from './JoWarning.svelte';
 export { default as allIsNull } from './utils/allIsNull.js';
 export { default as formatJk } from './format/formatJk.js';
 export { default as formatMk } from './format/formatMk.js';
+export { default as formatDay } from './format/formatDay.js';
+export { default as formatPeriode } from './format/formatPeriode.js';
+export { default as filterKelas } from './filter/filterKelas.js';
+export { default as isEmptyRef } from './utils/isEmptyRef.js';

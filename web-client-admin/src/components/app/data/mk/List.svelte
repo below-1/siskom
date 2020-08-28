@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import apolloClient from 'siskom-web-admin/apolloClient.js';
   import GQLList from 'siskom-web-admin/graphql/ListMk.js';
-  import GQLDosen from 'siskom-web-admin/graphql/DeleteMk.js';
+  import GQLDelete from 'siskom-web-admin/graphql/DeleteMk.js';
   import MdDelete from 'svelte-icons/md/MdDelete.svelte'
   import MdCreate from 'svelte-icons/md/MdCreate.svelte'
   import {
@@ -35,7 +35,7 @@
   let hasNext = false;
   let hasPrev = false;
 
-  function loadDosen (options) {
+  function loadMk (options) {
     let variables = {
       ...options,
       keyword: `${options.keyword}%`
@@ -57,7 +57,7 @@
       })
   }
 
-  $: loadDosen({
+  $: loadMk({
     tipeMk,
     openIn,
     keyword,
@@ -77,7 +77,7 @@
   async function commitDelete (id) {
     try {
       await apolloClient.mutate({
-        mutation: DeleteGQL,
+        mutation: GQLDelete,
         variables: {
           id
         }
@@ -116,7 +116,7 @@
       openIn,
       take
     }
-    loadDosen(params);
+    loadMk(params);
   });
 </script>
 
@@ -171,7 +171,7 @@
               />
               <JoLink 
                 cls="mr-2" 
-                to={`/#/admin/data/mk/${mk.id}/update`}
+                to={`/#/admin/data/mk/edit/${mk.id}`}
               >
                 <div class="h-4 w-4 text-blue-700">
                   <MdCreate />

@@ -111,7 +111,7 @@
       />
     {/if}
     
-    {#if selected}
+    {#if value}
       <div class="flex-grow bg-white border-gray-400 border p-2 py-1 text-sm font-semibold rounded">
         <slot name="selected" {selected}></slot>
       </div>

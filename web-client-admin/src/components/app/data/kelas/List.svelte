@@ -174,7 +174,7 @@
             </JoButton>
             <JoButton
               action={() => {
-                pushRoute(`/admin/data/kelas/${item.id}/update`)
+                pushRoute(`/admin/data/kelas/schedule/${item.id}`)
               }}
               cls="ml-1"
             >

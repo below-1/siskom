@@ -64,3 +64,29 @@ export const ClashCourse = gql`
     }
   }
 `
+
+export const ScheduleById = gql`
+  query ScheduledById($id: Int!) {
+    scheduledKelaByIdKelas(idKelas: $id) {
+      nodeId
+      hariKul
+      idDosen
+      kapasitas
+      ruangan
+      totalMenit
+      waktuKul
+      ruangan
+      kelas: kelaByIdKelas {
+        idPeriode
+      }
+    }
+  }
+`;
+
+export const UpdateSchedule = gql`
+  mutation UpdateScheduledKelas ($payload: UpdateScheduledClassInput!) {
+    updateScheduledClass (input: $payload) {
+      integer
+    }
+  }
+`;

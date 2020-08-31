@@ -17,7 +17,7 @@
   import { notification } from 'siskom-web-admin/stores/index.js';
   import filterDosen from 'siskom-web-admin/services/filterDosen.js';
   import * as GQL from 'siskom-web-admin/graphql/KelasSchedule.js';
-  import { ClashError, CLASHES, FORM } from './commons.js';
+  import { ClashError, CLASHES, FORM } from '../commons.js';
 
   let dosenId = null;
   let ruangan = '';
@@ -139,7 +139,7 @@
       if (err.name == 'ClashError') {
         localStorage.setItem(CLASHES, JSON.stringify(err.clashes));
         notification.show({ type: 'danger', message: 'kelas bertabrakan' });
-        pushRoute('/admin/kelas/error-clashes');
+        pushRoute('/admin/data/kelas/error-clashes');
       } else {
         notification.show({ type: 'danger', message: 'gagal menambah data kelas' });
       }

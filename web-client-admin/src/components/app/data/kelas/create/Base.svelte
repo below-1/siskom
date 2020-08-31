@@ -15,7 +15,7 @@
     JoButton,
     formatPeriode
   } from 'siskom-web-commons';
-  import { get_input_payload, set_input_payload } from './commons';
+  import { get_input_payload, set_input_payload } from '../commons';
   import { notification } from 'siskom-web-admin/stores/index.js';
 
   const GQLRequired = gql`

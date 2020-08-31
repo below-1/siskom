@@ -7,7 +7,8 @@
   const prefix = '/admin/data/kelas';
   const routes = {
     '/': List,
-    '/create': Create
+    '/create': Create,
+    '/create/*': Create
   }
 </script>
 

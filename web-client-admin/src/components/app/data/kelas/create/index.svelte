@@ -3,11 +3,13 @@
   import Router from 'svelte-spa-router';
 
   import BaseEditor from './Base.svelte';
+  import ScheduleEditor from './Schedule.svelte';
 
   const prefix = '/admin/data/kelas/create';
   const routes = {
     '/': BaseEditor,
-    '/base': BaseEditor
+    '/base': BaseEditor,
+    '/schedule': ScheduleEditor
   };
 </script>
 

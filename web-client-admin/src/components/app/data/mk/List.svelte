@@ -166,7 +166,7 @@
             <td class="flex items-center justify-end text-xs">
               <JoLink 
                 cls="mr-2" 
-                to={`/#/admin/data/mk/${mk.id}/prasyarat`}
+                to={`/#/admin/data/mk/prasyarat/${mk.id}`}
                 label="prasyarat"
               />
               <JoLink 

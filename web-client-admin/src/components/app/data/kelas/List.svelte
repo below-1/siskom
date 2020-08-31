@@ -163,7 +163,7 @@
             {#if item.schedule}
             <JoButton
               action={() => {
-                pushRoute(`/admin/data/kelas/${item.id}/members`)
+                pushRoute(`/admin/data/kelas/members/${item.id}`)
               }}
             >
               <div class="flex items-center">

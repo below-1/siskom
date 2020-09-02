@@ -14,6 +14,7 @@
   import GQLKelasMembers from 'siskom-web-admin/graphql/KelasMembers.js';
   import GQLDeleteMember from 'siskom-web-admin/graphql/DeleteMember.js';
   import { notification } from 'siskom-web-admin/stores/index.js';
+  import MemberGradeDialog from './MemberGrade.svelte';
 
   const perPage = 10
   export let params = {};
@@ -25,6 +26,7 @@
   $: selectedId = items
     .filter(it => it.selected)
     .map(it => it.id);
+  let addMemberDialog = false;
   let gradeDialogData = {
     idMahasiswa: null,
     idKelas: null,
@@ -76,6 +78,23 @@
     }
   }
 
+  async function removeMember(idMahasiswaKelas) {
+    try {
+      await apolloClient.mutate({
+        mutation: GQLDeleteMember,
+        variables: {
+          idMahasiswaKelas
+        }
+      })
+    } catch (err) {
+      console.log(err)
+      notification.show({
+        type: 'error',
+        message: 'gagal menghapus data mahasiswa'
+      })
+    }
+  }
+
   onMount(loadData);
 </script>
 
@@ -83,7 +102,11 @@
   <div class="font-semibold text-lg">Data Anggota Kelas</div>
   <div class="text-sm my-4 flex items-stretch">
     <JoInput bind:value={keyword} placeholder="cari.." />
-    <JoLink cls="ml-2" to={`/#/admin/kelas/${idKelas}/members/add`} label="tambah" />
+    <JoLink
+      to={`/#/admin/data/kelas/${idKelas}/add-member`}
+      cls="ml-2"
+      label="tambah"
+    />
   </div>
 </div>
 
@@ -106,15 +129,19 @@
             <td class="font-semibold">{it.mahasiswa.nama}</td>
             <td>{it.mahasiswa.tahunMasuk}</td>
             <td class="font-semibold">
-              {it.nilai.toFixed(3)}
-              / {it.formattedNilai.angka}
-              / {it.formattedNilai.huruf}
+              {#if it.nilai || it.nilai == 0}
+                {it.nilai.toFixed(3)}
+                / {it.formattedNilai.angka}
+                / {it.formattedNilai.huruf}
+              {:else}
+                -
+              {/if}
             </td>
             <td class="text-right flex items-center justify-end">
               <JoButton 
                 cls="mr-1" 
                 action={() => {
-                  removeMember(it.mahasiswa.id)
+                  removeMember(it.id);
                 }}
               >
                 <div class="h-4 w-4 text-red-700">
@@ -125,6 +152,7 @@
                 label="nilai"
                 action={() => {
                   gradeDialogData = {
+                    id: it.id,
                     idMahasiswa: it.mahasiswa.id,
                     idKelas,
                     currentGrade: it.nilai,
@@ -144,3 +172,15 @@
     </div>
   </div>
 </JoAsyncContent>
+
+<MemberGradeDialog 
+  {...gradeDialogData} 
+  on:done={() => {
+    console.log('ok');
+    loadData();
+    gradeDialogData = {
+      ...gradeDialogData,
+      show: false
+    }
+  }}
+/>

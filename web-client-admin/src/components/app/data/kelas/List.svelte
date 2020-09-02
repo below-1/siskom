@@ -41,6 +41,7 @@
   async function getListKelas ({ selectedPeriode }) {
     let result;
     networkStatus = 'loading';
+    console.log(`selectedPeriode: ${selectedPeriode}`);
 
     try {
       result = await apolloClient.query({ 

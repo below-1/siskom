@@ -4,6 +4,7 @@ export default gql`
   query ListMahasiswaKelas($idKelas: Int!) {
     allMahasiswaKelas(condition: { idKelas: $idKelas }) {
       nodes {
+        id
         idKelas
         idMhs
         nilai

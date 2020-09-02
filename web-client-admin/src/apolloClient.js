@@ -18,6 +18,7 @@ const httpLink = new HttpLink({
 });
 
 export default new ApolloClient({
+  connectToDevTools: true,
   cache,
   link: concat(authMiddleware, httpLink)
 });

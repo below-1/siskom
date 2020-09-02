@@ -16,18 +16,6 @@ input[type="radio"]:checked.jo-radio {
   background: #4299E1;
 }
 
-.jo-auto-complete .input-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-}
-
-.jo-auto-complete .spinner {
-  animation-name: spinner;
-  animation-duration: 1000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
 
 .jo-spinner .spinner {
   border-radius: 50%;

@@ -9,6 +9,7 @@
   export let placeholder;
   export let value;
   export let items = [];
+  export let strategy = 'absolute';
 
   let keyword = '';
   let show = false;
@@ -68,10 +69,11 @@
     if (!searchInput) {
       return;
     }
+    console.log('strategy = ', strategy)
     popperWidth = searchInput.offsetWidth;
     createPopper(searchInput, popperElement, {
       placement: 'bottom-start',
-      strategy: 'absolute',
+      strategy,
       modifiers: [
         {
           name: 'offset',
@@ -93,6 +95,29 @@
     window.removeEventListener('click', onClickOutside);
   });
 </script>
+
+<style>
+  .jo-auto-complete .input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .jo-auto-complete .spinner {
+    animation-name: spinner;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .jo-spinner .spinner {
+    border-radius: 50%;
+    animation-name: spinner;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+</style>
 
 <div 
   class="jo-auto-complete w-full"

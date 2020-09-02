@@ -1,15 +1,11 @@
 import { gql } from '@apollo/client/core';
 
 export default gql`
-  mutation DeleteKelasMember($idMahasiswa: Int!, $idKelas: Int!) {
-    deleteMahasiswaKelaByIdKelasAndIdMhs (input: {
-      idMhs: $idMahasiswa,
-      idKelas: $idKelas
+  mutation DeleteMahasiswaKelas ($idMahasiswaKelas: Int!) {
+    deleteMahasiswaKelaById(input: {
+      id: $idMahasiswaKelas
     }) {
-      mahasiswaKela {
-        idMhs
-        idKelas
-      }
+      deletedMahasiswaKelaId
     }
   }
 `

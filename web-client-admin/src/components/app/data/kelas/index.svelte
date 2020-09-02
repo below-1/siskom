@@ -5,6 +5,7 @@
   import EditSchedule from './EditSchedule.svelte';
   import ErrorClashes from './ErrorClashes.svelte';
   import Members from './Members.svelte';
+  import AddMember from './AddMember.svelte';
   import Logo from 'siskom-web-admin/icons/work.svg';
 
   const prefix = '/admin/data/kelas';
@@ -14,7 +15,8 @@
     '/create/*': Create,
     '/schedule/:id': EditSchedule,
     '/error-clashes': ErrorClashes,
-    '/members/:id': Members
+    '/members/:id': Members,
+    '/:id/add-member': AddMember
   }
 </script>
 

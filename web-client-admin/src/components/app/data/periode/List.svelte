@@ -74,20 +74,28 @@
           <td>{item.awal}</td>
           <td>{item.akhir}</td>
           <td>
-            <a 
-              href={`/#/admin/data/dosen/${item.ketua.id}/update`} 
-              class="underline"
-            >
-              {item.ketua.nama}
-            </a>
+            {#if item.ketua}
+              <a 
+                href={`/#/admin/data/dosen/edit/${item.ketua.id}`} 
+                class="underline"
+              >
+                {item.ketua.nama}
+              </a>
+            {:else}
+              -
+            {/if}
           </td>
           <td>
-            <a 
-              href={`/#/admin/data/dosen/${item.sekretaris.id}/update`} 
+            {#if item.sekretaris}
+              <a 
+              href={`/#/admin/data/dosen/edit/${item.sekretaris.id}`} 
               class="underline"
             >
               {item.sekretaris.nama}
             </a>
+            {:else}
+              -
+            {/if}
           </td>
           <td class="text-right">
             <JoButton

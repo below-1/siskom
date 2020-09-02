@@ -384,6 +384,10 @@
     {
       "packageName": "siskom-web-admin",
       "projectFolder": "web-client-admin"
+    },
+    {
+      "packageName": "siskom-web-user",
+      "projectFolder": "web-client-user"
     }
     // {
     //   /**

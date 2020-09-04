@@ -22,3 +22,4 @@ export { default as formatNilai } from './format/formatNilai.js';
 export { default as filterKelas } from './filter/filterKelas.js';
 export { default as isEmptyRef } from './utils/isEmptyRef.js';
 export { default as checkKapasitas } from './utils/checkKapasitas.js';
+export { default as Logout } from './Logout.svelte';

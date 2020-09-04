@@ -2525,10 +2525,11 @@ packages:
       rollup-plugin-svelte: 5.2.3_rollup@2.26.5+svelte@3.24.1
       svelte: 3.24.1
       svelte-icons: 2.1.0
+      svelte-spa-router: 2.2.0_svelte@3.24.1
     dev: false
     name: '@rush-temp/siskom-web-commons'
     resolution:
-      integrity: sha512-t63RJjs2Y7e9q1PfRiBYesJTTLMUWO9VYFSnc11zTZjhLpLg/PRvMSUtIJuxzBTgfjqFEP2rgq3Q3yYqaATnNg==
+      integrity: sha512-OlXhsiXkocpPmmxl2zw1AfzMItlldZo/GNfiPrXUyCj0mMJwVLPSjF1PYxRJkeypSzylk0WXHtVwZUVGceSedw==
       tarball: 'file:projects/siskom-web-commons.tgz'
     version: 0.0.0
 registry: ''

@@ -18,7 +18,8 @@
   "peerDependencies": {
     "svelte": "^3.24.1",
     "@popperjs/core": "^2.4.4",
-    "svelte-icons": "^2.1.0"
+    "svelte-icons": "^2.1.0",
+    "svelte-spa-router": "~2.2.0"
   },
   "type": "module",
   "keywords": [],

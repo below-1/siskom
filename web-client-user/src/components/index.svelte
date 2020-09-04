@@ -1,0 +1,28 @@
+<script>
+  import { onMount } from 'svelte';
+  import Router from 'svelte-spa-router';
+  import App from './app/index.svelte';
+  import Login from './auth/Login.svelte';
+  import { 
+    JoAsyncContent,
+    JoNotification,
+    JoWarning,
+    notification,
+    warning
+  } from 'siskom-web-commons';
+  import updateSession from 'siskom-web-user/services/updateSession.js';
+
+  const routes = {
+    '/': Login,
+    '/app': App,
+    '/app/*': App
+  }
+
+  onMount(async () => {
+    await updateSession();
+  });
+</script>
+
+<JoNotification {notification}></JoNotification>
+<JoWarning {warning}></JoWarning>
+<Router {routes}></Router>

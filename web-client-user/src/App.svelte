@@ -1,10 +1,16 @@
 <script>
+	import { JoInput } from 'siskom-web-commons';
 	export let name;
+	let keyword = '';
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<JoInput
+		bind:value={keyword}
+		placeholder="Foobar..."
+	/>
 </main>
 
 <style>

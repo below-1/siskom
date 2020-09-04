@@ -382,6 +382,10 @@
       "projectFolder": "web-commons"
     },
     {
+      "packageName": "siskom-web-user",
+      "projectFolder": "web-client-user"
+    },
+    {
       "packageName": "siskom-web-admin",
       "projectFolder": "web-client-admin"
     }

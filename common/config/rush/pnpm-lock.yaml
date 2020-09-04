@@ -1,18 +1,22 @@
 dependencies:
   '@apollo/client': 3.1.3_graphql@15.3.0
   '@popperjs/core': 2.4.4
-  '@rollup/plugin-alias': 3.1.1
-  '@rollup/plugin-commonjs': 14.0.0
+  '@rollup/plugin-alias': 3.1.1_rollup@2.26.5
+  '@rollup/plugin-commonjs': 14.0.0_rollup@2.26.5
+  '@rollup/plugin-node-resolve': 9.0.0_rollup@2.26.5
   '@rush-temp/siskom-web-admin': 'file:projects/siskom-web-admin.tgz'
   '@rush-temp/siskom-web-commons': 'file:projects/siskom-web-commons.tgz'
+  '@rush-temp/siskom-web-user': 'file:projects/siskom-web-user.tgz'
   autoprefixer: 9.8.6
   date-fns: 2.16.0
   graphql: 15.3.0
   postcss-import: 12.0.1
+  rollup: 2.26.5
   rollup-plugin-livereload: 1.3.0
   rollup-plugin-postcss: 3.1.6
+  rollup-plugin-svelte: 5.2.3_rollup@2.26.5
   rollup-plugin-svg: 2.0.0
-  rollup-plugin-terser: 7.0.0
+  rollup-plugin-terser: 7.0.0_rollup@2.26.5
   sirv-cli: 1.0.6
   svelte-icons: 2.1.0
   svelte-spa-router: 2.2.0
@@ -78,16 +82,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1oO6+dN5kdIA3sKPZhRGJTfGVP4SWV6KqlMOwry4J3HfyD68sl/3KmG7DeYUzvN+RbhXDnv/D8vNNB8168tAMg==
-  /@rollup/plugin-alias/3.1.1:
-    dependencies:
-      slash: 3.0.0
-    dev: false
-    engines:
-      node: '>=8.0.0'
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0
-    resolution:
-      integrity: sha512-hNcQY4bpBUIvxekd26DBPgF7BT4mKVNDF5tBG4Zi+3IgwLxGYRY0itHs9D0oLVwXM5pvJDWJlBQro+au8WaUWw==
   /@rollup/plugin-alias/3.1.1_rollup@2.26.5:
     dependencies:
       rollup: 2.26.5
@@ -99,22 +93,6 @@ packages:
       rollup: ^1.20.0||^2.0.0
     resolution:
       integrity: sha512-hNcQY4bpBUIvxekd26DBPgF7BT4mKVNDF5tBG4Zi+3IgwLxGYRY0itHs9D0oLVwXM5pvJDWJlBQro+au8WaUWw==
-  /@rollup/plugin-commonjs/14.0.0:
-    dependencies:
-      '@rollup/pluginutils': 3.1.0
-      commondir: 1.0.1
-      estree-walker: 1.0.1
-      glob: 7.1.6
-      is-reference: 1.2.1
-      magic-string: 0.25.7
-      resolve: 1.17.0
-    dev: false
-    engines:
-      node: '>= 8.0.0'
-    peerDependencies:
-      rollup: ^2.3.4
-    resolution:
-      integrity: sha512-+PSmD9ePwTAeU106i9FRdc+Zb3XUWyW26mo5Atr2mk82hor8+nPwkztEjFo8/B1fJKfaQDg9aM2bzQkjhi7zOw==
   /@rollup/plugin-commonjs/14.0.0_rollup@2.26.5:
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.26.5
@@ -132,23 +110,6 @@ packages:
       rollup: ^2.3.4
     resolution:
       integrity: sha512-+PSmD9ePwTAeU106i9FRdc+Zb3XUWyW26mo5Atr2mk82hor8+nPwkztEjFo8/B1fJKfaQDg9aM2bzQkjhi7zOw==
-  /@rollup/plugin-node-resolve/8.4.0_rollup@2.26.5:
-    dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.26.5
-      '@types/resolve': 1.17.1
-      builtin-modules: 3.1.0
-      deep-freeze: 0.0.1
-      deepmerge: 4.2.2
-      is-module: 1.0.0
-      resolve: 1.17.0
-      rollup: 2.26.5
-    dev: false
-    engines:
-      node: '>= 8.0.0'
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0
-    resolution:
-      integrity: sha512-LFqKdRLn0ShtQyf6SBYO69bGE1upV6wUhBX0vFOUnLAyzx5cwp8svA0eHUnu8+YU57XOkrMtfG63QOpQx25pHQ==
   /@rollup/plugin-node-resolve/9.0.0_rollup@2.26.5:
     dependencies:
       '@rollup/pluginutils': 3.1.0_rollup@2.26.5
@@ -165,18 +126,6 @@ packages:
       rollup: ^1.20.0||^2.0.0
     resolution:
       integrity: sha512-gPz+utFHLRrd41WMP13Jq5mqqzHL3OXrfj3/MkSyB6UBIcuNt9j60GCbarzMzdf1VHFpOxfQh/ez7wyadLMqkg==
-  /@rollup/pluginutils/3.1.0:
-    dependencies:
-      '@types/estree': 0.0.39
-      estree-walker: 1.0.1
-      picomatch: 2.2.2
-    dev: false
-    engines:
-      node: '>= 8.0.0'
-    peerDependencies:
-      rollup: ^1.20.0||^2.0.0
-    resolution:
-      integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==
   /@rollup/pluginutils/3.1.0_rollup@2.26.5:
     dependencies:
       '@types/estree': 0.0.39
@@ -721,10 +670,6 @@ packages:
       node: '>=0.11'
     resolution:
       integrity: sha512-DWTRyfOA85sZ4IiXPHhiRIOs3fW5U6Msrp+gElXARa6EpoQTXPyHQmh7hr+ssw2nx9FtOQWnAMJKgL5vaJqILw==
-  /deep-freeze/0.0.1:
-    dev: false
-    resolution:
-      integrity: sha1-OgsABd4YZygZ39OM0x+RF5yJPoQ=
   /deepmerge/4.2.2:
     dev: false
     engines:
@@ -2060,6 +2005,18 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-lkKMTXhPyaNgELFFf7mAGLqFTr13Lswak1YkP+b9rfl6YNVHxs3PYgZFAGLOyLvOtSuCVRq6BryXs1EgyC+nHQ==
+  /rollup-plugin-svelte/5.2.3_rollup@2.26.5:
+    dependencies:
+      require-relative: 0.8.7
+      rollup: 2.26.5
+      rollup-pluginutils: 2.8.2
+      sourcemap-codec: 1.4.8
+    dev: false
+    peerDependencies:
+      rollup: '>=0.60.0'
+      svelte: '*'
+    resolution:
+      integrity: sha512-513vOht9A93OV7fvmpIq8mD1JFgTZ5LidmpULKM2Od9P1l8oI5KwvO32fwCnASuVJS1EkRfvCnS7vKQ8DF4srg==
   /rollup-plugin-svelte/5.2.3_rollup@2.26.5+svelte@3.24.1:
     dependencies:
       require-relative: 0.8.7
@@ -2079,17 +2036,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-DmE7dSQHo1SC5L2uH2qul3Mjyd5oV6U1aVVkyvTLX/mUsRink7f1b1zaIm+32GEBA6EHu8H/JJi3DdWqM53ySQ==
-  /rollup-plugin-terser/7.0.0:
-    dependencies:
-      '@babel/code-frame': 7.10.4
-      jest-worker: 26.3.0
-      serialize-javascript: 4.0.0
-      terser: 5.2.1
-    dev: false
-    peerDependencies:
-      rollup: ^2.0.0
-    resolution:
-      integrity: sha512-p/N3lLiFusCjYTLfVkoaiRTOGr5AESEaljMPH12MhOtoMkmTBhIAfuadrcWy4am1U0vU4WTxO9fi0K09O4CboQ==
   /rollup-plugin-terser/7.0.0_rollup@2.26.5:
     dependencies:
       '@babel/code-frame': 7.10.4
@@ -2494,7 +2440,7 @@ packages:
       '@popperjs/core': 2.4.4
       '@rollup/plugin-alias': 3.1.1_rollup@2.26.5
       '@rollup/plugin-commonjs': 14.0.0_rollup@2.26.5
-      '@rollup/plugin-node-resolve': 8.4.0_rollup@2.26.5
+      '@rollup/plugin-node-resolve': 9.0.0_rollup@2.26.5
       autoprefixer: 9.8.6
       date-fns: 2.16.0
       graphql: 15.3.0
@@ -2514,7 +2460,7 @@ packages:
     dev: false
     name: '@rush-temp/siskom-web-admin'
     resolution:
-      integrity: sha512-HJJZEgHc0fFpPNvkweYWvTp6aO5JlWLHF+LBu/1oP4E66MDeOXqOdkm1MXTfoZdnuPBFMnUxcNGxP2YhuPLf7g==
+      integrity: sha512-t9C0CqsEOK2oiUygu/jYJppAE62zLdYxHOYXWjqY8ak36B4CT7F+Oj2n6W9zoNVFymR6LZzOn1pHmxzYaIu6ZA==
       tarball: 'file:projects/siskom-web-admin.tgz'
     version: 0.0.0
   'file:projects/siskom-web-commons.tgz':
@@ -2529,8 +2475,24 @@ packages:
     dev: false
     name: '@rush-temp/siskom-web-commons'
     resolution:
-      integrity: sha512-OlXhsiXkocpPmmxl2zw1AfzMItlldZo/GNfiPrXUyCj0mMJwVLPSjF1PYxRJkeypSzylk0WXHtVwZUVGceSedw==
+      integrity: sha512-KT7FpuiH1/4x4hz6FSmL0seCfDs1yKvzgx4IJua3eW+mozrBXGWlaAHd9iM4qfbCH5KROj6Hon0x51xHQ9qoKQ==
       tarball: 'file:projects/siskom-web-commons.tgz'
+    version: 0.0.0
+  'file:projects/siskom-web-user.tgz':
+    dependencies:
+      '@rollup/plugin-commonjs': 14.0.0_rollup@2.26.5
+      '@rollup/plugin-node-resolve': 9.0.0_rollup@2.26.5
+      rollup: 2.26.5
+      rollup-plugin-livereload: 1.3.0
+      rollup-plugin-svelte: 5.2.3_rollup@2.26.5+svelte@3.24.1
+      rollup-plugin-terser: 7.0.0_rollup@2.26.5
+      sirv-cli: 1.0.6
+      svelte: 3.24.1
+    dev: false
+    name: '@rush-temp/siskom-web-user'
+    resolution:
+      integrity: sha512-p4wM4f14qjMfpPJGFZp1R9hx8z7+IVTY7BAydj+BpFnkmGMriFNbpDK1TR5JDFGQ91g87ANs2qcmtUrzcCmlFQ==
+      tarball: 'file:projects/siskom-web-user.tgz'
     version: 0.0.0
 registry: ''
 specifiers:
@@ -2538,14 +2500,18 @@ specifiers:
   '@popperjs/core': ^2.4.4
   '@rollup/plugin-alias': ~3.1.1
   '@rollup/plugin-commonjs': ^14.0.0
+  '@rollup/plugin-node-resolve': ^9.0.0
   '@rush-temp/siskom-web-admin': 'file:./projects/siskom-web-admin.tgz'
   '@rush-temp/siskom-web-commons': 'file:./projects/siskom-web-commons.tgz'
+  '@rush-temp/siskom-web-user': 'file:./projects/siskom-web-user.tgz'
   autoprefixer: ~9.8.6
   date-fns: ~2.16.0
   graphql: ~15.3.0
   postcss-import: ~12.0.1
+  rollup: ^2.3.4
   rollup-plugin-livereload: ^1.0.0
   rollup-plugin-postcss: ~3.1.6
+  rollup-plugin-svelte: ^5.2.3
   rollup-plugin-svg: ^2.0.0
   rollup-plugin-terser: ^7.0.0
   sirv-cli: ^1.0.0

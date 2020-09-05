@@ -6,8 +6,10 @@
   let id = null;
   onMount(() => {
     const userRaw = localStorage.getItem('siskom.user');
-    const user = userRaw ? JSON.parse(userRaw) : null;
-    id = user.targetId;
+    if (userRaw) {
+      const user = JSON.parse(userRaw);
+      id = user.targetId;
+    }
   });
 </script>
 

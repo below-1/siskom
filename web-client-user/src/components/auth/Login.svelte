@@ -85,12 +85,7 @@
         throw err;
       })
       .then(user => {
-        const { tipeUser } = user;
-        if (tipeUser != 'ADMIN') {
-          networkStatus = 'ready';
-          return;
-        }
-        pushRoute('/admin');
+        redirect(user.tipeUser)
       })
       .catch(err => {
         console.log(err);

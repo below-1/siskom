@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import Router from 'svelte-spa-router';
   import RespLayout from 'siskom-web-user/components/commons/RespLayout.svelte';
   import * as common_menus  from 'siskom-web-user/commons/menus.js';
@@ -72,6 +73,10 @@
     '/me_mhs': SelfMahasiswa,
     '/me_mhs/*': SelfMahasiswa,
   };
+
+  onMount(() => {
+    console.log('app/index.svelte');
+  })
 </script>
 
 

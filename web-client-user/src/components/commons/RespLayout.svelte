@@ -3,6 +3,7 @@
   import MdMoreHoriz from 'svelte-icons/md/MdMoreHoriz.svelte';
   import RespMenu from './RespMenu.svelte';
   import RespSideInfo from './RespSideInfo.svelte';
+  import logo from 'siskom-web-user/icons/abstract.svg';
 
   export let menus = [];
   export let avatar;
@@ -11,6 +12,7 @@
   export let meHref = '';
 
   let showMenu = false;
+  let logoSize = 20;
 </script>
 
 <style>
@@ -25,7 +27,7 @@
 
 <div class="flex items-center px-4 bg-black text-white h-16 fixed top-0 right-0 left-0">
   <div class="logo mr-2">
-    <Logo />
+    <img src={logo} height={logoSize} width={logoSize} />
   </div>
   <div class="font-bold text-xl">siskom</div>
   <input class="appearance-none bg-gray-800 rounded mx-2 px-2 font-bold text-gray-200" placeholder="keyword..." />
@@ -67,12 +69,12 @@
 {/if}
 <div class="notification">
 </div>
-<div class="flex flex-col bg-gray-300 mt-16">
+<nav class="w-64 fixed left-0 bottom-0" style="top: 4rem;">
+  <RespMenu {menus} {title} {avatar} {subtitle} {meHref} />
+</nav>
+<div class="flex flex-col bg-gray-300 mt-16 ml-64">
   <div class="flex-grow flex">
-    <div class="hidden md:block md:w-1/5 p-4">
-      <RespMenu {menus} {title} {avatar} {subtitle} {meHref} />
-    </div>
-    <div class="w-full md:w-3/5 md:px-4 md:py-4">
+    <div class="w-full md:w-4/5 md:px-4 md:py-4">
       <slot name="content"></slot>
     </div>
     <div class="hidden md:block w-1/5 p-4">

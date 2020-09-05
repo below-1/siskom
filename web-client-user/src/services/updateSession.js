@@ -93,4 +93,5 @@ export default async function updateSessionData () {
   dosenStore.set(dosen);
   mahasiswaStore.set(mahasiswa);
   userStore.set(user);
+  console.log('done updating session');
 }

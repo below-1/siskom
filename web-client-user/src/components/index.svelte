@@ -12,6 +12,7 @@
   } from 'siskom-web-commons';
   import updateSession from 'siskom-web-user/services/updateSession.js';
 
+  let initDone = false;
   const routes = {
     '/': Login,
     '/app': App,
@@ -20,9 +21,14 @@
 
   onMount(async () => {
     await updateSession();
+    initDone = true;
   });
 </script>
 
+{#if initDone}
 <JoNotification {notification}></JoNotification>
 <JoWarning {warning}></JoWarning>
 <Router {routes}></Router>
+{:else}
+<div>loading...</div>
+{/if}

@@ -8,6 +8,7 @@
     user 
   } from 'siskom-web-commons';
   import * as context_key from './context.js';
+  import AvatarScope from './AvatarScope.svelte';
 
   const mahasiswa = getContext(context_key.mahasiswa);
   const attendedPeriode = getContext(context_key.attendedPeriode);
@@ -36,44 +37,40 @@
 
 <JoAsyncContent {networkStatus}>
   <div slot="success">
+    <div class="text-3xl font-black my-6">Detail Mahasiswa</div>
+    <AvatarScope mahasiswa={$mahasiswa} />
+    <div class="text-2xl font-bold my-6">Informasi Umum</div>
 
-    <div class="bg-white mt-6 py-4 px-4 md:w-2/3">
-      <div id="mhs_section_title" class="text-center text-lg font-bold">Informasi Umum</div>
-    </div>
-
-    <div class="px-4 mb-6 bg-white md:w-2/3 font-semibold">
-      <div class="flex items-center justify-between py-3 border-b border-gray-300">
+    <div class="p-4 border-2 border-dashed border-gray-300 mb-6 md:w-2/3 font-semibold">
+      <div class="flex items-center justify-between py-3 border-b border-gray-400">
         <span>Nama</span>
         <span>{$mahasiswa.nama}</span>
       </div>
-      <div class="flex items-center justify-between py-3 border-b border-gray-300">
+      <div class="flex items-center justify-between py-3 border-b border-gray-400">
         <span>NIM</span>
         <span>{$mahasiswa.nim}</span>
       </div>
-      <div class="flex items-center justify-between py-3 border-b border-gray-300">
+      <div class="flex items-center justify-between py-3 border-b border-gray-400">
         <span>Jenis Kelamin</span>
         <span>{$mahasiswa.sex}</span>
       </div>
-      <div class="flex items-center justify-between py-3 border-b border-gray-300">
+      <div class="flex items-center justify-between py-3 border-b border-gray-400">
         <span>Tahun Masuk</span>
         <span>{$mahasiswa.tahunMasuk}</span>
       </div>
-      <div class="flex items-center justify-between py-3 border-b border-gray-300">
+      <div class="flex items-center justify-between py-3 border-b border-gray-400">
         <span>Semester</span>
         <span>{$attendedPeriode.length}</span>
       </div>
-      <div class="flex items-center justify-between py-3 border-b border-gray-300">
+      <div class="flex items-center justify-between py-3 border-b border-gray-400">
         <span>Dosen Pa</span>
         <span>{$mahasiswa.pa.nama}</span>
       </div>
     </div>
 
     {#if canSeeDetail}
-      <div class="bg-white mt-6 py-4 px-4">
-        <div class="text-center text-lg font-bold">Link</div>
-      </div>
-
-      <ul class="bg-white px-4 mb-6">
+      <div class="text-2xl font-bold my-6">Tautan</div>
+      <ul class="p-4 border-2 border-dashed border-gray-300 mb-6 md:w-2/3 font-semibold">
         <li>
           <a 
             href={`/#${prefix}/schedule`}

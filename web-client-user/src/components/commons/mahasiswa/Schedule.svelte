@@ -1,15 +1,15 @@
 <script>
   import { onMount, getContext } from 'svelte';
-  import { gql } from '@apollo/client/core';
-  import apolloClient from 'siskom/apollo-client.js';
-  import { load as getStorage } from 'siskom/commons/storage.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import formatDay from 'siskom/commons/formatDay.js';
-  import formatScheduleDayTime from 'siskom/commons/formatScheduleDayTime.js';
-  import GQL_schedules from 'siskom/graphql/scheduled-kelas-mahasiswa.gql';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoAsyncContent,
+    JoSelect,
+    formatDay,
+    formatScheduleDayTime,
+    periode
+  } from 'siskom-web-commons';
+  import GQLScheduledKelasMahasiswa from 'siskom-web-user/graphql/ScheduledKelasMahasiswa.js';
   import * as context_key from './context.js';
-  import { periode } from 'siskom/stores/index.js';
 
   const mahasiswa = getContext(context_key.mahasiswa);
   const attendedPeriode = getContext(context_key.attendedPeriode);
@@ -32,7 +32,7 @@
     }
     networkStatus = 'loading';
     apolloClient.query({
-      query: GQL_schedules,
+      query: GQLScheduledKelasMahasiswa,
       variables: {
         idMahasiswa,
         idPeriode

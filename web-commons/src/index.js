@@ -19,6 +19,7 @@ export { default as formatMk } from './format/formatMk.js';
 export { default as formatDay } from './format/formatDay.js';
 export { default as formatPeriode } from './format/formatPeriode.js';
 export { default as formatNilai } from './format/formatNilai.js';
+export { default as formatScheduleDayTime } from './format/formatScheduleDayTime.js';
 export { default as filterKelas } from './filter/filterKelas.js';
 export { default as isEmptyRef } from './utils/isEmptyRef.js';
 export { default as checkKapasitas } from './utils/checkKapasitas.js';

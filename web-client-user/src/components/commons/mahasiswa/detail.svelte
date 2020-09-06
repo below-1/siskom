@@ -5,10 +5,9 @@
   import {
     JoAsyncContent,
   } from 'siskom-web-commons';
-  import AvatarScope from './AvatarScope.svelte';
   import apolloClient from 'siskom-web-user/apolloClient.js';
   import GQLDetailMahasiswa from 'siskom-web-user/graphql/DetailMahasiswa.js';
-  // import Schedule from './schedule.svelte';
+  import Schedule from './Schedule.svelte';
   // import Transkrip from './transkrip.svelte';
   // import KRS from './krs.svelte';
   // import KHS from './khs.svelte';
@@ -50,7 +49,7 @@
 
   const routes = {
     '/info': Info,
-    // '/schedule': Schedule,
+    '/schedule': Schedule
     // '/transkrip': Transkrip,
     // '/krs': KRS,
     // '/khs': KHS
@@ -81,10 +80,6 @@
 
 <JoAsyncContent {networkStatus}>
   <div slot="success">
-    <!-- Show avatar at me_mhs/info -->
-    {#if showAvatar || $location == '/app/me_mhs/info'}
-      <AvatarScope mahasiswa={$mahasiswa} />
-    {/if}
     <Router {routes} {prefix} />
   </div>
 </JoAsyncContent>

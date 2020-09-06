@@ -12,7 +12,7 @@
   export let meHref = '';
 
   let showMenu = false;
-  let logoSize = 32;
+  let logoSize = 24;
 </script>
 
 <style>
@@ -25,19 +25,21 @@
   }
 </style>
 
-<nav class="border-b border-gray-300 h-12 flex items-center px-4">
-  <div class="flex items-center">
-    <img class="mr-4" src={logo} height={logoSize} width={logoSize} />
-    <span class="font-bold tracking-wider text-lg">siskom</span>
+<nav class="bg-gray-900 text-white">
+  <div class="md:mx-auto md:w-2/3 flex items-center h-12">
+    <div class="flex items-center">
+      <img class="mr-2" src={logo} height={logoSize} width={logoSize} />
+      <span class="font-bold tracking-wider">siskom</span>
+    </div>
+    <div class="flex-grow"></div>
+    <a href="/#/about" class="mr-8 font-bold">
+      about
+    </a>
+    <button class="flex items-center appearance-none border-none">
+      <img src={avatar} height={logoSize} width={logoSize} class="mr-2" />
+      <span class="font-bold">jordan meta</span>
+    </button>
   </div>
-  <div class="flex-grow"></div>
-  <a href="/#/about" class="mr-8 font-bold">
-    about
-  </a>
-  <button class="flex items-center appearance-none">
-    <img src={avatar} height={logoSize} width={logoSize} class="mr-4" />
-    <span class="font-bold">jordan meta</span>
-  </button>
 </nav>
 
 <div class="bg-gray-100 h-8 border-b border-gray-300 flex items-center justify-center">
@@ -47,7 +49,9 @@
 
 <div class="flex flex-col" style="min-height: calc(100vh - 3rem);">
 
-  <slot name="content"></slot>
+  <div class="md:w-2/3 md:mx-auto my-12">
+    <slot name="content"></slot>
+  </div>
 
   <footer class="px-4 py-6 bg-gray-200 border-t border-gray-300 flex flex-col items-center justify-center text-gray-700 text-center">
     <div class="font-semibold text-xs">Sistem Informasi Akademik Ilmu Komputer Nusa Cendana</div>

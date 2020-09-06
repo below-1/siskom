@@ -31,23 +31,21 @@
   });
 </script>
 
-<div class="w-2/3 mx-auto my-4">
-  <h2 class="text-3xl text-gray-700 font-black mb-4 text-center">Data Personal</h2>
-  <div class="grid grid-cols-3 gap-3 mb-8">
-    {#each personalMenus as menu (menu.label)}
-      <a 
-        href={menu.path}
-        class="p-8 bg-gray-100 rounded flex flex-col items-center justify-center font-bold text-gray-600 hover:text-gray-900"
-      >
-        <div class="h-20 w-20">
-          <svelte:component this={menu.icon}></svelte:component>
-        </div>
-        <div class="text-2xl my-2">{menu.label}</div>
-      </a>
-    {/each}
-  </div>
-  <h2 class="text-3xl text-gray-700 font-black mb-4 text-center">Jurusan</h2>
+<h2 class="text-3xl text-gray-700 font-black mb-4 text-center">Data Personal</h2>
+<div class="grid grid-cols-3 gap-3 mb-8">
+  {#each personalMenus as menu (menu.label)}
+    <a 
+      href={menu.path}
+      class="p-8 bg-gray-100 rounded flex flex-col items-center justify-center font-bold text-gray-600 hover:text-gray-900"
+    >
+      <div class="h-20 w-20">
+        <svelte:component this={menu.icon}></svelte:component>
+      </div>
+      <div class="text-2xl my-2">{menu.label}</div>
+    </a>
+  {/each}
 </div>
+<h2 class="text-3xl text-gray-700 font-black mb-4 text-center">Jurusan</h2>
 
 <!-- <DetailMahasiswa {id} prefix="/app/me_mhs">
 </DetailMahasiswa> -->

@@ -6,12 +6,12 @@
   $: avatar = mahasiswa ? buildAvatar(mahasiswa.nim, 64) : null;
 </script>
 
-<div class="bg-white p-4 flex">
+<div class="flex items-center border-b border-gray-400 py-4">
   <div>
-    <img src={avatar} />
+    <img class="rounded-full" src={avatar} />
   </div>
   <div class="text-left ml-2">
-    <div class="font-semibold text-2xl">{mahasiswa.nama}</div>
+    <div class="font-semibold text-lg">{mahasiswa.nama}</div>
     <div class="font-semibold text-sm">
       {mahasiswa.nim}, 
       {mahasiswa.sex.toLowerCase()}

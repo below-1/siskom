@@ -2,15 +2,17 @@
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
   import Router, { location } from 'svelte-spa-router';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import AvatarScope from './avatar-scope.svelte';
-  import apollo_client from 'siskom/apollo-client.js';
-  import GQL_detail_mahasiswsa from 'siskom/graphql/detail-mahasiswa.gql';
-  import Schedule from './schedule.svelte';
-  import Transkrip from './transkrip.svelte';
-  import KRS from './krs.svelte';
-  import KHS from './khs.svelte';
-  import Info from './info.svelte';
+  import {
+    JoAsyncContent,
+  } from 'siskom-web-commons';
+  import AvatarScope from './AvatarScope.svelte';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import GQLDetailMahasiswa from 'siskom-web-user/graphql/DetailMahasiswa.js';
+  // import Schedule from './schedule.svelte';
+  // import Transkrip from './transkrip.svelte';
+  // import KRS from './krs.svelte';
+  // import KHS from './khs.svelte';
+  import Info from './Info.svelte';
   import * as context_key from './context.js';
 
   export let id;
@@ -48,18 +50,18 @@
 
   const routes = {
     '/info': Info,
-    '/schedule': Schedule,
-    '/transkrip': Transkrip,
-    '/krs': KRS,
-    '/khs': KHS
+    // '/schedule': Schedule,
+    // '/transkrip': Transkrip,
+    // '/krs': KRS,
+    // '/khs': KHS
   };
 
   async function load_mahasiswa ({ id }) {
     if (!id) return;
     networkStatus = 'loading';
     try {
-      const result = await apollo_client.query({
-        query: GQL_detail_mahasiswsa,
+      const result = await apolloClient.query({
+        query: GQLDetailMahasiswa,
         variables: {
           id
         }

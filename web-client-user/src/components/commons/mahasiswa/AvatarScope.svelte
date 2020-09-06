@@ -1,9 +1,9 @@
 <script>
-  import avatar_url from 'siskom/commons/avatar.js';
+  import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
 
   export let mahasiswa;
 
-  $: avatar = mahasiswa ? avatar_url(mahasiswa.nim, 64) : null;
+  $: avatar = mahasiswa ? buildAvatar(mahasiswa.nim, 64) : null;
 </script>
 
 <div class="bg-white p-4 flex">

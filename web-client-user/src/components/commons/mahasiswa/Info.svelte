@@ -1,10 +1,13 @@
 <script>
   import { getContext } from 'svelte';
-  import apollo_client from 'siskom/apollo-client.js';
-  import GQL_detail_mahasiswsa from 'siskom/graphql/detail-mahasiswa.gql';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import GQLDetailMahasiswa from 'siskom-web-user/graphql/DetailMahasiswa.js';
+  import {
+    JoAsyncContent,
+    mahasiswa as globalMahasiswa, 
+    user 
+  } from 'siskom-web-commons';
   import * as context_key from './context.js';
-  import { mahasiswa as globalMahasiswa, user } from 'siskom/stores/index.js';
 
   const mahasiswa = getContext(context_key.mahasiswa);
   const attendedPeriode = getContext(context_key.attendedPeriode);

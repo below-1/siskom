@@ -11,7 +11,8 @@
   } from 'siskom-web-commons';
   import build_avatar from 'siskom-web-user/commons/buildAvatar.js';
   // import SelfDosen from './dosen/me-two.svelte';
-  import SelfMahasiswa from './mahasiswa/me.svelte';
+  import HomeMahasiswa from './mahasiswa/Home.svelte';
+  import SelfMahasiswa from './mahasiswa/Me.svelte';
   // import Ilkom from './ilkom.svelte';
 
   function getDataFromSession ({ user, mahasiswa, dosen }) {
@@ -29,7 +30,7 @@
         subtitle = mahasiswa.nim;
         avatar = build_avatar(mahasiswa.nim, 32);
         prefix = '/mahasiswa';
-        SelfComponent = SelfMahasiswa;
+        SelfComponent = HomeMahasiswa;
       } else if (user.tipeUser == 'DOSEN') {
         menus = common_menus.dosen;
         title = dosen.nama;
@@ -70,8 +71,8 @@
     // '/ilkom/*': Ilkom,
     // '/me_dosen': SelfDosen,
     // '/me_dosen/*': SelfDosen,
-    '/me_mhs': SelfMahasiswa,
-    '/me_mhs/*': SelfMahasiswa,
+    '/me_mhs': HomeMahasiswa,
+    '/me_mhs/*': SelfMahasiswa
   };
 
   onMount(() => {

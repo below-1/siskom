@@ -3,13 +3,13 @@
   import { writable } from 'svelte/store';
   import Router, { location } from 'svelte-spa-router';
   import {
-    JoAsyncContent,
+    JoAsyncContent
   } from 'siskom-web-commons';
   import apolloClient from 'siskom-web-user/apolloClient.js';
   import GQLDetailMahasiswa from 'siskom-web-user/graphql/DetailMahasiswa.js';
   import Schedule from './Schedule.svelte';
   import Transkrip from './Transkrip.svelte';
-  // import KRS from './krs.svelte';
+  import KRS from './Krs.svelte';
   // import KHS from './khs.svelte';
   import Info from './Info.svelte';
   import * as context_key from './context.js';
@@ -50,8 +50,8 @@
   const routes = {
     '/info': Info,
     '/schedule': Schedule,
-    '/transkrip': Transkrip
-    // '/krs': KRS,
+    '/transkrip': Transkrip,
+    '/krs': KRS
     // '/khs': KHS
   };
 
@@ -79,7 +79,7 @@
 </style>
 
 <JoAsyncContent {networkStatus}>
-  <div slot="success">
+  <div slot="success" class="px-4 md:px-0">
     <Router {routes} {prefix} />
   </div>
 </JoAsyncContent>

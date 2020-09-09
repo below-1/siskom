@@ -1,15 +1,16 @@
 <script>
   import { onMount, getContext } from 'svelte';
-  import apolloClient from 'siskom/apollo-client.js';
-  import { load as loadStorage } from 'siskom/commons/storage.js';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoButton from 'siskom/components/commons/JoButton.svelte';
-  import JoLink from 'siskom/components/commons/JoLink.svelte';
-  import JoNameAvatar from 'siskom/components/commons/JoNameAvatar.svelte';
-  import GQL_krs from 'siskom/graphql/krs.gql';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoSelect,
+    JoAsyncContent,
+    JoButton,
+    JoLink,
+    JoNameAvatar,
+    periode
+  } from 'siskom-web-commons';
+  import GQLKrs from 'siskom-web-user/graphql/KRS.js';
   import * as context_key from './context.js';
-  import { periode } from 'siskom/stores/index.js';
 
   const mahasiswa = getContext(context_key.mahasiswa);
   const attendedPeriode = getContext(context_key.attendedPeriode);
@@ -42,7 +43,7 @@
     networkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_krs,
+        query: GQLKrs,
         variables: {
           idMahasiswa,
           idPeriode
@@ -58,26 +59,29 @@
   }
 </script>
 
-<div class="bg-white py-4 px-4 mb-2">
-  <div class="text-left text-xl font-black">Kartu Rencana Studi</div>
+<div class="text-left text-3xl font-black mb-8 px-4">Kartu Rencana Studi</div>
+
+<div class="flex items-center my-4">
   <JoSelect 
     options={optionsPeriode} 
     bind:value={idPeriode}
     emptyLabel="pilih periode"
+    cls="w-64"
   />
+  <JoButton cls="py-1 ml-2 text-lg font-black" label="print" dark color="green" />
 </div>
+
 <JoAsyncContent {networkStatus}>
   <div slot="success">
-    <div class="bg-white font-bold flex justify-between items-center px-4 py-3 mb-2">
-      <div>
-        <div>total mata kuliah: {total} mk</div>
-        <div>total sks: {totalSks} mk</div>
-      </div>
-      <JoButton cls="py-1" label="print" dark color="green" />
+
+    <div class="p-4 font-semibold mb-4 border-2 border-dashed border-gray-400 md:w-1/2">
+      <div class="p-2 border-b border-gray-400">total mata kuliah: {total} mk</div>
+      <div class="p-2 border-b border-gray-400">total sks: {totalSks} mk</div>
     </div>
-    <ul class="bg-white">
+
+    <ul class="mt-8">
       {#each items as item (item.id)}
-        <li class="py-3 px-4 border-b border-gray-300 w-full flex items-center">
+        <li class="py-3 px-4 border-b-2 border-dashed border-gray-400 w-full flex items-center">
           <JoNameAvatar name={item.kelas.mk.nama} size='base' cls='mr-4 w-12' />
           <div class="flex flex-col flex-grow">
             <div class="font-semibold">
@@ -91,5 +95,6 @@
         </li>
       {/each}
     </ul>
+
   </div>
 </JoAsyncContent>

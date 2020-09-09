@@ -1,17 +1,20 @@
 <script>
   import { getContext } from 'svelte';
   import { push as pushRoute } from 'svelte-spa-router';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import JoButton from 'siskom/components/commons/JoButton.svelte';
-  import JoLink from 'siskom/components/commons/JoLink.svelte';
-  import JoInput from 'siskom/components/commons/JoInput.svelte';
-  import InfoTranskrip from 'siskom/components/commons/mahasiswa/info-transkrip.svelte';
-  import GQL_transkrip from 'siskom/graphql/transkrip.gql';
-  import GQL_info_transkrip from 'siskom/graphql/info-transkrip.gql';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+
+  import {
+    JoAsyncContent,
+    JoSelect,
+    JoButton,
+    JoLink,
+    JoInput,
+    periode
+  } from 'siskom-web-commons';
+  import InfoTranskrip from './InfoTranskrip.svelte';
+  import GQLTranskrip from 'siskom-web-user/graphql/Transkrip.js';
+  import GQLInfoTranskrip from 'siskom-web-user/graphql/InfoTranskrip.js';
   import * as context_key from './context.js';
-  import { periode } from 'siskom/stores/index.js';
 
   const mahasiswa = getContext(context_key.mahasiswa);
   const attendedPeriode = getContext(context_key.attendedPeriode);
@@ -64,7 +67,7 @@
     infoNetworkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_info_transkrip,
+        query: GQLInfoTranskrip,
         variables: {
           id: idMahasiswa,
           tahun,
@@ -81,7 +84,7 @@
 
   async function fetchTranskrip ({ idMahasiswa, idPeriode, take, after, keyword, tahun, semester }) {
     const queryResult = await apolloClient.query({
-      query: GQL_transkrip,
+      query: GQLTranskrip,
       fetchPolicy: 'network-only',
       variables: {
         id: idMahasiswa,
@@ -131,32 +134,33 @@
   }
 </script>
 
-<div class="bg-white py-4 px-4">
-  <div class="text-lg font-bold">Transkrip Nilai</div>
-  <JoSelect 
-    options={optionsPeriode} 
-    bind:value={idPeriode} 
-    emptyLabel="Semua Semester" 
-    label="periode"
+<div class="text-3xl font-black mb-8">Transkrip Nilai</div>
+<JoSelect 
+  options={optionsPeriode} 
+  bind:value={idPeriode} 
+  emptyLabel="Semua Semester" 
+  label="periode"
+  cls="w-64"
+/>
+<div class="my-2 flex items-center justify-start w-full">
+  <input
+    bind:value={keyword}
+    type='text'
+    placeholder='keyword'
+    class="bg-white border-gray-400 border p-2 py-1 text-sm font-semibold rounded"
   />
-  <div class="my-2 flex items-center justify-start w-full">
-    <input
-      bind:value={keyword}
-      type='text'
-      placeholder='keyword'
-      class="bg-white border-gray-400 border p-2 py-1 text-sm font-semibold rounded"
-    />
-    <JoButton label="info" cls="ml-2">
-    </JoButton>
-    <JoButton label="print" cls="ml-2">
-    </JoButton>
-  </div>
+  <JoButton label="info" cls="ml-2">
+  </JoButton>
+  <JoButton label="print" cls="ml-2">
+  </JoButton>
 </div>
 
 <JoAsyncContent networkStatus={infoNetworkStatus}>
-  <div slot="success" class="p-6 text-gray-800 text-sm bg-white md:my-4">
-    <div class="text-left font-bold text-gray-600 py-2">Rangkuman</div>
-    <InfoTranskrip {...infoTranskrip} />
+  <div slot="success">
+    <div class="text-left font-bold text-2xl mb-2">Rangkuman</div>
+    <div class="text-gray-800 text-sm bg-white md:my-4 border-2 border-dashed border-gray-400 p-4">
+      <InfoTranskrip {...infoTranskrip} />
+    </div>
   </div>
 </JoAsyncContent>
 
@@ -165,7 +169,7 @@
     <ul>
       {#each items as item (item.cursor)}
         <li 
-          class="py-3 px-6 border-b border-gray-300 w-full font-bold text-gray-800 lowercase"
+          class="py-3 px-4 border-b border-gray-400 w-full font-bold text-gray-800 lowercase"
         >
           <div class="flex items-center">
             <div class="flex flex-col flex-grow">

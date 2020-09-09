@@ -8,7 +8,7 @@
   import apolloClient from 'siskom-web-user/apolloClient.js';
   import GQLDetailMahasiswa from 'siskom-web-user/graphql/DetailMahasiswa.js';
   import Schedule from './Schedule.svelte';
-  // import Transkrip from './transkrip.svelte';
+  import Transkrip from './Transkrip.svelte';
   // import KRS from './krs.svelte';
   // import KHS from './khs.svelte';
   import Info from './Info.svelte';
@@ -49,8 +49,8 @@
 
   const routes = {
     '/info': Info,
-    '/schedule': Schedule
-    // '/transkrip': Transkrip,
+    '/schedule': Schedule,
+    '/transkrip': Transkrip
     // '/krs': KRS,
     // '/khs': KHS
   };

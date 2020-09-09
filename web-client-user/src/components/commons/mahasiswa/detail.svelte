@@ -10,7 +10,7 @@
   import Schedule from './Schedule.svelte';
   import Transkrip from './Transkrip.svelte';
   import KRS from './Krs.svelte';
-  // import KHS from './khs.svelte';
+  import KHS from './Khs.svelte';
   import Info from './Info.svelte';
   import * as context_key from './context.js';
 
@@ -51,8 +51,8 @@
     '/info': Info,
     '/schedule': Schedule,
     '/transkrip': Transkrip,
-    '/krs': KRS
-    // '/khs': KHS
+    '/krs': KRS,
+    '/khs': KHS
   };
 
   async function load_mahasiswa ({ id }) {

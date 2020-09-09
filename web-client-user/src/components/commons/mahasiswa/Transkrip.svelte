@@ -5,6 +5,7 @@
 
   import {
     JoAsyncContent,
+    JoNameAvatar,
     JoSelect,
     JoButton,
     JoLink,
@@ -172,6 +173,7 @@
           class="py-3 px-4 border-b border-gray-400 w-full font-bold text-gray-800 lowercase"
         >
           <div class="flex items-center">
+            <JoNameAvatar name={item.node.namaMk} size='base' cls='hidden md:block mr-4 w-12' />
             <div class="flex flex-col flex-grow">
               <div class="flex items-center flex-wrap text-lg">
                 <a

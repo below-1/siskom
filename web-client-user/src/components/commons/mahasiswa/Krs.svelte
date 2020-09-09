@@ -83,11 +83,11 @@
       {#each items as item (item.id)}
         <li class="py-3 border-b border-gray-400 flex items-center">
           <div class="flex flex-col flex-grow">
-            <div class="font-semibold">
-              <a class="font-bold underline" href={`/#/app/ilkom/mks/${item.kelas.id}`}>{item.kelas.mk.nama}</a>
-              <a class="font-bold underline ml-2" href={`/#/app/ilkom/kelas/${item.kelas.mk.id}`}>kelas {item.kelas.label}</a>
+            <div class="text-lg">
+              <a class="font-bold underline mr-4" href={`/#/app/ilkom/mks/${item.kelas.id}`}>{item.kelas.mk.nama}</a>
+              <a class="font-bold underline" href={`/#/app/ilkom/kelas/${item.kelas.mk.id}`}>kelas {item.kelas.label}</a>
             </div>
-            <div class="font-semibold text-sm text-gray-800">
+            <div class="font-medium text-sm text-gray-800">
               {item.kelas.mk.kode}, {item.kelas.mk.sks} sks, {item.kelas.mk.tipeMk.toLowerCase()}
             </div>
           </div>

@@ -173,10 +173,10 @@
         >
           <div class="flex items-center">
             <div class="flex flex-col flex-grow">
-              <div class="flex items-center flex-wrap">
+              <div class="flex items-center flex-wrap text-lg">
                 <a
                   href={`/#/app/ilkom/mks/${item.node.idMk}`}
-                  class="underline font-black mr-2"
+                  class="underline font-black mr-4"
                 >
                   {item.node.namaMk}
                 </a>

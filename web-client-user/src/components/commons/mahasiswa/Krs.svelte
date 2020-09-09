@@ -59,16 +59,16 @@
   }
 </script>
 
-<div class="text-left text-3xl font-black mb-8 px-4">Kartu Rencana Studi</div>
+<div class="text-3xl font-black my-6">Kartu Rencana Studi</div>
 
-<div class="flex items-center my-4">
+<div class="flex items-center flex-wrap my-4">
   <JoSelect 
+    label="periode"
     options={optionsPeriode} 
     bind:value={idPeriode}
     emptyLabel="pilih periode"
-    cls="w-64"
   />
-  <JoButton cls="py-1 ml-2 text-lg font-black" label="print" dark color="green" />
+  <JoButton cls="py-1 my-2 md:my-0 text-lg font-black" label="print" dark color="green" />
 </div>
 
 <JoAsyncContent {networkStatus}>
@@ -81,8 +81,7 @@
 
     <ul class="mt-8">
       {#each items as item (item.id)}
-        <li class="py-3 px-4 border-b-2 border-dashed border-gray-400 w-full flex items-center">
-          <JoNameAvatar name={item.kelas.mk.nama} size='base' cls='mr-4 w-12' />
+        <li class="py-3 border-b border-gray-400 flex items-center">
           <div class="flex flex-col flex-grow">
             <div class="font-semibold">
               <a class="font-bold underline" href={`/#/app/ilkom/mks/${item.kelas.id}`}>{item.kelas.mk.nama}</a>

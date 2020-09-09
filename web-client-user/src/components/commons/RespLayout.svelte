@@ -26,7 +26,7 @@
 </style>
 
 <nav class="bg-gray-900 text-white">
-  <div class="md:mx-auto md:w-2/3 flex items-center h-12">
+  <div class="px-4 md:px-0 md:mx-auto md:w-2/3 flex items-center h-12">
     <div class="flex items-center">
       <img class="mr-2" src={logo} height={logoSize} width={logoSize} />
       <span class="font-bold tracking-wider">siskom</span>
@@ -42,9 +42,9 @@
   </div>
 </nav>
 
-<div class="bg-gray-100 h-8 border-b border-gray-300 flex items-center justify-center">
-  <div class="text-sm font-bold mr-4">periode 2019/2020, semester 12</div>
-  <div class="h-6 bg-blue-700 text-white px-4 font-bold flex items-center text-sm">fase: input mata kuliah</div>
+<div class="px-4 bg-gray-100 h-12 border-b border-gray-300 flex items-center justify-center md:h-8 md:px-0">
+  <div class="text-sm font-bold mr-4 h-12 md:h-8">periode 2019/2020, semester 12</div>
+  <div class="h-10 bg-blue-700 text-white px-4 font-bold flex items-center text-sm md:h-6">fase: input mata kuliah</div>
 </div>
 
 <div class="flex flex-col" style="min-height: calc(100vh - 3rem);">

@@ -43,7 +43,7 @@
 </nav>
 
 <div class="px-4 bg-gray-100 h-12 border-b border-gray-300 flex items-center justify-center md:h-8 md:px-0">
-  <div class="text-sm font-bold mr-4 h-12 md:h-8">periode 2019/2020, semester 12</div>
+  <div class="text-sm font-bold mr-4 md:h-8">periode 2019/2020, semester 12</div>
   <div class="h-10 bg-blue-700 text-white px-4 font-bold flex items-center text-sm md:h-6">fase: input mata kuliah</div>
 </div>
 

@@ -1,25 +1,40 @@
 <script>
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
+  import { gql } from '@apollo/client/core';
   import Router from 'svelte-spa-router';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoButton from 'siskom/components/commons/JoButton.svelte';
-  import JoLink from 'siskom/components/commons/JoLink.svelte';
-  import AvatarScope from './avatar-scope.svelte';
-  import formatScheduleDayTime from 'siskom/commons/formatScheduleDayTime.js';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoAsyncContent,
+    JoButton,
+    JoLink,
+    formatScheduleDayTime
+  } from 'siskom-web-commons';
+  import AvatarScope from './AvatarScope.svelte';
   import * as context_key from './context';
-  import avatar_url from 'siskom/commons/avatar.js';
-  import GQL_dosen_by_id from 'siskom/graphql/dosen-by-id.gql';
-  import Pa from './pa.svelte';
-  import Schedule from './schedule.svelte';
-  import Info from './info.svelte';
+  import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
+  // import Pa from './pa.svelte';
+  // import Schedule from './schedule.svelte';
+  import Info from './Info.svelte';
+
+  const GQLDetail = gql`
+    query DetailDosen($id: Int!) {
+      dosen: dosenById (id: $id) {
+        id
+        nama
+        nip
+        nodeId
+        sex
+        status
+      }
+    }
+  `;
 
   const dosen = writable(null);
   const routes = {
     '/info': Info,
-    '/pas': Pa,
-    '/schedules': Schedule
+    // '/pas': Pa,
+    // '/schedules': Schedule
   };
   setContext(context_key.dosen, dosen);
 
@@ -47,7 +62,7 @@
 
   async function getDetailDosen ({ id }) {
     const result = await apolloClient.query({
-      query: GQL_DetailDosen,
+      query: GQLDetail,
       variables: { id }
     })
     return result.data;
@@ -59,7 +74,7 @@
     networkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_dosen_by_id,
+        query: GQLDetail,
         variables: {
           id
         }

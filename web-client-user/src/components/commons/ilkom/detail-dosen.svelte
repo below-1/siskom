@@ -1,5 +1,5 @@
 <script>
-  import DetailDosen from 'siskom/components/commons/dosen/detail.svelte';
+  import DetailDosen from 'siskom-web-user/components/commons/dosen/Detail.svelte';
 
   export let params = {};
   $: id = params ? parseInt(params.id) : null;

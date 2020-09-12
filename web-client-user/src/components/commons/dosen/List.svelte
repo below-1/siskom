@@ -2,9 +2,11 @@
   import { onMount } from 'svelte';
   import { push as pushRoute, location } from 'svelte-spa-router';
   import { gql } from '@apollo/client/core';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoInput from 'siskom/components/commons/JoInput.svelte';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoAsyncContent,
+    JoInput
+  } from 'siskom-web-commons';
 
   export let onDetail;
 
@@ -44,24 +46,27 @@
   onMount(loadDosen);
 </script>
 
-<div class="py-4 px-4 bg-white mb-2">
-  <div class="text-center text-lg font-bold">Daftar Dosen</div>
-  <JoInput cls="my-3 w-full" bind:value={keyword} placeholder="keyword..." />
-</div>
+<div class="text-3xl font-black my-6">Daftar Dosen</div>
+<JoInput cls="my-2 w-64" bind:value={keyword} placeholder="keyword..." />
 <JoAsyncContent {networkStatus}>
   <ul slot="success" class="bg-white">
     {#each items as item (item.id)}
-      <li class="py-3 border-b border-gray-300 w-full px-4">
+      <li class="py-4 border-b border-gray-400">
+
         <div class="flex items-center text-sm">
-          <div class="w-8 h-8 mr-3" style={`background: url(${avatarUrl(item.nip)})`}>
+          <div 
+            class="w-10 h-10 mr-3" 
+            style={`background: url(${avatarUrl(item.nip)})`}
+          >
           </div>
-          <div class="flex flex-col flex-grow">
+          <div class="flex flex-col flex-grow text-lg">
             <a 
               href={'/#' + $location + '/' + item.id + '/info'}
-              class="appearance-none font-semibold underline text-left"
+              class="appearance-none font-black underline text-left"
             >{item.nama}</a>
-            <div class="text-xs">{item.nip}</div>
+            <div class="text-sm">{item.nip}</div>
           </div>
+
           <div>
             {#if item.status == 'AKTIF'}
               <span class="px-2 bg-green-600 text-white text-xs font-bold">{item.status.toLowerCase()}</span>

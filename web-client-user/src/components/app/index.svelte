@@ -13,7 +13,7 @@
   // import SelfDosen from './dosen/me-two.svelte';
   import HomeMahasiswa from './mahasiswa/Home.svelte';
   import SelfMahasiswa from './mahasiswa/Me.svelte';
-  // import Ilkom from './ilkom.svelte';
+  import Ilkom from './ilkom.svelte';
 
   function getDataFromSession ({ user, mahasiswa, dosen }) {
     let menus = [];
@@ -67,8 +67,8 @@
   }));
   const routes = {
     '/auth/logout': Logout,
-    // '/ilkom': Ilkom,
-    // '/ilkom/*': Ilkom,
+    '/ilkom': Ilkom,
+    '/ilkom/*': Ilkom,
     // '/me_dosen': SelfDosen,
     // '/me_dosen/*': SelfDosen,
     '/me_mhs': HomeMahasiswa,

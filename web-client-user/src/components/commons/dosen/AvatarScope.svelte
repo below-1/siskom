@@ -1,15 +1,15 @@
 <script>
-  import avatar_url from 'siskom/commons/avatar.js';
+  import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
 
   export let dosen;
 
-  $: avatar = dosen ? avatar_url(dosen.nip, 64) : null;
+  $: avatar = dosen ? buildAvatar(dosen.nip, 48) : null;
 </script>
 
-<div class="bg-white p-4 flex items-center mb-2">
-  <img src={avatar} class="mr-2" />
+<div class="flex items-center my-6">
+  <img src={avatar} class="mr-4" />
   <div>
-    <div class="font-semibold text-2xl">{dosen.nama}</div>
+    <div class="font-semibold text-3xl">{dosen.nama}</div>
     <div class="font-semibold text-sm">
       {dosen.nip}, 
       {dosen.sex.toLowerCase()}

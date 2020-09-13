@@ -12,6 +12,8 @@
   import KRS from './Krs.svelte';
   import KHS from './Khs.svelte';
   import Info from './Info.svelte';
+  import IPChart from './IPChart.svelte';
+  import IPTable from './IPTable.svelte';
   import * as context_key from './context.js';
 
   export let id;
@@ -44,7 +46,8 @@
     { label: 'transkrip', path: 'transkrip' },
     { label: 'krs', path: 'krs' },
     { label: 'khs', path: 'khs' },
-    { label: 'akm', path: 'akm' }
+    { label: 'akm', path: 'akm' },
+    { label: 'ip dan ipk', path: 'ip' }
   ];
 
   const routes = {
@@ -52,7 +55,9 @@
     '/schedule': Schedule,
     '/transkrip': Transkrip,
     '/krs': KRS,
-    '/khs': KHS
+    '/khs': KHS,
+    '/ip-table': IPTable,
+    '/ip-chart': IPChart
   };
 
   async function load_mahasiswa ({ id }) {

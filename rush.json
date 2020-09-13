@@ -378,6 +378,10 @@
    */
   "projects": [
     {
+      "packageName": "siskom-gql",
+      "projectFolder": "gql-server"
+    },
+    {
       "packageName": "siskom-web-commons",
       "projectFolder": "web-commons"
     },

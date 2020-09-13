@@ -1,0 +1,39 @@
+#!/bin/bash
+
+case $1 in
+
+	db:start)
+		cd docker && docker-compose up -d
+		cd ..
+		echo "DB started"
+		;;
+
+	db:rewrite)
+		echo "about to rewrite db";
+		dropdb --host=127.0.0.1 --port=5432 -e -U postgres postgres;
+		createdb --host=127.0.0.1 --port=5432 -e -U postgres -O postgres postgres;
+		cat inout/*.sql | psql --host=127.0.0.1 --port=5432 -U postgres -d postgres -a -1
+		;;
+
+	db:rewrite:mutations)
+		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres -a -1 -f inout/5_mutations.sql
+		;;	
+	db:rewrite:querys)
+		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres -a -1 -f inout/6_querys.sql
+		;;	
+	db:seed)
+		echo "seeding database"
+		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres -a -1 -f data.sql
+		;;
+	db:repair)
+		echo "repairing sequence"
+		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres -a -1 -f repair_seq.sql
+		;;
+
+	db:interactive)
+		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres
+		;;
+	*)
+		echo "unknown"
+		;;
+esac

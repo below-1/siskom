@@ -4,12 +4,22 @@
   import RespMenu from './RespMenu.svelte';
   import RespSideInfo from './RespSideInfo.svelte';
   import logo from 'siskom-web-user/icons/abstract.svg';
+  import {
+    user,
+    mahasiswa,
+    dosen,
+    periode
+  } from 'siskom-web-commons';
 
   export let menus = [];
   export let avatar;
   export let title = '';
   export let subtitle = '';
   export let meHref = '';
+
+  $: name = $user.tipeUser == 'MAHASISWA' ? $mahasiswa.nama : $dosen.nama;
+  $: tahun = $periode.tahun;
+  $: semester = $periode.semester;
 
   let showMenu = false;
   let logoSize = 24;
@@ -37,13 +47,13 @@
     </a>
     <button class="flex items-center appearance-none border-none">
       <img src={avatar} height={logoSize} width={logoSize} class="mr-2" />
-      <span class="font-bold">jordan meta</span>
+      <span class="font-bold">{name}</span>
     </button>
   </div>
 </nav>
 
 <div class="px-4 bg-gray-100 h-12 border-b border-gray-300 flex items-center justify-center md:h-8 md:px-0">
-  <div class="text-sm font-bold mr-4 md:h-8">periode 2019/2020, semester 12</div>
+  <div class="text-sm font-bold mr-4">periode {tahun}/{tahun + 1}, semester {semester}</div>
   <div class="h-10 bg-blue-700 text-white px-4 font-bold flex items-center text-sm md:h-6">fase: input mata kuliah</div>
 </div>
 

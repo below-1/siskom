@@ -13,7 +13,7 @@
   import AvatarScope from './AvatarScope.svelte';
   import * as context_key from './context';
   import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
-  // import Pa from './pa.svelte';
+  import Pa from './Pa.svelte';
   // import Schedule from './schedule.svelte';
   import Info from './Info.svelte';
 
@@ -33,7 +33,7 @@
   const dosen = writable(null);
   const routes = {
     '/info': Info,
-    // '/pas': Pa,
+    '/pas': Pa,
     // '/schedules': Schedule
   };
   setContext(context_key.dosen, dosen);

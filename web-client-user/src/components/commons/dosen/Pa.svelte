@@ -2,12 +2,13 @@
   import { onMount, getContext } from 'svelte';
   import { push as pushRoute } from 'svelte-spa-router';
   import { gql } from '@apollo/client/core';
-  import apolloClient from 'siskom/apollo-client.js';
-  import { load as loadStorage } from 'siskom/commons/storage.js';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import { periode } from 'siskom/stores/index.js';
-  import GQL_dosen_mahasiswa_pa from 'siskom/graphql/dosen-mahasiswa-pa.gql';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoSelect,
+    JoAsyncContent,
+    periode
+  } from 'siskom-web-commons';
+  import GQLDosenMahasiswaPa from 'siskom-web-user/graphql/DosenMahasiswaPa.js';
   import * as context_key from './context';
 
   const dosen = getContext(context_key.dosen);
@@ -66,7 +67,7 @@
 
   function getMahasiswa (options) {
     return apolloClient.query({
-      query: GQL_dosen_mahasiswa_pa,
+      query: GQLDosenMahasiswaPa,
       variables: {
         ...options,
         keyword: `${options.keyword}%`
@@ -104,19 +105,19 @@
 
 <JoAsyncContent {networkStatus}>
   <div slot="success">
-    <div class="p-4 bg-white">
-      <div class="text-base text-center font-semibold my-2">Daftar Mahasiswa Bimbingan Akademik</div>
-      <JoSelect emptyLabel="pilih periode" bind:value={tahunMasuk} options={optionsTahunMasuk} />
+    <div class="my-6">
+      <div class="text-2xl font-black">Daftar Mahasiswa Bimbingan Akademik</div>
+      <JoSelect emptyLabel="pilih periode" bind:value={tahunMasuk} options={optionsTahunMasuk} cls="w-64" />
     </div>
-    <ul class="my-2 bg-white">
+    <ul class="my-4">
       {#each items as item (item.cursor)}
-        <li class="border-b border-gray-300 p-4 flex items-center">
+        <li class="border-b border-gray-300 py-4 flex items-center">
           <div style="max-width: 2.5rem; min-width: 2.5rem; width: 2.5rem;">
             <img src={`${avatarUrl}/64/${item.node.nim}.png`} />
           </div>
           <div class="ml-2">
-            <a href={`/#/app/ilkom/mahasiswas/${item.node.id}/info`} class="font-bold underline">{item.node.nama}</a>
-            <div class="text-xs">{item.node.sex.toLowerCase()}, {item.node.nim}</div>
+            <a href={`/#/app/ilkom/mahasiswas/${item.node.id}/info`} class="text-lg font-bold underline">{item.node.nama}</a>
+            <div>{item.node.sex.toLowerCase()}, {item.node.nim}</div>
           </div>
         </li>
       {/each}

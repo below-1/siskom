@@ -12,6 +12,7 @@ dependencies:
   autoprefixer: 9.8.6
   chance: 1.1.7
   date-fns: 2.16.0
+  graphile-utils: 4.9.0
   graphql: 15.3.0
   knex: 0.21.5_pg@8.3.3
   lodash: 4.17.20
@@ -1521,6 +1522,19 @@ packages:
       graphile-build-pg: ^4.5.0
     resolution:
       integrity: sha512-ZXjz+F9jWSU/vVRr6GSx3KCQ0HuG6qRtfWGdBcP5na2yiz7/2oPEOO0rQz66gjTt7zmA2VM6EisCXvdLCFQNQg==
+  /graphile-utils/4.9.0:
+    dependencies:
+      debug: 4.1.1
+      graphql: 14.7.0
+      tslib: 2.0.1
+    dev: false
+    engines:
+      node: '>=8.6'
+    peerDependencies:
+      graphile-build: ^4.5.0
+      graphile-build-pg: ^4.5.0
+    resolution:
+      integrity: sha512-HM173CzVWEue+oR3VY/cPM2syw4rLnVUrN7KlBCCjAtGkzvuhn6AXoa9pHhuZzJegcTuW2xo+s7rvMMNicEvKQ==
   /graphql-iso-date/3.6.1_graphql@14.7.0:
     dependencies:
       graphql: 14.7.0
@@ -4118,6 +4132,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-i/6DQjL8Xf3be4K/E6Wgpekn5Qasl1usyw++dAA35Ue5orEn65VIxOA+YvNNl9HV3qv70T7CNwjODHZrLwvd1Q==
+  /tslib/2.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
   /type-is/1.6.18:
     dependencies:
       media-typer: 0.3.0
@@ -4268,6 +4286,7 @@ packages:
   'file:projects/siskom-gql.tgz':
     dependencies:
       chance: 1.1.7
+      graphile-utils: 4.9.0
       knex: 0.21.5_pg@8.3.3
       lodash: 4.17.20
       pg: 8.3.3_pg@8.3.3
@@ -4276,7 +4295,7 @@ packages:
     dev: false
     name: '@rush-temp/siskom-gql'
     resolution:
-      integrity: sha512-3jA/42q1Alol5Drrkw4ymNml6DD9kmnmWcRQzKU1QPvBtRwyVsifkaypPLPg60cBVSNrS3fjlWvT5poPKIYT5A==
+      integrity: sha512-7TPbuAcuusWXn0iqPgtDAZK46NxxLXN1/203wHqNT1JctcqVF67+iEUiVXap/FMvYg0Xfrc2SBdsqwtPpQ/Q7g==
       tarball: 'file:projects/siskom-gql.tgz'
     version: 0.0.0
   'file:projects/siskom-web-admin.tgz':
@@ -4365,6 +4384,7 @@ specifiers:
   autoprefixer: ~9.8.6
   chance: ^1.1.6
   date-fns: ~2.16.0
+  graphile-utils: ~4.9.0
   graphql: ~15.3.0
   knex: ^0.21.2
   lodash: ^4.17.19

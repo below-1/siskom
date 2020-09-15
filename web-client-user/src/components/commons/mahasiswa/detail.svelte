@@ -84,7 +84,7 @@
 </style>
 
 <JoAsyncContent {networkStatus}>
-  <div slot="success" class="px-4 md:px-0">
+  <div slot="success">
     <Router {routes} {prefix} />
   </div>
 </JoAsyncContent>

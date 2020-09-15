@@ -41,7 +41,7 @@
 </script>
 
 <h2 class="text-3xl text-gray-700 font-black mb-4 text-center">Data Personal</h2>
-<div class="grid grid-cols-2 gap-3 mb-8 p-4 md:p-0 md:grid-cols-3">
+<div class="grid grid-cols-1 gap-3 mb-8 p-4 md:p-0 md:grid-cols-3">
   {#each personalMenus as menu (menu.label)}
     <a 
       href={menu.path}
@@ -55,7 +55,7 @@
   {/each}
 </div>
 <h2 class="text-3xl text-gray-700 font-black mb-4 text-center">Prodi</h2>
-<div class="grid grid-cols-2 gap-3 mb-8 p-4 md:p-0 md:grid-cols-3">
+<div class="grid grid-cols-1 gap-3 mb-8 p-4 md:p-0 md:grid-cols-3">
   {#each ilkomMenus as menu (menu.label)}
     <a 
       href={menu.path}

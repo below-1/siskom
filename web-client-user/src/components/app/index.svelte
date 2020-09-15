@@ -88,7 +88,7 @@
   {avatar}
   meHref="/#/app/me_mhs/info"
 >
-  <div slot="content">
+  <div slot="content" class="px-4 md:px-0">
     <Router {routes} prefix="/app" />
   </div>
 </RespLayout>

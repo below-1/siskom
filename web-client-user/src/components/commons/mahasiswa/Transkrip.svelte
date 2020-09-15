@@ -170,12 +170,12 @@
     <ul>
       {#each items as item (item.cursor)}
         <li 
-          class="py-3 px-4 border-b border-gray-400 w-full font-bold text-gray-800 lowercase"
+          class="py-4 border-b-2 border-dashed border-gray-400 w-full font-bold lowercase"
         >
           <div class="flex items-center">
             <JoNameAvatar name={item.node.namaMk} size='base' cls='hidden md:block mr-4 w-12' />
             <div class="flex flex-col flex-grow">
-              <div class="flex items-center flex-wrap text-lg">
+              <div class="flex items-center flex-wrap text-xl">
                 <a
                   href={`/#/app/ilkom/mks/${item.node.idMk}`}
                   class="underline font-black mr-4"
@@ -189,12 +189,12 @@
                   kelas {item.node.label}
                 </a>
               </div>
-              <div class="text-gray-700 text-sm">
+              <div class="text-gray-700">
                 {item.node.tahun}/{item.node.tahun + 1} semester {item.node.semester}
               </div>
             </div>
             <div 
-              class="font-bold"
+              class="font-bold text-lg"
               class:text-red-800={item.node.lulus == 'tidak lulus'}
             >
               <span class="">

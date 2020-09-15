@@ -60,14 +60,15 @@
 </script>
 
 <div class="text-left text-3xl font-black my-6">Kartu Hasil Studi</div>
-<div class="flex items-center my-4">
+<div class="flex items-center flex-wrap my-4">
   <JoSelect 
     options={optionsPeriode} 
     bind:value={idPeriode}
     label="semester"
     emptyLabel="Pilih Semester"
+    cls="mr-4"
   />
-  <JoButton cls="py-1 my-2 mx-4" label="print" dark color="green" />
+  <JoButton cls="py-1 my-2 font-bold" label="print" dark color="green" />
 </div>
 
 <JoAsyncContent {networkStatus}>
@@ -83,10 +84,10 @@
         <li 
           class="py-4 border-b border-gray-400"
         >
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between pr-6 md:pr-0">
             <JoNameAvatar name={item.kelas.mk.nama} size='base' cls='hidden md:block mr-4 w-12' />
             <div class="flex flex-col flex-grow md:w-1/3">
-              <div class="flex items-center text-lg">
+              <div class="flex items-center flex-wrap text-lg">
                 <a class="font-black mr-4 underline" href={`/#/app/ilkom/mks/${item.kelas.mk.id}`}>{item.kelas.mk.nama}</a>
                 <a class="font-black underline" href={`/#/app/ilkom/kelas/${item.kelas.mk.id}`}>kelas {item.kelas.label}</a>
               </div>

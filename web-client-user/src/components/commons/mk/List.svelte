@@ -105,14 +105,14 @@
 <div class="flex items-center flex-wrap my-6">
   <JoSelect 
     label="tipe mata kuliah" 
-    cls="my-2 w-64" 
+    cls="my-2 w-64 mr-2" 
     options={optionsTipeMk} 
     bind:value={tipeMk} 
     emptyLabel="semua"  />
-  <JoInput cls="my-2 mx-2" bind:value={keyword} placeholder="keyword.." />
+  <JoInput cls="my-2" bind:value={keyword} placeholder="keyword.." />
 </div>
 <JoAsyncContent {networkStatus}>
-  <div slot="success" class="bg-white">
+  <div slot="success">
     <ul>
       {#each items as mk (mk.cursor)}
         <li class="py-3 border-b border-gray-300 flex items-center">
@@ -124,11 +124,9 @@
         </li>
       {/each}
     </ul>
-    <div class="flex items-center py-3">
-      <JoButton 
-        label="selanjutnya" 
-        action={loadNext}
-      />
-    </div>
+    <JoButton 
+      label="selanjutnya" 
+      action={loadNext}
+    />
   </div>
 </JoAsyncContent>

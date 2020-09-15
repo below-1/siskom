@@ -2,16 +2,17 @@
   import { onMount } from 'svelte';
   import { push as pushRoute, location } from 'svelte-spa-router';
   import { gql } from '@apollo/client/core';
-  import apolloClient from 'siskom/apollo-client.js';
-  import { load as loadStorage } from 'siskom/commons/storage.js';
-  import JoButton from 'siskom/components/commons/JoButton.svelte';
-  import JoLink from 'siskom/components/commons/JoLink.svelte';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import JoInput from 'siskom/components/commons/JoInput.svelte';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoNameAvatar from 'siskom/components/commons/JoNameAvatar.svelte';
-  import formatPeriode from 'siskom/commons/formatPeriode.js';
-  import formatScheduleDayTime from 'siskom/commons/formatScheduleDayTime.js';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoButton,
+    JoLink,
+    JoSelect,
+    JoInput,
+    JoAsyncContent,
+    JoNameAvatar,
+    formatPeriode,
+    formatScheduleDayTime
+  } from 'siskom-web-commons';
 
   const GQL_Required = gql`
     query ScheduleRequired {
@@ -163,12 +164,19 @@
   $: loadNext ({ after });
 </script>
 
-<div class="px-4 py-4 bg-white mb-2">
-  <div class="text-xl text-left font-black">Daftar Kelas</div>
-  <div class="flex flex-wrap items-center justify-center">
-    <JoSelect label="periode" cls="my-2 mr-2 flex-grow" bind:value={idPeriode} options={optionsPeriode} />
-    <JoInput cls="my-2 flex-grow" bind:value={keyword} placeholder="keyword.." />
-  </div>
+<div class="text-3xl font-black">Daftar Kelas</div>
+<div class="flex flex-wrap items-center justify-start">
+  <JoSelect 
+    label="periode" 
+    cls="my-2 mr-2 w-64" 
+    bind:value={idPeriode} 
+    options={optionsPeriode} 
+  />
+  <JoInput 
+    cls="my-2" 
+    bind:value={keyword} 
+    placeholder="keyword.." 
+  />
 </div>
 <JoAsyncContent {networkStatus}>
   <div slot="success">
@@ -176,7 +184,7 @@
       <ul>
         {#each items as item (item.cursor)}
           <li 
-            class="border-b border-gray-300 p-4 flex items-center hover:bg-gray-100"
+            class="border-b border-gray-300 py-4 flex items-center hover:bg-gray-100"
           >
             <JoNameAvatar name={item.node.mk.nama} size='base' cls='w-12 mr-4' />
             <div class="flex items-center flex-grow">

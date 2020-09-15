@@ -4,7 +4,7 @@
   import DetailDosen from './detail-dosen.svelte';
   import Mk from '../mk/List.svelte';
   import DetailMk from './detail-mk.svelte';
-  // import Kelas from '../kelas/list.svelte';
+  import Kelas from '../kelas/List.svelte';
   // import DetailKelas from './detail-kelas.svelte';
   // import Mahasiswas from '../mahasiswa/list.svelte';
   // import DetailMahasiswa from './detail-mahasiswa.svelte';
@@ -17,7 +17,7 @@
     '/dosens/:id/*': DetailDosen,
     '/mks': Mk,
     '/mks/:id': DetailMk,
-    // '/kelas': Kelas,
+    '/kelas': Kelas,
     // '/kelas/:id': DetailKelas,
     // '/kelas/:id/*': DetailKelas,
     // '/mahasiswas': Mahasiswas,

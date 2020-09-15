@@ -2,12 +2,14 @@
   import { onMount } from 'svelte';
   import { push as pushRoute, location } from 'svelte-spa-router';
   import { gql } from '@apollo/client/core';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import JoInput from 'siskom/components/commons/JoInput.svelte';
-  import JoButton from 'siskom/components/commons/JoButton.svelte';
-  import JoNameAvatar from 'siskom/components/commons/JoNameAvatar.svelte';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoAsyncContent,
+    JoSelect,
+    JoInput,
+    JoButton,
+    JoNameAvatar
+  } from 'siskom-web-commons';
 
   let networkStatus = 'loading';
   let items = [];
@@ -99,27 +101,30 @@
   })
 </script>
 
-<div class="py-3 px-4 md:px-6 mb-2 bg-white">
-  <div class="font-black text-xl">Daftar Mata Kuliah</div>
-  <div class="flex items-center flex-wrap">
-    <JoSelect label="tipe mata kuliah" cls="my-2" options={optionsTipeMk} bind:value={tipeMk} emptyLabel="semua" />
-    <JoInput cls="my-2 mx-2" bind:value={keyword} placeholder="keyword.." />
-  </div>
+<div class="font-black text-3xl my-6">Daftar Mata Kuliah</div>
+<div class="flex items-center flex-wrap my-6">
+  <JoSelect 
+    label="tipe mata kuliah" 
+    cls="my-2 w-64" 
+    options={optionsTipeMk} 
+    bind:value={tipeMk} 
+    emptyLabel="semua"  />
+  <JoInput cls="my-2 mx-2" bind:value={keyword} placeholder="keyword.." />
 </div>
 <JoAsyncContent {networkStatus}>
   <div slot="success" class="bg-white">
-    <ul class="w-full">
+    <ul>
       {#each items as mk (mk.cursor)}
-        <li class="py-2 px-4 md:px-6 border-b border-gray-300 flex items-center">
-          <JoNameAvatar name={mk.node.nama} size='base' cls='mr-4 px-2 w-12' />
+        <li class="py-3 border-b border-gray-300 flex items-center">
+          <JoNameAvatar name={mk.node.nama} size='base' cls='mr-4 w-12' />
           <div>
-            <a href={"/#" + $location + '/' + mk.node.id} class="font-bold underline">{mk.node.nama}</a>
+            <a href={"/#" + $location + '/' + mk.node.id} class="font-bold text-lg underline">{mk.node.nama}</a>
             <div>{mk.node.tipeMk.toLowerCase()} {mk.node.kode}, {mk.node.sks} sks</div>
           </div>
         </li>
       {/each}
     </ul>
-    <div class="flex justify-center items-center py-3">
+    <div class="flex items-center py-3">
       <JoButton 
         label="selanjutnya" 
         action={loadNext}

@@ -2,7 +2,7 @@
   import Router, { location } from 'svelte-spa-router';
   import Dosens from '../dosen/List.svelte';
   import DetailDosen from './detail-dosen.svelte';
-  // import Mk from '../mk/list.svelte';
+  import Mk from '../mk/List.svelte';
   import DetailMk from './detail-mk.svelte';
   // import Kelas from '../kelas/list.svelte';
   // import DetailKelas from './detail-kelas.svelte';
@@ -15,7 +15,7 @@
     '/dosens': Dosens,
     '/dosens/:id': DetailDosen,
     '/dosens/:id/*': DetailDosen,
-    // '/mks': Mk,
+    '/mks': Mk,
     '/mks/:id': DetailMk,
     // '/kelas': Kelas,
     // '/kelas/:id': DetailKelas,

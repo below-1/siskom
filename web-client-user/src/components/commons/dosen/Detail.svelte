@@ -14,7 +14,7 @@
   import * as context_key from './context';
   import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
   import Pa from './Pa.svelte';
-  // import Schedule from './schedule.svelte';
+  import Schedule from './Schedule.svelte';
   import Info from './Info.svelte';
 
   const GQLDetail = gql`
@@ -34,7 +34,7 @@
   const routes = {
     '/info': Info,
     '/pas': Pa,
-    // '/schedules': Schedule
+    '/schedules': Schedule
   };
   setContext(context_key.dosen, dosen);
 

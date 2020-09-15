@@ -2,15 +2,17 @@
   import { onMount, getContext } from 'svelte';
   import { push as pushRoute } from 'svelte-spa-router';
   import { gql } from '@apollo/client/core';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import formatPeriode from 'siskom/commons/formatPeriode.js';
-  import formatDay from 'siskom/commons/formatDay.js';
-  import formatScheduleDayTime from 'siskom/commons/formatScheduleDayTime.js';
-  import GQL_all_periode from 'siskom/graphql/all-periode.gql';
-  import GQL_dosen_schedule from 'siskom/graphql/dosen-schedule.gql';
-  import { periode } from 'siskom/stores/index.js';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoAsyncContent,
+    JoSelect,
+    formatPeriode,
+    formatDay,
+    formatScheduleDayTime,
+    periode
+  } from 'siskom-web-commons';
+  import GQLAllPeriode from 'siskom-web-user/graphql/AllPeriode.js';
+  import GQLDosenSchedule from 'siskom-web-user/graphql/DosenSchedule.js';
   import * as context_key from './context.js';
 
   const dosen = getContext(context_key.dosen);
@@ -31,7 +33,7 @@
   function getRequired () {
     networkStatus = 'loading';
     return apolloClient.query({
-      query: GQL_all_periode
+      query: GQLAllPeriode
     })
       .then(result => {
         optionsPeriode = result.data.allPeriodes.nodes.map(it => {
@@ -50,7 +52,7 @@
 
   function getSchedules ({ idDosen, idPeriode }) {
     apolloClient.query({
-      query: GQL_dosen_schedule,
+      query: GQLDosenSchedule,
       variables: {
         idPeriode,
         idDosen
@@ -93,13 +95,18 @@
 
 <JoAsyncContent {networkStatus}>
   <div slot="success">
-    <div class="p-4 bg-white">
-      <div class="font-semibold text-lg text-center">Jadwal Perkuliahan</div>
-      <JoSelect label="periode" bind:value={selectedIdPeriode} options={optionsPeriode} />
+    <div class="my-6">
+      <div class="font-black text-2xl">Jadwal Perkuliahan</div>
+      <JoSelect 
+        label="periode" 
+        bind:value={selectedIdPeriode} 
+        options={optionsPeriode} 
+        cls="w-64"
+      />
     </div>
-    <ul class="my-2 bg-white">
+    <ul class="my-4">
       {#each items as group (group.hari)}
-        <li class="p-4 flex my-6">
+        <li class="py-4 flex my-6">
           <div class="font-semibold w-16 ">{group.hari}</div>
           <ul class="ml-2 pl-2 border-l-2 border-teal-600">
             {#each group.items as item (item.nodeId)}

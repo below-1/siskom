@@ -1,5 +1,5 @@
 <script>
-  import DetailMk from 'siskom/components/commons/mk/detail.svelte';
+  import DetailMk from 'siskom-web-user/components/commons/mk/Detail.svelte';
 
   export let params = {};
   $: idMk = params ? parseInt(params.id) : null;

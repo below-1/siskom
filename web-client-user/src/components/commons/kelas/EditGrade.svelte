@@ -1,12 +1,31 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoDialog from 'siskom/components/commons/JoDialog.svelte';
-  import JoNumber from 'siskom/components/commons/JoNumber.svelte';
-  import JoButton from 'siskom/components/commons/JoButton.svelte';
-  import apolloClient from 'siskom/apollo-client.js';
-  import GQL_update_nilai from 'siskom/graphql/update-nilai.gql';
-  import GQL_frag_mahasiswa_kelas from 'siskom/graphql/fragments/mahasiswa-kelas.gql';
+  import { gql } from '@apollo/client/core';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoAsyncContent,
+    JoDialog,
+    JoNumber,
+    JoButton
+  } from 'siskom-web-commons';
+
+  const GQLUpdateNilai = gql`
+    mutation UpdateNilai ($idMahasiswaKelas: Int!, $nilai: Float) {
+      updateMahasiswaKelaById(
+        input: {
+          mahasiswaKelaPatch: {nilai: $nilai}, 
+          id: $idMahasiswaKelas
+        }
+      ) {
+        mahasiswaKela {
+          id
+          idMhs
+          idKelas
+          nilai
+        }
+      }
+    }
+  `;
 
   const dispatch = createEventDispatcher();
   export let id = null;
@@ -20,7 +39,7 @@
     networkStatus = 'loading';
     try { 
       const result = await apolloClient.mutate({
-        mutation: GQL_update_nilai,
+        mutation: GQLUpdateNilai,
         variables: {
           idMahasiswaKelas: id,
           nilai

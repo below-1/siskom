@@ -1,17 +1,22 @@
 <script>
   import { getContext } from 'svelte';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoDialog from 'siskom/components/commons/JoDialog.svelte';
-  import JoNumber from 'siskom/components/commons/JoNumber.svelte';
-  import JoButton from 'siskom/components/commons/JoButton.svelte';
-  import EditGrade from './edit-grade.svelte';
-  import formatNilai from 'siskom/commons/formatNilai.js';
-  import avatar_url from 'siskom/commons/avatar.js';
-  import GQL_kelas_schedule_members from 'siskom/graphql/kelas-schedule-members.gql';
-  import GQL_kelas_schedule from 'siskom/graphql/kelas-schedule.gql';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoAsyncContent,
+    JoDialog,
+    JoNumber,
+    JoButton,
+    formatNilai,
+    user, 
+    mahasiswa, 
+    phase, 
+    periode
+  } from 'siskom-web-commons';
+  import EditGrade from './EditGrade.svelte';
+  import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
+  import GQLKelasScheduleMembers from 'siskom-web-user/graphql/KelasScheduleMembers.js';
+  import GQLKelasSchedule from 'siskom-web-user/graphql/KelasSchedule.js';
   import * as context_key from './context.js';
-  import { user, mahasiswa, phase, periode } from 'siskom/stores/index.js';
 
   export let params = {};
   const kelas = getContext(context_key.kelas);
@@ -78,7 +83,7 @@
     networkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_kelas_schedule_members,
+        query: GQLKelasScheduleMembers,
         variables: {
           idKelas
         }
@@ -88,7 +93,7 @@
         const formattedNilai = nilai ? formatNilai(nilai) : null;
         return {
           ...it,
-          avatar: avatar_url(it.mahasiswa.id, 32),
+          avatar: buildAvatar(it.mahasiswa.id, 32),
           formattedNilai
         }
       });
@@ -107,7 +112,7 @@
     networkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_kelas_schedule,
+        query: GQLKelasSchedule,
         variables: {
           idKelas
         }
@@ -125,7 +130,7 @@
   <div slot="success">
     <ul class="my-2 bg-white">
       {#each members as member (member.id)}
-        <li class="px-4 py-2 border-b border-gray-300 flex items-center hover:bg-gray-100">
+        <li class="py-2 border-b border-gray-300 flex items-center hover:bg-gray-100">
           <div class="w-20 px-2 py-1 flex items-center">
             <img src={member.avatar} />
           </div>

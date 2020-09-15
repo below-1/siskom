@@ -1,5 +1,5 @@
 <script>
-  import DetailKelas from 'siskom/components/commons/kelas/detail.svelte';
+  import DetailKelas from 'siskom-web-user/components/commons/kelas/Detail.svelte';
 
   export let params = {};
   $: id = params ? parseInt(params.id) : null;

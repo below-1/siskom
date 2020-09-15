@@ -1,10 +1,12 @@
 <script>
   import { getContext } from 'svelte';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import formatScheduleDayTime from 'siskom/commons/formatScheduleDayTime.js';
-  import avatar_url from 'siskom/commons/avatar.js';
-  import GQL_kelas_schedule from 'siskom/graphql/kelas-schedule.gql';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import { 
+    JoAsyncContent,
+    formatScheduleDayTime
+  } from 'siskom-web-commons';
+  import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
+  import GQLKelasSchedule from 'siskom-web-user/graphql/KelasSchedule.js';
   import * as context_key from './context.js';
 
   const idKelas = getContext(context_key.id);
@@ -19,7 +21,7 @@
     networkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_kelas_schedule,
+        query: GQLKelasSchedule,
         variables: {
           idKelas
         }

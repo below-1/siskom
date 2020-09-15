@@ -81,14 +81,14 @@
 
     <ul class="mt-8">
       {#each items as item (item.id)}
-        <li class="py-4 border-b border-gray-400 flex items-center">
+        <li class="py-4 border-b-2 border-dashed border-gray-400 flex items-center">
           <JoNameAvatar name={item.kelas.mk.nama} size='base' cls='hidden md:block mr-4 w-12' />
           <div class="flex flex-col flex-grow">
             <div class="text-lg">
               <a class="font-bold underline mr-4" href={`/#/app/ilkom/mks/${item.kelas.id}`}>{item.kelas.mk.nama}</a>
               <a class="font-bold underline" href={`/#/app/ilkom/kelas/${item.kelas.mk.id}`}>kelas {item.kelas.label}</a>
             </div>
-            <div class="font-medium text-sm text-gray-800">
+            <div class="font-semibold">
               {item.kelas.mk.kode}, {item.kelas.mk.sks} sks, {item.kelas.mk.tipeMk.toLowerCase()}
             </div>
           </div>

@@ -82,7 +82,7 @@
     <ul class="my-4">
       {#each items as item (item.id)}
         <li 
-          class="py-4 border-b border-gray-400"
+          class="py-4 border-b-2 border-dashed border-gray-400"
         >
           <div class="flex items-center justify-between pr-6 md:pr-0">
             <JoNameAvatar name={item.kelas.mk.nama} size='base' cls='hidden md:block mr-4 w-12' />

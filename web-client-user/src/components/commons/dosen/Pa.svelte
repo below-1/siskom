@@ -111,7 +111,7 @@
     </div>
     <ul class="my-4">
       {#each items as item (item.cursor)}
-        <li class="border-b border-gray-300 py-4 flex items-center">
+        <li class="border-b-2 border-dashed border-gray-400 py-4 flex items-center">
           <div style="max-width: 2.5rem; min-width: 2.5rem; width: 2.5rem;">
             <img src={`${avatarUrl}/64/${item.node.nim}.png`} />
           </div>

@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
   import MdMoreHoriz from 'svelte-icons/md/MdMoreHoriz.svelte';
   import FaBars from 'svelte-icons/fa/FaBars.svelte'
@@ -18,12 +19,19 @@
   $: name = $user.tipeUser == 'MAHASISWA' ? $mahasiswa.nama : $dosen.nama;
   $: tahun = $periode.tahun;
   $: semester = $periode.semester;
+  $: subtitle = $user.tipeUser == 'MAHASISWA' ? $mahasiswa.nim : $dosen.nip;
 
-  let showMenu = true;
+  let showMenu = false;
   let logoSize = 28;
+  const body = document.getElementsByTagName('body')[0];
 
   function toggleMenu () {
     showMenu = !showMenu;
+    if (showMenu) {
+      body.style.position = 'fixed';
+    } else {
+      body.style.position = 'static';
+    }
   }
 </script>
 
@@ -33,15 +41,16 @@
     right: 0;
     left: 0;
     bottom: 0;
-    top: 4rem;
+    top: 3.5rem;
     z-index: 100;
+    overflow-y: scroll;
   }
 </style>
 
 <nav class="bg-gray-900 text-white fixed top-0 left-0 right-0 md:static">
   <div class="px-4 md:px-0 md:mx-auto md:w-2/3 flex items-center h-12">
     <div class="flex items-center">
-      <img class="mr-2" src={logo} height={logoSize} width={logoSize} />
+      <img alt="logo" class="mr-2" src={logo} height={logoSize} width={logoSize} />
       <span class="text-xl font-bold tracking-wider">siskom</span>
     </div>
     <div class="flex-grow"></div>
@@ -62,24 +71,33 @@
 </nav>
 
 {#if showMenu}
-  <div class="mobile-menu bg-red shadow-xl">
+  <div class="mobile-menu bg-white shadow-xl">
     <ul class="w-full">
       <li class="hover:bg-gray-200">
-        fucek
+        <a href='/#/app/me_mhs' class="flex items-center w-full h-full py-2 px-4">
+          <img src={avatar} height={logoSize + 20} width={logoSize + 20} class="mr-2" />
+          <div class="text-lg">
+            <div class="font-semibold">{name}</div>
+            <div class="text-sm">{subtitle}</div>
+          </div>
+        </a>
       </li>
       {#each menus as menu (menu.label)}
         {#if (menu.header)}
           <li>
-            <div class="flex items-center w-full h-full py-2 px-4 font-semibold">
+            <div class="flex items-center w-full h-full py-2 px-4 text-xl font-black text-gray-800 capitalize">
               {menu.label}
             </div>
           </li>
         {:else}
-          <li class="border-b border-gray-300 hover:bg-gray-200">
-            <a href={menu.path} class="flex items-center w-full h-full py-2 px-4 text-sm">
+          <a href={menu.path} class="border-b-2 border-dashed border-gray-400 hover:bg-gray-200 flex items-center pl-8 py-2">
+            <div class="h-10 w-10 p-2 rounded-full bg-gray-100 mr-2 text-gray-700">
+              <svelte:component this={menu.icon}></svelte:component>
+            </div>
+            <div class="text-gray-800 font-bold">
               {menu.label}
-            </a>
-          </li>
+            </div>
+          </a>
         {/if}
       {/each}
     </ul>

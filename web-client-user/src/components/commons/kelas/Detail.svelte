@@ -78,11 +78,11 @@
       </div>
     </div>
 
-    <div class="py-6 flex items-center bg-white border border-gray-300">
+    <div class="flex items-center bg-gray-100 border-dashed border-2 border-gray-400">
       {#each menus as menu (menu.label)}
         <a
           href={menu.path}
-          class="p-2 px-4 flex items-center justify-center text-lg font-semibold border-r border-gray-300"
+          class="py-3 px-4 flex items-center justify-center text-lg font-semibold border-r border-gray-300"
         >
           {menu.label}
         </a>

@@ -51,7 +51,7 @@
 <JoAsyncContent {networkStatus}>
   <ul slot="success" class="bg-white">
     {#each items as item (item.id)}
-      <li class="py-4 border-b border-gray-400">
+      <li class="py-4 border-b-2 border-dashed border-gray-400">
 
         <div class="flex items-center text-sm">
           <div 

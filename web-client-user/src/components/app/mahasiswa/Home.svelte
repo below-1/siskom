@@ -26,8 +26,7 @@
   const ilkomMenus = [
     { label: 'Dosen', path: '/#/app/ilkom/dosens', icon: FaUserSecret },
     { label: 'Mata Kuliah', path: '/#/app/ilkom/mks', icon: FaBook },
-    { label: 'Kelas', path: '/#/app/ilkom/kelas', icon: FaBezierCurve },
-    { label: 'Periode', path: '/#/app/ilkom/periodes', icon: FaCalendarDay },
+    { label: 'Kelas', path: '/#/app/ilkom/kelas', icon: FaBezierCurve }
   ]
 
   let id = null;

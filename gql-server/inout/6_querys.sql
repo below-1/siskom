@@ -405,32 +405,30 @@ create or replace function kelas_schedule_members (
     where k.id = _id_kelas
 $$ language sql stable;
 
-create or replace function mahasiswa_ip_series (
+create or replace function calc_mahasiswa_periode_info (
   _id_mahasiswa integer
-) returns setof mahasiswa_ip as $$
-  with d as (
-    select
-      p.id as periode_id,
+)  returns setof mahasiswa_periode_info as $$
+  select
+      p.id,
       p.tahun,
       p.semester,
-        sum(mk.sks)::integer as sks,
-        sum(
-          case 
-            when mh_k.nilai >= 60.0 then mk.sks
-            else 0
-          end
-        )::integer as sksd,
-        sum(mk.sks * angka_nilai(mh_k.nilai))::float as sksn
-        from mahasiswa m 
-        join mahasiswa_kelas mh_k on mh_k.id_mhs = m.id
-        join kelas k on k.id = mh_k.id_kelas
-        join mata_kuliah mk on mk.id = k.id_mk
-        join periode p on p.id = k.id_periode
-        where 
-            m.id = 1
-        group by p.id
-        order by p.tahun, p.semester 
-  ) select periode_id, tahun, semester, (sksn / sksd)::float as ip from d 
+      sum(mk.sks)::integer as sks,
+      sum(
+        case 
+          when mh_k.nilai >= 60.0 then mk.sks
+          else 0
+        end
+      )::integer as sksd,
+      sum(mk.sks * angka_nilai(mh_k.nilai))::float as sksn
+      from mahasiswa m 
+      join mahasiswa_kelas mh_k on mh_k.id_mhs = m.id
+      join kelas k on k.id = mh_k.id_kelas
+      join mata_kuliah mk on mk.id = k.id_mk
+      join periode p on p.id = k.id_periode
+      where 
+          m.id = _id_mahasiswa
+      group by p.id
+      order by p.tahun desc
 $$ language sql stable;
 
 -- create or replace function mata_kuliah_mahasiswa (

@@ -15,7 +15,7 @@
 
   const personalMenus = [
     { label: 'Info', path: '/#/app/me_mhs/info', icon: IoIosContact },
-    { label: 'IPK', path: '/#/app/me_mhs/schedule', icon: IoIosCube },
+    { label: 'IPK', path: '/#/app/me_mhs/ip-chart', icon: IoIosCube },
     { label: 'Jadwal', path: '/#/app/me_mhs/schedule', icon: IoIosCalendar },
     { label: 'Transkrip Nilai', path: '/#/app/me_mhs/transkrip', icon: FaCheckDouble },
     { label: 'KRS', path: '/#/app/me_mhs/krs', icon: FaFileExport },

@@ -85,3 +85,12 @@ CREATE TYPE mahasiswa_ip as (
   semester SEMESTER,
   nilai float
 );
+
+CREATE TYPE mahasiswa_periode_info as (
+  id integer,
+  tahun TH_AJAR,
+  semester SEMESTER,
+  sks integer,
+  sksd integer,
+  sksn float
+);

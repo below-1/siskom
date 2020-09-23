@@ -10,7 +10,8 @@
     Logout
   } from 'siskom-web-commons';
   import build_avatar from 'siskom-web-user/commons/buildAvatar.js';
-  // import SelfDosen from './dosen/me-two.svelte';
+  import SelfDosen from './dosen/Me.svelte';
+  import HomeDosen from './dosen/Home.svelte';
   import HomeMahasiswa from './mahasiswa/Home.svelte';
   import SelfMahasiswa from './mahasiswa/Me.svelte';
   import Ilkom from './ilkom.svelte';
@@ -69,8 +70,8 @@
     '/auth/logout': Logout,
     '/ilkom': Ilkom,
     '/ilkom/*': Ilkom,
-    // '/me_dosen': SelfDosen,
-    // '/me_dosen/*': SelfDosen,
+    '/me_dosen': HomeDosen,
+    '/me_dosen/*': SelfDosen,
     '/me_mhs': HomeMahasiswa,
     '/me_mhs/*': SelfMahasiswa
   };

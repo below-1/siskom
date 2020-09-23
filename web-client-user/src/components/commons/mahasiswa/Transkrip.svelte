@@ -10,7 +10,8 @@
     JoButton,
     JoLink,
     JoInput,
-    periode
+    periode,
+    formatNilai
   } from 'siskom-web-commons';
   import InfoTranskrip from './InfoTranskrip.svelte';
   import GQLTranskrip from 'siskom-web-user/graphql/Transkrip.js';
@@ -96,7 +97,14 @@
         keyword: !keyword || keyword == '' ? null : keyword
       }
     })
-    return queryResult.data.transkrip.edges;
+    const result = queryResult.data.transkrip.edges.map(e => {
+      const nilai = formatNilai(e.node.nilai);
+      return {
+        ...e,
+        nilai
+      };
+    });
+    return result;
   }
 
   async function reload ({ idMahasiswa, idPeriode, take, keyword, tahun, semester }) {
@@ -108,7 +116,6 @@
     networkStatus = 'loading';
     try {
       const result = await fetchTranskrip({ idMahasiswa, idPeriode, take, keyword, after: null, tahun, semester });
-      console.log(result);
       items = result;
       networkStatus = 'success';
     } catch (err) {
@@ -197,8 +204,8 @@
               class="font-bold text-lg"
               class:text-red-800={item.node.lulus == 'tidak lulus'}
             >
-              <span class="">
-                A
+              <span class="uppercase">
+                {item.nilai.huruf}
               </span>
               <span>/ {item.node.nilai.toFixed(2)}</span>
             </div>

@@ -1,13 +1,16 @@
 <script>
   import { onMount } from 'svelte';
-  import apolloClient from 'siskom/apollo-client.js';
-  import JoSelect from 'siskom/components/commons/JoSelect.svelte';
-  import JoAsyncContent from 'siskom/components/commons/JoAsyncContent.svelte';
-  import JoInput from 'siskom/components/commons/JoInput.svelte';
-  import GQL_list_mahasiswa from 'siskom/graphql/list-mahasiswa.gql';
-  import GQL_list_years from 'siskom/graphql/list-years.gql';
-  import { periode } from 'siskom/stores/index.js';
-  import avatar_url from 'siskom/commons/avatar.js';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
+  import {
+    JoSelect,
+    JoAsyncContent,
+    JoInput,
+    periode,
+    formatJk
+  } from 'siskom-web-commons';
+  import GQLListMahasiswa from 'siskom-web-user/graphql/ListMahasiswa.js';
+  import GQLAllPeriode from 'siskom-web-user/graphql/AllPeriode.js';
+  import buildAvatar from 'siskom-web-user/commons/buildAvatar.js';
 
   // states
   let networkStatus = 'loading';
@@ -26,7 +29,7 @@
     networkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_list_mahasiswa,
+        query: GQLListMahasiswa,
         variables: {
           keyword: `${keyword}%`,
           tahunMasuk,
@@ -37,9 +40,10 @@
       items = data.allMahasiswas.nodes.map(it => {
         return {
           ...it,
-          avatar: avatar_url(it.nim, 24)
+          avatar: buildAvatar(it.nim, 24)
         }
       });
+      console.log(items);
       canNext = data.allMahasiswas.pageInfo.hasNextPage;
       networkStatus = 'success';
     } catch (err) {
@@ -52,12 +56,19 @@
     networkStatus = 'loading';
     try {
       const result = await apolloClient.query({
-        query: GQL_list_years
+        query: GQLAllPeriode
       });
-      optionsTahunMasuk = result.data.allYears.nodes.map(y => ({
-        value: y,
-        label: y
-      }));
+      let uniqueYears = [];
+      result.data.allPeriodes.nodes.forEach(p => {
+        if (uniqueYears.includes(p.tahun)) {
+          return;
+        }
+        uniqueYears.push(p.tahun);
+      });
+      optionsTahunMasuk = uniqueYears.map(t => ({
+        value: t,
+        label: t
+      }))
       tahunMasuk = $periode.tahun;
     } catch (err) {
       networkStatus = 'error';
@@ -68,15 +79,15 @@
   onMount(loadPeriode);
 </script>
 
-<div class="p-4 bg-white mb-2">
-  <div class="text-lg font-bold">Daftar Mahasiswa</div>
-  <div class="flex items-center">
+<div>
+  <div class="text-3xl font-black my-6">Daftar Mahasiswa</div>
+  <div class="flex flex-wrap items-center my-4">
     <JoSelect 
       label="tahun masuk" 
       emptyLabel="pilih tahun masuk" 
       bind:value={tahunMasuk} 
       options={optionsTahunMasuk} 
-      cls="mr-2"
+      cls="mr-2 my-2"
     />
     <JoInput placeholder="keyword..." bind:value={keyword} />
   </div>
@@ -87,14 +98,13 @@
 
     <ul class="bg-white">
       {#each items as item (item.id)}
-        <li class="border-b border-gray-300 p-4 flex items-center px-6">
+        <li class="border-b-2 border-gray-400 border-dashed py-4 flex items-center">
           <div style="max-width: 2.8rem; min-width: 2.8rem; width: 2.8rem;">
             <img src={item.avatar} />
           </div>
           <div class="ml-2">
-            <a class="font-semibold underline" href={`/#/app/ilkom/mahasiswas/${item.id}/info`}>{item.nama}</a>
-            <div ></div>
-            <div class="text-sm">{item.sex.toLowerCase()}, {item.nim}</div>
+            <a class="text-lg font-medium underline" href={`/#/app/ilkom/mahasiswas/${item.id}/info`}>{item.nama}</a>
+            <div>{formatJk(item.sex)}, {item.nim}</div>
           </div>
         </li>
       {/each}

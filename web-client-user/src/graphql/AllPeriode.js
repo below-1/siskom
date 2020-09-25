@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client/core';
 
 export default gql`
-  query ScheduleRequired {
+  query AllPeriodes {
     allPeriodes {
       nodes {
         id

@@ -6,7 +6,7 @@
   import DetailMk from './detail-mk.svelte';
   import Kelas from '../kelas/List.svelte';
   import DetailKelas from './detail-kelas.svelte';
-  // import Mahasiswas from '../mahasiswa/list.svelte';
+  import Mahasiswas from '../mahasiswa/List.svelte';
   // import DetailMahasiswa from './detail-mahasiswa.svelte';
 
   export let prefix;
@@ -20,7 +20,7 @@
     '/kelas': Kelas,
     '/kelas/:id': DetailKelas,
     '/kelas/:id/*': DetailKelas,
-    // '/mahasiswas': Mahasiswas,
+    '/mahasiswas': Mahasiswas,
     // '/mahasiswas/:id': DetailMahasiswa,
     // '/mahasiswas/:id/*': DetailMahasiswa
   };

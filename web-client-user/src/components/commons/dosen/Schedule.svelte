@@ -59,30 +59,54 @@
       }
     })
       .then(result => {
-        const raws = result.data.schedule.nodes.map(it => {
+        let raws = [];
+        result.data.schedule.nodes.forEach(it => {
           const _schedule = formatScheduleDayTime({
             hari: it.hariKul,
             jam: it.waktuKul,
             totalMenit: it.totalMenit
           });
           const [ day, ..._withoutDay ] = _schedule.split(',')
-          return {
+          const result = {
             _schedule: _withoutDay.join(','),
             ...it
           }
+          for (let i = 0; i < raws.length; i++) {
+            let raw = raws[i];
+            if (raw.hariKul > result.hariKul) {
+              raws.splice(i, 0, result);
+              return;
+            }
+          }
+          raws.push(result);
         });
         items = [];
         raws.forEach(item => {
-          const hari = formatDay(item.hariKul);
-          let group = items.find(gr => gr.hari == hari);
-          if (!group) {
-            group = {
-              hari,
-              items: []
-            };
-            items.push(group);
+          if (items.length == 0) {
+            // if empty list, push day of this item
+            const itemDay = formatDay(item.hariKul);
+            items.push({
+              separator: true,
+              text: itemDay,
+              nodeId: itemDay // fake id for iteration key
+            })
+            items.push(item);
+            return;
           }
-          group.items.push(item);
+          // if day of last item is different from current item,
+          // add separator
+          const n = items.length;
+          const prevItem = items[n - 1];
+          const prevItemDay = formatDay(prevItem.hariKul);
+          const currentItemDay = formatDay(item.hariKul);
+          if (prevItemDay != currentItemDay) {
+            items.push({
+              separator: true,
+              text: currentItemDay,
+              nodeId: currentItemDay // fake id for iteration key
+            })
+          }
+          items.push(item);
         });
         networkStatus = 'success';
       })
@@ -105,29 +129,22 @@
       />
     </div>
     <ul class="my-4">
-      {#each items as group (group.hari)}
-        <li class="py-4 flex my-6">
-          <div class="font-semibold w-16 ">{group.hari}</div>
-          <ul class="ml-2 pl-2 border-l-2 border-teal-600">
-            {#each group.items as item (item.nodeId)}
-              <li class="pl-4 py-4 border-b border-gray-300 w-full">
-                <div class="flex">
-                  <div class="flex flex-col">
-                    <a
-                      href={`/#/app/ilkom/mks/${item.kelas.mk.id}`}
-                      class="font-semibold underline"
-                    >{item.kelas.mk.nama}</a>
-                    <a
-                      href={`/#/app/ilkom/kelas/${item.kelas.id}`}
-                      class="font-semibold underline"
-                    >kelas {item.kelas.label}</a>
-                    <div class="text-sm">{item._schedule}, {item.ruangan}</div>
-                  </div>
+      {#each items as item (item.nodeId)}
+        {#if item.separator}
+          <li class="font-bold mt-8 text-2xl">{item.text}</li>
+        {:else}
+          <li class="p-4 border-b-2 border-dashed border-gray-400 w-full">
+            <div class="flex">
+              <div class="flex flex-col">
+                <div class="text-lg">
+                  <a href={`/#/app/ilkom/mks/${item.kelas.mk.id}`} class="font-bold underline mr-4">{item.kelas.mk.nama}</a>
+                  <a class="mr-4 font-semibold underline" href={`/#/app/ilkom/kelas/${item.kelas.id}/schedule`}>kelas {item.kelas.label}</a>, 
                 </div>
-              </li>
-            {/each}
-          </ul>
-        </li>
+                <div>{item._schedule}, {item.ruangan}</div>
+              </div>
+            </div>
+          </li>
+        {/if}
       {/each}
     </ul>
   </div>

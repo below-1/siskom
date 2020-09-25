@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import Router from 'svelte-spa-router';
+  import Router, { push } from 'svelte-spa-router';
   import App from './app/index.svelte';
   import Login from './auth/Login.svelte';
   import { 
@@ -20,7 +20,10 @@
   }
 
   onMount(async () => {
-    await updateSession();
+    const token = localStorage.getItem('siskom.token');
+    if (token) {
+      await updateSession();
+    }
     initDone = true;
   });
 </script>

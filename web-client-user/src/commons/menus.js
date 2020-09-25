@@ -8,6 +8,7 @@ import FaUserSecret from 'svelte-icons/fa/FaUserSecret.svelte'
 import FaBook from 'svelte-icons/fa/FaBook.svelte'
 import FaBezierCurve from 'svelte-icons/fa/FaBezierCurve.svelte'
 import FaCalendarDay from 'svelte-icons/fa/FaCalendarDay.svelte'
+import FaSignOutAlt from 'svelte-icons/fa/FaSignOutAlt.svelte'
 
 
 export const mahasiswa = [
@@ -22,20 +23,22 @@ export const mahasiswa = [
   { label: 'Dosen', path: '/#/app/ilkom/dosens', icon: FaUserSecret },
   { label: 'Mata Kuliah', path: '/#/app/ilkom/mks', icon: FaBook },
   { label: 'Kelas', path: '/#/app/ilkom/kelas', icon: FaBezierCurve },
-  { label: 'Periode', path: '/#/app/ilkom/periodes', icon: FaCalendarDay }
+  { label: 'Periode', path: '/#/app/ilkom/periodes', icon: FaCalendarDay },
+  { header: true, label: '' },
+  { label: 'Logout', path: '/#/app/auth/logout', icon: FaSignOutAlt }
 ]
 
 export const dosen = [
   { header: true, label: 'personal' },
-  { label: 'Info', path: '/#/app/me_dosen/info' },
-  { label: 'Jadwal', path: '/#/app/me_dosen/schedules' },
-  { label: 'Bimbingan Akademik', path: '/#/app/me_dosen/pas' },
+  { label: 'Info', path: '/#/app/me_dos/info', icon: IoIosContact },
+  { label: 'Jadwal', path: '/#/app/me_dos/schedules', icon: IoIosCalendar },
+  { label: 'Bimbingan Akademik', path: '/#/app/me_dos/pas', icon: IoIosCube },
   { header: true, label: 'ilkom' },
-  { label: 'Kelas', path: '/#/app/ilkom/kelas' },
-  { label: 'Dosen', path: '/#/app/ilkom/dosens' },
-  { label: 'Mata Kuliah', path: '/#/app/ilkom/mks' },
-  { label: 'Mahasiswa', path: '/#/app/ilkom/mahasiswas' },
-  { header: true, label: 'lainnya' },
+  { label: 'Kelas', path: '/#/app/ilkom/kelas', icon: FaBezierCurve },
+  { label: 'Dosen', path: '/#/app/ilkom/dosens', icon: FaUserSecret },
+  { label: 'Mata Kuliah', path: '/#/app/ilkom/mks', icon: FaBook },
+  { label: 'Mahasiswa', path: '/#/app/ilkom/mahasiswas', icon: FaBezierCurve },
+  { header: true, label: '' },
   { label: 'Bantuan', path: '/#/app/etc/help' },
-  { label: 'Logout', path: '/#/app/auth/logout' }
+  { label: 'Logout', path: '/#/app/auth/logout', icon: FaSignOutAlt }
 ];

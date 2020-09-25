@@ -1,37 +1,37 @@
 <script>
-  export let menus = [];
   export let avatar;
-  export let title = '';
-  export let subtitle = '';
-  export let meHref = '';
+  export let name;
+  export let subtitle;
+  export let menus;
+  export let avatarSize = 36;
 </script>
 
-<ul class="w-full text-gray-600 border border-gray-300">
-  <li class="bg-white mb-2">
-    <a 
-      href={meHref} 
-      class="flex items-center w-full h-full p-4"
-    >
-      <img src={avatar} class="mr-2" />
-      <div>
-        <div class="font-black text-lg">{title}</div>
-        <div class="font-black text-sm"> {subtitle}</div>
+<ul class="">
+  <li class="bg-gray-200 hover:bg-gray-300">
+    <a href='/#/app/me_mhs' class="flex items-center w-full h-full py-4 px-4">
+      <img src={avatar} height={avatarSize} width={avatarSize} class="mr-2" />
+      <div class="text-sm">
+        <div class="font-bold">{name}</div>
+        <div class="text-xs font-semibold">{subtitle}</div>
       </div>
     </a>
   </li>
   {#each menus as menu (menu.label)}
     {#if (menu.header)}
-      <li class="bg-white">
-        <div class="flex items-center w-full h-full py-3 px-4 font-black text-lg text-gray-800">
+      <li>
+        <div class="flex items-center w-full h-full py-2 px-4 text-sm font-black text-gray-600 capitalize">
           {menu.label}
         </div>
       </li>
     {:else}
-      <li class="hover:bg-gray-300 bg-white">
-        <a href={menu.path} class="flex items-center w-full h-full py-3 px-4 text-sm font-bold">
+      <a href={menu.path} class="hover:bg-gray-300 flex items-center pl-6 py-4 text-sm">
+        <div class="h-5 w-5 mr-2 text-gray-600">
+          <svelte:component this={menu.icon}></svelte:component>
+        </div>
+        <div class="text-gray-600 hover:text-gray-800 font-semibold">
           {menu.label}
-        </a>
-      </li>
+        </div>
+      </a>
     {/if}
   {/each}
 </ul>

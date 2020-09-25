@@ -2,6 +2,30 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/*@font-face {
+  font-family: 'Titillium';
+  font-weight: 400;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 600;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 700;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 900;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-Black.ttf');
+}*/
+
 body {
   margin: 0 !important;
   padding: 0 !important;

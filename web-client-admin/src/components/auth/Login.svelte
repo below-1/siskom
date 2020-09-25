@@ -72,6 +72,7 @@
         console.log(result);
       })
       .catch(err => {
+        localStorage.removeItem('siskom.token');
         console.log(err);
         throw err;
       })

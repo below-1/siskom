@@ -10,5 +10,5 @@
   });
 </script>
 
-<DetailDosen {id} prefix="/app/me_dosen" showAvatar>
+<DetailDosen {id} prefix="/app/me_dos" showAvatar>
 </DetailDosen>

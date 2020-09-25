@@ -13,9 +13,9 @@
 
   const personalMenus = [
     { label: 'Info', path: '/#/app/me_dos/info', icon: IoIosContact },
-    { label: 'Kelas', path: '/#/app/me_dos/schedule', icon: IoIosCalendar },
-    { label: 'Bimbingan PA', path: '/#/app/me_dos/pa', icon: FaCheckDouble },
-    { label: 'Bimbingan TA', path: '/#/app/me_dos/ta', icon: FaCheckDouble }
+    { label: 'Kelas', path: '/#/app/me_dos/schedules', icon: IoIosCalendar },
+    { label: 'Bimbingan PA', path: '/#/app/me_dos/pas', icon: FaCheckDouble },
+    { label: 'Bimbingan TA', path: '/#/app/me_dos/tas', icon: FaCheckDouble }
   ]
 
 

@@ -70,8 +70,8 @@
     '/auth/logout': Logout,
     '/ilkom': Ilkom,
     '/ilkom/*': Ilkom,
-    '/me_dosen': HomeDosen,
-    '/me_dosen/*': SelfDosen,
+    '/me_dos': HomeDosen,
+    '/me_dos/*': SelfDosen,
     '/me_mhs': HomeMahasiswa,
     '/me_mhs/*': SelfMahasiswa
   };

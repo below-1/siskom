@@ -18,6 +18,8 @@ returns char(2) as $$
   end
 $$ language sql stable;
 
+
+
 create or replace function angka_nilai (nilai float)
 returns numeric as $$
   select case
@@ -38,6 +40,8 @@ returns numeric as $$
   end
 $$ language sql stable;
 
+
+
 create or replace function current_periode () 
 returns periode as $$
   select p.* from periode p inner join
@@ -47,6 +51,8 @@ returns periode as $$
       on d.vl::integer = p.id;
 $$ language sql stable;
 
+
+
 create or replace function current_periode_id ()
 returns integer as $$
   select (setting_value->>'value')::integer
@@ -55,10 +61,14 @@ returns integer as $$
     limit 1
 $$ language sql stable;
 
+
+
 create or replace function current_user_id () returns integer as $$
   select nullif(current_setting('jwt.claims.id'), '')::integer
 $$ language sql stable;
 comment on function current_user_id is E'@omit execute';
+
+
 
 create or replace function current_id_mahasiswa () returns integer as $$
   select
@@ -70,9 +80,13 @@ create or replace function current_id_mahasiswa () returns integer as $$
 $$ language sql stable;
 comment on function current_id_mahasiswa is E'@omit execute';
 
+
+
 create or replace function current_mahasiswa () returns mahasiswa as $$
   select * from mahasiswa where id = current_id_mahasiswa()
 $$ language sql stable;
+
+
 
 create or replace function current_id_dosen () returns integer as $$
   select
@@ -84,13 +98,18 @@ create or replace function current_id_dosen () returns integer as $$
 $$ language sql stable;
 comment on function current_id_dosen is E'@omit execute';
 
+
+
 create or replace function current_dosen () returns dosen as $$
   select * from dosen where id = current_id_dosen()
 $$ language sql stable;
 
+
+
 create or replace function current_app_user () returns app_user as $$
   select * from app_user where id = current_user_id()
 $$ language sql stable;
+
 
 
 create or replace function find_mahasiswa(
@@ -107,9 +126,13 @@ begin
         limit _take;
 end $$ language plpgsql stable;
 
+
+
 create or replace function all_years() returns setof TH_AJAR as $$
     select distinct p.tahun from periode p order by p.tahun asc
 $$ language sql stable;
+
+
 
 create or replace function list_kelas(
   _id_periode periode.id%type
@@ -125,6 +148,8 @@ create or replace function list_kelas(
     left join dosen d on sk.id_dosen = d.id
     where k.id_periode = _id_periode
 $$ language sql stable;
+
+
 
 create or replace function list_clash_courses (
   _id_periode integer,
@@ -171,6 +196,8 @@ create or replace function list_clash_courses (
       )
 $$ language sql stable;
 
+
+
 create or replace function next_label (
   _id_periode integer,
   _id_mk integer
@@ -187,6 +214,7 @@ create or replace function next_label (
 $$ language sql stable;
 
 
+
 create or replace function current_setting () returns setting as $$
   with 
     cp as (select * from current_periode()),
@@ -195,6 +223,8 @@ create or replace function current_setting () returns setting as $$
     (cp, (pr.setting_value->>'value')::phase_type)::setting
       from pr, cp
 $$ language sql stable;
+
+
 
 create or replace function scheduled_kelas_mahasiswa (
   _id_mahasiswa integer,
@@ -224,7 +254,10 @@ create or replace function scheduled_kelas_mahasiswa (
     order by sc_kel.hari_kul, sc_kel.waktu_kul
 $$ language sql stable;
 
-create or replace function attended_periode (_id_mahasiswa integer) returns setof periode as $$
+
+
+create or replace function attended_periode (_id_mahasiswa integer) 
+returns setof periode as $$
   select p
     from mahasiswa m 
     left join periode_mahasiswa pm on pm.id_mahasiswa  = m.id
@@ -232,6 +265,8 @@ create or replace function attended_periode (_id_mahasiswa integer) returns seto
     where m.id = _id_mahasiswa
     order by p.tahun desc, p.semester desc 
 $$ language sql stable;
+
+
 
 create or replace function transkrip (
   _id_mahasiswa integer, 
@@ -275,6 +310,8 @@ create or replace function transkrip (
     order by p.tahun desc, p.semester desc
 $$ language sql stable;
 
+
+
 create or replace function kelas_in_periode (
   _id_mahasiswa integer, 
   _id_periode integer
@@ -285,6 +322,8 @@ create or replace function kelas_in_periode (
     join kelas k on k.id = mh_k.id_kelas
     where m.id = _id_mahasiswa and k.id_periode = _id_periode
 $$ language sql stable;
+
+
 
 create or replace function info_transkrip_kumulatif (
   _id_mahasiswa integer, 
@@ -312,6 +351,8 @@ create or replace function info_transkrip_kumulatif (
   ) select *, (sksn / sksd)::float as ipk from d
 $$ language sql stable;
 
+
+
 create or replace function info_transkrip_periode (
   _id_mahasiswa integer, 
   _id_periode integer
@@ -336,6 +377,8 @@ create or replace function info_transkrip_periode (
   ) select *, (sksn / sksd)::float as ipk from d
 $$ language sql stable;
 
+
+
 create or replace function kelas_dosen (
   _id_dosen integer,
   _id_periode integer
@@ -351,6 +394,8 @@ create or replace function kelas_dosen (
       and p.id = _id_periode
 $$ language sql stable;
 
+
+
 create or replace function kelas_of_mahasiswa (
   _id_mhs integer,
   _id_kelas integer
@@ -360,6 +405,8 @@ create or replace function kelas_of_mahasiswa (
     where id_kelas = _id_kelas and id_mhs = _id_mhs
     limit 1
 $$ language sql stable;
+
+
 
 create or replace function schedule_of_dosen (
   _id_periode integer,
@@ -373,6 +420,8 @@ create or replace function schedule_of_dosen (
         and k.id_periode = _id_periode;
   end;
 $$ language plpgsql stable;
+
+
 
 create or replace function filtered_kelas (
   _id_periode integer,
@@ -388,6 +437,8 @@ create or replace function filtered_kelas (
       and p.id = _id_periode
 $$ language sql stable;
 
+
+
 create or replace function total_mahasiswa_active_pa_dosen (
   _id_dosen integer
 ) returns bigint as $$
@@ -395,6 +446,8 @@ create or replace function total_mahasiswa_active_pa_dosen (
     from mahasiswa m 
     where m.id_pa = _id_dosen
 $$ language sql stable;
+
+
 
 create or replace function kelas_schedule_members (
   _id_kelas integer
@@ -404,6 +457,8 @@ create or replace function kelas_schedule_members (
     join mahasiswa_kelas mh_k on mh_k.id_kelas = k.id
     where k.id = _id_kelas
 $$ language sql stable;
+
+
 
 create or replace function calc_mahasiswa_periode_info (
   _id_mahasiswa integer
@@ -430,6 +485,8 @@ create or replace function calc_mahasiswa_periode_info (
       group by p.id
       order by p.tahun desc
 $$ language sql stable;
+
+
 
 -- create or replace function mata_kuliah_mahasiswa (
 --   _id_mahasiswa integer

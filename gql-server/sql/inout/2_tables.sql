@@ -96,6 +96,7 @@ create table app_user (
 create table periode_mahasiswa (
   id_periode integer not null,
   id_mahasiswa integer not null,
+  registrasi boolean not null default false,
   primary key (id_periode, id_mahasiswa)
 );
 

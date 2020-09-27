@@ -1,15 +1,17 @@
 require('dotenv').config()
 
-const express = require('express')
+// const express = require('express')
+const polka = require('polka')
 const cors = require('cors')
 const session = require('./middleware/session')
 const postgraphile = require('./middleware/postgraphile')
 
-const app = express()
+const app = polka()
 
-app.use(session)
-app.use(cors())
-app.use('/api', postgraphile)
+app
+	.use(session)
+	.use(cors())
+	.use('/api', postgraphile)
 
 app.listen(process.env.PORT, (err) => {
 	if (err) {

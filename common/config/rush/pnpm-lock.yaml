@@ -23,6 +23,7 @@ dependencies:
   knex: 0.21.5_pg@8.3.3
   lodash: 4.17.20
   pg: 8.3.3_pg@8.3.3
+  polka: 0.5.2
   postcss-import: 12.0.1
   postgraphile: 4.8.0
   postgraphile-plugin-connection-filter: 2.0.0
@@ -64,6 +65,12 @@ packages:
         optional: true
     resolution:
       integrity: sha512-zXMiaj+dX0sgXIwEV5d/PI6B8SZT2bqlKNjZWcEXRY7NjESF5J3nd4v8KOsrhHe+A3YhNv63tIl35Sq7uf41Pg==
+  /@arr/every/1.0.1:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-UQFQ6SgyJ6LX42W8rHCs8KVc0JS0tzVL9ct4XYedJukskYVWTo49tNiMEK9C2HTyarbNiT/RVIRSY82vH+6sTg==
   /@babel/code-frame/7.10.4:
     dependencies:
       '@babel/highlight': 7.10.4
@@ -97,6 +104,10 @@ packages:
       node: '>=8.6'
     resolution:
       integrity: sha512-/8a8qBItKbpoDkoiUcNPiLcn91wAniDA23ZsxTxoC51YD/FORF0znsISL19XGqw5Iq5b0jlFbDIpgtN0fQEbqQ==
+  /@polka/url/0.5.0:
+    dev: false
+    resolution:
+      integrity: sha512-oZLYFEAzUKyi3SKnXvj32ZCEGH6RDnao7COuCVhDydMS9NrCSVXhM79VaKyP5+Zc33m0QXEd2DN3UkU7OsHcfw==
   /@polka/url/1.0.0-next.11:
     dev: false
     resolution:
@@ -2525,6 +2536,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
+  /matchit/1.0.8:
+    dependencies:
+      '@arr/every': 1.0.1
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-CwPPICzozd/ezCzpVwGYG5bMVieaapnA0vvHDQnmQ2u2vZtVLynoPmvFsZjL67hFOvTBhhpqSR0bq3uloDP/Rw==
   /mdn-data/2.0.4:
     dev: false
     resolution:
@@ -3034,6 +3053,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
+  /polka/0.5.2:
+    dependencies:
+      '@polka/url': 0.5.0
+      trouter: 2.0.1
+    dev: false
+    resolution:
+      integrity: sha512-FVg3vDmCqP80tOrs+OeNlgXYmFppTXdjD5E7I4ET1NjvtNmQrb1/mJibybKkb/d4NA7YWAr1ojxuhpL3FHqdlw==
   /posix-character-classes/0.1.1:
     dev: false
     engines:
@@ -4421,6 +4447,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-gduQwd1rOdDMGxFG1gEvhV88Oirdo2p+KjoYFU7k2g+i7n6AFFbDQ5kMPUsW0pNbfQsB/cwXvT1i4Bue0s9g5g==
+  /trouter/2.0.1:
+    dependencies:
+      matchit: 1.0.8
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-kr8SKKw94OI+xTGOkfsvwZQ8mWoikZDd2n8XZHjJVZUARZT+4/VV6cacRS6CLsH9bNm+HFIPU1Zx4CnNnb4qlQ==
   /ts-invariant/0.4.4:
     dependencies:
       tslib: 1.13.0
@@ -4615,12 +4649,13 @@ packages:
       knex: 0.21.5_pg@8.3.3
       lodash: 4.17.20
       pg: 8.3.3_pg@8.3.3
+      polka: 0.5.2
       postgraphile: 4.8.0
       postgraphile-plugin-connection-filter: 2.0.0
     dev: false
     name: '@rush-temp/siskom-gql'
     resolution:
-      integrity: sha512-4dJ2eQvUYf0x8VKLO0C+4t+7zv4B1j506drtqQqC1uWI7GQlgXKJu5w1fN1UfObU1Kf3XzCUUGdoTX5M2RrnJg==
+      integrity: sha512-fU9SqshGPJBGa6g/fONNzqi7ypbzG5Po+WxHBtbG07xduZfcCSPo1F1vXsr59rxq77l3k0fCFXkoAJfEe/s+6w==
       tarball: 'file:projects/siskom-gql.tgz'
     version: 0.0.0
   'file:projects/siskom-web-admin.tgz':
@@ -4720,6 +4755,7 @@ specifiers:
   knex: ^0.21.2
   lodash: ^4.17.19
   pg: ^8.3.3
+  polka: ~0.5.2
   postcss-import: ~12.0.1
   postgraphile: ^4.7.0
   postgraphile-plugin-connection-filter: ^2.0.0

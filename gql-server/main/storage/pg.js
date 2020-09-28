@@ -1,5 +1,6 @@
-const { Pool } = require('pg')
+const pg = require('pg')
 
-module.exports = new Pool({
+const pool = new pg.Pool({
 	connectionString: process.env.DB_URL
 })
+module.exports = pool

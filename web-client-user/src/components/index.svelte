@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import Router, { push } from 'svelte-spa-router';
+  import apolloClient from 'siskom-web-user/apolloClient.js';
   import App from './app/index.svelte';
   import Login from './auth/Login.svelte';
   import { 
@@ -10,6 +11,7 @@
     notification,
     warning
   } from 'siskom-web-commons';
+  import CurrentUser from 'siskom-web-user/graphql/CurrentUser.js';
   import updateSession from 'siskom-web-user/services/updateSession.js';
 
   let initDone = false;
@@ -19,9 +21,25 @@
     '/app/*': App
   }
 
+
   onMount(async () => {
-    const token = localStorage.getItem('siskom.token');
-    if (token) {
+
+    let user = null;
+
+    try {
+      const result = await apolloClient.query({
+        query: CurrentUser
+      })
+      const { currentAppUser } = result.data;
+      user = currentAppUser;
+    } catch (err) {
+      console.log(err.message)
+      alert('terjadi kesalahan')
+      // loading forever
+      return
+    }
+
+    if (user) {
       await updateSession();
     }
     initDone = true;

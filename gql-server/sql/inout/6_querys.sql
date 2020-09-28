@@ -64,7 +64,7 @@ $$ language sql stable;
 
 
 create or replace function current_user_id () returns integer as $$
-  select nullif(current_setting('siskom.user_id'), '')::integer
+  select nullif(current_setting('siskom.user_id', true), '')::integer
 $$ language sql stable;
 comment on function current_user_id is E'@omit execute';
 

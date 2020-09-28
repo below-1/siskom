@@ -26,6 +26,7 @@
     "graphql": "~15.3.0",
     "svelte-spa-router": "~2.2.0",
     "validator": "~13.1.1",
-    "date-fns": "~2.16.0"
+    "date-fns": "~2.16.0",
+    "axios": "~0.20.0"
   }
 }

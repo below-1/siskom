@@ -14,9 +14,10 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 
 const httpLink = new HttpLink({
   uri: 'http://localhost:5000/api/graphql',
+  credentials: 'include'
 });
 
 export default new ApolloClient({
   cache,
-  link: concat(authMiddleware, httpLink)
+  link: httpLink
 });

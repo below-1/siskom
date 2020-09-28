@@ -10,7 +10,10 @@ const app = Polka()
 
 app
 	.use(session)
-	.use(cors())
+	.use(cors({
+		origin: ['http://localhost:5002','http://localhost:5001'],
+		credentials: true
+	}))
 	.use('/api', postgraphile)
 
 routesAuth(app)

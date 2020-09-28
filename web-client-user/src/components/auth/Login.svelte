@@ -3,6 +3,7 @@
   import { get } from 'svelte/store';
   import { push as pushRoute } from 'svelte-spa-router';
   import client from 'siskom-web-user/apolloClient.js';
+  import axios from 'siskom-web-user/services/axios.js';
   import isEmpty from 'validator/es/lib/isEmpty';
   import trim from 'validator/es/lib/trim';
   import {
@@ -47,31 +48,25 @@
       fetchPolicy: 'network-only'
     })
       .then(resp => {
-        return resp.data.currentAppUser;
+        const user = resp.data.currentAppUser;
+        if (!user) throw new Error('user is empty');
+        return user;
       })
   }
 
   function login () {
-    const variables = {
+    const payload = {
       username,
       password
     }
     networkStatus = 'loading';
-    const resultProm = client.mutate({
-      mutation: GQLLogin,
-      variables
-    })
-    return resultProm
-      .then(result => {
-        if (!result.data.login) {
-          networkStatus = 'error';
-          return;
-        }
-        localStorage.setItem('siskom.token', result.data.login.token);
-        console.log('in login result')
-        console.log(result);
+    return axios.post('/auth/login', payload, { withCredentials: true })
+      .then(resp => resp.data)
+      .then(data => {
+        console.log(data)
       })
       .catch(err => {
+        networkStatus = 'error';
         console.log(err);
         throw err;
       })

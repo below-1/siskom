@@ -9,15 +9,9 @@ dependencies:
   '@rush-temp/siskom-web-admin': 'file:projects/siskom-web-admin.tgz'
   '@rush-temp/siskom-web-commons': 'file:projects/siskom-web-commons.tgz'
   '@rush-temp/siskom-web-user': 'file:projects/siskom-web-user.tgz'
-  '@types/body-parser': 1.19.0
-  '@types/connect-redis': 0.0.14
-  '@types/express-session': 1.17.0
-  '@types/ioredis': 4.17.4
-  '@types/node': 14.11.2
-  '@types/pg': 7.14.5
-  '@types/polka': 0.5.1
   apexcharts: 3.20.2
   autoprefixer: 9.8.6
+  axios: 0.20.0
   body-parser: 1.19.0
   chance: 1.1.7
   connect-redis: 5.0.0
@@ -47,7 +41,6 @@ dependencies:
   svelte-spa-router: 2.2.0
   tailwindcss: 1.7.3
   turbo-json-parse: 2.3.0
-  typescript: 4.0.3
   validator: 13.1.1
 lockfileVersion: 5.1
 packages:
@@ -569,6 +562,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-XrvP4VVHdRBCdX1S3WXVD8+RyG9qeb1D5Sn1DeLiG2xfSpzellk5k54xbUERJ3M5DggQxes39UGOTP8CFrEGbg==
+  /axios/0.20.0:
+    dependencies:
+      follow-redirects: 1.13.0
+    dev: false
+    resolution:
+      integrity: sha512-ANA4rr2BDcmmAQLOKft2fufrtuvlqR+cXNNinUmvfeSNCOF98PZL+7M/v1zIdGo7OLjEA9J2gXJL+j4zGsl0bA==
   /backo2/1.0.2:
     dev: false
     resolution:
@@ -1568,6 +1567,12 @@ packages:
       node: '>= 0.10'
     resolution:
       integrity: sha512-lNaHNVymajmk0OJMBn8fVUAU1BtDeKIqKoVhk4xAALB57aALg6b4W0MfJ/cUE0g9YBXy5XhSlPIpYIJ7HaY/3Q==
+  /follow-redirects/1.13.0:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
   /for-in/1.0.2:
     dev: false
     engines:
@@ -4756,7 +4761,7 @@ packages:
     dev: false
     name: '@rush-temp/siskom-gql'
     resolution:
-      integrity: sha512-11ZheOxvgGxMaB0Y1mk0QI+DaQRy7ZukTqw+HKvQJmo7h9jfv3TwGcfQEiVhfa/oT6v4MsrnGeawTq3n9ms6nA==
+      integrity: sha512-g0eOnNU4f/raI5oBVHZL+p9M0p1RIcIFvV2jWjnxAdDkL3zc0U1XHjyfr+USndoU0Hk0FO2rxHvK2xEYyylFZw==
       tarball: 'file:projects/siskom-gql.tgz'
     version: 0.0.0
   'file:projects/siskom-web-admin.tgz':
@@ -4812,6 +4817,7 @@ packages:
       '@rollup/plugin-node-resolve': 9.0.0_rollup@2.26.5
       '@sveltejs/pancake': 0.0.17
       apexcharts: 3.20.2
+      axios: 0.20.0
       date-fns: 2.16.0
       graphql: 15.3.0
       rollup: 2.26.5
@@ -4827,7 +4833,7 @@ packages:
     dev: false
     name: '@rush-temp/siskom-web-user'
     resolution:
-      integrity: sha512-2wMCR88R+wK5Cbk+TBu5UTuLcOx5/KYMGj3RDDidHzJT9jdKR5B/kg1nQxWtjWiw5s3VNDYedL17aW/9fk4gWg==
+      integrity: sha512-tVEyUH9a8ka3r0vTbbQqHXyrU5r3ARyTxKIRFydAllSkhGINrsz4r99PVnT7zl6CIkQj2rKebVWNqaCjWSHLlw==
       tarball: 'file:projects/siskom-web-user.tgz'
     version: 0.0.0
 registry: ''
@@ -4842,15 +4848,9 @@ specifiers:
   '@rush-temp/siskom-web-admin': 'file:./projects/siskom-web-admin.tgz'
   '@rush-temp/siskom-web-commons': 'file:./projects/siskom-web-commons.tgz'
   '@rush-temp/siskom-web-user': 'file:./projects/siskom-web-user.tgz'
-  '@types/body-parser': ~1.19.0
-  '@types/connect-redis': ~0.0.14
-  '@types/express-session': ~1.17.0
-  '@types/ioredis': ~4.17.4
-  '@types/node': ~14.11.2
-  '@types/pg': ~7.14.5
-  '@types/polka': ~0.5.1
   apexcharts: ^3.20.2
   autoprefixer: ~9.8.6
+  axios: ~0.20.0
   body-parser: ~1.19.0
   chance: ^1.1.6
   connect-redis: ~5.0.0
@@ -4880,5 +4880,4 @@ specifiers:
   svelte-spa-router: ~2.2.0
   tailwindcss: ~1.7.3
   turbo-json-parse: ~2.3.0
-  typescript: ~4.0.3
   validator: ~13.1.1

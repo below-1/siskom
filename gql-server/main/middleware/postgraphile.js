@@ -9,7 +9,6 @@ module.exports = postgraphile(
     graphiql: process.env.NODE_ENV != 'production',
     enhanceGraphiql: true,
     dynamicJson: true,
-    enableCors: true,
     jwtPgTypeIdentifier: 'public.app_user_jwt',
     jwtSecret: process.env.JWT_SECRET,
     appendPlugins: [

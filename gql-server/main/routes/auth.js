@@ -30,6 +30,8 @@ async function login (request, response) {
 		}
 		const user = pgResult.rows[0]
 		request.session.user_id = user.id
+		console.log("here");
+		console.log(request.session);
 		result = user
 	} catch (err) {
 		console.log(err)

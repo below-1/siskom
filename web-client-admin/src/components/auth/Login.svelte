@@ -3,6 +3,7 @@
   import { get } from 'svelte/store';
   import { push as pushRoute } from 'svelte-spa-router';
   import client from 'siskom-web-admin/apolloClient.js';
+  import axios from 'siskom-web-admin/services/axios.js';
   import isEmpty from 'validator/es/lib/isEmpty';
   import trim from 'validator/es/lib/trim';
   import {
@@ -51,6 +52,24 @@
       })
   }
 
+  function login_2 () {
+    const payload = {
+      username,
+      password
+    }
+    networkStatus = 'loading';
+    return axios.post('/auth/login', payload, { withCredentials: true })
+      .then(resp => resp.data)
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => {
+        networkStatus = 'error';
+        console.log(err);
+        throw err;
+      })
+  }
+
   function login () {
     const variables = {
       username,
@@ -79,7 +98,7 @@
   }
 
   function onLogin () {
-    return login()
+    return login_2()
       .then(getCurrentUser)
       .catch(err => {
         console.log('fail to get current user');

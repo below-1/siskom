@@ -4,6 +4,7 @@ const { createWriteStream } = require('fs');
 const _ = require('lodash');
 const Chance = require('chance');
 const chance = new Chance();
+const path = require('path');
 
 const padToTwo = number => number <= 9999 ? `000${number}`.slice(-2) : number;
 
@@ -108,14 +109,19 @@ function kelasForPeriode (students, dosens, lastId) {
     const mks = randomMks(12, periode.id);
     mata_kuliahs = [ ...mata_kuliahs, ...mks ];
 
-    let _kelases = mks.map(mk => {
-      return {
-        id: kelasSerial.next(),
-        id_periode: periode.id,
-        id_mk: mk.id,
-        label: 'A',
-        mk
-      }
+    let _kelases = [];
+    mks.forEach(mk => {
+      _.range(chance.natural({ min: 1, max: 5 }))
+        .forEach(i => {
+          const kl = {
+            id: kelasSerial.next(),
+            id_periode: periode.id,
+            id_mk: mk.id,
+            label: String.fromCharCode(65 + i - 0),
+            mk
+          };
+          _kelases.push(kl);
+        })
     });
 
     const _scheduled = _kelases.map(kelas => {
@@ -141,7 +147,8 @@ function kelasForPeriode (students, dosens, lastId) {
         mahasiswa_kelas.push({
           id_kelas: sc.id_kelas,
           id_mhs: student.id,
-          nilai: chance.floating({ min: 0, max: 100.0 })
+          nilai: chance.floating({ min: 0, max: 100.0 }),
+          validated: true
         })
       })
     });
@@ -182,7 +189,7 @@ function runSeed () {
     connection: 'postgres://postgres@localhost/postgres'
   });
 
-  let stream = createWriteStream('data.sql');
+  let stream = createWriteStream(path.join(process.cwd(), 'sql', 'data.sql'));
   stream.on('finish', () => {
     console.log('done write data');
   });

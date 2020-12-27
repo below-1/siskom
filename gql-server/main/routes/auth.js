@@ -52,7 +52,10 @@ async function test_session (request, response) {
 }
 
 async function logout (request, response) {
-	response.end('logout')
+	request.session.destroy((err) => {
+		response.end('logout');
+	});
+
 }
 
 module.exports = (app) => {

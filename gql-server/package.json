@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:cli": "npx postgraphile --append-plugins postgraphile-plugin-connection-filter -c postgres://postgres@localhost/postgres --enhance-graphiql --cors --dynamic-json",
-    "start": "node main/index.js"
+    "start": "node main/index.js",
+    "mock": "node main/mock.js"
   },
   "keywords": [],
   "author": "",

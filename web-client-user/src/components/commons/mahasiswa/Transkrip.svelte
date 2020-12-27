@@ -2,6 +2,7 @@
   import { getContext } from 'svelte';
   import { push as pushRoute } from 'svelte-spa-router';
   import apolloClient from 'siskom-web-user/apolloClient.js';
+  import 'siskom-web-user/styles/jo-table.css';
 
   import {
     JoAsyncContent,
@@ -172,8 +173,59 @@
   </div>
 </JoAsyncContent>
 
+<div class="text-left font-bold text-2xl mb-2">Daftar Mata Kuliah</div>
 <JoAsyncContent {networkStatus}>
   <div slot="success" class="bg-white">
+    <table class="jo-table text-base">
+      <tbody>
+        {#each items as item (item.cursor)}
+          <tr>
+            <td class="hidden md:table-cell">
+              <JoNameAvatar name={item.node.namaMk} size='base' cls='mr-4 w-12' />
+            </td>
+            <td class="flex flex-col py-4 md:table-cell">
+              <a
+                href={`/#/app/ilkom/mks/${item.node.idMk}`}
+                class="font-black mr-4"
+              >
+                {item.node.namaMk}
+              </a>
+              <a
+                href={`/#/app/ilkom/kelas/${item.node.idKelas}`}
+                class="font-black md:hidden"
+              >
+                kelas {item.node.label}
+              </a>
+              <div class="md:hidden">{item.node.tahun}/{item.node.tahun + 1} semester {item.node.semester}</div>
+            </td>
+            <td class="hidden md:table-cell">
+              <a
+                href={`/#/app/ilkom/kelas/${item.node.idKelas}`}
+                class="font-black"
+              >
+                kelas {item.node.label}
+              </a>
+            </td>
+            <td class="hidden md:table-cell">
+              {item.node.tahun}/{item.node.tahun + 1} semester {item.node.semester}
+            </td>
+            <td>
+              <div 
+                class="font-bold text-sm md:text-base"
+                class:text-red-800={item.node.lulus == 'tidak lulus'}
+              >
+                <span class="uppercase">
+                  {item.nilai.huruf}
+                </span>
+                <span>/ {item.node.nilai.toFixed(2)}</span>
+              </div>
+            </td>
+          </tr>
+        {/each}
+      </tbody>
+    </table>
+
+<!--
     <ul>
       {#each items as item (item.cursor)}
         <li 
@@ -213,6 +265,8 @@
         </li>
       {/each}
     </ul>
+-->
+
     <div class="w-full mx-4 py-4 w-full flex justify-center items-center">
       <button 
         on:click={onLoadNext}

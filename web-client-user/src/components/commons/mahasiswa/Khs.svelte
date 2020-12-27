@@ -13,6 +13,7 @@
   import InfoTranskrip from './InfoTranskrip.svelte';
   import GQLKhs from 'siskom-web-user/graphql/KHS.js';
   import * as context_key from './context.js';
+  import 'siskom-web-user/styles/jo-table.css';
 
   const mahasiswa = getContext(context_key.mahasiswa);
   const attendedPeriode = getContext(context_key.attendedPeriode);
@@ -79,6 +80,41 @@
       <InfoTranskrip {...infoTranskrip} />
     </div>
 
+    <div class="text-left font-bold text-gray-600 py-2 mt-8">Daftar Mata Kuliah</div>
+    <table class="jo-table text-base my-4">
+      <tbody>
+        {#each items as item (item.id)}
+          <tr>
+            <td class="hidden md:table-cell">
+              <JoNameAvatar 
+                name={item.kelas.mk.nama} 
+                size='base' 
+                cls='mr-4 w-12' />
+            </td>
+            <td class="py-4">
+              <a class="font-black mr-4 underline" href={`/#/app/ilkom/mks/${item.kelas.mk.id}`}>{item.kelas.mk.nama}</a>
+            </td>
+            <td>
+              <a class="font-black underline" href={`/#/app/ilkom/kelas/${item.kelas.mk.id}`}>kelas {item.kelas.label}</a>
+            </td>
+            <td class="text-sm font-semibold">
+              {item.kelas.mk.sks} sks, {item.kelas.mk.tipeMk.toLowerCase()}
+            </td>
+            <td
+              class="font-medium text-right"
+              class:text-red-800={item.lulus == 'tidak lulus'}
+            >
+              <span class="">
+                A
+              </span>
+              <span>/ {item.nilai.toFixed(2)}</span>
+            </td>
+          </tr>
+        {/each}
+      </tbody>
+    </table>
+
+<!--
     <ul class="my-4">
       {#each items as item (item.id)}
         <li 
@@ -109,5 +145,6 @@
         </li>
       {/each}
     </ul>
+-->
   </div>
 </JoAsyncContent>

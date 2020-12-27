@@ -1,0 +1,7 @@
+How to rebuild the system (with all of its states from ground up)
+
+1. drop database
+2. rewrite database
+3. run seed
+4. seeding redis:
+		4.1.		

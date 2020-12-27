@@ -2,6 +2,7 @@ import { gql } from '@apollo/client/core';
 
 export default gql`
   query KelasDetail ($id: Int!) {
+
     kelas: kelaById(id: $id) {
       id
       label
@@ -17,5 +18,22 @@ export default gql`
         scheduled
       }
     }
+
+    schedule: scheduledKelaByIdKelas(idKelas: $idKelas) {
+      idKelas
+      kapasitas
+      hariKul
+      totalMenit
+      waktuKul
+      ruangan
+      dosen: dosenByIdDosen {
+        id
+        nama
+        nip
+        sex
+        status
+      }
+    }
+    
   }
 `

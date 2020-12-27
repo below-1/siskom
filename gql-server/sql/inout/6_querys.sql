@@ -298,6 +298,7 @@ create or replace function transkrip (
     join periode p on k.id_periode = p.id
     where 
       m.id = _id_mahasiswa 
+      and mh_k.validated = true
       and p.tahun <= _tahun
       and (not (p.tahun::integer = _tahun) or p.semester <= _semester)
       and (
@@ -320,7 +321,10 @@ create or replace function kelas_in_periode (
     from mahasiswa m 
     join mahasiswa_kelas mh_k on mh_k.id_mhs  = m.id
     join kelas k on k.id = mh_k.id_kelas
-    where m.id = _id_mahasiswa and k.id_periode = _id_periode
+    where 
+      m.id = _id_mahasiswa 
+      and mh_k.validated = true
+      and k.id_periode = _id_periode
 $$ language sql stable;
 
 
@@ -346,6 +350,7 @@ create or replace function info_transkrip_kumulatif (
     join periode p on p.id = k.id_periode
     where 
         m.id = _id_mahasiswa
+        and mh_k.validated = true
         and p.tahun <= _tahun
         and (not (p.tahun::integer = _tahun) or p.semester <= _semester)
   ) select *, (sksn / sksd)::float as ipk from d
@@ -373,6 +378,7 @@ create or replace function info_transkrip_periode (
     join periode p on p.id = k.id_periode
     where 
         m.id = _id_mahasiswa
+        and mh_k.validated = true
         and p.id = _id_periode
   ) select *, (sksn / sksd)::float as ipk from d
 $$ language sql stable;
@@ -482,11 +488,10 @@ create or replace function calc_mahasiswa_periode_info (
       join periode p on p.id = k.id_periode
       where 
           m.id = _id_mahasiswa
+          and mh_k.validated = true
       group by p.id
       order by p.tahun desc
 $$ language sql stable;
-
-
 
 -- create or replace function mata_kuliah_mahasiswa (
 --   _id_mahasiswa integer

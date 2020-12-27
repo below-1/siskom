@@ -1,329 +1,329 @@
-insert into "dosen" ("id", "nama", "nip", "sex", "status") values (1, 'Ernest Burns', '38347530612616759218', 'laki-laki', 'aktif'), (2, 'Todd Sutton', '07320031920448175842', 'perempuan', 'aktif'), (3, 'Leon Meyer', '36404036248328713480', 'perempuan', 'aktif'), (4, 'Hettie Hayes', '40257642690102927138', 'perempuan', 'aktif'), (5, 'Inez Cummings', '35342034038548839736', 'perempuan', 'aktif'), (6, 'Garrett Clayton', '21873645600528085934', 'perempuan', 'aktif'), (7, 'Catherine Nunez', '63328074837660506179', 'perempuan', 'aktif'), (8, 'Ricky Morgan', '29169116452764983796', 'perempuan', 'aktif'), (9, 'Roger Fuller', '90586387320489892616', 'perempuan', 'aktif'), (10, 'Theodore Copeland', '31684348421996229281', 'perempuan', 'aktif'), (11, 'Dustin Stanley', '83267431120495121174', 'perempuan', 'aktif'), (12, 'Blake Webb', '05782092947488341920', 'perempuan', 'aktif'), (13, 'Alice Arnold', '33554140053983080806', 'laki-laki', 'aktif'), (14, 'Daniel Howell', '63712869467324160354', 'perempuan', 'aktif'), (15, 'Charles Wilkins', '01152839441839082488', 'laki-laki', 'aktif');
+insert into "dosen" ("id", "nama", "nip", "sex", "status") values (1, 'Lettie Swanson', '19179874038771519995', 'laki-laki', 'aktif'), (2, 'Andrew McKenzie', '97364175621048682196', 'laki-laki', 'aktif'), (3, 'Gregory Goodwin', '89081371668020295087', 'laki-laki', 'aktif'), (4, 'Eugene Kelley', '42758892358129180182', 'laki-laki', 'aktif'), (5, 'Florence Salazar', '75584946507521394327', 'laki-laki', 'aktif'), (6, 'Melvin Warren', '53393850083010723799', 'laki-laki', 'aktif'), (7, 'Dora Houston', '51557702630200268356', 'laki-laki', 'aktif'), (8, 'Addie Ward', '62133775461105817668', 'perempuan', 'aktif'), (9, 'Brett Hunt', '53240546626866694732', 'perempuan', 'aktif'), (10, 'Jordan Cruz', '13608981369930831823', 'perempuan', 'aktif'), (11, 'Juan Marsh', '99952461680315865148', 'perempuan', 'aktif'), (12, 'Benjamin Kelly', '22516189773993837115', 'laki-laki', 'aktif'), (13, 'Millie Maxwell', '42618076253939863029', 'perempuan', 'aktif'), (14, 'Amelia Fuller', '80339739711262903473', 'perempuan', 'aktif'), (15, 'Carlos Massey', '42723514718513693712', 'laki-laki', 'aktif');
 
 insert into "periode" ("akhir", "awal", "id", "id_ketua", "id_sekretaris", "semester", "tahun") values ('2007-06-04', '2007-01-04', 1, 1, 2, 1, 2007), ('2007-12-04', '2007-07-04', 2, 1, 2, 2, 2007), ('2008-06-04', '2008-01-04', 3, 1, 2, 1, 2008), ('2008-12-04', '2008-07-04', 4, 1, 2, 2, 2008), ('2009-06-04', '2009-01-04', 5, 1, 2, 1, 2009), ('2009-12-04', '2009-07-04', 6, 1, 2, 2, 2009);
 
 insert into "room" ("kapasitas", "nama") values (40, 'k1'), (40, 'k2'), (40, 'k3'), (40, 'k4'), (40, 'k5'), (30, 'laboratorium komputer');
 
-insert into "mahasiswa" ("id", "id_pa", "nama", "nim", "sex", "tahun_masuk") values (1, 2, 'Anthony Nichols', '6765655595', 'perempuan', 2007), (2, 3, 'Leo Medina', '0287208683', 'perempuan', 2007), (3, 6, 'Birdie Kim', '8998021795', 'laki-laki', 2007), (4, 4, 'David Dawson', '8354762949', 'laki-laki', 2007), (5, 9, 'Hattie Henderson', '1202102656', 'laki-laki', 2007), (6, 9, 'Brandon Jimenez', '5363684969', 'perempuan', 2007), (7, 10, 'Caleb Little', '9055105503', 'laki-laki', 2007), (8, 9, 'David Willis', '6808566705', 'perempuan', 2007), (9, 7, 'Bryan Klein', '7660551997', 'perempuan', 2007), (10, 4, 'Gussie Morgan', '0817742546', 'perempuan', 2007), (11, 10, 'Minerva Nichols', '3608547761', 'laki-laki', 2007), (12, 12, 'Rosetta Riley', '2145432613', 'laki-laki', 2007), (13, 10, 'Fred Cooper', '5593143074', 'perempuan', 2007), (14, 13, 'Katharine Dunn', '1050363748', 'laki-laki', 2007), (15, 4, 'Allen Murphy', '0863107595', 'perempuan', 2007), (16, 11, 'Edward Marsh', '6783102970', 'perempuan', 2007), (17, 10, 'Milton Sandoval', '0382235325', 'perempuan', 2007), (18, 5, 'Cole Powers', '8277349306', 'perempuan', 2007), (19, 11, 'Angel Wolfe', '2156322832', 'laki-laki', 2007), (20, 10, 'Micheal Stewart', '5565391479', 'perempuan', 2007), (21, 7, 'Bertha Delgado', '9418931948', 'perempuan', 2007), (22, 5, 'Melvin Reed', '4027802824', 'laki-laki', 2007), (23, 8, 'Adrian McDonald', '8791176442', 'laki-laki', 2007), (24, 3, 'Anthony Swanson', '9609917946', 'perempuan', 2007), (25, 12, 'Antonio Spencer', '6623169470', 'laki-laki', 2007), (26, 13, 'Ray Bryan', '9426117383', 'laki-laki', 2007), (27, 6, 'Glenn Reeves', '6754034832', 'perempuan', 2007), (28, 4, 'Dollie Powell', '4690505078', 'laki-laki', 2007), (29, 1, 'Warren Rivera', '7843872507', 'laki-laki', 2007), (30, 6, 'Lena Jordan', '4083951170', 'laki-laki', 2007), (31, 14, 'Dollie Briggs', '1948440715', 'laki-laki', 2007), (32, 5, 'Lucile Day', '6935812663', 'perempuan', 2007), (33, 9, 'Willie Morales', '8192818545', 'perempuan', 2007), (34, 4, 'Rebecca Miller', '6523514568', 'perempuan', 2007), (35, 7, 'Shane Miles', '3390813728', 'laki-laki', 2007), (36, 2, 'Brett Beck', '1848145789', 'perempuan', 2007), (37, 10, 'Daisy Simpson', '4203234038', 'laki-laki', 2007), (38, 13, 'Jorge Pope', '3304103391', 'laki-laki', 2007), (39, 6, 'Betty Atkins', '8235161161', 'perempuan', 2007), (40, 10, 'Jason Brock', '5005142814', 'laki-laki', 2007);
+insert into "mahasiswa" ("id", "id_pa", "nama", "nim", "sex", "tahun_masuk") values (1, 6, 'Clifford Collins', '3677018170', 'perempuan', 2007), (2, 3, 'Allen Reed', '6481081077', 'laki-laki', 2007), (3, 5, 'Adelaide Mitchell', '5622606015', 'laki-laki', 2007), (4, 9, 'Nelle Christensen', '3352936571', 'perempuan', 2007), (5, 5, 'Jay Blair', '4736256331', 'laki-laki', 2007), (6, 5, 'Clarence Cross', '2461925502', 'perempuan', 2007), (7, 13, 'Brian Morrison', '1435175390', 'perempuan', 2007), (8, 10, 'Cecelia Cross', '5913279687', 'perempuan', 2007), (9, 14, 'Josie Alvarado', '0266390828', 'laki-laki', 2007), (10, 5, 'Erik Phelps', '4333941204', 'laki-laki', 2007), (11, 13, 'Frances Matthews', '3115072247', 'perempuan', 2007), (12, 4, 'Daisy Hale', '8760369514', 'laki-laki', 2007), (13, 3, 'Leila Haynes', '1553919374', 'perempuan', 2007), (14, 5, 'Kevin Burke', '9139170726', 'laki-laki', 2007), (15, 7, 'Lizzie Hodges', '8647392959', 'laki-laki', 2007), (16, 6, 'Viola Osborne', '0043007228', 'perempuan', 2007), (17, 11, 'Georgia Hanson', '7935967054', 'laki-laki', 2007), (18, 6, 'Virginia Roy', '1204371901', 'perempuan', 2007), (19, 8, 'Jeremy Wilkins', '8270974028', 'perempuan', 2007), (20, 6, 'Miguel Fowler', '2186477334', 'laki-laki', 2007), (21, 14, 'Derek Butler', '8215831252', 'perempuan', 2007), (22, 14, 'Jorge Hicks', '0312456389', 'perempuan', 2007), (23, 12, 'Carlos Christensen', '2221021556', 'perempuan', 2007), (24, 3, 'Estelle Anderson', '0926259690', 'perempuan', 2007), (25, 12, 'Joe Bennett', '1970607457', 'perempuan', 2007), (26, 8, 'Jose Mathis', '7652966288', 'perempuan', 2007), (27, 12, 'Melvin Page', '0417592458', 'laki-laki', 2007), (28, 8, 'Leo Grant', '9418219421', 'perempuan', 2007), (29, 11, 'Leila Saunders', '8428198337', 'perempuan', 2007), (30, 9, 'Jesse Turner', '9636314722', 'laki-laki', 2007), (31, 4, 'Hannah Jackson', '6056915161', 'laki-laki', 2007), (32, 5, 'Brian Barber', '2936713615', 'laki-laki', 2007), (33, 10, 'Timothy Harrington', '3800250456', 'perempuan', 2007), (34, 13, 'Eliza Tate', '0541736342', 'perempuan', 2007), (35, 12, 'Madge Mathis', '7351131828', 'laki-laki', 2007), (36, 8, 'Theodore Allen', '7376672110', 'laki-laki', 2007), (37, 13, 'Georgia Rodgers', '5690112270', 'laki-laki', 2007), (38, 3, 'Genevieve Hardy', '9469869808', 'laki-laki', 2007), (39, 3, 'Luis Lowe', '0942448221', 'perempuan', 2007), (40, 1, 'Leo Tyler', '0353495422', 'perempuan', 2007);
 
 insert into "periode_mahasiswa" ("id_mahasiswa", "id_periode") values (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 1), (2, 2), (2, 3), (2, 4), (2, 5), (2, 6), (3, 1), (3, 2), (3, 3), (3, 4), (3, 5), (3, 6), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (10, 1), (10, 2), (10, 3), (10, 4), (10, 5), (10, 6), (11, 1), (11, 2), (11, 3), (11, 4), (11, 5), (11, 6), (12, 1), (12, 2), (12, 3), (12, 4), (12, 5), (12, 6), (13, 1), (13, 2), (13, 3), (13, 4), (13, 5), (13, 6), (14, 1), (14, 2), (14, 3), (14, 4), (14, 5), (14, 6), (15, 1), (15, 2), (15, 3), (15, 4), (15, 5), (15, 6), (16, 1), (16, 2), (16, 3), (16, 4), (16, 5), (16, 6), (17, 1), (17, 2), (17, 3), (17, 4), (17, 5), (17, 6), (18, 1), (18, 2), (18, 3), (18, 4), (18, 5), (18, 6), (19, 1), (19, 2), (19, 3), (19, 4), (19, 5), (19, 6), (20, 1), (20, 2), (20, 3), (20, 4), (20, 5), (20, 6), (21, 1), (21, 2), (21, 3), (21, 4), (21, 5), (21, 6), (22, 1), (22, 2), (22, 3), (22, 4), (22, 5), (22, 6), (23, 1), (23, 2), (23, 3), (23, 4), (23, 5), (23, 6), (24, 1), (24, 2), (24, 3), (24, 4), (24, 5), (24, 6), (25, 1), (25, 2), (25, 3), (25, 4), (25, 5), (25, 6), (26, 1), (26, 2), (26, 3), (26, 4), (26, 5), (26, 6), (27, 1), (27, 2), (27, 3), (27, 4), (27, 5), (27, 6), (28, 1), (28, 2), (28, 3), (28, 4), (28, 5), (28, 6), (29, 1), (29, 2), (29, 3), (29, 4), (29, 5), (29, 6), (30, 1), (30, 2), (30, 3), (30, 4), (30, 5), (30, 6), (31, 1), (31, 2), (31, 3), (31, 4), (31, 5), (31, 6), (32, 1), (32, 2), (32, 3), (32, 4), (32, 5), (32, 6), (33, 1), (33, 2), (33, 3), (33, 4), (33, 5), (33, 6), (34, 1), (34, 2), (34, 3), (34, 4), (34, 5), (34, 6), (35, 1), (35, 2), (35, 3), (35, 4), (35, 5), (35, 6), (36, 1), (36, 2), (36, 3), (36, 4), (36, 5), (36, 6), (37, 1), (37, 2), (37, 3), (37, 4), (37, 5), (37, 6), (38, 1), (38, 2), (38, 3), (38, 4), (38, 5), (38, 6), (39, 1), (39, 2), (39, 3), (39, 4), (39, 5), (39, 6), (40, 1), (40, 2), (40, 3), (40, 4), (40, 5), (40, 6);
 
 
 call new_user(
-  _username => '6765655595',
-  _password => '6765655595',
+  _username => '3677018170',
+  _password => '3677018170',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 1
 );
 
 call new_user(
-  _username => '0287208683',
-  _password => '0287208683',
+  _username => '6481081077',
+  _password => '6481081077',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 2
 );
 
 call new_user(
-  _username => '8998021795',
-  _password => '8998021795',
+  _username => '5622606015',
+  _password => '5622606015',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 3
 );
 
 call new_user(
-  _username => '8354762949',
-  _password => '8354762949',
+  _username => '3352936571',
+  _password => '3352936571',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 4
 );
 
 call new_user(
-  _username => '1202102656',
-  _password => '1202102656',
+  _username => '4736256331',
+  _password => '4736256331',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 5
 );
 
 call new_user(
-  _username => '5363684969',
-  _password => '5363684969',
+  _username => '2461925502',
+  _password => '2461925502',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 6
 );
 
 call new_user(
-  _username => '9055105503',
-  _password => '9055105503',
+  _username => '1435175390',
+  _password => '1435175390',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 7
 );
 
 call new_user(
-  _username => '6808566705',
-  _password => '6808566705',
+  _username => '5913279687',
+  _password => '5913279687',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 8
 );
 
 call new_user(
-  _username => '7660551997',
-  _password => '7660551997',
+  _username => '0266390828',
+  _password => '0266390828',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 9
 );
 
 call new_user(
-  _username => '0817742546',
-  _password => '0817742546',
+  _username => '4333941204',
+  _password => '4333941204',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 10
 );
 
 call new_user(
-  _username => '3608547761',
-  _password => '3608547761',
+  _username => '3115072247',
+  _password => '3115072247',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 11
 );
 
 call new_user(
-  _username => '2145432613',
-  _password => '2145432613',
+  _username => '8760369514',
+  _password => '8760369514',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 12
 );
 
 call new_user(
-  _username => '5593143074',
-  _password => '5593143074',
+  _username => '1553919374',
+  _password => '1553919374',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 13
 );
 
 call new_user(
-  _username => '1050363748',
-  _password => '1050363748',
+  _username => '9139170726',
+  _password => '9139170726',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 14
 );
 
 call new_user(
-  _username => '0863107595',
-  _password => '0863107595',
+  _username => '8647392959',
+  _password => '8647392959',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 15
 );
 
 call new_user(
-  _username => '6783102970',
-  _password => '6783102970',
+  _username => '0043007228',
+  _password => '0043007228',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 16
 );
 
 call new_user(
-  _username => '0382235325',
-  _password => '0382235325',
+  _username => '7935967054',
+  _password => '7935967054',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 17
 );
 
 call new_user(
-  _username => '8277349306',
-  _password => '8277349306',
+  _username => '1204371901',
+  _password => '1204371901',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 18
 );
 
 call new_user(
-  _username => '2156322832',
-  _password => '2156322832',
+  _username => '8270974028',
+  _password => '8270974028',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 19
 );
 
 call new_user(
-  _username => '5565391479',
-  _password => '5565391479',
+  _username => '2186477334',
+  _password => '2186477334',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 20
 );
 
 call new_user(
-  _username => '9418931948',
-  _password => '9418931948',
+  _username => '8215831252',
+  _password => '8215831252',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 21
 );
 
 call new_user(
-  _username => '4027802824',
-  _password => '4027802824',
+  _username => '0312456389',
+  _password => '0312456389',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 22
 );
 
 call new_user(
-  _username => '8791176442',
-  _password => '8791176442',
+  _username => '2221021556',
+  _password => '2221021556',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 23
 );
 
 call new_user(
-  _username => '9609917946',
-  _password => '9609917946',
+  _username => '0926259690',
+  _password => '0926259690',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 24
 );
 
 call new_user(
-  _username => '6623169470',
-  _password => '6623169470',
+  _username => '1970607457',
+  _password => '1970607457',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 25
 );
 
 call new_user(
-  _username => '9426117383',
-  _password => '9426117383',
+  _username => '7652966288',
+  _password => '7652966288',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 26
 );
 
 call new_user(
-  _username => '6754034832',
-  _password => '6754034832',
+  _username => '0417592458',
+  _password => '0417592458',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 27
 );
 
 call new_user(
-  _username => '4690505078',
-  _password => '4690505078',
+  _username => '9418219421',
+  _password => '9418219421',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 28
 );
 
 call new_user(
-  _username => '7843872507',
-  _password => '7843872507',
+  _username => '8428198337',
+  _password => '8428198337',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 29
 );
 
 call new_user(
-  _username => '4083951170',
-  _password => '4083951170',
+  _username => '9636314722',
+  _password => '9636314722',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 30
 );
 
 call new_user(
-  _username => '1948440715',
-  _password => '1948440715',
+  _username => '6056915161',
+  _password => '6056915161',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 31
 );
 
 call new_user(
-  _username => '6935812663',
-  _password => '6935812663',
+  _username => '2936713615',
+  _password => '2936713615',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 32
 );
 
 call new_user(
-  _username => '8192818545',
-  _password => '8192818545',
+  _username => '3800250456',
+  _password => '3800250456',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 33
 );
 
 call new_user(
-  _username => '6523514568',
-  _password => '6523514568',
+  _username => '0541736342',
+  _password => '0541736342',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 34
 );
 
 call new_user(
-  _username => '3390813728',
-  _password => '3390813728',
+  _username => '7351131828',
+  _password => '7351131828',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 35
 );
 
 call new_user(
-  _username => '1848145789',
-  _password => '1848145789',
+  _username => '7376672110',
+  _password => '7376672110',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 36
 );
 
 call new_user(
-  _username => '4203234038',
-  _password => '4203234038',
+  _username => '5690112270',
+  _password => '5690112270',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 37
 );
 
 call new_user(
-  _username => '3304103391',
-  _password => '3304103391',
+  _username => '9469869808',
+  _password => '9469869808',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 38
 );
 
 call new_user(
-  _username => '8235161161',
-  _password => '8235161161',
+  _username => '0942448221',
+  _password => '0942448221',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 39
 );
 
 call new_user(
-  _username => '5005142814',
-  _password => '5005142814',
+  _username => '0353495422',
+  _password => '0353495422',
   _tipe_user => 'mahasiswa',
   _scopes => '{mahasiswa}'::user_scope[],
   _target_id => 40
@@ -331,138 +331,138 @@ call new_user(
 
 
 call new_user(
-  _username => '38347530612616759218',
-  _password => '38347530612616759218',
+  _username => '19179874038771519995',
+  _password => '19179874038771519995',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 1
 );
 
 call new_user(
-  _username => '07320031920448175842',
-  _password => '07320031920448175842',
+  _username => '97364175621048682196',
+  _password => '97364175621048682196',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 2
 );
 
 call new_user(
-  _username => '36404036248328713480',
-  _password => '36404036248328713480',
+  _username => '89081371668020295087',
+  _password => '89081371668020295087',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 3
 );
 
 call new_user(
-  _username => '40257642690102927138',
-  _password => '40257642690102927138',
+  _username => '42758892358129180182',
+  _password => '42758892358129180182',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 4
 );
 
 call new_user(
-  _username => '35342034038548839736',
-  _password => '35342034038548839736',
+  _username => '75584946507521394327',
+  _password => '75584946507521394327',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 5
 );
 
 call new_user(
-  _username => '21873645600528085934',
-  _password => '21873645600528085934',
+  _username => '53393850083010723799',
+  _password => '53393850083010723799',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 6
 );
 
 call new_user(
-  _username => '63328074837660506179',
-  _password => '63328074837660506179',
+  _username => '51557702630200268356',
+  _password => '51557702630200268356',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 7
 );
 
 call new_user(
-  _username => '29169116452764983796',
-  _password => '29169116452764983796',
+  _username => '62133775461105817668',
+  _password => '62133775461105817668',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 8
 );
 
 call new_user(
-  _username => '90586387320489892616',
-  _password => '90586387320489892616',
+  _username => '53240546626866694732',
+  _password => '53240546626866694732',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 9
 );
 
 call new_user(
-  _username => '31684348421996229281',
-  _password => '31684348421996229281',
+  _username => '13608981369930831823',
+  _password => '13608981369930831823',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 10
 );
 
 call new_user(
-  _username => '83267431120495121174',
-  _password => '83267431120495121174',
+  _username => '99952461680315865148',
+  _password => '99952461680315865148',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 11
 );
 
 call new_user(
-  _username => '05782092947488341920',
-  _password => '05782092947488341920',
+  _username => '22516189773993837115',
+  _password => '22516189773993837115',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 12
 );
 
 call new_user(
-  _username => '33554140053983080806',
-  _password => '33554140053983080806',
+  _username => '42618076253939863029',
+  _password => '42618076253939863029',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 13
 );
 
 call new_user(
-  _username => '63712869467324160354',
-  _password => '63712869467324160354',
+  _username => '80339739711262903473',
+  _password => '80339739711262903473',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 14
 );
 
 call new_user(
-  _username => '01152839441839082488',
-  _password => '01152839441839082488',
+  _username => '42723514718513693712',
+  _password => '42723514718513693712',
   _tipe_user => 'dosen',
   _scopes => '{dosen}'::user_scope[],
   _target_id => 15
 );;
 
-insert into "mata_kuliah" ("id", "kode", "min_sks", "nama", "open_in", "pref_schedule", "scheduled", "sks", "tipe_mk") values (1, '61585', 0, 'Electronic Data Systems Corp.', 'ganjil', 1, true, 2, 'wajib'), (2, '71283', 0, 'Cincinnati Financial Corp.', 'ganjil', 1, true, 3, 'pilihan'), (3, '59166', 0, 'Rockwell Automation Inc', 'ganjil', 1, true, 2, 'pilihan'), (4, '17837', 0, 'American Standard Companies Inc.', 'ganjil', 1, true, 2, 'pilihan'), (5, '77943', 0, 'W.W. Grainger Inc', 'ganjil', 1, true, 3, 'wajib'), (6, '98498', 0, 'JDS Uniphase Corp.', 'ganjil', 1, true, 3, 'wajib'), (7, '91692', 0, 'Magellan Health Services Inc.', 'ganjil', 1, true, 2, 'wajib'), (8, '87581', 0, 'Petco Animal Supplies Inc.', 'ganjil', 1, true, 3, 'wajib'), (9, '59178', 0, 'El Paso Corporation', 'ganjil', 1, true, 3, 'wajib'), (10, '46259', 0, 'Delphi Corp.', 'ganjil', 1, true, 3, 'wajib'), (11, '33305', 0, 'Vulcan Materials Company', 'ganjil', 1, true, 3, 'umum'), (12, '97372', 0, 'Nash Finch Company', 'ganjil', 1, true, 2, 'wajib'), (13, '31436', 0, 'The May Department Stores Company', 'genap', 2, true, 3, 'pilihan'), (14, '48802', 0, 'Amazon.com, Inc.', 'genap', 2, true, 3, 'wajib'), (15, '24430', 0, 'CDW Computer Centers Inc.', 'genap', 2, true, 2, 'pilihan'), (16, '72493', 0, 'Performance Food Group Co.', 'genap', 2, true, 2, 'wajib'), (17, '74559', 0, 'Crane Co.', 'genap', 2, true, 3, 'wajib'), (18, '60052', 0, 'Markel Corporation', 'genap', 2, true, 3, 'umum'), (19, '21833', 0, 'Tecumseh Products Company', 'genap', 2, true, 2, 'umum'), (20, '67100', 0, 'Great Plains Energy Inc.', 'genap', 2, true, 3, 'wajib'), (21, '85283', 0, 'BellSouth Corporation', 'genap', 2, true, 2, 'pilihan'), (22, '39317', 0, 'TXU Corp', 'genap', 2, true, 2, 'wajib'), (23, '06322', 0, 'Agway Inc.', 'genap', 2, true, 2, 'pilihan'), (24, '61838', 0, 'Sara Lee Corp', 'genap', 2, true, 2, 'wajib'), (25, '23233', 0, 'Ford Motor Co', 'ganjil', 3, true, 2, 'umum'), (26, '60505', 0, 'Fifth Third Bancorp', 'ganjil', 3, true, 3, 'wajib'), (27, '47507', 0, 'Pantry Inc', 'ganjil', 3, true, 2, 'pilihan'), (28, '89957', 0, 'Sabre Holdings Corp', 'ganjil', 3, true, 3, 'wajib'), (29, '36534', 0, 'Beckman Coulter, Inc.', 'ganjil', 3, true, 2, 'pilihan'), (30, '54846', 0, 'Pactiv Corp', 'ganjil', 3, true, 2, 'pilihan'), (31, '87555', 0, 'The Neiman Marcus Group Inc.', 'ganjil', 3, true, 3, 'pilihan'), (32, '26031', 0, 'Progress Energy Inc', 'ganjil', 3, true, 3, 'pilihan'), (33, '04225', 0, 'Aetna Inc.', 'ganjil', 3, true, 2, 'wajib'), (34, '77554', 0, 'DURA Automotive Systems Inc.', 'ganjil', 3, true, 2, 'pilihan'), (35, '79574', 0, 'Georgia-Pacific Corporation', 'ganjil', 3, true, 3, 'wajib'), (36, '43081', 0, 'ChevronTexaco Corp.', 'ganjil', 3, true, 3, 'pilihan'), (37, '38331', 0, 'Tecumseh Products Company', 'genap', 4, true, 3, 'wajib'), (38, '87636', 0, 'Oshkosh Truck Corp', 'genap', 4, true, 3, 'wajib'), (39, '87003', 0, 'Safeguard Scientifics Inc.', 'genap', 4, true, 2, 'wajib'), (40, '04239', 0, 'Great Plains Energy Inc.', 'genap', 4, true, 2, 'pilihan'), (41, '67360', 0, 'Popular Inc', 'genap', 4, true, 2, 'wajib'), (42, '51065', 0, 'Hubbell Inc.', 'genap', 4, true, 3, 'wajib'), (43, '69167', 0, 'Standard Pacific Corp.', 'genap', 4, true, 2, 'wajib'), (44, '82400', 0, 'Phoenix Companies Inc', 'genap', 4, true, 3, 'wajib'), (45, '82185', 0, 'Dow Jones & Company, Inc.', 'genap', 4, true, 2, 'wajib'), (46, '48957', 0, 'D&K Healthcare Resources, Inc.', 'genap', 4, true, 2, 'pilihan'), (47, '68857', 0, 'The Men''s Wearhouse Inc.', 'genap', 4, true, 2, 'wajib'), (48, '26986', 0, 'Questar Corp', 'genap', 4, true, 3, 'wajib'), (49, '11144', 0, 'ONEOK Inc', 'ganjil', 5, true, 3, 'wajib'), (50, '43407', 0, 'Torchmark Corporation', 'ganjil', 5, true, 3, 'pilihan'), (51, '44105', 0, 'Allergan, Inc.', 'ganjil', 5, true, 3, 'wajib'), (52, '63712', 0, 'C. H. Robinson Worldwide Inc.', 'ganjil', 5, true, 2, 'wajib'), (53, '13150', 0, 'Waste Management Inc', 'ganjil', 5, true, 2, 'wajib'), (54, '28282', 0, 'Phillips Petroleum Co', 'ganjil', 5, true, 3, 'pilihan'), (55, '88766', 0, 'Comerica Inc.', 'ganjil', 5, true, 3, 'wajib'), (56, '03251', 0, 'Southern Company', 'ganjil', 5, true, 2, 'umum'), (57, '11961', 0, 'Valspar Corporation', 'ganjil', 5, true, 2, 'pilihan'), (58, '03984', 0, 'Burlington Resources Inc.', 'ganjil', 5, true, 3, 'wajib'), (59, '39746', 0, 'Ford Motor Co', 'ganjil', 5, true, 3, 'wajib'), (60, '18636', 0, 'AnnTaylor Inc.', 'ganjil', 5, true, 3, 'wajib'), (61, '17282', 0, 'Viad Corp', 'genap', 6, true, 2, 'wajib'), (62, '80495', 0, 'Coca-Cola Co.', 'genap', 6, true, 2, 'pilihan'), (63, '04887', 0, 'Southwest Airlines Co', 'genap', 6, true, 2, 'wajib'), (64, '26594', 0, 'AmSouth Bancorp.', 'genap', 6, true, 3, 'pilihan'), (65, '48607', 0, 'Jones Apparel Group Inc.', 'genap', 6, true, 3, 'pilihan'), (66, '71935', 0, 'Ecolab Inc.', 'genap', 6, true, 3, 'wajib'), (67, '86486', 0, 'Casey''s General Stores Inc.', 'genap', 6, true, 2, 'pilihan'), (68, '52374', 0, 'Michaels Stores Inc.', 'genap', 6, true, 2, 'wajib'), (69, '12624', 0, 'Manor Care Inc.', 'genap', 6, true, 3, 'wajib'), (70, '97387', 0, 'Paccar Inc', 'genap', 6, true, 3, 'pilihan'), (71, '08326', 0, 'Encompass Services Corporation', 'genap', 6, true, 3, 'wajib'), (72, '07263', 0, 'Tellabs Inc.', 'genap', 6, true, 3, 'wajib');
+insert into "mata_kuliah" ("id", "kode", "min_sks", "nama", "open_in", "pref_schedule", "scheduled", "sks", "tipe_mk") values (1, '48019', 0, 'Metals USA Inc.', 'ganjil', 1, true, 2, 'wajib'), (2, '68732', 0, 'Analog Devices, Inc.', 'ganjil', 1, true, 3, 'pilihan'), (3, '30728', 0, 'Mandalay Resort Group', 'ganjil', 1, true, 3, 'pilihan'), (4, '36112', 0, 'Northern Trust Corporation', 'ganjil', 1, true, 3, 'wajib'), (5, '80325', 0, 'Fleetwood Enterprises Inc.', 'ganjil', 1, true, 2, 'wajib'), (6, '05009', 0, 'BorgWarner Inc.', 'ganjil', 1, true, 2, 'pilihan'), (7, '08258', 0, 'Benchmark Electronics, Inc.', 'ganjil', 1, true, 3, 'pilihan'), (8, '03925', 0, 'Pathmark Stores Inc.', 'ganjil', 1, true, 3, 'pilihan'), (9, '23839', 0, 'Lehman Brothers Holdings Inc.', 'ganjil', 1, true, 3, 'pilihan'), (10, '40448', 0, 'XO Communications Inc', 'ganjil', 1, true, 2, 'wajib'), (11, '88438', 0, 'Textron Inc', 'ganjil', 1, true, 2, 'pilihan'), (12, '04536', 0, 'Coca-Cola Enterprises Inc.', 'ganjil', 1, true, 3, 'pilihan'), (13, '69294', 0, 'BMC Software, Inc.', 'genap', 2, true, 3, 'wajib'), (14, '39553', 0, 'Toys ''R'' Us Inc', 'genap', 2, true, 3, 'wajib'), (15, '64522', 0, 'CBRL Group Inc.', 'genap', 2, true, 3, 'pilihan'), (16, '54890', 0, 'Target Corp.', 'genap', 2, true, 2, 'wajib'), (17, '98968', 0, 'Quanta Services Inc.', 'genap', 2, true, 2, 'wajib'), (18, '67102', 0, 'MPS Group Inc.', 'genap', 2, true, 2, 'wajib'), (19, '15032', 0, 'Interstate Bakeries Corporation', 'genap', 2, true, 2, 'wajib'), (20, '42658', 0, 'Capital One Financial Corp.', 'genap', 2, true, 3, 'wajib'), (21, '91442', 0, 'National Oilwell Inc', 'genap', 2, true, 2, 'pilihan'), (22, '89231', 0, 'Greif Bros. Corporation', 'genap', 2, true, 2, 'pilihan'), (23, '57920', 0, 'Weyerhauser Company', 'genap', 2, true, 2, 'wajib'), (24, '78966', 0, 'Dun & Bradstreet Inc.', 'genap', 2, true, 3, 'pilihan'), (25, '59492', 0, 'Guidant Corporation', 'ganjil', 3, true, 2, 'wajib'), (26, '72192', 0, 'GreenPoint Financial Corp.', 'ganjil', 3, true, 3, 'wajib'), (27, '09870', 0, 'Peter Kiewit Sons'', Inc.', 'ganjil', 3, true, 2, 'pilihan'), (28, '98358', 0, 'Sempra Energy', 'ganjil', 3, true, 3, 'wajib'), (29, '37805', 0, 'Constellation Brands Inc.', 'ganjil', 3, true, 3, 'wajib'), (30, '54243', 0, 'Wyndham International Inc', 'ganjil', 3, true, 3, 'wajib'), (31, '12653', 0, 'Safeway Inc', 'ganjil', 3, true, 3, 'pilihan'), (32, '43008', 0, 'Washington Post Co.', 'ganjil', 3, true, 2, 'wajib'), (33, '30845', 0, 'Anheuser-Busch Companies, Inc.', 'ganjil', 3, true, 2, 'wajib'), (34, '95115', 0, 'Goldman Sachs Group Inc.', 'ganjil', 3, true, 2, 'wajib'), (35, '27269', 0, 'Mercury General Corporation', 'ganjil', 3, true, 3, 'pilihan'), (36, '74936', 0, 'DST Systems, Inc.', 'ganjil', 3, true, 2, 'wajib'), (37, '84674', 0, 'Computer Sciences Corp.', 'genap', 4, true, 3, 'pilihan'), (38, '17542', 0, 'Corn Products International Inc.', 'genap', 4, true, 2, 'wajib'), (39, '07068', 0, 'Viasystems Group Inc', 'genap', 4, true, 2, 'wajib'), (40, '70818', 0, 'Advanced Micro Devices, Inc.', 'genap', 4, true, 3, 'wajib'), (41, '61728', 0, 'AFLAC Incorporated', 'genap', 4, true, 2, 'wajib'), (42, '19205', 0, 'Texas Industries Inc.', 'genap', 4, true, 3, 'pilihan'), (43, '65015', 0, 'General Cable Corporation', 'genap', 4, true, 3, 'pilihan'), (44, '78088', 0, 'Integrated Electrical Services Inc.', 'genap', 4, true, 3, 'wajib'), (45, '73911', 0, 'C. H. Robinson Worldwide Inc.', 'genap', 4, true, 3, 'umum'), (46, '31514', 0, 'Tenet Healthcare Corporation', 'genap', 4, true, 3, 'wajib'), (47, '67300', 0, 'AMR Corporation', 'genap', 4, true, 2, 'wajib'), (48, '72873', 0, 'Microsoft Corporation', 'genap', 4, true, 3, 'wajib'), (49, '98534', 0, 'Starwood Hotels & Resorts Worldwide Inc', 'ganjil', 5, true, 2, 'wajib'), (50, '45959', 0, 'Exelon Corporation', 'ganjil', 5, true, 2, 'wajib'), (51, '38127', 0, 'Paccar Inc', 'ganjil', 5, true, 3, 'wajib'), (52, '13802', 0, 'Peter Kiewit Sons'', Inc.', 'ganjil', 5, true, 2, 'wajib'), (53, '50070', 0, 'Acterna Corp.', 'ganjil', 5, true, 2, 'wajib'), (54, '41067', 0, 'Energy East Corporation', 'ganjil', 5, true, 2, 'wajib'), (55, '82215', 0, 'Boise Cascade Corporation', 'ganjil', 5, true, 3, 'wajib'), (56, '02680', 0, 'Cooper Tire & Rubber Co.', 'ganjil', 5, true, 3, 'wajib'), (57, '12855', 0, 'Intuit Inc.', 'ganjil', 5, true, 2, 'wajib'), (58, '15081', 0, 'Perot Systems Corp', 'ganjil', 5, true, 2, 'wajib'), (59, '22252', 0, 'Conseco Inc.', 'ganjil', 5, true, 2, 'wajib'), (60, '34941', 0, 'Sysco Corp', 'ganjil', 5, true, 2, 'pilihan'), (61, '72765', 0, 'M & T Bank Corporation', 'genap', 6, true, 2, 'wajib'), (62, '49950', 0, 'Sprint Corp.', 'genap', 6, true, 2, 'pilihan'), (63, '94084', 0, 'Kroger Co.', 'genap', 6, true, 3, 'wajib'), (64, '71396', 0, 'W.W. Grainger Inc', 'genap', 6, true, 3, 'wajib'), (65, '73463', 0, 'Apache Corporation', 'genap', 6, true, 3, 'wajib'), (66, '75522', 0, 'Primedia Inc', 'genap', 6, true, 2, 'wajib'), (67, '59370', 0, 'Becton, Dickinson and Company', 'genap', 6, true, 3, 'wajib'), (68, '28155', 0, 'Radio Shack Corporation', 'genap', 6, true, 3, 'wajib'), (69, '41039', 0, 'BellSouth Corporation', 'genap', 6, true, 3, 'pilihan'), (70, '57394', 0, 'Laboratory Corporation of America Holdings', 'genap', 6, true, 2, 'wajib'), (71, '22615', 0, 'Raymond James Financial Inc.', 'genap', 6, true, 2, 'wajib'), (72, '99257', 0, 'ArvinMeritor, Inc.', 'genap', 6, true, 3, 'wajib');
 
-insert into "kelas" ("id", "id_mk", "id_periode", "label") values (1, 1, 1, 'A'), (2, 2, 1, 'A'), (3, 3, 1, 'A'), (4, 4, 1, 'A'), (5, 5, 1, 'A'), (6, 6, 1, 'A'), (7, 7, 1, 'A'), (8, 8, 1, 'A'), (9, 9, 1, 'A'), (10, 10, 1, 'A'), (11, 11, 1, 'A'), (12, 12, 1, 'A'), (13, 13, 2, 'A'), (14, 14, 2, 'A'), (15, 15, 2, 'A'), (16, 16, 2, 'A'), (17, 17, 2, 'A'), (18, 18, 2, 'A'), (19, 19, 2, 'A'), (20, 20, 2, 'A'), (21, 21, 2, 'A'), (22, 22, 2, 'A'), (23, 23, 2, 'A'), (24, 24, 2, 'A'), (25, 25, 3, 'A'), (26, 26, 3, 'A'), (27, 27, 3, 'A'), (28, 28, 3, 'A'), (29, 29, 3, 'A'), (30, 30, 3, 'A'), (31, 31, 3, 'A'), (32, 32, 3, 'A'), (33, 33, 3, 'A'), (34, 34, 3, 'A'), (35, 35, 3, 'A'), (36, 36, 3, 'A'), (37, 37, 4, 'A'), (38, 38, 4, 'A'), (39, 39, 4, 'A'), (40, 40, 4, 'A'), (41, 41, 4, 'A'), (42, 42, 4, 'A'), (43, 43, 4, 'A'), (44, 44, 4, 'A'), (45, 45, 4, 'A'), (46, 46, 4, 'A'), (47, 47, 4, 'A'), (48, 48, 4, 'A'), (49, 49, 5, 'A'), (50, 50, 5, 'A'), (51, 51, 5, 'A'), (52, 52, 5, 'A'), (53, 53, 5, 'A'), (54, 54, 5, 'A'), (55, 55, 5, 'A'), (56, 56, 5, 'A'), (57, 57, 5, 'A'), (58, 58, 5, 'A'), (59, 59, 5, 'A'), (60, 60, 5, 'A'), (61, 61, 6, 'A'), (62, 62, 6, 'A'), (63, 63, 6, 'A'), (64, 64, 6, 'A'), (65, 65, 6, 'A'), (66, 66, 6, 'A'), (67, 67, 6, 'A'), (68, 68, 6, 'A'), (69, 69, 6, 'A'), (70, 70, 6, 'A'), (71, 71, 6, 'A'), (72, 72, 6, 'A');
+insert into "kelas" ("id", "id_mk", "id_periode", "label") values (1, 1, 1, 'A'), (2, 1, 1, 'B'), (3, 2, 1, 'A'), (4, 2, 1, 'B'), (5, 3, 1, 'A'), (6, 3, 1, 'B'), (7, 3, 1, 'C'), (8, 3, 1, 'D'), (9, 3, 1, 'E'), (10, 4, 1, 'A'), (11, 4, 1, 'B'), (12, 5, 1, 'A'), (13, 5, 1, 'B'), (14, 5, 1, 'C'), (15, 5, 1, 'D'), (16, 6, 1, 'A'), (17, 6, 1, 'B'), (18, 7, 1, 'A'), (19, 7, 1, 'B'), (20, 7, 1, 'C'), (21, 7, 1, 'D'), (22, 8, 1, 'A'), (23, 8, 1, 'B'), (24, 8, 1, 'C'), (25, 8, 1, 'D'), (26, 8, 1, 'E'), (27, 9, 1, 'A'), (28, 9, 1, 'B'), (29, 9, 1, 'C'), (30, 10, 1, 'A'), (31, 10, 1, 'B'), (32, 11, 1, 'A'), (33, 11, 1, 'B'), (34, 11, 1, 'C'), (35, 11, 1, 'D'), (36, 12, 1, 'A'), (37, 13, 2, 'A'), (38, 13, 2, 'B'), (39, 13, 2, 'C'), (40, 13, 2, 'D'), (41, 13, 2, 'E'), (42, 14, 2, 'A'), (43, 14, 2, 'B'), (44, 14, 2, 'C'), (45, 14, 2, 'D'), (46, 15, 2, 'A'), (47, 15, 2, 'B'), (48, 15, 2, 'C'), (49, 16, 2, 'A'), (50, 17, 2, 'A'), (51, 17, 2, 'B'), (52, 17, 2, 'C'), (53, 18, 2, 'A'), (54, 18, 2, 'B'), (55, 18, 2, 'C'), (56, 19, 2, 'A'), (57, 19, 2, 'B'), (58, 19, 2, 'C'), (59, 19, 2, 'D'), (60, 20, 2, 'A'), (61, 20, 2, 'B'), (62, 20, 2, 'C'), (63, 20, 2, 'D'), (64, 20, 2, 'E'), (65, 21, 2, 'A'), (66, 22, 2, 'A'), (67, 22, 2, 'B'), (68, 22, 2, 'C'), (69, 22, 2, 'D'), (70, 22, 2, 'E'), (71, 23, 2, 'A'), (72, 23, 2, 'B'), (73, 23, 2, 'C'), (74, 23, 2, 'D'), (75, 24, 2, 'A'), (76, 25, 3, 'A'), (77, 25, 3, 'B'), (78, 25, 3, 'C'), (79, 25, 3, 'D'), (80, 26, 3, 'A'), (81, 27, 3, 'A'), (82, 27, 3, 'B'), (83, 27, 3, 'C'), (84, 27, 3, 'D'), (85, 27, 3, 'E'), (86, 28, 3, 'A'), (87, 28, 3, 'B'), (88, 29, 3, 'A'), (89, 29, 3, 'B'), (90, 29, 3, 'C'), (91, 29, 3, 'D'), (92, 29, 3, 'E'), (93, 30, 3, 'A'), (94, 30, 3, 'B'), (95, 30, 3, 'C'), (96, 30, 3, 'D'), (97, 31, 3, 'A'), (98, 31, 3, 'B'), (99, 31, 3, 'C'), (100, 31, 3, 'D'), (101, 31, 3, 'E'), (102, 32, 3, 'A'), (103, 33, 3, 'A'), (104, 33, 3, 'B'), (105, 33, 3, 'C'), (106, 33, 3, 'D'), (107, 33, 3, 'E'), (108, 34, 3, 'A'), (109, 34, 3, 'B'), (110, 35, 3, 'A'), (111, 35, 3, 'B'), (112, 35, 3, 'C'), (113, 35, 3, 'D'), (114, 36, 3, 'A'), (115, 37, 4, 'A'), (116, 37, 4, 'B'), (117, 37, 4, 'C'), (118, 37, 4, 'D'), (119, 37, 4, 'E'), (120, 38, 4, 'A'), (121, 38, 4, 'B'), (122, 38, 4, 'C'), (123, 38, 4, 'D'), (124, 38, 4, 'E'), (125, 39, 4, 'A'), (126, 39, 4, 'B'), (127, 39, 4, 'C'), (128, 40, 4, 'A'), (129, 40, 4, 'B'), (130, 41, 4, 'A'), (131, 41, 4, 'B'), (132, 42, 4, 'A'), (133, 43, 4, 'A'), (134, 44, 4, 'A'), (135, 44, 4, 'B'), (136, 44, 4, 'C'), (137, 44, 4, 'D'), (138, 45, 4, 'A'), (139, 45, 4, 'B'), (140, 45, 4, 'C'), (141, 46, 4, 'A'), (142, 46, 4, 'B'), (143, 46, 4, 'C'), (144, 46, 4, 'D'), (145, 46, 4, 'E'), (146, 47, 4, 'A'), (147, 47, 4, 'B'), (148, 48, 4, 'A'), (149, 48, 4, 'B'), (150, 48, 4, 'C'), (151, 49, 5, 'A'), (152, 49, 5, 'B'), (153, 50, 5, 'A'), (154, 50, 5, 'B'), (155, 50, 5, 'C'), (156, 50, 5, 'D'), (157, 50, 5, 'E'), (158, 51, 5, 'A'), (159, 51, 5, 'B'), (160, 51, 5, 'C'), (161, 51, 5, 'D'), (162, 51, 5, 'E'), (163, 52, 5, 'A'), (164, 53, 5, 'A'), (165, 54, 5, 'A'), (166, 54, 5, 'B'), (167, 54, 5, 'C'), (168, 55, 5, 'A'), (169, 55, 5, 'B'), (170, 55, 5, 'C'), (171, 55, 5, 'D'), (172, 55, 5, 'E'), (173, 56, 5, 'A'), (174, 57, 5, 'A'), (175, 57, 5, 'B'), (176, 58, 5, 'A'), (177, 58, 5, 'B'), (178, 58, 5, 'C'), (179, 58, 5, 'D'), (180, 59, 5, 'A'), (181, 59, 5, 'B'), (182, 59, 5, 'C'), (183, 59, 5, 'D'), (184, 59, 5, 'E'), (185, 60, 5, 'A'), (186, 61, 6, 'A'), (187, 61, 6, 'B'), (188, 62, 6, 'A'), (189, 62, 6, 'B'), (190, 62, 6, 'C'), (191, 62, 6, 'D'), (192, 63, 6, 'A'), (193, 63, 6, 'B'), (194, 63, 6, 'C'), (195, 64, 6, 'A'), (196, 64, 6, 'B'), (197, 64, 6, 'C'), (198, 65, 6, 'A'), (199, 65, 6, 'B'), (200, 65, 6, 'C'), (201, 65, 6, 'D'), (202, 65, 6, 'E'), (203, 66, 6, 'A'), (204, 67, 6, 'A'), (205, 68, 6, 'A'), (206, 68, 6, 'B'), (207, 68, 6, 'C'), (208, 69, 6, 'A'), (209, 70, 6, 'A'), (210, 70, 6, 'B'), (211, 70, 6, 'C'), (212, 70, 6, 'D'), (213, 71, 6, 'A'), (214, 71, 6, 'B'), (215, 72, 6, 'A'), (216, 72, 6, 'B'), (217, 72, 6, 'C');
 
-insert into "scheduled_kelas" ("hari_kul", "id_dosen", "id_kelas", "kapasitas", "ruangan", "total_menit", "waktu_kul") values (6, 14, 1, 40, 'k4', 90, '15:00'), (5, 13, 2, 30, 'laboratorium komputer', 135, '13:00'), (1, 2, 3, 40, 'k4', 90, '10:00'), (1, 1, 4, 40, 'k1', 90, '07:00'), (3, 3, 5, 40, 'k3', 135, '09:00'), (5, 8, 6, 30, 'laboratorium komputer', 135, '08:00'), (1, 5, 7, 40, 'k4', 90, '15:00'), (2, 8, 8, 40, 'k3', 135, '11:00'), (3, 11, 9, 40, 'k5', 135, '13:00'), (1, 1, 10, 40, 'k5', 135, '14:00'), (6, 3, 11, 40, 'k5', 135, '15:00'), (5, 15, 12, 40, 'k4', 90, '10:00'), (4, 9, 13, 40, 'k3', 135, '15:00'), (6, 14, 14, 40, 'k1', 135, '13:00'), (2, 11, 15, 40, 'k4', 90, '08:00'), (2, 10, 16, 40, 'k2', 90, '14:00'), (2, 11, 17, 40, 'k2', 135, '07:00'), (2, 2, 18, 40, 'k4', 135, '13:00'), (5, 2, 19, 40, 'k3', 90, '08:00'), (2, 8, 20, 40, 'k4', 135, '13:00'), (2, 13, 21, 40, 'k4', 90, '07:00'), (1, 2, 22, 40, 'k5', 90, '12:00'), (6, 14, 23, 40, 'k2', 90, '13:00'), (4, 15, 24, 40, 'k2', 90, '12:00'), (5, 12, 25, 30, 'laboratorium komputer', 90, '11:00'), (1, 5, 26, 30, 'laboratorium komputer', 135, '11:00'), (4, 3, 27, 40, 'k5', 90, '15:00'), (3, 8, 28, 40, 'k2', 135, '09:00'), (2, 11, 29, 40, 'k4', 90, '13:00'), (6, 5, 30, 30, 'laboratorium komputer', 90, '09:00'), (5, 9, 31, 40, 'k2', 135, '13:00'), (5, 7, 32, 40, 'k4', 135, '13:00'), (4, 8, 33, 40, 'k3', 90, '15:00'), (5, 2, 34, 40, 'k2', 90, '14:00'), (1, 14, 35, 40, 'k5', 135, '07:00'), (1, 2, 36, 40, 'k3', 135, '12:00'), (1, 1, 37, 40, 'k3', 135, '13:00'), (2, 2, 38, 40, 'k5', 135, '11:00'), (6, 12, 39, 30, 'laboratorium komputer', 90, '10:00'), (4, 11, 40, 40, 'k1', 90, '10:00'), (3, 11, 41, 40, 'k2', 90, '15:00'), (4, 10, 42, 30, 'laboratorium komputer', 135, '14:00'), (5, 5, 43, 30, 'laboratorium komputer', 90, '11:00'), (6, 2, 44, 40, 'k4', 135, '09:00'), (4, 6, 45, 40, 'k2', 90, '07:00'), (2, 15, 46, 40, 'k2', 90, '07:00'), (2, 7, 47, 40, 'k3', 90, '15:00'), (5, 14, 48, 40, 'k4', 135, '08:00'), (2, 5, 49, 40, 'k4', 135, '14:00'), (6, 6, 50, 40, 'k5', 135, '08:00'), (4, 4, 51, 30, 'laboratorium komputer', 135, '14:00'), (5, 12, 52, 30, 'laboratorium komputer', 90, '15:00'), (1, 11, 53, 40, 'k3', 90, '11:00'), (3, 13, 54, 40, 'k3', 135, '15:00'), (6, 1, 55, 40, 'k4', 135, '12:00'), (6, 3, 56, 40, 'k1', 90, '13:00'), (2, 11, 57, 30, 'laboratorium komputer', 90, '12:00'), (2, 14, 58, 40, 'k3', 135, '09:00'), (1, 11, 59, 40, 'k3', 135, '13:00'), (1, 5, 60, 40, 'k4', 135, '14:00'), (6, 7, 61, 40, 'k2', 90, '09:00'), (5, 14, 62, 40, 'k5', 90, '08:00'), (1, 11, 63, 30, 'laboratorium komputer', 90, '09:00'), (2, 7, 64, 40, 'k5', 135, '15:00'), (4, 2, 65, 40, 'k1', 135, '13:00'), (2, 11, 66, 40, 'k1', 135, '08:00'), (2, 1, 67, 30, 'laboratorium komputer', 90, '14:00'), (3, 6, 68, 40, 'k5', 90, '10:00'), (5, 12, 69, 30, 'laboratorium komputer', 135, '11:00'), (3, 10, 70, 40, 'k4', 135, '14:00'), (5, 11, 71, 40, 'k4', 135, '15:00'), (2, 8, 72, 40, 'k2', 135, '08:00');
+insert into "scheduled_kelas" ("hari_kul", "id_dosen", "id_kelas", "kapasitas", "ruangan", "total_menit", "waktu_kul") values (1, 5, 1, 40, 'k2', 90, '12:00'), (3, 1, 2, 40, 'k2', 90, '09:00'), (5, 10, 3, 40, 'k3', 135, '13:00'), (3, 11, 4, 30, 'laboratorium komputer', 135, '14:00'), (1, 1, 5, 30, 'laboratorium komputer', 135, '07:00'), (3, 1, 6, 30, 'laboratorium komputer', 135, '12:00'), (1, 3, 7, 40, 'k5', 135, '09:00'), (4, 3, 8, 30, 'laboratorium komputer', 135, '15:00'), (2, 11, 9, 40, 'k3', 135, '15:00'), (2, 8, 10, 40, 'k5', 135, '11:00'), (3, 10, 11, 40, 'k3', 135, '10:00'), (6, 7, 12, 40, 'k1', 90, '12:00'), (3, 6, 13, 30, 'laboratorium komputer', 90, '15:00'), (3, 5, 14, 40, 'k2', 90, '11:00'), (3, 10, 15, 40, 'k3', 90, '15:00'), (6, 15, 16, 40, 'k1', 90, '15:00'), (5, 4, 17, 40, 'k3', 90, '10:00'), (4, 7, 18, 40, 'k4', 135, '15:00'), (3, 8, 19, 40, 'k1', 135, '09:00'), (1, 7, 20, 40, 'k2', 135, '11:00'), (1, 8, 21, 40, 'k3', 135, '15:00'), (5, 7, 22, 40, 'k2', 135, '10:00'), (2, 4, 23, 40, 'k4', 135, '07:00'), (3, 5, 24, 30, 'laboratorium komputer', 135, '10:00'), (6, 14, 25, 40, 'k3', 135, '15:00'), (2, 10, 26, 30, 'laboratorium komputer', 135, '11:00'), (2, 7, 27, 40, 'k1', 135, '13:00'), (6, 14, 28, 40, 'k3', 135, '13:00'), (4, 14, 29, 40, 'k1', 135, '10:00'), (4, 11, 30, 40, 'k1', 90, '13:00'), (1, 5, 31, 40, 'k2', 90, '12:00'), (5, 9, 32, 30, 'laboratorium komputer', 90, '12:00'), (3, 13, 33, 30, 'laboratorium komputer', 90, '12:00'), (4, 12, 34, 30, 'laboratorium komputer', 90, '07:00'), (2, 8, 35, 40, 'k3', 90, '08:00'), (6, 10, 36, 30, 'laboratorium komputer', 135, '07:00'), (5, 1, 37, 40, 'k3', 135, '14:00'), (3, 14, 38, 40, 'k4', 135, '11:00'), (4, 9, 39, 40, 'k4', 135, '10:00'), (1, 2, 40, 40, 'k1', 135, '13:00'), (4, 1, 41, 40, 'k1', 135, '08:00'), (3, 7, 42, 40, 'k4', 135, '09:00'), (6, 11, 43, 40, 'k4', 135, '13:00'), (6, 5, 44, 40, 'k4', 135, '07:00'), (6, 6, 45, 30, 'laboratorium komputer', 135, '10:00'), (3, 10, 46, 40, 'k3', 135, '14:00'), (6, 7, 47, 40, 'k5', 135, '14:00'), (2, 7, 48, 40, 'k2', 135, '13:00'), (5, 14, 49, 40, 'k3', 90, '09:00'), (4, 7, 50, 40, 'k1', 90, '15:00'), (4, 11, 51, 40, 'k3', 90, '11:00'), (2, 8, 52, 30, 'laboratorium komputer', 90, '14:00'), (2, 1, 53, 40, 'k1', 90, '14:00'), (2, 7, 54, 40, 'k2', 90, '13:00'), (2, 10, 55, 30, 'laboratorium komputer', 90, '14:00'), (1, 15, 56, 40, 'k4', 90, '11:00'), (5, 14, 57, 40, 'k3', 90, '15:00'), (6, 7, 58, 40, 'k4', 90, '07:00'), (6, 10, 59, 40, 'k2', 90, '10:00'), (1, 11, 60, 30, 'laboratorium komputer', 135, '07:00'), (5, 15, 61, 30, 'laboratorium komputer', 135, '08:00'), (1, 13, 62, 40, 'k4', 135, '15:00'), (2, 13, 63, 40, 'k5', 135, '15:00'), (1, 8, 64, 40, 'k5', 135, '13:00'), (4, 3, 65, 40, 'k5', 90, '12:00'), (4, 7, 66, 30, 'laboratorium komputer', 90, '09:00'), (4, 9, 67, 40, 'k5', 90, '15:00'), (3, 9, 68, 40, 'k1', 90, '09:00'), (4, 3, 69, 40, 'k3', 90, '10:00'), (6, 5, 70, 40, 'k5', 90, '07:00'), (5, 10, 71, 40, 'k2', 90, '07:00'), (4, 3, 72, 40, 'k1', 90, '10:00'), (3, 5, 73, 30, 'laboratorium komputer', 90, '12:00'), (1, 15, 74, 40, 'k2', 90, '11:00'), (1, 8, 75, 30, 'laboratorium komputer', 135, '09:00'), (4, 1, 76, 30, 'laboratorium komputer', 90, '13:00'), (6, 12, 77, 40, 'k3', 90, '11:00'), (1, 3, 78, 40, 'k3', 90, '08:00'), (3, 2, 79, 40, 'k2', 90, '15:00'), (2, 8, 80, 40, 'k3', 135, '10:00'), (5, 11, 81, 40, 'k2', 90, '10:00'), (1, 14, 82, 40, 'k4', 90, '15:00'), (6, 6, 83, 40, 'k1', 90, '15:00'), (3, 12, 84, 40, 'k1', 90, '08:00'), (5, 3, 85, 40, 'k2', 90, '12:00'), (2, 4, 86, 40, 'k4', 135, '12:00'), (6, 6, 87, 40, 'k3', 135, '12:00'), (5, 3, 88, 40, 'k1', 135, '09:00'), (4, 13, 89, 40, 'k5', 135, '10:00'), (1, 7, 90, 40, 'k3', 135, '11:00'), (2, 13, 91, 40, 'k3', 135, '11:00'), (3, 2, 92, 40, 'k3', 135, '15:00'), (5, 15, 93, 40, 'k2', 135, '13:00'), (6, 8, 94, 40, 'k4', 135, '11:00'), (6, 6, 95, 40, 'k1', 135, '13:00'), (6, 10, 96, 40, 'k5', 135, '14:00'), (4, 2, 97, 30, 'laboratorium komputer', 135, '08:00'), (1, 7, 98, 40, 'k3', 135, '10:00'), (6, 8, 99, 30, 'laboratorium komputer', 135, '08:00'), (1, 8, 100, 40, 'k2', 135, '11:00'), (5, 3, 101, 40, 'k4', 135, '08:00'), (1, 6, 102, 40, 'k3', 90, '08:00'), (6, 2, 103, 30, 'laboratorium komputer', 90, '14:00'), (3, 6, 104, 40, 'k5', 90, '07:00'), (4, 10, 105, 40, 'k4', 90, '10:00'), (5, 7, 106, 40, 'k1', 90, '13:00'), (3, 13, 107, 40, 'k1', 90, '09:00'), (6, 6, 108, 40, 'k3', 90, '10:00'), (4, 11, 109, 40, 'k1', 90, '08:00'), (5, 14, 110, 30, 'laboratorium komputer', 135, '11:00'), (4, 7, 111, 40, 'k3', 135, '11:00'), (2, 12, 112, 40, 'k1', 135, '10:00'), (1, 1, 113, 40, 'k1', 135, '14:00'), (5, 5, 114, 40, 'k1', 90, '13:00'), (3, 13, 115, 40, 'k5', 135, '15:00'), (3, 14, 116, 40, 'k2', 135, '15:00'), (2, 6, 117, 40, 'k5', 135, '12:00'), (2, 13, 118, 40, 'k1', 135, '15:00'), (2, 15, 119, 40, 'k2', 135, '09:00'), (1, 5, 120, 40, 'k4', 90, '14:00'), (1, 3, 121, 40, 'k3', 90, '08:00'), (3, 10, 122, 40, 'k5', 90, '09:00'), (1, 7, 123, 40, 'k1', 90, '09:00'), (6, 12, 124, 40, 'k4', 90, '11:00'), (2, 6, 125, 40, 'k2', 90, '14:00'), (6, 3, 126, 40, 'k3', 90, '13:00'), (6, 6, 127, 40, 'k1', 90, '09:00'), (1, 3, 128, 40, 'k5', 135, '15:00'), (6, 13, 129, 40, 'k3', 135, '15:00'), (6, 12, 130, 40, 'k3', 90, '11:00'), (3, 13, 131, 40, 'k2', 90, '09:00'), (6, 1, 132, 40, 'k4', 135, '07:00'), (6, 9, 133, 40, 'k3', 135, '09:00'), (6, 12, 134, 40, 'k5', 135, '08:00'), (5, 6, 135, 30, 'laboratorium komputer', 135, '07:00'), (3, 13, 136, 30, 'laboratorium komputer', 135, '13:00'), (6, 10, 137, 40, 'k5', 135, '13:00'), (1, 3, 138, 40, 'k1', 135, '11:00'), (5, 13, 139, 40, 'k5', 135, '14:00'), (3, 5, 140, 40, 'k4', 135, '09:00'), (3, 11, 141, 40, 'k1', 135, '12:00'), (6, 13, 142, 40, 'k2', 135, '12:00'), (1, 10, 143, 40, 'k3', 135, '12:00'), (1, 6, 144, 40, 'k2', 135, '10:00'), (6, 4, 145, 40, 'k1', 135, '10:00'), (3, 3, 146, 40, 'k3', 90, '10:00'), (1, 5, 147, 40, 'k3', 90, '12:00'), (6, 1, 148, 40, 'k4', 135, '13:00'), (3, 7, 149, 40, 'k4', 135, '12:00'), (3, 1, 150, 40, 'k2', 135, '12:00'), (3, 6, 151, 40, 'k3', 90, '13:00'), (4, 7, 152, 40, 'k1', 90, '07:00'), (2, 5, 153, 40, 'k2', 90, '12:00'), (4, 9, 154, 40, 'k4', 90, '14:00'), (5, 5, 155, 30, 'laboratorium komputer', 90, '12:00'), (3, 1, 156, 40, 'k3', 90, '07:00'), (3, 5, 157, 40, 'k3', 90, '11:00'), (5, 7, 158, 40, 'k4', 135, '07:00'), (5, 11, 159, 40, 'k3', 135, '12:00'), (2, 3, 160, 40, 'k2', 135, '08:00'), (4, 6, 161, 30, 'laboratorium komputer', 135, '12:00'), (1, 12, 162, 40, 'k2', 135, '15:00'), (2, 4, 163, 40, 'k2', 90, '07:00'), (4, 5, 164, 40, 'k4', 90, '10:00'), (2, 1, 165, 40, 'k4', 90, '08:00'), (1, 11, 166, 30, 'laboratorium komputer', 90, '07:00'), (3, 6, 167, 40, 'k4', 90, '15:00'), (6, 4, 168, 30, 'laboratorium komputer', 135, '09:00'), (1, 15, 169, 40, 'k3', 135, '14:00'), (4, 10, 170, 40, 'k1', 135, '15:00'), (3, 4, 171, 40, 'k1', 135, '15:00'), (6, 6, 172, 40, 'k5', 135, '14:00'), (1, 5, 173, 40, 'k2', 135, '13:00'), (5, 2, 174, 30, 'laboratorium komputer', 90, '09:00'), (3, 9, 175, 40, 'k3', 90, '09:00'), (3, 14, 176, 40, 'k3', 90, '09:00'), (6, 11, 177, 40, 'k3', 90, '13:00'), (1, 9, 178, 40, 'k1', 90, '14:00'), (3, 14, 179, 40, 'k3', 90, '12:00'), (2, 7, 180, 40, 'k3', 90, '11:00'), (2, 3, 181, 40, 'k5', 90, '07:00'), (4, 15, 182, 40, 'k3', 90, '07:00'), (2, 9, 183, 40, 'k2', 90, '14:00'), (4, 4, 184, 40, 'k4', 90, '11:00'), (5, 8, 185, 30, 'laboratorium komputer', 90, '12:00'), (3, 14, 186, 40, 'k4', 90, '07:00'), (3, 15, 187, 40, 'k2', 90, '09:00'), (6, 12, 188, 40, 'k5', 90, '07:00'), (3, 6, 189, 40, 'k1', 90, '11:00'), (2, 14, 190, 30, 'laboratorium komputer', 90, '11:00'), (5, 12, 191, 40, 'k3', 90, '09:00'), (1, 1, 192, 30, 'laboratorium komputer', 135, '08:00'), (1, 8, 193, 40, 'k5', 135, '13:00'), (6, 10, 194, 30, 'laboratorium komputer', 135, '08:00'), (6, 13, 195, 30, 'laboratorium komputer', 135, '14:00'), (1, 15, 196, 40, 'k1', 135, '15:00'), (1, 2, 197, 40, 'k3', 135, '09:00'), (1, 12, 198, 40, 'k3', 135, '10:00'), (5, 3, 199, 30, 'laboratorium komputer', 135, '12:00'), (2, 5, 200, 40, 'k4', 135, '10:00'), (5, 5, 201, 40, 'k1', 135, '12:00'), (3, 4, 202, 30, 'laboratorium komputer', 135, '14:00'), (3, 15, 203, 40, 'k4', 90, '12:00'), (5, 5, 204, 40, 'k2', 135, '10:00'), (1, 9, 205, 40, 'k3', 135, '14:00'), (2, 6, 206, 40, 'k1', 135, '13:00'), (5, 3, 207, 30, 'laboratorium komputer', 135, '13:00'), (2, 13, 208, 40, 'k3', 135, '14:00'), (2, 9, 209, 30, 'laboratorium komputer', 90, '15:00'), (6, 3, 210, 40, 'k2', 90, '07:00'), (3, 5, 211, 30, 'laboratorium komputer', 90, '10:00'), (6, 2, 212, 40, 'k1', 90, '12:00'), (6, 8, 213, 40, 'k2', 90, '11:00'), (6, 13, 214, 40, 'k4', 90, '10:00'), (3, 12, 215, 40, 'k3', 135, '07:00'), (5, 4, 216, 40, 'k5', 135, '08:00'), (5, 12, 217, 40, 'k5', 135, '15:00');
 
-insert into "mahasiswa_kelas" ("id_kelas", "id_mhs", "nilai") values (1, 1, 20.6817), (12, 1, 82.2383), (9, 1, 66.2424), (4, 1, 42.244), (11, 1, 44.4587), (4, 2, 19.7366), (3, 2, 23.1501), (6, 2, 24.401), (5, 2, 1.0494), (10, 2, 92.0089), (2, 3, 11.2591), (10, 3, 10.216), (1, 3, 92.7758), (8, 3, 51.0953), (3, 4, 24.7993), (7, 4, 54.2907), (11, 4, 80.6965), (6, 4, 95.6649), (5, 4, 19.3097), (1, 5, 94.3106), (6, 5, 27.6769), (2, 5, 95.0752), (4, 5, 59.496), (9, 5, 42.4062), (4, 6, 49.665), (3, 6, 96.5876), (11, 6, 94.0531), (1, 6, 88.2342), (9, 6, 53.9687), (10, 6, 62.3025), (7, 6, 31.0522), (5, 7, 59.4464), (4, 7, 51.7449), (1, 7, 1.7393), (2, 7, 71.3916), (9, 7, 38.8087), (4, 8, 99.7469), (9, 8, 73.4278), (12, 8, 0.4397), (8, 8, 15.0971), (6, 8, 29.0531), (12, 9, 35.1678), (2, 9, 98.5915), (6, 9, 91.2667), (11, 9, 27.8093), (8, 9, 66.896), (1, 9, 26.5471), (9, 9, 62.0713), (4, 10, 65.6183), (12, 10, 48.8819), (1, 10, 15.9829), (5, 10, 34.1641), (4, 11, 46.6628), (7, 11, 55.5694), (10, 11, 39.3872), (5, 11, 49.9925), (2, 11, 83.9446), (2, 12, 0.7566), (9, 12, 28.7801), (11, 12, 70.4613), (3, 12, 51.2666), (10, 13, 39.7692), (1, 13, 53.0608), (8, 13, 47.5254), (7, 13, 86.3978), (4, 13, 85.0857), (9, 13, 66.5054), (2, 13, 88.2835), (6, 14, 14.2501), (10, 14, 62.656), (8, 14, 84.6766), (1, 14, 51.4157), (3, 14, 92.1023), (1, 15, 15.0916), (2, 15, 95.5125), (8, 15, 27.1453), (12, 15, 79.6667), (7, 15, 46.8103), (5, 16, 94.8691), (12, 16, 52.7723), (8, 16, 80.9826), (6, 16, 74.8557), (1, 16, 8.9342), (3, 16, 10.0688), (10, 17, 20.3307), (8, 17, 69.4317), (6, 17, 74.1662), (4, 17, 51.1299), (11, 17, 12.2992), (10, 18, 51.5889), (3, 18, 79.1998), (11, 18, 56.9374), (1, 18, 95.3325), (4, 19, 52.698), (10, 19, 56.351), (6, 19, 19.2369), (8, 19, 84.1972), (7, 19, 39.6559), (3, 19, 91.8724), (10, 20, 17.2764), (5, 20, 78.4208), (11, 20, 35.5346), (4, 20, 42.2217), (2, 20, 98.191), (3, 20, 27.2452), (10, 21, 62.3924), (4, 21, 89.1895), (8, 21, 6.974), (3, 21, 90.9007), (1, 21, 98.5157), (12, 21, 65.1707), (1, 22, 24.0983), (4, 22, 86.5097), (2, 22, 73.0959), (11, 22, 76.9987), (10, 22, 26.3379), (7, 22, 39.5974), (8, 22, 8.8022), (8, 23, 21.18), (7, 23, 13.4303), (5, 23, 8.674), (10, 23, 15.1584), (1, 23, 70.0337), (3, 23, 71.4167), (11, 24, 35.4165), (9, 24, 28.6697), (4, 24, 31.514), (6, 24, 26.1831), (10, 24, 35.2917), (3, 24, 4.5679), (10, 25, 15.0373), (7, 25, 66.939), (3, 25, 84.3848), (12, 25, 45.0953), (8, 25, 95.0978), (5, 26, 29.5955), (2, 26, 65.0063), (3, 26, 87.1067), (4, 26, 40.3396), (10, 26, 52.527), (7, 27, 15.6035), (4, 27, 38.1261), (5, 27, 87.76), (11, 27, 0.4633), (9, 28, 65.6825), (3, 28, 35.7048), (6, 28, 29.5216), (5, 28, 52.6485), (4, 28, 15.8414), (1, 29, 80.2382), (3, 29, 96.3475), (6, 29, 24.8833), (5, 29, 56.6861), (2, 29, 22.9347), (4, 29, 93.4014), (9, 30, 74.2157), (5, 30, 66.1007), (3, 30, 27.2202), (10, 30, 11.7844), (8, 30, 22.1156), (9, 31, 83.2283), (5, 31, 82.6261), (10, 31, 4.5201), (3, 31, 19.3259), (2, 31, 60.171), (1, 32, 80.0688), (8, 32, 98.2301), (2, 32, 55.8246), (11, 32, 96.3341), (9, 32, 38.0609), (11, 33, 40.7327), (12, 33, 79.4101), (6, 33, 35.8583), (2, 33, 96.567), (7, 33, 10.7195), (9, 33, 68.5826), (10, 34, 92.4235), (7, 34, 23.6606), (12, 34, 42.4241), (6, 34, 23.5759), (2, 34, 58.1171), (8, 34, 75.9633), (9, 35, 13.9371), (8, 35, 60.3845), (11, 35, 68.0031), (6, 35, 37.6194), (2, 35, 72.0123), (11, 36, 46.9439), (9, 36, 76.4623), (3, 36, 49.4795), (4, 36, 45.2829), (2, 36, 8.9706), (8, 37, 97.6482), (7, 37, 27.551), (1, 37, 88.1007), (12, 37, 99.2852), (9, 37, 23.7788), (3, 37, 39.5021), (5, 37, 65.0751), (9, 38, 16.7723), (8, 38, 98.2219), (10, 38, 26.7261), (3, 38, 81.7415), (1, 39, 50.7313), (7, 39, 56.2296), (2, 39, 44.2583), (4, 39, 95.1106), (8, 39, 74.6169), (3, 39, 68.0979), (6, 40, 62.1921), (5, 40, 53.8841), (3, 40, 85.7125), (4, 40, 6.926), (9, 40, 70.4368), (21, 1, 67.4604), (19, 1, 45.1373), (23, 1, 76.4338), (17, 1, 52.8093), (23, 2, 81.2231), (15, 2, 94.5592), (24, 2, 12.588), (20, 2, 8.8476), (17, 2, 81.5286), (16, 2, 55.5471), (13, 2, 9.5658), (18, 3, 47.4948), (17, 3, 61.2822), (24, 3, 44.656), (13, 3, 82.2337), (20, 4, 41.8092), (16, 4, 1.0001), (19, 4, 21.2656), (23, 4, 14.4452), (14, 4, 51.0414), (17, 4, 44.2767), (22, 5, 37.2162), (16, 5, 55.4585), (15, 5, 69.8613), (18, 5, 56.1279), (17, 5, 94.5868), (24, 5, 84.134), (14, 5, 52.2012), (20, 6, 86.3071), (17, 6, 93.8538), (14, 6, 14.9978), (13, 6, 13.3233), (21, 6, 96.3613), (18, 6, 92.3213), (14, 7, 68.4306), (19, 7, 56.9774), (22, 7, 45.5672), (15, 7, 83.428), (23, 7, 14.8856), (21, 8, 36.5584), (22, 8, 1.395), (16, 8, 73.9801), (19, 8, 60.9201), (20, 8, 77.033), (21, 9, 61.4053), (24, 9, 45.5913), (15, 9, 18.6795), (22, 9, 97.124), (17, 9, 6.9697), (21, 10, 35.3739), (18, 10, 86.6331), (23, 10, 33.772), (19, 10, 26.2145), (15, 11, 59.9155), (18, 11, 16.2572), (14, 11, 33.3579), (23, 11, 68.9535), (17, 11, 99.7182), (23, 12, 59.8234), (20, 12, 64.382), (16, 12, 15.4169), (17, 12, 71.3584), (24, 12, 20.5299), (19, 12, 72.4937), (24, 13, 16.6719), (21, 13, 50.5933), (20, 13, 53.5125), (19, 13, 28.211), (15, 14, 70.4835), (20, 14, 21.1468), (22, 14, 10.412), (24, 14, 81.822), (17, 14, 87.8919), (14, 14, 34.7378), (15, 15, 34.3265), (21, 15, 66.0825), (14, 15, 6.5448), (16, 15, 72.6135), (23, 15, 55.7859), (20, 15, 64.974), (21, 16, 67.9902), (14, 16, 27.4126), (17, 16, 22.6569), (19, 16, 51.2375), (24, 16, 38.5609), (17, 17, 94.4491), (15, 17, 21.2226), (14, 17, 86.3271), (23, 17, 17.1178), (19, 17, 71.079), (17, 18, 59.1815), (15, 18, 56.0363), (22, 18, 23.4966), (23, 18, 53.8692), (13, 18, 32.4486), (22, 19, 70.2132), (21, 19, 59.9845), (23, 19, 41.366), (17, 19, 48.7421), (15, 19, 58.5655), (21, 20, 21.9885), (16, 20, 55.7445), (20, 20, 20.8524), (14, 20, 57.9834), (22, 20, 51.6198), (23, 20, 53.9125), (19, 20, 59.6463), (20, 21, 6.7399), (24, 21, 94.2417), (18, 21, 11.4772), (21, 21, 61.5958), (21, 22, 58.3025), (17, 22, 40.0319), (19, 22, 55.7845), (13, 22, 80.5963), (14, 23, 36.5971), (23, 23, 41.8124), (18, 23, 75.2716), (15, 23, 69.3021), (18, 24, 54.5673), (21, 24, 58.4023), (22, 24, 94.8236), (14, 24, 88.6377), (13, 24, 14.3181), (23, 24, 94.0798), (17, 25, 70.9268), (14, 25, 27.531), (19, 25, 19.5075), (16, 25, 4.785), (22, 25, 95.7127), (21, 25, 9.9081), (23, 26, 46.175), (18, 26, 94.9323), (19, 26, 78.5976), (17, 26, 50.3432), (20, 26, 80.9428), (14, 26, 17.4204), (13, 26, 3.9306), (13, 27, 83.5578), (14, 27, 15.4164), (21, 27, 36.6761), (20, 27, 91.336), (13, 28, 45.5975), (15, 28, 96.4576), (21, 28, 78.1169), (18, 28, 41.5397), (20, 28, 49.0613), (16, 29, 5.5471), (18, 29, 22.8054), (22, 29, 58.8384), (19, 29, 31.7349), (21, 29, 41.4907), (20, 30, 98.5623), (17, 30, 35.2193), (15, 30, 93.2745), (13, 30, 22.2125), (18, 30, 34.9347), (16, 30, 45.0271), (18, 31, 3.827), (14, 31, 36.7836), (16, 31, 33.5045), (24, 31, 13.2798), (23, 31, 72.2755), (20, 31, 15.2386), (18, 32, 71.4856), (22, 32, 90.6162), (21, 32, 73.0578), (17, 32, 92.996), (23, 32, 71.1222), (13, 32, 72.5294), (20, 32, 67.4797), (21, 33, 62.1642), (23, 33, 87.2387), (13, 33, 69.2247), (22, 33, 72.9163), (14, 33, 35.8445), (20, 34, 72.4722), (14, 34, 93.6384), (15, 34, 24.7424), (22, 34, 57.7465), (13, 34, 85.9308), (17, 34, 44.16), (24, 35, 1.2371), (22, 35, 73.0981), (20, 35, 82.0661), (23, 35, 49.8997), (19, 35, 66.1551), (14, 36, 6.2316), (16, 36, 0.4814), (20, 36, 19.4013), (21, 36, 34.9342), (20, 37, 45.4671), (15, 37, 14.2559), (24, 37, 42.0191), (17, 37, 95.5563), (13, 37, 48.6547), (19, 37, 80.6721), (23, 38, 54.9215), (21, 38, 4.2546), (18, 38, 69.1901), (15, 38, 55.3659), (17, 38, 31.6645), (19, 38, 33.5703), (24, 39, 12.5814), (22, 39, 62.9818), (17, 39, 86.5462), (23, 39, 73.5706), (14, 39, 6.6884), (24, 40, 99.6977), (15, 40, 80.9105), (18, 40, 63.4664), (19, 40, 87.2496), (36, 1, 46.6559), (28, 1, 38.2103), (32, 1, 96.9949), (29, 1, 14.5617), (26, 1, 19.1662), (26, 2, 93.8174), (29, 2, 14.7076), (27, 2, 13.0388), (34, 2, 90.2997), (31, 2, 98.4148), (26, 3, 42.5912), (28, 3, 34.9763), (29, 3, 83.3771), (36, 3, 12.5477), (27, 3, 42.6604), (25, 3, 38.1984), (25, 4, 16.0473), (26, 4, 88.887), (31, 4, 82.7545), (34, 4, 53.2889), (32, 4, 88.4493), (32, 5, 61.1894), (35, 5, 81.063), (25, 5, 50.1209), (30, 5, 87.1246), (34, 5, 48.1852), (25, 6, 99.1147), (29, 6, 33.6662), (32, 6, 60.3959), (36, 6, 14.1), (27, 6, 93.943), (27, 7, 91.7537), (31, 7, 74.9858), (35, 7, 76.8158), (36, 7, 8.7932), (29, 7, 17.9595), (26, 8, 43.3611), (33, 8, 7.8677), (29, 8, 43.8151), (25, 8, 66.7408), (30, 8, 84.0845), (32, 8, 34.7351), (26, 9, 19.9907), (36, 9, 57.8838), (32, 9, 37.1708), (29, 9, 70.0624), (28, 9, 46.4146), (27, 9, 93.9514), (32, 10, 80.8636), (26, 10, 79.4662), (30, 10, 89.3261), (28, 10, 48.3362), (36, 10, 49.5618), (34, 10, 97.876), (33, 10, 11.3942), (32, 11, 47.0362), (35, 11, 19.8699), (33, 11, 98.9145), (31, 11, 68.4206), (34, 11, 84.6517), (29, 12, 59.6663), (28, 12, 44.8929), (33, 12, 32.8437), (32, 12, 97.5485), (35, 12, 74.4305), (26, 12, 50.8826), (36, 12, 89.4331), (25, 13, 3.6217), (30, 13, 4.8063), (33, 13, 29.4829), (28, 13, 67.9859), (36, 13, 79.3357), (27, 13, 69.2163), (29, 13, 41.3026), (30, 14, 67.2499), (28, 14, 11.387), (31, 14, 9.1506), (25, 14, 40.6564), (27, 14, 94.9274), (33, 14, 12.8176), (29, 14, 9.2875), (28, 15, 4.5234), (34, 15, 63.515), (33, 15, 41.5988), (32, 15, 95.4851), (30, 15, 93.2694), (29, 15, 64.1826), (27, 16, 22.6979), (31, 16, 35.1154), (30, 16, 36.8087), (25, 16, 41.306), (36, 16, 26.3754), (29, 16, 38.0855), (35, 16, 69.9251), (25, 17, 11.4086), (36, 17, 72.424), (26, 17, 30.1383), (31, 17, 24.8475), (35, 18, 49.1488), (25, 18, 26.9431), (28, 18, 74.8712), (33, 18, 74.4936), (31, 18, 71.188), (25, 19, 3.2579), (29, 19, 55.6063), (32, 19, 84.5356), (33, 19, 23.7348), (34, 19, 58.6002), (31, 19, 36.5528), (31, 20, 39.3781), (27, 20, 15.1336), (33, 20, 32.1839), (32, 20, 34.9543), (35, 20, 48.5761), (26, 21, 58.443), (25, 21, 6.1185), (34, 21, 49.0004), (29, 21, 14.3568), (28, 21, 76.9791), (29, 22, 82.6116), (25, 22, 50.8048), (35, 22, 31.09), (26, 22, 37.0704), (36, 22, 27.2997), (30, 23, 10.3033), (29, 23, 31.7655), (34, 23, 39.5753), (27, 23, 5.4357), (31, 23, 89.9168), (36, 24, 87.8341), (28, 24, 33.8751), (26, 24, 5.2761), (29, 24, 74.2126), (33, 24, 54.7338), (33, 25, 76.6043), (25, 25, 44.4217), (35, 25, 31.8716), (34, 25, 87.5734), (34, 26, 81.9713), (25, 26, 28.3589), (31, 26, 26.746), (27, 26, 69.9937), (32, 26, 84.5328), (30, 26, 11.2315), (35, 27, 34.125), (29, 27, 95.3129), (25, 27, 61.6608), (28, 27, 85.0198), (30, 28, 80.705), (31, 28, 15.9323), (28, 28, 9.0979), (33, 28, 3.6164), (29, 28, 79.8999), (28, 29, 57.6636), (30, 29, 91.0941), (25, 29, 87.9827), (34, 29, 10.2971), (26, 29, 99.615), (27, 30, 39.7961), (31, 30, 13.7009), (25, 30, 5.042), (29, 30, 77.5253), (28, 30, 93.0743), (33, 31, 42.605), (35, 31, 39.6449), (32, 31, 71.1721), (36, 31, 26.4687), (26, 31, 78.9569), (36, 32, 75.7025), (35, 32, 21.5892), (31, 32, 92.5864), (30, 32, 48.5876), (27, 32, 65.2793), (33, 33, 40.0606), (29, 33, 70.958), (36, 33, 30.0457), (30, 33, 21.4747), (34, 33, 39.717), (28, 33, 76.4746), (25, 34, 43.36), (32, 34, 44.4845), (33, 34, 71.2313), (35, 34, 33.7469), (26, 34, 38.5377), (27, 34, 55.859), (36, 34, 13.0411), (27, 35, 63.3048), (31, 35, 98.8197), (30, 35, 91.9658), (35, 35, 48.1959), (33, 35, 12.4028), (29, 35, 41.5313), (34, 36, 23.6723), (26, 36, 32.214), (30, 36, 4.3702), (28, 36, 45.6303), (33, 36, 62.8013), (32, 36, 31.8424), (35, 36, 39.9991), (26, 37, 54.7039), (27, 37, 18.6241), (33, 37, 21.8787), (31, 37, 95.6957), (28, 37, 85.4095), (32, 37, 11.5917), (30, 38, 77.5554), (26, 38, 85.7408), (31, 38, 52.5382), (27, 38, 15.2489), (36, 38, 56.018), (33, 39, 61.8787), (32, 39, 32.5751), (36, 39, 32.8535), (25, 39, 66.6154), (27, 39, 25.7454), (26, 39, 28.1389), (33, 40, 29.6819), (26, 40, 73.0447), (25, 40, 49.9812), (27, 40, 80.2614), (40, 1, 94.097), (38, 1, 84.1743), (43, 1, 8.1531), (45, 1, 98.5151), (48, 1, 24.3559), (39, 1, 44.9972), (41, 2, 48.3726), (48, 2, 61.5203), (40, 2, 89.3094), (46, 2, 12.3063), (43, 2, 63.8899), (44, 2, 18.198), (41, 3, 47.678), (47, 3, 87.0972), (38, 3, 63.462), (37, 3, 20.539), (42, 3, 37.7226), (44, 3, 11.1523), (48, 3, 70.574), (41, 4, 42.3801), (39, 4, 96.6687), (48, 4, 81.1881), (45, 4, 53.2475), (38, 4, 40.673), (42, 5, 49.2302), (43, 5, 80.7781), (38, 5, 34.594), (37, 5, 49.6958), (37, 6, 58.6778), (44, 6, 99.4181), (41, 6, 68.755), (40, 6, 4.4329), (38, 6, 72.1679), (46, 6, 80.5801), (43, 6, 73.8399), (44, 7, 7.6978), (46, 7, 14.9673), (38, 7, 13.3302), (39, 7, 94.3546), (47, 8, 8.0122), (42, 8, 58.5802), (43, 8, 60.2652), (38, 8, 13.029), (37, 8, 87.1105), (46, 9, 87.574), (44, 9, 55.3305), (38, 9, 25.6068), (43, 9, 2.4302), (42, 9, 41.502), (41, 9, 1.7499), (48, 10, 48.812), (41, 10, 59.6597), (42, 10, 97.6851), (43, 10, 12.4817), (38, 10, 11.9521), (44, 10, 17.489), (37, 11, 99.7777), (45, 11, 39.7397), (43, 11, 62.3578), (47, 11, 26.0413), (44, 12, 69.1048), (45, 12, 90.6855), (37, 12, 28.7231), (38, 12, 42.4087), (39, 12, 87.9409), (48, 13, 61.8635), (45, 13, 92.5969), (40, 13, 31.013), (37, 13, 9.8941), (44, 13, 90.4896), (41, 13, 51.9109), (43, 14, 76.6274), (44, 14, 33.3299), (37, 14, 29.8693), (46, 14, 66.8984), (47, 14, 82.114), (37, 15, 53.354), (42, 15, 87.6635), (46, 15, 59.4809), (47, 15, 20.8865), (44, 15, 27.0756), (41, 15, 10.3953), (38, 16, 72.7339), (37, 16, 50.1895), (42, 16, 58.5636), (41, 16, 83.5949), (43, 16, 6.5635), (47, 16, 12.024), (43, 17, 81.3429), (39, 17, 82.8986), (40, 17, 86.0349), (48, 17, 72.4852), (45, 17, 91.0542), (40, 18, 38.658), (41, 18, 41.0448), (48, 18, 42.6671), (38, 18, 54.5387), (37, 18, 21.9665), (46, 18, 70.6584), (43, 18, 87.0798), (46, 19, 10.7069), (38, 19, 10.8181), (40, 19, 54.4609), (42, 19, 0.0103), (39, 20, 43.5728), (45, 20, 44.12), (43, 20, 62.602), (42, 20, 18.7667), (41, 20, 7.623), (42, 21, 7.5129), (44, 21, 37.4299), (47, 21, 51.161), (48, 21, 46.0749), (46, 22, 55.1761), (40, 22, 26.7292), (37, 22, 66.6426), (43, 22, 55.9933), (44, 22, 15.4094), (43, 23, 42.8998), (45, 23, 47.0922), (40, 23, 79.1091), (44, 23, 88.6889), (48, 23, 79.1315), (39, 23, 32.7926), (45, 24, 34.152), (43, 24, 68.0998), (37, 24, 91.4603), (46, 24, 92.9489), (46, 25, 67.8427), (40, 25, 95.9541), (42, 25, 2.4471), (47, 25, 55.7227), (37, 25, 70.1049), (48, 26, 83.409), (43, 26, 26.4392), (37, 26, 72.1682), (40, 26, 58.8758), (43, 27, 29.8941), (37, 27, 41.0051), (47, 27, 13.7875), (40, 27, 31.1228), (44, 27, 82.7581), (40, 28, 65.9036), (39, 28, 89.23), (38, 28, 95.3038), (37, 28, 64.1717), (46, 29, 31.3781), (45, 29, 3.6231), (39, 29, 1.3548), (47, 29, 52.5565), (42, 29, 53.9492), (47, 30, 7.9667), (41, 30, 75.1674), (43, 30, 5.7895), (44, 30, 27.818), (46, 30, 21.3745), (39, 30, 73.8625), (42, 31, 39.2822), (37, 31, 72.1617), (44, 31, 68.0909), (47, 31, 96.5998), (43, 31, 0.2897), (41, 31, 83.4273), (37, 32, 33.2872), (38, 32, 79.7237), (48, 32, 91.8937), (40, 32, 59.8647), (43, 32, 9.8891), (37, 33, 91.3314), (38, 33, 25.6352), (47, 33, 3.7104), (48, 33, 49.3775), (44, 33, 28.6825), (39, 33, 87.4161), (44, 34, 77.3325), (39, 34, 72.2514), (46, 34, 0.4635), (47, 34, 1.2869), (37, 35, 26.6108), (47, 35, 65.9538), (48, 35, 6.3232), (44, 35, 52.492), (41, 35, 35.2969), (41, 36, 70.2889), (46, 36, 53.3321), (37, 36, 77.1733), (42, 36, 80.8682), (45, 36, 85.976), (43, 37, 24.2282), (48, 37, 48.1984), (44, 37, 9.678), (47, 37, 17.1048), (45, 37, 80.3243), (46, 37, 52.1985), (48, 38, 71.9763), (44, 38, 51.0728), (37, 38, 29.1357), (45, 38, 81.8996), (39, 39, 14.0295), (44, 39, 5.2833), (43, 39, 93.8926), (46, 39, 34.8841), (41, 39, 87.5011), (45, 39, 59.1413), (42, 40, 37.0294), (45, 40, 21.2923), (40, 40, 53.5543), (46, 40, 94.968), (39, 40, 18.681), (57, 1, 73.9908), (53, 1, 50.216), (58, 1, 35.394), (60, 1, 40.0872), (54, 1, 70.4688), (55, 1, 62.9852), (49, 1, 19.7185), (51, 2, 7.838), (56, 2, 48.947), (52, 2, 9.5729), (57, 2, 35.0229), (54, 2, 28.4599), (59, 2, 38.823), (53, 2, 11.5602), (60, 3, 70.7432), (53, 3, 88.0091), (57, 3, 24.0589), (49, 3, 74.0458), (58, 4, 18.6941), (53, 4, 55.7361), (57, 4, 5.1134), (55, 4, 99.6546), (49, 4, 90.8349), (52, 4, 55.9188), (56, 5, 38.8863), (60, 5, 42.9331), (59, 5, 79.6178), (54, 5, 58.5209), (51, 5, 13.2359), (53, 5, 84.2723), (49, 5, 40.05), (57, 6, 72.2245), (54, 6, 27.3335), (60, 6, 8.4304), (53, 6, 31.304), (50, 6, 17.4112), (59, 6, 23.266), (57, 7, 50.2128), (49, 7, 12.2267), (53, 7, 77.7439), (56, 7, 26.8944), (52, 7, 80.776), (56, 8, 16.005), (60, 8, 98.1646), (59, 8, 4.1471), (50, 8, 74.9157), (53, 8, 52.4087), (51, 8, 3.6505), (50, 9, 95.2498), (51, 9, 53.8445), (58, 9, 42.6703), (57, 9, 36.4485), (53, 9, 14.5599), (60, 9, 85.8896), (60, 10, 73.336), (59, 10, 42.1531), (55, 10, 0.6113), (53, 10, 96.3246), (49, 10, 69.5181), (59, 11, 13.9275), (58, 11, 58.3298), (51, 11, 49.6006), (54, 11, 40.2664), (57, 11, 41.5449), (54, 12, 35.1708), (52, 12, 44.2877), (57, 12, 80.1846), (56, 12, 47.3194), (60, 12, 51.412), (57, 13, 71.9662), (49, 13, 90.6253), (51, 13, 75.8474), (52, 13, 23.5133), (58, 13, 80.8612), (49, 14, 13.9019), (57, 14, 82.2582), (52, 14, 23.5751), (56, 14, 30.5934), (51, 14, 99.1594), (53, 14, 52.9084), (54, 14, 33.3918), (52, 15, 66.9579), (49, 15, 28.7081), (54, 15, 32.211), (50, 15, 10.9749), (53, 15, 28.2722), (58, 15, 56.6291), (50, 16, 61.9123), (52, 16, 41.4251), (60, 16, 11.6574), (49, 16, 33.1458), (59, 16, 42.7821), (52, 17, 70.1143), (51, 17, 49.9655), (49, 17, 70.6756), (59, 17, 67.9505), (58, 18, 80.0823), (51, 18, 35.3584), (57, 18, 81.8596), (59, 18, 36.8154), (52, 18, 33.1763), (50, 18, 86.2171), (55, 18, 77.582), (54, 19, 7.4751), (53, 19, 57.3137), (59, 19, 27.4535), (60, 19, 10.5969), (56, 19, 60.3741), (57, 20, 42.7635), (59, 20, 10.5633), (51, 20, 87.7014), (52, 20, 43.1576), (49, 21, 74.1302), (50, 21, 80.2044), (53, 21, 15.6988), (59, 21, 81.7675), (55, 21, 63.5296), (59, 22, 81.4147), (53, 22, 5.4458), (58, 22, 30.2884), (57, 22, 10.5601), (51, 23, 70.9066), (54, 23, 21.4537), (58, 23, 40.9704), (56, 23, 59.3498), (55, 23, 34.3515), (52, 24, 5.5592), (57, 24, 95.9736), (50, 24, 91.5757), (53, 24, 50.2133), (60, 24, 54.8148), (49, 25, 70.1115), (56, 25, 84.0649), (51, 25, 97.6239), (53, 25, 19.2287), (59, 25, 65.7522), (54, 25, 14.0456), (58, 26, 65.39), (60, 26, 71.7847), (51, 26, 13.3744), (56, 26, 68.7964), (50, 26, 87.2998), (52, 27, 3.4722), (58, 27, 58.103), (50, 27, 80.565), (59, 27, 30.6797), (51, 27, 81.5412), (51, 28, 78.0628), (56, 28, 69.7748), (49, 28, 29.724), (50, 28, 53.4278), (54, 28, 53.1277), (55, 28, 70.5301), (60, 29, 5.0198), (51, 29, 71.2418), (58, 29, 32.2877), (59, 29, 8.0468), (50, 30, 55.1416), (55, 30, 10.7789), (57, 30, 32.2576), (60, 30, 16.787), (59, 30, 71.2025), (56, 30, 38.2001), (50, 31, 84.8862), (60, 31, 44.7185), (51, 31, 35.3064), (49, 31, 21.8349), (53, 31, 98.193), (60, 32, 93.8532), (55, 32, 19.6159), (50, 32, 42.2736), (57, 32, 98.0426), (59, 32, 16.3313), (58, 32, 47.2483), (49, 33, 38.5062), (60, 33, 79.5515), (58, 33, 84.8666), (55, 33, 55.0299), (59, 33, 68.0035), (56, 33, 28.5728), (51, 33, 11.3587), (53, 34, 83.4763), (58, 34, 50.7982), (49, 34, 26.7988), (56, 34, 83.3978), (60, 34, 48.7422), (57, 34, 80.1643), (54, 34, 49.8879), (58, 35, 24.6849), (60, 35, 89.1572), (51, 35, 43.9637), (59, 35, 78.1951), (53, 35, 46.6206), (56, 36, 51.7826), (58, 36, 54.5544), (49, 36, 19.1257), (52, 36, 63.8332), (59, 37, 65.9669), (54, 37, 69.104), (49, 37, 47.4699), (55, 37, 46.8449), (51, 37, 89.0829), (56, 37, 4.0961), (50, 37, 54.2998), (58, 38, 48.8815), (53, 38, 97.0568), (55, 38, 49.2591), (56, 38, 24.4353), (54, 38, 66.2435), (51, 38, 1.2352), (58, 39, 71.6558), (57, 39, 45.2981), (49, 39, 6.4216), (56, 39, 14.5064), (58, 40, 24.1097), (54, 40, 85.0569), (53, 40, 73.6851), (51, 40, 96.1414), (52, 40, 88.4638), (57, 40, 9.4524), (63, 1, 6.8606), (67, 1, 22.3176), (68, 1, 1.9303), (65, 1, 99.7266), (69, 1, 76.6118), (70, 2, 75.6912), (63, 2, 64.1705), (68, 2, 72.9232), (71, 2, 33.266), (69, 3, 35.3559), (72, 3, 93.8382), (66, 3, 48.5053), (65, 3, 1.9861), (62, 3, 84.1168), (61, 3, 15.3892), (63, 4, 55.7013), (64, 4, 65.9036), (62, 4, 24.298), (69, 4, 59.0966), (69, 5, 87.8632), (72, 5, 18.8191), (68, 5, 70.5594), (67, 5, 60.0718), (62, 5, 98.1216), (68, 6, 70.0948), (65, 6, 34.8437), (69, 6, 80.0955), (66, 6, 14.0528), (70, 6, 10.5284), (64, 6, 71.4453), (65, 7, 80.6526), (63, 7, 50.565), (67, 7, 20.2491), (61, 7, 1.6039), (68, 8, 17.4799), (63, 8, 44.9477), (70, 8, 35.8774), (66, 8, 79.9199), (68, 9, 26.5493), (64, 9, 18.3278), (67, 9, 42.3764), (63, 9, 53.6163), (61, 9, 99.7356), (72, 9, 80.9486), (67, 10, 4.3845), (68, 10, 73.9634), (66, 10, 89.2513), (61, 10, 48.7028), (70, 10, 13.3542), (71, 10, 96.9769), (62, 10, 23.9058), (64, 11, 38.2278), (62, 11, 49.568), (61, 11, 4.5679), (67, 11, 39.7645), (68, 11, 14.4331), (67, 12, 4.5796), (70, 12, 50.19), (64, 12, 10.5542), (68, 12, 23.1902), (61, 12, 66.5401), (63, 13, 41.2124), (66, 13, 50.925), (65, 13, 70.1682), (67, 13, 10.2436), (69, 13, 26.3247), (72, 14, 74.0813), (65, 14, 79.1396), (61, 14, 56.8821), (68, 14, 8.0506), (66, 14, 95.1757), (64, 14, 73.8902), (62, 15, 44.2018), (69, 15, 3.2036), (67, 15, 10.4291), (65, 15, 20.6475), (63, 15, 91.0016), (66, 15, 9.3557), (68, 16, 58.333), (66, 16, 50.1682), (63, 16, 67.9983), (65, 16, 99.083), (62, 17, 98.3471), (70, 17, 90.3226), (69, 17, 31.9295), (64, 17, 62.5831), (67, 17, 88.9684), (66, 17, 74.2385), (65, 18, 0.938), (66, 18, 86.9883), (71, 18, 18.7202), (69, 18, 14.3571), (72, 18, 45.3549), (64, 19, 95.084), (67, 19, 93.057), (68, 19, 84.6612), (63, 19, 34.9752), (68, 20, 6.2434), (65, 20, 13.4063), (70, 20, 77.7625), (69, 20, 40.103), (71, 20, 28.7285), (66, 20, 32.3862), (64, 20, 2.9921), (69, 21, 75.5067), (65, 21, 50.2491), (66, 21, 7.0241), (68, 21, 24.9432), (72, 21, 59.1327), (63, 21, 79.4187), (64, 22, 8.9655), (68, 22, 94.7633), (61, 22, 90.8949), (65, 22, 99.3499), (63, 22, 94.2587), (67, 22, 88.8989), (66, 23, 18.3682), (72, 23, 97.1658), (71, 23, 48.9612), (63, 23, 75.5079), (68, 23, 55.0521), (70, 24, 63.316), (61, 24, 25.8327), (64, 24, 3.4402), (62, 24, 26.1251), (65, 25, 41.5922), (63, 25, 54.7981), (72, 25, 9.0378), (66, 25, 66.8145), (68, 25, 51.0364), (69, 25, 2.616), (71, 26, 3.3424), (72, 26, 55.1068), (68, 26, 26.5429), (67, 26, 76.789), (63, 27, 49.8704), (65, 27, 28.8984), (70, 27, 58.9102), (67, 27, 85.5423), (71, 27, 59.5528), (61, 28, 22.0793), (68, 28, 41.6266), (67, 28, 75.2079), (71, 28, 77.1618), (63, 29, 5.1662), (70, 29, 35.784), (61, 29, 68.1761), (66, 29, 59.7912), (67, 30, 31.3546), (63, 30, 37.426), (72, 30, 0.1216), (68, 30, 34.2715), (70, 31, 48.9316), (61, 31, 65.104), (68, 31, 62.2387), (62, 31, 63.3956), (69, 31, 40.9478), (72, 32, 94.002), (62, 32, 37.2245), (61, 32, 3.3537), (67, 32, 26.7977), (65, 32, 12.5692), (67, 33, 69.7716), (64, 33, 83.7433), (61, 33, 61.3123), (71, 33, 36.411), (70, 33, 46.2738), (62, 33, 50.8675), (68, 34, 58.454), (69, 34, 76.2404), (63, 34, 10.1821), (67, 34, 70.6941), (61, 34, 18.9308), (72, 34, 28.0065), (62, 34, 38.1452), (67, 35, 24.8254), (68, 35, 78.0178), (62, 35, 97.0237), (72, 35, 50.8883), (64, 35, 60.093), (71, 35, 17.2713), (72, 36, 67.6778), (62, 36, 66.4287), (69, 36, 54.5107), (61, 36, 37.5173), (67, 36, 85.5032), (64, 37, 41.7908), (65, 37, 75.6611), (62, 37, 19.4899), (70, 37, 70.1638), (63, 37, 48.0705), (72, 38, 96.8288), (64, 38, 54.0537), (65, 38, 3.1811), (68, 38, 19.8948), (67, 38, 79.8096), (71, 38, 70.107), (64, 39, 32.5133), (62, 39, 8.5775), (69, 39, 11.2598), (61, 39, 32.5667), (65, 39, 24.5254), (71, 39, 82.138), (62, 40, 69.6427), (71, 40, 95.7083), (69, 40, 57.6903), (70, 40, 8.2685);
+insert into "mahasiswa_kelas" ("id_kelas", "id_mhs", "nilai", "validated") values (24, 1, 23.6099, true), (7, 1, 38.9512, true), (21, 1, 60.9564, true), (35, 1, 61.0971, true), (20, 1, 91.2059, true), (8, 1, 85.9468, true), (13, 1, 8.2638, true), (13, 2, 93.754, true), (12, 2, 46.4399, true), (36, 2, 14.3616, true), (25, 2, 21.7944, true), (31, 2, 43.0498, true), (33, 2, 42.344, true), (14, 3, 61.6102, true), (23, 3, 85.6034, true), (17, 3, 78.2651, true), (30, 3, 29.9618, true), (9, 3, 50.4953, true), (13, 4, 99.1786, true), (15, 4, 68.3525, true), (17, 4, 79.047, true), (2, 4, 13.2094, true), (28, 4, 19.2087, true), (33, 4, 75.8171, true), (3, 4, 89.8365, true), (15, 5, 24.3435, true), (8, 5, 22.5818, true), (9, 5, 51.9733, true), (13, 5, 46.6836, true), (22, 5, 90.4554, true), (35, 5, 76.4269, true), (32, 6, 19.1801, true), (35, 6, 5.0135, true), (3, 6, 89.4232, true), (28, 6, 60.1741, true), (22, 6, 7.1324, true), (29, 7, 66.4468, true), (30, 7, 40.799, true), (22, 7, 68.7246, true), (23, 7, 58.7486, true), (7, 7, 72.5959, true), (3, 8, 40.8344, true), (32, 8, 87.305, true), (12, 8, 12.7959, true), (36, 8, 67.0809, true), (27, 9, 98.0625, true), (19, 9, 82.348, true), (5, 9, 59.9673, true), (12, 9, 60.9367, true), (35, 10, 64.1244, true), (13, 10, 33.9613, true), (14, 10, 98.4831, true), (20, 10, 76.6956, true), (22, 11, 72.1581, true), (15, 11, 36.6147, true), (27, 11, 64.6637, true), (2, 11, 18.4823, true), (18, 11, 80.8656, true), (36, 11, 45.0321, true), (5, 11, 0.532, true), (7, 12, 58.1538, true), (21, 12, 36.9556, true), (6, 12, 25.0062, true), (5, 12, 33.2923, true), (32, 12, 77.0057, true), (28, 13, 85.1626, true), (26, 13, 2.5963, true), (10, 13, 60.8038, true), (9, 13, 74.2504, true), (27, 13, 59.8503, true), (33, 13, 10.2818, true), (5, 14, 32.4501, true), (30, 14, 82.7097, true), (1, 14, 82.4378, true), (3, 14, 87.1616, true), (7, 15, 93.7219, true), (16, 15, 45.2963, true), (2, 15, 64.108, true), (8, 15, 34.0961, true), (20, 16, 16.9215, true), (4, 16, 63.8896, true), (34, 16, 90.204, true), (33, 16, 0.1443, true), (36, 16, 82.955, true), (33, 17, 74.3651, true), (28, 17, 7.5561, true), (18, 17, 10.9336, true), (26, 17, 75.0596, true), (19, 17, 58.7774, true), (9, 17, 39.254, true), (13, 17, 75.6346, true), (6, 18, 56.0212, true), (34, 18, 40.1452, true), (23, 18, 4.7682, true), (1, 18, 2.4409, true), (25, 19, 95.0831, true), (22, 19, 7.1168, true), (24, 19, 56.3108, true), (10, 19, 62.9194, true), (14, 19, 85.1387, true), (1, 19, 94.131, true), (31, 19, 26.5773, true), (21, 20, 15.7075, true), (30, 20, 64.6556, true), (35, 20, 24.6168, true), (5, 20, 73.5766, true), (1, 20, 99.7522, true), (8, 20, 48.8279, true), (28, 20, 3.0895, true), (11, 21, 0.6088, true), (4, 21, 91.0957, true), (14, 21, 26.4607, true), (35, 21, 76.6885, true), (36, 22, 93.1748, true), (10, 22, 95.2072, true), (3, 22, 64.4836, true), (27, 22, 23.3581, true), (9, 22, 19.4634, true), (13, 22, 98.801, true), (30, 22, 15.4535, true), (5, 23, 15.8874, true), (19, 23, 71.5097, true), (25, 23, 30.4691, true), (29, 23, 82.4471, true), (17, 23, 1.0076, true), (1, 23, 58.3498, true), (26, 24, 71.042, true), (6, 24, 52.2048, true), (32, 24, 85.1549, true), (31, 24, 95.8034, true), (10, 25, 45.1508, true), (27, 25, 49.9679, true), (5, 25, 83.8578, true), (8, 25, 30.2283, true), (11, 25, 60.4244, true), (15, 25, 1.2552, true), (6, 26, 14.6549, true), (22, 26, 67.2281, true), (4, 26, 34.0785, true), (1, 26, 95.5473, true), (5, 26, 9.7083, true), (24, 27, 16.3236, true), (14, 27, 31.4489, true), (21, 27, 5.3029, true), (17, 27, 13.493, true), (3, 27, 44.7437, true), (28, 28, 94.818, true), (24, 28, 68.1256, true), (35, 28, 96.8942, true), (25, 28, 14.9632, true), (4, 29, 88.76, true), (18, 29, 21.4476, true), (9, 29, 35.5569, true), (13, 29, 59.1788, true), (15, 30, 57.3966, true), (19, 30, 91.969, true), (5, 30, 35.1723, true), (10, 30, 38.4343, true), (35, 30, 23.8421, true), (33, 30, 83.4741, true), (23, 30, 16.7981, true), (3, 31, 47.6269, true), (29, 31, 58.337, true), (26, 31, 60.6178, true), (19, 31, 41.4078, true), (4, 32, 13.6912, true), (1, 32, 47.2449, true), (9, 32, 43.1914, true), (19, 32, 98.9306, true), (20, 33, 54.1233, true), (9, 33, 48.249, true), (29, 33, 41.2349, true), (24, 33, 92.5043, true), (31, 33, 10.9627, true), (13, 33, 59.6182, true), (19, 34, 85.4438, true), (25, 34, 41.093, true), (34, 34, 24.9805, true), (29, 34, 92.5357, true), (16, 34, 23.9987, true), (28, 34, 22.9668, true), (13, 35, 71.9875, true), (26, 35, 6.1512, true), (20, 35, 26.5618, true), (29, 35, 33.2677, true), (23, 35, 20.483, true), (11, 35, 75.021, true), (14, 35, 5.0639, true), (11, 36, 93.8079, true), (32, 36, 20.508, true), (6, 36, 33.4502, true), (3, 36, 9.558, true), (22, 36, 43.2952, true), (1, 37, 7.7844, true), (12, 37, 84.4972, true), (10, 37, 84.9798, true), (7, 37, 73.1413, true), (16, 37, 22.9593, true), (35, 38, 0.4552, true), (16, 38, 41.1896, true), (9, 38, 98.0467, true), (1, 38, 28.4903, true), (26, 38, 24.2973, true), (27, 38, 85.2357, true), (14, 38, 35.7794, true), (17, 39, 74.2066, true), (23, 39, 81.9412, true), (22, 39, 75.2551, true), (28, 39, 57.2396, true), (4, 39, 35.8286, true), (18, 39, 15.8235, true), (1, 40, 99.2725, true), (6, 40, 36.3694, true), (3, 40, 46.0158, true), (21, 40, 76.5839, true), (61, 1, 87.0938, true), (40, 1, 86.7682, true), (41, 1, 32.1476, true), (54, 1, 67.7038, true), (66, 1, 92.1028, true), (45, 1, 22.8618, true), (58, 1, 49.4798, true), (69, 2, 44.6881, true), (43, 2, 94.2118, true), (55, 2, 19.6307, true), (40, 2, 32.5892, true), (62, 3, 81.6324, true), (46, 3, 47.5602, true), (50, 3, 54.4278, true), (61, 3, 93.583, true), (64, 3, 73.2589, true), (40, 3, 95.0598, true), (52, 4, 83.9346, true), (50, 4, 41.2075, true), (64, 4, 95.5574, true), (71, 4, 45.1144, true), (54, 4, 41.2004, true), (72, 4, 91.6485, true), (71, 5, 88.8288, true), (39, 5, 79.0683, true), (49, 5, 88.5071, true), (54, 5, 8.9847, true), (55, 5, 39.5107, true), (59, 5, 80.9011, true), (51, 6, 20.3815, true), (48, 6, 20.1245, true), (61, 6, 22.0095, true), (74, 6, 74.2374, true), (65, 6, 44.9485, true), (54, 7, 2.8198, true), (53, 7, 30.5958, true), (55, 7, 13.7386, true), (64, 7, 25.4485, true), (67, 7, 43.5899, true), (37, 7, 40.3034, true), (44, 8, 92.4632, true), (40, 8, 12.7516, true), (54, 8, 47.5767, true), (70, 8, 67.1845, true), (71, 8, 96.8926, true), (62, 9, 33.9275, true), (59, 9, 1.692, true), (57, 9, 71.6646, true), (71, 9, 51.2675, true), (43, 9, 79.9604, true), (49, 9, 3.1968, true), (45, 10, 59.0153, true), (40, 10, 88.3902, true), (71, 10, 69.26, true), (53, 10, 81.2835, true), (66, 11, 86.1145, true), (51, 11, 81.3244, true), (58, 11, 24.373, true), (67, 11, 88.0776, true), (48, 11, 56.4195, true), (68, 11, 89.5922, true), (51, 12, 50.2674, true), (44, 12, 63.4297, true), (75, 12, 78.7904, true), (42, 12, 12.3809, true), (68, 12, 80.5288, true), (75, 13, 83.1763, true), (41, 13, 7.8611, true), (66, 13, 22.5932, true), (56, 13, 87.9479, true), (55, 13, 18.8012, true), (62, 13, 56.4461, true), (58, 13, 43.2664, true), (72, 14, 93.1738, true), (54, 14, 50.1244, true), (75, 14, 37.2204, true), (64, 14, 90.6002, true), (37, 14, 65.6846, true), (49, 14, 1.3843, true), (51, 14, 73.4185, true), (70, 15, 95.6843, true), (42, 15, 93.6243, true), (54, 15, 36.041, true), (47, 15, 55.1988, true), (41, 15, 12.3759, true), (49, 15, 45.847, true), (75, 15, 56.4238, true), (52, 16, 98.6076, true), (38, 16, 49.2966, true), (50, 16, 39.9434, true), (54, 16, 61.5645, true), (65, 16, 49.6465, true), (50, 17, 2.4531, true), (55, 17, 99.046, true), (43, 17, 76.6756, true), (65, 17, 85.5046, true), (61, 18, 20.6585, true), (75, 18, 88.086, true), (49, 18, 21.2904, true), (40, 18, 32.8151, true), (50, 18, 65.7037, true), (56, 18, 29.4373, true), (73, 19, 63.3988, true), (70, 19, 16.6504, true), (57, 19, 13.6118, true), (43, 19, 41.5373, true), (49, 19, 2.6974, true), (58, 19, 91.195, true), (50, 20, 50.7942, true), (43, 20, 64.2568, true), (42, 20, 14.7229, true), (52, 20, 6.0941, true), (52, 21, 74.3074, true), (59, 21, 99.6241, true), (71, 21, 74.9113, true), (62, 21, 8.3435, true), (48, 21, 88.651, true), (41, 21, 60.6342, true), (73, 22, 33.6814, true), (65, 22, 16.61, true), (39, 22, 41.1432, true), (50, 22, 70.9715, true), (70, 22, 47.8586, true), (41, 23, 9.4533, true), (38, 23, 4.4015, true), (53, 23, 90.185, true), (73, 23, 93.7406, true), (44, 24, 86.284, true), (55, 24, 6.9691, true), (73, 24, 69.7795, true), (45, 24, 19.2908, true), (49, 24, 10.9404, true), (73, 25, 23.0972, true), (55, 25, 43.2001, true), (63, 25, 30.2368, true), (58, 25, 83.9369, true), (75, 25, 11.9376, true), (47, 26, 15.2812, true), (54, 26, 49.3427, true), (67, 26, 77.8593, true), (42, 26, 33.506, true), (51, 26, 46.5152, true), (42, 27, 15.5271, true), (57, 27, 46.4313, true), (58, 27, 25.8931, true), (40, 27, 16.9747, true), (51, 27, 10.4731, true), (44, 28, 43.9136, true), (62, 28, 0.2384, true), (47, 28, 55.8568, true), (50, 28, 42.9871, true), (66, 28, 59.3143, true), (41, 28, 41.5807, true), (61, 28, 96.3533, true), (72, 29, 75.2092, true), (61, 29, 2.775, true), (75, 29, 24.766, true), (51, 29, 90.7301, true), (65, 29, 52.7484, true), (50, 29, 79.9887, true), (59, 30, 5.6025, true), (53, 30, 1.2683, true), (67, 30, 21.1192, true), (61, 30, 25.0288, true), (57, 30, 50.8476, true), (37, 30, 58.8118, true), (62, 31, 49.5665, true), (74, 31, 74.1959, true), (39, 31, 76.9528, true), (69, 31, 51.3388, true), (68, 32, 51.7486, true), (60, 32, 95.9811, true), (52, 32, 86.3791, true), (66, 32, 63.6249, true), (65, 32, 98.9837, true), (55, 32, 73.0134, true), (42, 32, 35.7306, true), (50, 33, 72.522, true), (66, 33, 91.0691, true), (71, 33, 55.6599, true), (44, 33, 20.6822, true), (42, 33, 29.2468, true), (65, 33, 21.3994, true), (45, 33, 11.7418, true), (59, 34, 81.17, true), (37, 34, 4.8771, true), (66, 34, 98.7643, true), (65, 34, 67.1034, true), (46, 34, 52.9348, true), (49, 35, 30.0369, true), (47, 35, 15.3745, true), (44, 35, 89.9435, true), (65, 35, 82.1551, true), (68, 35, 63.0096, true), (72, 35, 52.0288, true), (46, 35, 56.3996, true), (56, 36, 92.0005, true), (61, 36, 91.1479, true), (58, 36, 9.8057, true), (48, 36, 64.3912, true), (72, 36, 2.5676, true), (57, 37, 9.1647, true), (42, 37, 40.3927, true), (75, 37, 87.0332, true), (46, 37, 22.8238, true), (71, 37, 85.1436, true), (48, 37, 26.8455, true), (51, 38, 26.6396, true), (47, 38, 41.5247, true), (58, 38, 90.4248, true), (46, 38, 28.8003, true), (72, 38, 58.6725, true), (54, 38, 20.4325, true), (68, 39, 48.9109, true), (42, 39, 70.6548, true), (45, 39, 92.6905, true), (55, 39, 13.139, true), (63, 40, 50.7823, true), (44, 40, 67.6689, true), (40, 40, 3.8935, true), (74, 40, 61.4717, true), (72, 40, 68.4925, true), (52, 40, 59.1904, true), (101, 1, 83.5596, true), (80, 1, 4.9399, true), (103, 1, 62.9406, true), (93, 1, 74.6549, true), (111, 1, 20.1052, true), (79, 2, 54.834, true), (98, 2, 94.1387, true), (101, 2, 6.0369, true), (97, 2, 54.2788, true), (88, 2, 49.7251, true), (95, 2, 84.025, true), (109, 3, 40.5075, true), (80, 3, 86.2559, true), (89, 3, 78.0001, true), (84, 3, 73.8356, true), (110, 4, 81.0042, true), (76, 4, 53.5481, true), (87, 4, 47.9098, true), (83, 4, 0.4322, true), (100, 4, 41.1444, true), (89, 4, 55.4316, true), (100, 5, 12.5569, true), (76, 5, 58.1785, true), (97, 5, 78.6282, true), (84, 5, 23.3827, true), (106, 6, 34.3566, true), (89, 6, 34.2112, true), (86, 6, 38.2213, true), (108, 6, 13.5533, true), (110, 6, 52.306, true), (103, 6, 14.9049, true), (76, 7, 26.2498, true), (99, 7, 6.1751, true), (84, 7, 53.871, true), (107, 7, 33.3778, true), (109, 8, 70.844, true), (114, 8, 19.8592, true), (83, 8, 14.1761, true), (94, 8, 49.365, true), (82, 8, 83.0445, true), (81, 8, 34.9555, true), (85, 8, 37.5819, true), (96, 9, 41.3196, true), (109, 9, 33.297, true), (93, 9, 68.3686, true), (103, 9, 77.3306, true), (92, 9, 20.2832, true), (94, 9, 82.2573, true), (107, 10, 23.1127, true), (84, 10, 4.1823, true), (78, 10, 18.2488, true), (81, 10, 66.0916, true), (104, 10, 51.5847, true), (82, 10, 70.2065, true), (79, 10, 15.0684, true), (79, 11, 75.6357, true), (76, 11, 14.3818, true), (88, 11, 96.6123, true), (104, 11, 3.6975, true), (112, 11, 3.735, true), (104, 12, 41.0155, true), (91, 12, 93.1344, true), (80, 12, 13.8795, true), (112, 12, 14.4768, true), (109, 12, 69.1035, true), (107, 13, 67.6358, true), (105, 13, 89.5798, true), (103, 13, 37.0111, true), (90, 13, 20.644, true), (83, 13, 15.6127, true), (104, 13, 4.6737, true), (110, 14, 51.2886, true), (113, 14, 93.5079, true), (85, 14, 24.8316, true), (78, 14, 40.1688, true), (96, 14, 3.0259, true), (110, 15, 48.2867, true), (77, 15, 91.4845, true), (109, 15, 20.4457, true), (84, 15, 56.1349, true), (92, 16, 40.2258, true), (97, 16, 74.3702, true), (95, 16, 32.9509, true), (93, 16, 90.2156, true), (96, 16, 91.0404, true), (106, 17, 35.3767, true), (84, 17, 13.8874, true), (96, 17, 90.8842, true), (97, 17, 62.0517, true), (82, 17, 69.5387, true), (99, 17, 50.652, true), (101, 18, 57.2285, true), (90, 18, 26.7234, true), (111, 18, 90.438, true), (107, 18, 52.8144, true), (101, 19, 99.5959, true), (78, 19, 54.7802, true), (84, 19, 6.1338, true), (94, 19, 63.8044, true), (81, 19, 95.9437, true), (82, 20, 57.7221, true), (102, 20, 74.3161, true), (78, 20, 8.554, true), (91, 20, 70.5088, true), (90, 20, 73.5633, true), (79, 20, 11.695, true), (80, 21, 62.3447, true), (83, 21, 62.334, true), (82, 21, 88.8038, true), (108, 21, 59.5978, true), (90, 21, 73.3476, true), (92, 21, 67.4141, true), (95, 22, 36.5281, true), (88, 22, 30.3872, true), (91, 22, 17.9203, true), (100, 22, 7.7227, true), (87, 22, 36.8989, true), (102, 22, 21.2462, true), (99, 23, 73.4218, true), (98, 23, 81.2995, true), (88, 23, 45.5239, true), (87, 23, 62.5516, true), (113, 23, 81.829, true), (94, 23, 64.2221, true), (82, 24, 65.9073, true), (79, 24, 39.7756, true), (113, 24, 90.1789, true), (107, 24, 29.5309, true), (90, 24, 57.3393, true), (76, 24, 47.533, true), (102, 25, 4.9729, true), (95, 25, 52.0161, true), (92, 25, 52.3593, true), (98, 25, 61.3013, true), (92, 26, 58.3121, true), (87, 26, 16.4933, true), (98, 26, 29.9874, true), (101, 26, 54.41, true), (106, 26, 57.9832, true), (94, 27, 85.016, true), (88, 27, 43.1592, true), (77, 27, 0.5627, true), (99, 27, 95.9771, true), (91, 27, 60.5719, true), (83, 27, 84.9334, true), (89, 28, 43.4937, true), (93, 28, 63.318, true), (105, 28, 42.6206, true), (98, 28, 45.8765, true), (104, 29, 92.5793, true), (101, 29, 5.0833, true), (107, 29, 15.6112, true), (88, 29, 44.6084, true), (82, 29, 71.1625, true), (76, 29, 24.4081, true), (96, 30, 97.5987, true), (95, 30, 36.744, true), (87, 30, 19.6046, true), (81, 30, 22.4022, true), (79, 30, 91.9296, true), (102, 30, 14.0924, true), (95, 31, 28.4126, true), (85, 31, 0.1065, true), (113, 31, 86.3722, true), (96, 31, 28.8958, true), (80, 32, 72.5506, true), (104, 32, 33.8621, true), (88, 32, 16.2917, true), (107, 32, 62.3925, true), (93, 33, 73.8999, true), (98, 33, 76.7519, true), (84, 33, 68.7334, true), (106, 33, 98.7028, true), (80, 33, 42.8996, true), (108, 33, 60.1635, true), (76, 34, 71.4926, true), (101, 34, 84.3317, true), (91, 34, 21.5814, true), (78, 34, 99.945, true), (107, 34, 20.6495, true), (95, 34, 86.8094, true), (85, 35, 68.8396, true), (81, 35, 12.4487, true), (109, 35, 98.9302, true), (101, 35, 23.5933, true), (91, 35, 13.4423, true), (106, 35, 77.7336, true), (92, 35, 70.3406, true), (102, 36, 73.5706, true), (89, 36, 58.3992, true), (92, 36, 53.528, true), (100, 36, 56.058, true), (101, 36, 77.0307, true), (88, 36, 78.3385, true), (80, 36, 6.0234, true), (104, 37, 84.7173, true), (107, 37, 73.8315, true), (77, 37, 69.6897, true), (91, 37, 4.2872, true), (96, 38, 95.2996, true), (92, 38, 21.3419, true), (108, 38, 66.9775, true), (102, 38, 71.16, true), (82, 38, 3.6082, true), (77, 38, 74.3106, true), (103, 39, 21.3193, true), (109, 39, 27.8048, true), (111, 39, 81.4783, true), (98, 39, 18.7035, true), (89, 39, 9.4373, true), (96, 39, 73.8768, true), (101, 40, 11.6859, true), (106, 40, 9.5915, true), (89, 40, 57.0347, true), (105, 40, 25.9334, true), (123, 1, 61.9946, true), (121, 1, 8.8106, true), (149, 1, 4.0453, true), (126, 1, 88.953, true), (144, 1, 33.0636, true), (122, 2, 54.2254, true), (119, 2, 34.0924, true), (150, 2, 2.6188, true), (128, 2, 46.2348, true), (124, 2, 23.3415, true), (145, 2, 88.191, true), (116, 3, 77.4963, true), (146, 3, 42.4931, true), (134, 3, 43.9515, true), (137, 3, 21.0266, true), (115, 3, 90.6485, true), (128, 3, 31.7717, true), (126, 4, 7.5997, true), (132, 4, 0.1182, true), (149, 4, 44.8429, true), (147, 4, 21.0512, true), (148, 4, 27.4548, true), (147, 5, 23.9426, true), (124, 5, 65.3054, true), (140, 5, 25.5969, true), (118, 5, 98.9337, true), (131, 5, 60.1556, true), (132, 6, 8.7753, true), (131, 6, 1.9745, true), (133, 6, 84.0184, true), (115, 6, 10.9241, true), (122, 6, 93.8782, true), (142, 6, 27.0427, true), (147, 6, 34.2974, true), (143, 7, 36.2575, true), (150, 7, 59.0902, true), (147, 7, 8.3241, true), (135, 7, 5.1289, true), (119, 7, 75.0518, true), (128, 7, 34.6959, true), (131, 8, 64.8421, true), (123, 8, 66.6769, true), (143, 8, 68.5321, true), (119, 8, 24.4898, true), (139, 8, 53.6017, true), (134, 8, 42.2827, true), (150, 8, 46.8091, true), (133, 9, 55.7549, true), (129, 9, 68.5014, true), (130, 9, 58.282, true), (150, 9, 73.4828, true), (128, 9, 1.2978, true), (124, 9, 86.4596, true), (147, 10, 22.3149, true), (119, 10, 33.0204, true), (143, 10, 89.3351, true), (121, 10, 66.0386, true), (125, 10, 39.8313, true), (146, 11, 29.2972, true), (134, 11, 78.0997, true), (122, 11, 66.3528, true), (126, 11, 39.5141, true), (142, 12, 71.9112, true), (140, 12, 94.2139, true), (137, 12, 54.8797, true), (123, 12, 45.4327, true), (143, 12, 20.0598, true), (149, 12, 97.6572, true), (146, 13, 66.5981, true), (140, 13, 19.9389, true), (127, 13, 25.9394, true), (138, 13, 35.0764, true), (136, 13, 44.8694, true), (123, 13, 74.1419, true), (120, 13, 29.6636, true), (141, 14, 34.788, true), (145, 14, 33.8182, true), (132, 14, 49.4607, true), (140, 14, 26.4253, true), (143, 14, 35.7515, true), (131, 14, 34.9254, true), (146, 15, 34.149, true), (136, 15, 74.4996, true), (121, 15, 56.3491, true), (129, 15, 52.4826, true), (122, 15, 33.6136, true), (129, 16, 94.0924, true), (142, 16, 28.4271, true), (124, 16, 14.6605, true), (128, 16, 81.6952, true), (123, 17, 68.3787, true), (133, 17, 71.0304, true), (137, 17, 51.3848, true), (148, 17, 83.8716, true), (119, 17, 87.1318, true), (150, 18, 27.3078, true), (131, 18, 8.9102, true), (120, 18, 50.4339, true), (135, 18, 0.5424, true), (145, 18, 49.5137, true), (126, 19, 92.2194, true), (139, 19, 56.3739, true), (141, 19, 34.0498, true), (147, 19, 45.1234, true), (133, 19, 51.6669, true), (117, 20, 40.3899, true), (134, 20, 84.8306, true), (119, 20, 45.5705, true), (148, 20, 98.0453, true), (122, 20, 16.5429, true), (142, 20, 92.9081, true), (128, 21, 50.2326, true), (138, 21, 0.4997, true), (124, 21, 16.0931, true), (115, 21, 93.1708, true), (122, 21, 6.0354, true), (119, 21, 26.5583, true), (136, 22, 7.3227, true), (134, 22, 77.8103, true), (133, 22, 4.3313, true), (126, 22, 96.4154, true), (150, 22, 14.2482, true), (146, 23, 85.9237, true), (124, 23, 13.0904, true), (147, 23, 23.125, true), (140, 23, 0.977, true), (149, 23, 87.107, true), (115, 23, 68.8751, true), (117, 24, 0.4962, true), (144, 24, 15.2764, true), (136, 24, 23.9874, true), (127, 24, 12.4793, true), (131, 25, 79.8577, true), (136, 25, 93.0588, true), (150, 25, 87.7115, true), (128, 25, 79.1214, true), (148, 26, 57.5968, true), (131, 26, 59.2228, true), (124, 26, 10.1216, true), (141, 26, 56.9784, true), (138, 26, 76.5756, true), (117, 26, 46.468, true), (119, 27, 82.5068, true), (130, 27, 58.2316, true), (147, 27, 58.725, true), (139, 27, 9.2059, true), (132, 27, 78.2154, true), (126, 28, 96.4332, true), (130, 28, 42.7289, true), (128, 28, 91.0064, true), (134, 28, 78.4476, true), (140, 29, 44.879, true), (119, 29, 88.5535, true), (149, 29, 40.1339, true), (125, 29, 49.1704, true), (145, 29, 24.9237, true), (144, 29, 64.7065, true), (125, 30, 67.4308, true), (119, 30, 78.8456, true), (122, 30, 23.1443, true), (129, 30, 11.2701, true), (134, 30, 24.5289, true), (137, 31, 72.9167, true), (135, 31, 34.5716, true), (121, 31, 58.3414, true), (128, 31, 31.0387, true), (126, 31, 67.9639, true), (125, 32, 77.1941, true), (124, 32, 34.8471, true), (134, 32, 51.7458, true), (143, 32, 87.8276, true), (144, 32, 16.1829, true), (136, 32, 49.2942, true), (116, 32, 84.8945, true), (139, 33, 37.7757, true), (140, 33, 38.2096, true), (135, 33, 16.5947, true), (134, 33, 70.4633, true), (133, 33, 92.828, true), (123, 34, 52.2771, true), (142, 34, 15.1221, true), (136, 34, 7.3293, true), (118, 34, 82.6598, true), (125, 34, 78.6934, true), (133, 34, 78.7907, true), (147, 35, 63.2007, true), (129, 35, 82.9227, true), (119, 35, 72.2425, true), (148, 35, 82.1495, true), (137, 36, 48.8304, true), (128, 36, 9.0605, true), (130, 36, 28.6384, true), (122, 36, 67.2034, true), (135, 36, 18.5778, true), (149, 37, 50.3522, true), (145, 37, 41.4521, true), (125, 37, 54.6083, true), (147, 37, 31.3099, true), (146, 37, 94.9459, true), (130, 37, 94.2418, true), (125, 38, 96.9192, true), (127, 38, 80.6616, true), (128, 38, 51.3309, true), (119, 38, 77.297, true), (127, 39, 62.2254, true), (136, 39, 31.6736, true), (142, 39, 61.7916, true), (137, 39, 29.9721, true), (127, 40, 30.6157, true), (150, 40, 48.465, true), (123, 40, 69.4314, true), (148, 40, 78.1566, true), (130, 40, 26.391, true), (129, 40, 37.6403, true), (173, 1, 46.4988, true), (174, 1, 89.7722, true), (181, 1, 75.7011, true), (178, 1, 88.3104, true), (156, 1, 83.1217, true), (162, 1, 69.742, true), (162, 2, 63.868, true), (153, 2, 5.3356, true), (154, 2, 32.6094, true), (157, 2, 94.5765, true), (170, 2, 36.6727, true), (178, 2, 78.2729, true), (177, 3, 50.1972, true), (183, 3, 64.6905, true), (171, 3, 24.8397, true), (151, 3, 53.4821, true), (164, 4, 42.7906, true), (161, 4, 66.1537, true), (169, 4, 83.0132, true), (174, 4, 88.394, true), (152, 4, 90.0036, true), (182, 5, 75.9512, true), (154, 5, 93.7297, true), (169, 5, 94.0452, true), (168, 5, 20.1748, true), (179, 6, 25.2269, true), (174, 6, 59.0775, true), (158, 6, 6.11, true), (157, 6, 75.5328, true), (184, 7, 97.4963, true), (166, 7, 76.4962, true), (179, 7, 48.2706, true), (158, 7, 10.8866, true), (151, 7, 75.7968, true), (163, 8, 25.5396, true), (183, 8, 17.4059, true), (158, 8, 92.8709, true), (176, 8, 86.3241, true), (177, 8, 49.4697, true), (162, 9, 14.5022, true), (183, 9, 10.1955, true), (168, 9, 72.8481, true), (157, 9, 99.9428, true), (181, 10, 26.4469, true), (163, 10, 50.7754, true), (152, 10, 33.6824, true), (173, 10, 88.6875, true), (151, 11, 74.9235, true), (185, 11, 90.4883, true), (164, 11, 66.7467, true), (176, 11, 73.6896, true), (167, 11, 7.6128, true), (177, 11, 32.0796, true), (151, 12, 8.8836, true), (183, 12, 36.6202, true), (168, 12, 77.7952, true), (152, 12, 28.6276, true), (163, 12, 0.5705, true), (173, 12, 87.2853, true), (160, 13, 51.7953, true), (173, 13, 65.2482, true), (161, 13, 22.2508, true), (174, 13, 65.7489, true), (156, 13, 28.1115, true), (168, 13, 90.1574, true), (155, 14, 86.6767, true), (165, 14, 78.383, true), (179, 14, 55.0454, true), (180, 14, 45.9146, true), (156, 14, 47.6991, true), (178, 14, 50.3296, true), (176, 14, 77.3532, true), (158, 15, 8.5662, true), (162, 15, 56.5899, true), (167, 15, 62.8315, true), (155, 15, 20.5459, true), (171, 15, 60.3016, true), (172, 16, 18.3242, true), (155, 16, 59.4816, true), (158, 16, 45.0621, true), (179, 16, 69.4666, true), (157, 16, 50.7912, true), (176, 17, 42.1122, true), (163, 17, 29.4779, true), (154, 17, 56.0776, true), (156, 17, 26.4843, true), (182, 17, 4.8047, true), (168, 18, 74.2017, true), (173, 18, 94.3932, true), (155, 18, 37.0372, true), (169, 18, 13.576, true), (157, 18, 46.7131, true), (169, 19, 38.8568, true), (162, 19, 77.2324, true), (166, 19, 82.426, true), (156, 19, 65.9279, true), (174, 19, 77.7577, true), (174, 20, 32.4006, true), (172, 20, 38.1886, true), (181, 20, 84.393, true), (178, 20, 60.4061, true), (175, 20, 36.3422, true), (173, 21, 84.83, true), (184, 21, 25.1726, true), (152, 21, 23.2989, true), (185, 21, 35.3334, true), (181, 21, 54.3998, true), (168, 21, 32.8111, true), (167, 22, 3.0145, true), (155, 22, 98.1619, true), (157, 22, 71.544, true), (154, 22, 40.6912, true), (165, 22, 53.455, true), (175, 22, 50.0821, true), (183, 22, 56.5983, true), (167, 23, 66.7535, true), (184, 23, 70.0923, true), (171, 23, 18.3704, true), (169, 23, 42.2512, true), (175, 23, 23.501, true), (163, 24, 99.8142, true), (185, 24, 88.0115, true), (183, 24, 2.6697, true), (184, 24, 30.0101, true), (161, 24, 10.4827, true), (153, 24, 60.8766, true), (183, 25, 12.7485, true), (152, 25, 79.642, true), (184, 25, 93.274, true), (182, 25, 43.8251, true), (175, 25, 9.9574, true), (155, 25, 9.4682, true), (177, 26, 41.2823, true), (175, 26, 4.7004, true), (154, 26, 75.4881, true), (156, 26, 56.651, true), (174, 26, 64.8439, true), (180, 26, 3.3109, true), (184, 27, 67.7354, true), (154, 27, 55.3737, true), (182, 27, 98.3977, true), (152, 27, 38.3584, true), (153, 28, 71.6811, true), (167, 28, 1.697, true), (172, 28, 75.3798, true), (164, 28, 75.9427, true), (165, 28, 67.3037, true), (174, 29, 71.1594, true), (158, 29, 81.0916, true), (173, 29, 37.7381, true), (160, 29, 30.5178, true), (178, 29, 54.0449, true), (164, 30, 57.288, true), (158, 30, 25.7372, true), (184, 30, 60.0592, true), (172, 30, 20.7547, true), (156, 30, 9.125, true), (166, 30, 2.7792, true), (173, 30, 50.193, true), (168, 31, 95.6983, true), (151, 31, 56.8832, true), (158, 31, 96.7719, true), (181, 31, 4.8776, true), (183, 31, 5.3681, true), (176, 32, 30.2607, true), (185, 32, 69.6477, true), (165, 32, 57.8057, true), (157, 32, 47.5523, true), (156, 33, 72.0395, true), (181, 33, 99.5588, true), (171, 33, 48.2007, true), (169, 33, 27.5041, true), (170, 34, 20.8109, true), (154, 34, 75.3404, true), (164, 34, 56.7729, true), (160, 34, 76.9572, true), (167, 35, 24.3184, true), (178, 35, 17.5841, true), (152, 35, 80.0107, true), (155, 35, 66.2442, true), (163, 35, 36.0593, true), (181, 36, 64.4457, true), (155, 36, 88.4515, true), (169, 36, 42.8878, true), (160, 36, 22.9926, true), (164, 36, 56.8328, true), (164, 37, 48.3161, true), (163, 37, 25.229, true), (174, 37, 67.646, true), (159, 37, 74.2168, true), (157, 37, 19.5773, true), (177, 38, 4.2825, true), (172, 38, 98.3526, true), (160, 38, 43.1496, true), (175, 38, 86.2141, true), (184, 38, 62.6635, true), (185, 39, 60.6287, true), (164, 39, 1.9444, true), (159, 39, 36.8849, true), (181, 39, 69.0011, true), (167, 39, 7.2229, true), (164, 40, 31.2014, true), (172, 40, 63.9869, true), (168, 40, 71.188, true), (170, 40, 50.5695, true), (184, 40, 62.4955, true), (180, 40, 50.2937, true), (186, 1, 25.1728, true), (202, 1, 90.1662, true), (216, 1, 37.5428, true), (196, 1, 76.532, true), (215, 1, 79.6785, true), (203, 1, 61.0817, true), (207, 1, 58.7228, true), (199, 2, 22.5132, true), (192, 2, 64.9403, true), (210, 2, 81.0781, true), (204, 2, 4.5022, true), (211, 2, 27.3841, true), (194, 2, 10.1176, true), (203, 3, 23.271, true), (205, 3, 56.9344, true), (195, 3, 29.6195, true), (208, 3, 17.3377, true), (187, 3, 12.7665, true), (186, 4, 56.6369, true), (204, 4, 6.8675, true), (209, 4, 71.2285, true), (196, 4, 72.6774, true), (203, 5, 90.729, true), (208, 5, 45.2801, true), (214, 5, 43.0643, true), (199, 5, 97.5468, true), (212, 5, 15.8472, true), (193, 5, 48.0078, true), (206, 5, 11.3192, true), (205, 6, 20.3067, true), (190, 6, 57.5268, true), (203, 6, 20.4234, true), (191, 6, 20.8612, true), (206, 6, 40.4081, true), (197, 6, 41.828, true), (194, 6, 19.0972, true), (189, 7, 43.3217, true), (209, 7, 68.9725, true), (207, 7, 86.6328, true), (217, 7, 73.5789, true), (197, 7, 54.3228, true), (203, 8, 16.1433, true), (198, 8, 27.8637, true), (207, 8, 77.4689, true), (212, 8, 73.2985, true), (197, 8, 44.5108, true), (196, 8, 58.6078, true), (186, 9, 66.2145, true), (217, 9, 50.9819, true), (187, 9, 5.2516, true), (194, 9, 53.3696, true), (216, 10, 5.6894, true), (217, 10, 45.5871, true), (189, 10, 10.0071, true), (195, 10, 31.2792, true), (211, 10, 65.2618, true), (193, 10, 46.0498, true), (186, 10, 56.624, true), (193, 11, 90.8859, true), (217, 11, 13.3422, true), (199, 11, 26.1441, true), (189, 11, 84.4299, true), (215, 11, 46.1795, true), (210, 11, 90.9689, true), (196, 12, 49.325, true), (192, 12, 93.3681, true), (198, 12, 92.185, true), (206, 12, 79.7448, true), (216, 13, 93.8217, true), (212, 13, 32.2069, true), (215, 13, 50.5851, true), (193, 13, 86.1242, true), (204, 13, 43.6915, true), (206, 13, 72.2331, true), (208, 14, 72.6564, true), (200, 14, 19.1026, true), (191, 14, 61.4795, true), (190, 14, 99.3688, true), (201, 15, 68.6667, true), (187, 15, 81.2245, true), (192, 15, 0.7818, true), (207, 15, 37.9536, true), (213, 15, 39.052, true), (203, 15, 45.09, true), (213, 16, 8.8749, true), (189, 16, 91.6171, true), (209, 16, 23.893, true), (194, 16, 25.588, true), (192, 16, 1.8542, true), (191, 17, 55.0939, true), (188, 17, 69.9699, true), (215, 17, 82.2373, true), (201, 17, 74.0632, true), (205, 17, 96.5427, true), (204, 17, 9.2052, true), (206, 18, 29.7721, true), (197, 18, 90.2593, true), (204, 18, 61.5364, true), (188, 18, 87.6254, true), (210, 18, 90.5709, true), (216, 19, 25.8379, true), (211, 19, 13.0073, true), (189, 19, 87.6262, true), (190, 19, 39.1573, true), (205, 19, 12.5072, true), (196, 19, 31.5481, true), (187, 20, 59.3081, true), (193, 20, 85.502, true), (190, 20, 31.8041, true), (192, 20, 89.9026, true), (194, 20, 31.8627, true), (209, 20, 36.3601, true), (193, 21, 6.4343, true), (187, 21, 21.7533, true), (216, 21, 41.4651, true), (210, 21, 86.4701, true), (214, 22, 28.4953, true), (206, 22, 23.843, true), (186, 22, 40.2088, true), (187, 22, 44.0378, true), (193, 22, 57.5373, true), (192, 22, 0.6966, true), (209, 22, 92.3229, true), (194, 23, 24.8602, true), (193, 23, 52.6557, true), (190, 23, 77.8376, true), (199, 23, 18.6846, true), (187, 23, 2.1177, true), (216, 24, 9.8482, true), (190, 24, 84.1682, true), (211, 24, 6.7915, true), (188, 24, 7.2447, true), (203, 25, 48.9518, true), (204, 25, 6.4553, true), (198, 25, 74.1922, true), (190, 25, 94.068, true), (217, 25, 2.1841, true), (200, 26, 21.4106, true), (191, 26, 72.7831, true), (213, 26, 96.8587, true), (198, 26, 96.745, true), (202, 26, 29.2168, true), (195, 26, 91.7202, true), (188, 27, 85.5263, true), (214, 27, 57.8874, true), (186, 27, 75.2045, true), (208, 27, 80.992, true), (210, 27, 33.6262, true), (195, 27, 36.8736, true), (205, 27, 75.9153, true), (195, 28, 89.3315, true), (198, 28, 2.1581, true), (207, 28, 50.2322, true), (194, 28, 43.5374, true), (199, 28, 58.9633, true), (200, 28, 3.1392, true), (215, 29, 94.9802, true), (214, 29, 39.9017, true), (201, 29, 14.8449, true), (196, 29, 21.4551, true), (205, 30, 50.7649, true), (214, 30, 3.7988, true), (202, 30, 86.8125, true), (213, 30, 75.0996, true), (206, 30, 59.0164, true), (196, 30, 86.0053, true), (217, 31, 9.5337, true), (191, 31, 26.0737, true), (192, 31, 18.8607, true), (200, 31, 36.318, true), (198, 31, 85.8644, true), (201, 32, 91.6991, true), (202, 32, 29.208, true), (193, 32, 8.3068, true), (189, 32, 31.8788, true), (205, 32, 26.628, true), (188, 33, 44.38, true), (190, 33, 55.405, true), (217, 33, 43.3576, true), (186, 33, 41.708, true), (189, 33, 55.4089, true), (202, 33, 49.9247, true), (216, 34, 7.48, true), (199, 34, 45.3419, true), (198, 34, 61.9491, true), (203, 34, 65.3944, true), (194, 34, 86.7916, true), (215, 34, 18.3124, true), (188, 35, 45.8289, true), (209, 35, 28.1812, true), (215, 35, 72.8062, true), (217, 35, 80.7586, true), (212, 35, 91.9941, true), (213, 36, 67.3312, true), (214, 36, 14.3355, true), (188, 36, 38.3435, true), (186, 36, 83.3103, true), (192, 36, 87.1639, true), (195, 37, 39.9044, true), (198, 37, 62.8172, true), (199, 37, 92.4052, true), (210, 37, 66.8325, true), (217, 37, 47.0685, true), (209, 37, 14.6565, true), (202, 37, 71.4927, true), (214, 38, 92.8107, true), (206, 38, 21.7975, true), (196, 38, 38.8951, true), (187, 38, 51.858, true), (202, 39, 41.6245, true), (206, 39, 1.6782, true), (211, 39, 94.7378, true), (189, 39, 9.5009, true), (191, 40, 39.3981, true), (205, 40, 58.1788, true), (206, 40, 7.9488, true), (211, 40, 17.8492, true), (202, 40, 19.7349, true), (194, 40, 88.8928, true), (199, 40, 42.8336, true);
 
 
     insert into app_settings (setting_key, setting_value)
       values 
         ('id_active_periode', '{"value": 6}'),
-        ('current_phase', '{"value": "grading"}');
+        ('current_phase', '{"value": "registration"}');
   ;
 
 

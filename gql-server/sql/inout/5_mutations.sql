@@ -214,6 +214,8 @@ create or replace function add_mahasiswa_to_kelas (
 declare
   _mk mata_kuliah;
   _id_result int;
+  _sksd int;
+  _periode periode;
 begin
   -- Check requirement of this mata_kuliah
   -- select mk into strict _mk 

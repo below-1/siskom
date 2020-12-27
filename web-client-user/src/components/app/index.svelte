@@ -6,8 +6,7 @@
   import { 
     user,
     mahasiswa,
-    dosen,
-    Logout
+    dosen
   } from 'siskom-web-commons';
   import build_avatar from 'siskom-web-user/commons/buildAvatar.js';
   import SelfDosen from './dosen/Me.svelte';
@@ -15,6 +14,7 @@
   import HomeMahasiswa from './mahasiswa/Home.svelte';
   import SelfMahasiswa from './mahasiswa/Me.svelte';
   import Ilkom from './ilkom.svelte';
+  import Logout from "siskom-web-user/components/auth/Logout.svelte";
 
   function getDataFromSession ({ user, mahasiswa, dosen }) {
     let menus = [];

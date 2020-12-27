@@ -14,6 +14,7 @@
   import Info from './Info.svelte';
   import IPChart from './IPChart.svelte';
   import IPTable from './IPTable.svelte';
+  import ChooseCourse from './choose-course/index.svelte';
   import * as context_key from './context.js';
 
   export let id;
@@ -57,7 +58,8 @@
     '/krs': KRS,
     '/khs': KHS,
     '/ip-table': IPTable,
-    '/ip-chart': IPChart
+    '/ip-chart': IPChart,
+    '/choose-course': ChooseCourse
   };
 
   async function load_mahasiswa ({ id }) {

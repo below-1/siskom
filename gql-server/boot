@@ -33,6 +33,10 @@ case $1 in
 	db:interactive)
 		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres
 		;;
+
+	redis:seed)
+		node main/seedRedis.js
+		;;
 	*)
 		echo "unknown"
 		;;

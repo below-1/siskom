@@ -9,7 +9,7 @@
 <ul class="">
   <li class="bg-gray-200 hover:bg-gray-300">
     <a href='/#/app/me_mhs' class="flex items-center w-full h-full py-4 px-4">
-      <img src={avatar} height={avatarSize} width={avatarSize} class="mr-2" />
+      <img src={avatar} height={avatarSize} width={avatarSize} class="mr-2 rounded-full" />
       <div class="text-sm">
         <div class="font-bold">{name}</div>
         <div class="text-xs font-semibold">{subtitle}</div>

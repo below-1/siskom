@@ -38,7 +38,7 @@
 >
   <!-- Layer -->
   <div class="layer">
-    <div class="dialog shadow-xl rounded border border-gray-300" style={`width: ${width}px;`}>
+    <div class="dialog shadow-xl rounded border border-gray-300 w-full md:w-1/3 md:mx-auto">
       <div class="py-4 px-6 bg-gray-100 flex justify-between items-center border-b border-gray-300">
         <div class="font-semibold">{title}</div>
         <!-- Close icon -->

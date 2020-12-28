@@ -105,7 +105,7 @@
       {#each bimbinganPa as mahasiswa (mahasiswa.nodeId)}
         <li class="border-b border-gray-300 py-4 flex items-center">
           <div style="max-width: 2.5rem; min-width: 2.5rem; width: 2.5rem;">
-            <img src={mahasiswa.avatar} />
+            <img class="rounded-full" src={mahasiswa.avatar} />
           </div>
           <div class="ml-2">
             <div class="font-bold text-lg">{mahasiswa.nama}</div>

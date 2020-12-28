@@ -72,7 +72,7 @@
 {#if showMenu}
   <nav
     class="fixed bottom-0 left-0 right-0 overflow-y-scroll bg-gray-100"
-    style="top: 2.5rem;"
+    style="top: 3rem;"
   >
     <RespMenu
       {avatar}

@@ -33,6 +33,8 @@
   export let nilai = 0;
   let networkStatus = 'ready';
 
+  $: invalidNilai = isNaN(nilai);
+
   $: title = 'Ubah Nilai ' + nama;
 
   async function updateNilai () {
@@ -56,13 +58,17 @@
 
 <JoAsyncContent {networkStatus}>
   <div slot="ready">
-    <JoNumber 
-      min={0}
-      max={100}
-      step={0.01}
-      bind:value={nilai} 
-      cls="mb-6" 
-    />
+    <div class="flex flex-col mb-6">
+      <JoNumber 
+        min={0}
+        max={100}
+        step={0.01}
+        bind:value={nilai} 
+      />
+      {#if invalidNilai}
+        <div class="text-red-500 text-sm">nilai Tidak Valid</div>
+      {/if}
+    </div>
     <JoButton 
       label="simpan" 
       action={updateNilai}

@@ -123,7 +123,7 @@
   class="jo-auto-complete w-full"
   bind:this={wrapper}
 >
-  <div class="input-wrapper" bind:this={searchInput}>
+  <div class="input-wrapper flex items-center" bind:this={searchInput}>
 
     {#if !value}
       <input 

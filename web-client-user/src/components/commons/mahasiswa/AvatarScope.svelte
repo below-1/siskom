@@ -3,7 +3,7 @@
 
   export let mahasiswa;
 
-  $: avatar = mahasiswa ? buildAvatar(mahasiswa.nim, 256) : null;
+  $: avatar = mahasiswa ? buildAvatar(mahasiswa.nim, 124) : null;
 </script>
 
 <div class="flex items-center border-b border-gray-400 py-4">

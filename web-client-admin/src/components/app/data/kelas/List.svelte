@@ -149,7 +149,10 @@
       {#each filteredClasses as item (item.nodeId)}
         <tr>
           <td>
-            <div class="font-semibold">{item.mataKuliah.nama}</div>
+            <a 
+              href={`/#/admin/data/mk/edit/${item.mataKuliah.id}`} 
+              class="font-semibold undeline"
+            >{item.mataKuliah.nama}</a>
             <div class="font-medium text-gray-900 text-xs">
               {item.mataKuliah.tipeMk}, {item.mataKuliah.kode}
             </div>

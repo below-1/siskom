@@ -3,16 +3,15 @@
 
   export let dosen;
 
-  $: avatar = dosen ? buildAvatar(dosen.nip, 48) : null;
+  $: avatar = dosen ? buildAvatar(dosen.nip, 124) : null;
 </script>
 
 <div class="flex items-center my-6">
-  <img src={avatar} class="mr-4" />
+  <img src={avatar} class="mr-4 rounded-full" />
   <div>
-    <div class="font-semibold text-3xl">{dosen.nama}</div>
+    <div class="font-semibold text-lg">{dosen.nama}</div>
     <div class="font-semibold text-sm">
       {dosen.nip}, 
-      {dosen.sex.toLowerCase()}
       {#if dosen.status == 'AKTIF'}
         <span class="px-2 bg-green-600 text-white text-xs font-bold">aktif</span>
       {:else}

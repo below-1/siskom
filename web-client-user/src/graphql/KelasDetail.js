@@ -19,7 +19,7 @@ export default gql`
       }
     }
 
-    schedule: scheduledKelaByIdKelas(idKelas: $idKelas) {
+    schedule: scheduledKelaByIdKelas(idKelas: $id) {
       idKelas
       kapasitas
       hariKul

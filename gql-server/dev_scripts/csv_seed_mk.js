@@ -27,12 +27,14 @@ async function load_mk () {
 	// console.log(atomic_data);
 }
 
-load_mk()
-	.catch(err => {
-		console.log(err);
-		process.exit(1);
-	})
-	.then(() => {
-		console.log("exiting whatsoever...");
-		process.exit(0);
-	})
+module.exports = load_mk;
+
+// load_mk()
+// 	.catch(err => {
+// 		console.log(err);
+// 		process.exit(1);
+// 	})
+// 	.then(() => {
+// 		console.log("exiting whatsoever...");
+// 		process.exit(0);
+// 	})

@@ -21,7 +21,12 @@
   }
 
   onMount(async () => {
-    await updateSession();
+    try {
+      await updateSession();
+    } catch (err) {
+      console.log('error updating session');
+      console.log(err);
+    }
   });
 </script>
 

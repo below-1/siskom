@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "csvtojson": "~2.0.10",
-    "knex": "~0.21.15"
+    "knex": "~0.21.15",
+    "lodash": "~4.17.20"
   }
 }

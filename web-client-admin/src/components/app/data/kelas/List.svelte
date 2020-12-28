@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import apolloClient from 'siskom-web-admin/apolloClient.js';
-  import { periode } from 'siskom-web-admin/stores/index.js';
+  // import { periode } from 'siskom-web-admin/stores/index.js';
   import { parse, format, addMinutes } from 'date-fns';
   import { push as pushRoute } from 'svelte-spa-router';
   import MdDateRange from 'svelte-icons/md/MdDateRange.svelte'
@@ -18,7 +18,7 @@
     JoInput,
     JoButton
   } from 'siskom-web-commons';
-  import { warning, notification } from 'siskom-web-admin/stores/index.js';
+  import { warning, notification, periode } from 'siskom-web-admin/stores/index.js';
   import GQLListKelas from 'siskom-web-admin/graphql/ListKelas.js';
   import GQLDeleteKelas from 'siskom-web-admin/graphql/DeleteKelas.js';
   import 'siskom-web-admin/styles/jo-table.css';
@@ -39,8 +39,11 @@
   $: onKeywordChange({ keyword, classes });
 
   async function getListKelas ({ selectedPeriode }) {
+    if (selectedPeriode == null) return;
     let result;
     networkStatus = 'loading';
+    console.log(`idPeriode: ${idPeriode}`);
+    console.log(`$periode: ${$periode}`);
     console.log(`selectedPeriode: ${selectedPeriode}`);
 
     try {

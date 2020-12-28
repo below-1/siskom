@@ -1,0 +1,563 @@
+id_pa,nama,nim
+1,Nefriyanti Mira Mangngi,1606080001
+1,Dwisanti Sisilia Bau Bani,1606080003
+1,Seni Octavia Dima Lado,1606080004
+1,Daniel Hermus Rully,1606080006
+1,Siti Suyarti Said,1606080007
+1,Alpedro Imanuel Lopo,1606080016
+1,Maria Selia,1606080017
+1,Raynaldo Ardianra Foenale,1606080018
+1,Leonardo Rihi Huky,1606080020
+1,Aristop Solle,1606080043
+1,Wilhelmus Manji Joman,1606080044
+1,Yohanes Paulus Laba Uak,1606080045
+1,Derwinta Pondence Snae,1606080046
+1,Katarina Novani Lakonawa,1606080047
+1,Ahminto Rizaldy Amuntoda,1606080048
+1,Apriliani Erwinda Djati,1606080049
+1,Diah Kristianing Tyas,1606080050
+1,Josep Sotir Mabilegi,1606080051
+1,Nurtanti M. Tahir,1606080052
+1,Junita Ga Riwu,1706080001
+1,Dian Ismiyanti,1706080002
+1,Juliet Reinita Angelia Lao,1706080003
+1,Jessica Stephanie Ang Djadi,1706080004
+1,Elma Koamesa,1706080005
+1,Yulia Arni Susanti Dedo Ngara,1706080006
+1,Yolanda Meiliani Mutiara,1706080080
+1,Betharia B. Asmoro,1706080081
+1,Adi Saldi Buala,1706080082
+1,Rifaldo Dima,1706080083
+1,Ali Umanailo,1706080084
+1,Afriani,1806080008
+1,Yefty Novlia Ndun,1806080010
+1,Ngakan Made Raditya,1806080041
+1,Andrianus Ato,1806080042
+1,Dionisia Taosila,1806080043
+1,Devid Pongsilurang,1806080044
+1,Mario Lazarus Tara Palla,1806080045
+1,Petrus Bere Mamulak,1806080046
+1,Seflin Andriani Nalle,1806080047
+1,Putri Emilia Bloemhard,1906080001
+1,Dewanti Prodensia Natonis,1906080002
+1,Clotilde Cindyesari Timo Tasaeb,1906080003
+1,Febronia.B. Sonlay,1906080004
+1,Shinta Aidah H. Ardani,1906080005
+1,Khofifah S. Kase,1906080089
+1,Taufiq Rahman Prasetyo,1906080080
+1,Maria Fransiska I.L. Hipir,2006080036
+1,Mario Antonius Oematan,2006080037
+1,Nalfayo Christian Ratu,2006080038
+1,Nicky Albertho Lubalu,2006080039
+1,Petrus Junior Amalo,2006080040
+2,Ignosa Lalak,1506080022
+2,Hakim Yudistiramissa,1506080023
+2,Aplonia Yunita Rikardus,1506080024
+2,Inggrit Clesia Ambesa,1506080025
+2,Dimas Putra Sedy,1506080026
+2,Tri Agengsi Ritonga,1506080027
+2,Welmy Sinlae,1506080029
+2,Imanuel Jodi Gustda Beli,1506080031
+2,Agustinus Beda Riantobi,1506080032
+2,Yudy Pratama Fanggidae,1506080034
+2,Marco Kresna Riwukedo,1506080036
+2,Muh. Amman Siwaka,1506080037
+2,Sufa Louis Yosua Nitbani,1506080038
+2,Johan Junian Wila Mare,1606080021
+2,Yohana Desilva Salu,1606080022
+2,Theo Purnama Mooy,1606080103
+2,Alberto Jervin Martinus,1606080111
+2,Lasarus Petrus Anie,1606080113
+2,Puput Novita Sari,1706080007
+2,Nur Chayatus Sholichah,1706080008
+2,Voni Veronika Djara,1706080009
+2,Mohammad  R. P. Satidjoyo,1706080010
+2,Rizal Pebianto,1706080012
+2,Ayu Suhaida Badu,1706080087
+2,Andrew Simanjuntak,1706080088
+2,Maria Diana Setia ,1706080089
+2,Christin Angela Mana`O,1806080011
+2,Angela Melinda Sania Nge,1806080016
+2,Glandy Samuel Herren Assa,1806080062
+2,Muhammad I. Catur Prasetyo,1806080087
+2,Amin Adiputra Bannesi,1806080088
+2,Mustafa Araman Patymoa,1806080089
+2,Fransesco R. M. Boli Duhan,1806080090
+2,Krisna Nalley,1806080091
+2,Zhany Bogilino Pah,1806080092
+2,Carlos De C. Rihi,1806080095
+2,Grace Catherine Eky,1906080006
+2,Immardion Djara Rohi,1906080007
+2,Dovan K.Manafe,1906080008
+2,Gehezi Kamlasi,1906080009
+2,Imanuel Pay,1906080010
+2,Rosaliani Tresia Kaseh,1906080085
+2,Isabela Eka Putri,1906080073
+2,Seprianus Dethan,2006080046
+2,Sulthan Syarif Qasim Lamarian,2006080047
+2,Tesalonika Maharany Cornelia,2006080048
+2,Theodorus Raslam Nahak,2006080049
+2,Vischa Venessha Adoe,2006080050
+2,Shanty Novinnia Ratu Djawa,2006080080
+2,Syarief Abdurachman,2006080081
+2,Thomson Oktavian Tayeb,2006080082
+3,Viani Anika Afeanpah,1606080053
+3,Jefrison. F. Hene,1606080055
+3,Imanuel Banik,1606080058
+3,Vivian Farandina Lia,1606080059
+3,Anita Tulu Ga,1606080060
+3,Sayiban Dandy Gunawan,1606080061
+3,Olsen Junior Nalle,1606080063
+3,Jessica L. Febryanti Sunbanu,1606080064
+3,Inggrid Eflin Ay,1606080067
+3,Dionaldo Priero Laning,1606080068
+3,Bella Dwi Aprillia,1606080069
+3,Milam Hamni Deta Henuk,1606080070
+3,Mira Eka Putri,1606080071
+3,Randy Piet Nubatonis,1606080072
+3,Guido Alfino Kiu,1706080013
+3,Marianus Seran,1706080014
+3,Ralph Hanny Waworuntu,1706080015
+3,Wellem Tagi,1706080016
+3,Nining Lilian Manoh,1706080017
+3,Viktorianus Du’e Ligho,1706080018
+3,Arman Wicaksono,1706080073
+3,Rudy Christofel Lomi,1706080074
+3,Muhammad Edy Setiawan Hamal,1706080075
+3,Elfrida Veranda Beka Dede,1706080076
+3,Ogolitus Besin,1706080077
+3,Jurgan Louis Febby,1706080078
+3,Federika Antonia Ina Dai,1706080090
+3,Vicky Olfianto N. Laukamang,1706080092
+3,Aleksander Yosep Obe,1706080093
+3,Yaven Othnel Ataupah,1706080139
+3,Yohanis Leonardo Pajihuko,1706080140
+3,Sulaiman Majid,1706080141
+3,Andri D. Manuleu,1706080142
+3,Alexsius No,1706080146
+3,Ronaldo H. Ke,1706080147
+3,Praksedis Tamonob,1706080148
+3,Rachmadiansyah,1806080001
+3,Metri Leo,1806080005
+3,Digna Vinsentia Sue,1806080007
+3,Dita Natasha Io,1806080012
+3,Irgi Syarmad Indrawan,1806080013
+3,Fiona Abigail Rohi,1806080015
+3,Redempia Kornea Gomes,1806080021
+3,Cleopatra Liunima,1806080022
+3,Devan Rudolfo Oly,1806080093
+3,Juanito Nic Nixon Fanggidae,2006080006
+3,Riche Syabarinda Maro,2006080007
+3,Magdalena Carmila Motu,2006080008
+3,Ireni Dewintan Lenggu,2006080009
+3,Arpakhsad Joshtri Sugiatma Lenggu,2006080010
+3,Feron Emiliano Lobo Foenale,2006080062
+4,Julia Indrawati Riwu,1606080023
+4,Yona Hutri Yoga Polly,1606080025
+4,Ahmad Adri,1606080027
+4,Muhammad I. Faizal Adyatma,1606080028
+4,Maria Magdalena Nindi,1606080029
+4,Ometri Madona Cristin Natonis,1606080030
+4,Muhammad F. S. Faznurrahman,1606080031
+4,Alfonsa Regina Wona,1606080033
+4,Ricky Yohanis Amtaran,1606080034
+4,Cirilus Gilberto Wendo,1606080035
+4,Sarah Kristina Lilimwelat,1606080036
+4,Detha Dao Manu Djami,1606080037
+4,Helwin Suardi Yohanis Edon,1606080038
+4,Plorina Pius,1606080039
+4,Mario.A.E.M.Makin,1606080040
+4,Zyancil Novalingo Pah,1606080041
+4,Kenneth M. Honandar Sabandar,1606080042
+4,Mersiana Sanbein,1706080026
+4,Richard Ropatri Waang,1706080027
+4,Aprilia Suryanti,1706080028
+4,Alens Ytual Atamai,1706080029
+4,Novriane Agnes Emawati Hurint,1706080030
+4,Rainer Taebenu,1706080100
+4,Ari Ansar Lasmin Thayib,1706080102
+4,Ongki Nehemia Selly,1706080103
+4,Gerald Julien Huwae,1706080104
+4,Alexandro E. Yosafat Saragih,1806080056
+4,Muhammad K. Pratama Putra,1806080057
+4,Maria Roswita Sait,1806080058
+4,Margaretha Delima Melly,1806080059
+4,Jenor B. Mapada,1806080060
+4,Ferdinandus Elfanto Andreas,1806080061
+4,Erland Pratama,1806080063
+4,Imanuel Brian Calvin Mauk,1806080064
+4,Carolina Elga Retnasari Nuhan,2006080021
+4,Chiko Prihanda Lai,2006080022
+4,Dian Putri Novita Polly,2006080023
+4,Dimas Suhada,2006080024
+4,Dinda Permata Mbatu,2006080025
+4,Noviyanti Usman,2006080072
+5,Stefania Febrianti Daor       ,1306081002
+5,Yulius Arnoldus Bili ,1306081015
+5,Jordan L. N. Meta     ,1306082024
+5,Samoel Ch. Laning ,1306082037
+5,Roynaldo A. B. Weka,1306082039
+5,Timothy A. Masangin           ,1306082040
+5,Agustin W. Mulia Lasena,1606080002
+5,Priskus Stefanus Umbu Tara,1606080005
+5,Germana Ceunfin,1606080009
+5,Ratna Sari Saputri Hama,1606080010
+5,Mersiana Da Costa,1606080011
+5,Elfrida Aurelia Wea,1606080012
+5,Heldi Lau,1606080013
+5,Claudias Marcal,1606080014
+5,Elisyah,1606080015
+5,Onita Ngeta,1606080073
+5,Rudy Marthinus Doko,1606080074
+5,Calvin Rifaldi Juniano Nalle,1606080075
+5,Dedi Franto Nubatonis,1606080077
+5,Rachmad Oktaviandi,1706080031
+5,Merlin Novita Oematan,1706080032
+5,Utari Sara Laimeheriwa,1706080033
+5,Dhany Brahmantio Andreas Thei,1706080034
+5,Hanny Fantika Sari Ballo,1706080035
+5,Celline Victoria Foenay,1706080036
+5,Danyella Helmina A. Rame Huki,1706080105
+5,Emma Yulianti Suat,1706080106
+5,Yohana Kaleka Anagiri,1706080107
+5,Fajar Subiantoro,1706080108
+5,Rikardus Xaverius Lau,1706080109
+5,Tifanny Nathasya Sooai,1806080024
+5,Charisma Oktovianus Haning,1806080033
+5,Marcello Alexandro Dilivio,1806080034
+5,Muhammad U. F. Kadir Dolu,1806080035
+5,Putri Gracia Moru,1806080036
+5,Maria J. Rachel Putri Lagarama,1806080037
+5,Chinskim Louis Rohy,1806080038
+5,Farhan Aditya Rafi,1806080039
+5,Yeni Rina Kandami,1806080094
+5,Maulana Y.P.P. Abdullah,1906080016
+5,Mirlandi Lesik,1906080017
+5,Amelia Inda Rosanti Adoe,1906080018
+5,Yufridon Chrisma Luttu,1906080070
+5,Rizal Juan Septiadi Juana,1906080092
+5,Fulgensius Raru,1906080064
+5,Albert Elkana Patiung,1906080087
+5,Gede Made Satriawira Dharma,2006080031
+5,Genashea Octavianus,2006080032
+5,Joanie Sophia Mellisya Lany,2006080033
+5,Julastri M. K. Sopaba,2006080034
+5,Maria Clara Puhugelong,2006080035
+5,Femigo Alberto Nabunome,2006080061
+5,Pedro Fransiskus B. Hada Tokan,2006080074
+5,Ratna Dewaty Henuk,2006080075
+5,Reynaldi Yogasitonda,2006080076
+6,Yani Pau                      ,1306082049
+6,Shinta Irensi Feni            ,1306082052
+6,Lidia E. Sabuna            ,1306083063
+6,Alida S. Siahaan,1506080080
+6,Esty S. Ndun,1506080082
+6,Adriana Afra Kasa,1606080078
+6,Juniardi Christian Didok,1606080094
+6,Dewinners A. Penu Moy,1606080110
+6,Eunike Juliansari Punuf,1606080120
+6,Gever Imanuel Taopan,1606080122
+6,Metty Missa,1606080124
+6,Asre Seprianto Tibul,1606080125
+6,Harun Agustav Samuel Thimotius,1706080037
+6,Theresia Rosnawati,1706080038
+6,Simon Petrus Bungalolon,1706080039
+6,Jermias William Boling,1706080040
+6,Reynaldi Artha Alexander Willa,1706080041
+6,Aprianto Umbu Njaka,1706080042
+6,Rayner Marthin Julian Max,1706080111
+6,Kristanti Kurniati Rehi,1706080112
+6,Patrisius Abineno,1706080113
+6,Antonius Eliseus Resi,1806080025
+6,Agustino Particho Dwi Djayanto,1806080026
+6,Maria I. Elvira Kabosu,1806080027
+6,Chalid Isnain,1806080028
+6,Vinsensa Septiani G. Radjo,1806080029
+6,Angelo Ianson Brand,1806080030
+6,Wigrifar A. Emerson Ledoh,1806080031
+6,Maria Louise Ludgardis Muku,1806080032
+6,Santia Melan Obe,1906080011
+6,Skolastika Wae Salu,1906080012
+6,Alfa Elison Mailau,1906080020
+6,Meri Siandi Takesan,1906080022
+6,Icha Nggonggoek,1906080023
+6,Alexander Fulbertus,1906080024
+6,Angelo Sabatho Kolmate,1906080025
+6,Fiona Pa Padja,1906080026
+6,Brigita Tiara Alisandra,1906080027
+6,Nur Ilawati,1906080069
+6,Maria Goreti Nago,1906080081
+6,Fransiskus Xaverius Lawotan,1906080093
+6,Irene Dewi Lorenza,2006080016
+6,Selestino Bernard Kroon,2006080017
+6,Anastasia Yuniarsih Kartika Bhia,2006080018
+6,Archangela Zita Hardin,2006080019
+6,Ayuntha Gloria,2006080020
+6,Margareta Jeane Doven,2006080066
+6,Maria Margaretha Thua ,2006080067
+6,Maria Yuliana Wonlele,2006080068
+6,Mariana Elisabeth Carolina Nge,2006080069
+6,Mersiano Alexandro Kaat,2006080070
+6,Miranda Hasian Sitanggang,2006080071
+6,Sarah Aprilia Datta,2006080079
+7,Nurachman Nurawi              ,1406080003
+7,Romualdus A. O. I. Wutun  ,1406080014
+7,Yesti M. L. Lebuan              ,1406080020
+7,Anggraini Setiawati Agus Terru,1606080080
+7,Bertha Veronika Da Silva Pinto,1606080082
+7,Paulo Ignasius Prasso,1606080085
+7,Fitri Ndoen,1606080088
+7,Merianti Zacharias,1606080091
+7,Akhzan A. Sultani,1606080092
+7,Moch Idris,1606080093
+7,Aku Sulu Marten Mauribu,1606080095
+7,Semmy Vigmendelson Keubana,1606080096
+7,Daniel Rae Lulu,1706080019
+7,Gisela Hilga Taus,1706080020
+7,Martinus Minggu,1706080043
+7,Meilland Astin Gabriel,1706080044
+7,Dennis Juardi Mandiri Pello,1706080045
+7,Ancillus Erwynalis Kolo,1706080046
+7,Raslan Simon Dima,1706080047
+7,Desiria Aldea Uskono,1706080048
+7,Nonci Maris Radja,1706080115
+7,Lili Suryani Tefa,1706080116
+7,Gerardus Lasbaun,1706080117
+7,Yovita Adriana Hoar Nahak,1706080118
+7,Ivan Calpucino Koy,1706080119
+7,Resty Sahertian,1806080073
+7,Argofen N. T Naiobe,1806080074
+7,Aisyah Nurul Hamidah,1806080075
+7,Ahmad Zaqiyuddin Farhan,1806080076
+7,Abdul Kadir Rasyid,1806080077
+7,Dino Ajaib Biliu,1806080079
+7,Diana Inda Carmilla Tokan,1906080013
+7,Suhardani Suhardjana,1906080014
+7,Wilybrordus Pati Keraf,1906080029
+7,Imanuel Vierichardly Kana Ha'U,1906080030
+7,Maria Yolanda Dela Sale Sebu,1906080031
+7,Charles Lidang Djawa,1906080032
+7,Anggi Yosilva Manafe,1906080033
+7,Vicky Junaidi Saputra Costa,1906080034
+7,Abdyunior Januar Suek,1906080035
+7,Jurlin Rosita Maniagala,1906080036
+7,Felixiano Juvenalis Def Fernandez,1906080037
+7,Donny F. Tantri,1906080038
+7,Gabriela Gracia Jematu,1906080039
+7,Anna Gracyela Ayu Oktaviani,1906080079
+7,Tiara Abigail Marlien Guiputra,1906080088
+7,Melinda Magdalena Padjodjang,2006080001
+7,Endah Kirani Putri Manungke,2006080002
+7,Dwi Yuningsih,2006080003
+7,Ina Jesica Malelak,2006080004
+7,Gerardus Sila,2006080005
+8,Dian Astuti Julianti Heri     ,1406080029
+8,Given Grady Willa             ,1406080032
+8,Metti Zaldy Luwu              ,1406080033
+8,Ronald Y. E. Hadu ,1406080038
+8,Mariana Bendelina Kolimon,1606080106
+8,Andre Yermias Ndaomanu,1606080116
+8,Kristoforus Malen Hewen,1606080117
+8,Leonardus Christo Berek,1606080121
+8,Veryani Sumaa,1606080123
+8,Dionesia M. B. Senda,1606080127
+8,Maria Delfiana Fahik,1706080049
+8,Hendrico Tantry,1706080050
+8,Keflin Regina Willa,1706080052
+8,Maryo Y. Embarto Dwi Osan Sina,1706080053
+8,Defitroh Chen Sami`un,1706080054
+8,Lusiana Serly Da Silva ,1706080120
+8,Dionisius Binsasi,1706080121
+8,Tomey Andrehon Tari,1706080124
+8,Jibrael Petrus Brayen Leo Lede,1806080048
+8,Suryani Juwita Riwu Bara,1806080050
+8,Steivan Royce Lalek Radjah,1806080051
+8,Yohanes Ronaldi Beby Mee,1806080052
+8,Rey Phoborsq,1806080053
+8,I Gusti A. Putu Arya Wirawan,1806080054
+8,Agatha Jeinefer Meluk,1806080055
+8,Elfristone Brillyantino Bunga,1906080015
+8,Clarita Prima Dos Santos,1906080040
+8,Maria T.S. Aurora,1906080041
+8,Gian Ananta Brikmar,1906080042
+8,Deswita Lori Laka,1906080043
+8,Andini Mustika,1906080044
+8,Andreas Duli Sabon,1906080045
+8,Endang Banunaek,1906080046
+8,Adinda D. B. Jefons,1906080047
+8,Adhityo William,1906080048
+8,Minggi Marcela Lete,1906080049
+8,Claudius X. M Seran,1906080050
+8,Kevin Paul Juan Putra Lay,1906080051
+8,Claudio Hauradja,1906080052
+8,M. Afrizal Ady Asmara ,1906080053
+8,Andi Aulia Rahman,1906080094
+8,Allen Miquel Dwitala,1906080072
+8,Mario .A.T. Raya Muda,1906080076
+8,Edwin Kana,1906080068
+8,Rambu Mura Ata Bolu,2006080041
+8,Ricky Wilkris Manafe,2006080042
+8,Ririn Lona,2006080043
+8,Rosa V.K. Isabela Ohe Roma,2006080044
+8,Santri Aswinto Nomleni,2006080045
+8,Richardo Willyam Soela,2006080077
+8,Sandi Hendriyani Henukh,2006080078
+9,Marni Nokas,1506080001
+9,Adimas Robertho Millu,1506080003
+9,Wilhelmina Michelle Djema,1506080005
+9,Agatha Marilin Saekoko,1506080006
+9,Angela Veyusmin Jehola,1506080007
+9,Yermias Yoel Nalle,1506080008
+9,Budy Enderson Ly,1506080012
+9,Mildred Petrus Lado,1506080013
+9,Ferren Shandra Long,1506080014
+9,Muhammad Riyaadhi Jufri,1506080015
+9,Ardean Raflian,1506080016
+9,Dedy Dura,1506080017
+9,Alyan Elman Sumintoro,1506080018
+9,Elias J. F. Nahak Lay,1506080019
+9,Dinastri Binsasi Madeira,1506080020
+9,Indra Aryanto Nubatonis,1606080108
+9,Devita Susana Sajuna,1706080021
+9,Yolanda Alfionita Lellie,1706080022
+9,Marlon Y. Ninef,1706080023
+9,Yeni Marleni Doko,1706080024
+9,Soviyana Omi Niha,1706080055
+9,Cornelhan Agusto Mandaha,1706080056
+9,Natalia Da Costa Fatima,1706080057
+9,Erlangga Pramana Putra,1706080058
+9,Ricky Alexander Dethan,1706080059
+9,Marthom Josem Bureni,1706080060
+9,Marci Trimelda Anita Manu,1706080125
+9,Lumena M.M Saba,1706080126
+9,Clifford Rivero Nethaniel Ratu,1706080127
+9,Robinson Andrew David Pellu,1706080128
+9,Mirna Evenjelin Berek Enok,1706080129
+9,Alfiany Melinda Pellokila,1806080069
+9,Aprianus Paulus Bangngu,1806080071
+9,Frensile Susanti Ndoen,1806080065
+9,Mutia Lestari,1806080070
+9,Penina Afliana Lakat,1806080067
+9,Prisca Patricia Putri Dau,1806080066
+9,Yosep Geraldino Dot,1806080068
+9,Chikita Wulan Gracia Lau,1806080072
+9,Gracela Nataly Dana Fanggidae,1906080054
+9,Nadirah Khairani Muchtar,1906080071
+9,Andre Fabian Temaluru,1906080065
+9,Elton Chloris Meyok,1906080066
+9,Antonio Maria Claret Bere Laka,1906080082
+9,Elisabeth Ester Eunike Leobisa,2006080026
+9,Fachry Muhammad Umasangadji,2006080027
+9,Fadli Firmansyach Djati,2006080028
+9,Fransisco Ronaldo Lehot,2006080029
+9,Frumensia Nirwana Nendong,2006080030
+9,Nur Hanifa,2006080073
+10,Meriani Ina Bobo,1506080044
+10,Dionisius Lemba,1506080045
+10,Yakob Thomas Liufeto,1506080046
+10,Melisa Anthoneta Ndaumanu,1506080048
+10,Janny Kurnia P. N. Kaha,1506080051
+10,Erwin Tri Wardana Non,1506080054
+10,Jublina Djami Radja Leba,1506080055
+10,Yobel Diago Richo Apaut,1506080056
+10,Einjel Beitrix Liu,1506080057
+10,Hillarius Eka Boy Benu,1506080058
+10,Yohanes Mesang Tanggela,1506080059
+10,Joshua  Evangel Koroh,1606080089
+10,M. T. Geraldine Kadja,1606080098
+10,Ahmad Fajrin Saputra,1706080061
+10,Yanti Mone,1706080062
+10,Jumadi Wahid Longso,1706080063
+10,Asmeri Lontorin,1706080064
+10,Ibnu Sabri Fauzi,1706080065
+10,Criony Bayuweni Wabang,1706080066
+10,Aryo R. H. Pulu,1706080079
+10,Karmianus Lado,1706080097
+10,Axel Christian Kolokota,1706080130
+10,Delfiana Marlice Rassa,1706080131
+10,Mehelina Nenohaifeto,1706080132
+10,Willem Esau Humau,1706080133
+10,Yosias Reinald Bunga Nawa,1806080080
+10,Benyamin C. P. Tielman,1806080081
+10,Kelvin Titus Wetangterah,1806080082
+10,Jakha Rama Phosa,1806080083
+10,Rikardus Mbusa,1806080084
+10,Ulfa Aminah Hamzah,1806080085
+10,Fransiskus Anjelinus Dhey Nena,1806080086
+10,Melvern Niander Salmun,1906080055
+10,Hilaria R. A Lala,1906080056
+10,Dinni Andriani Puay,1906080057
+10,Sharlin Onlau,1906080058
+10,Carles Ronaldi Bones,1906080059
+10,Katharina Kinbenu,1906080060
+10,Pedro Isidorus B. Mau,1906080086
+10,Chensta Welmarni Nakamnanu,1906080075
+10,Aditya Deorizky Kartoma,1906080067
+10,Genio Edgar Hartanto Tael,1906080078
+10,Nopetrus Pati Mudaj,1906080091
+10,Virgilia Dusty Day Manek Malaeluan,2006080011
+10,Agustinho Gusmao Pereira,2006080012
+10,Emilia Tas'au,2006080013
+10,Siti Maharani Ayuningsi Anshar,2006080014
+10,Delsiana Osi Seran,2006080015
+10,Franklin Anugrah Steveinson Lobo,2006080063
+10,Fredriandrik Rover Grasias Riwoe,2006080064
+10,Izurkarnain Saputra Jafar,2006080065
+11,Zulius B. L. Simanjuntak,1506080062
+11,Bona Ventura Fernandez,1506080064
+11,Eko Tomy Hartono,1506080065
+11,Richard Raymond Fangidae,1506080068
+11,Richmon Jance Joh,1506080069
+11,Harming Saputra Adju Bunga,1506080070
+11,Nikotesa Eko Rianto Pah,1506080071
+11,Muhammad Salim,1506080072
+11,Christin Mario Wae,1506080073
+11,Wanto Imanuel Missa,1506080074
+11,Misma Katriana Lopo,1506080075
+11,Wendy Wiradhika They,1506080081
+11,Kandidus Stanis Dua,1606080086
+11,Anani Sriprapgustensi Nino,1606080087
+11,Devon Radimaz Izacsson Nggauk,1706080067
+11,Marianus Kaya,1706080069
+11,Galfint Reeves Jimmy,1706080070
+11,Yosua Tanga Wila,1706080071
+11,Yandris William R. Octavianus,1706080072
+11,Denni Irvanto Metkono,1706080098
+11,Dandi Ralahallo,1706080134
+11,Jeryanto Lero Nono,1706080135
+11,Hutry Umbu Meta,1706080136
+11,Lusianus Puay,1706080137
+11,Candi Purnomo,1706080143
+11,Ivanna C. Tunliu,1706080144
+11,Marten Wue,1706080145
+11,Jane Feltince Sanam,1806080002
+11,I Gusti A. Ayu Putri Paramita,1806080003
+11,Jessi K. Martha Juliana Ropa,1806080004
+11,Yohanesta Densiana Nake,1806080006
+11,Wendi Lia Talak,1806080009
+11,Rizal Hidayatullah,1806080014
+11,Melaninan Hetta,1806080017
+11,Putri Tamala Panie,1806080019
+11,Astuti Syamsudin,1806080020
+11,Natalia Vicka Ricardia Wonggo,1806080023
+11,Maria Y. Amsikan,1906080062
+11,Dhema Alfredo Theon ,1906080063
+11,Ellen Keysita Eluama,1906080077
+11,Hendrikus Viator Ola Hadjon,1906080074
+11,Imanuel Raja Giri,1906080083
+11,Berton I Pellondou,1906080084
+11,Yohanes Baptista Jeano Aliman,2006080051
+11,Yosefa Carela Atok,2006080052
+11,Yosep Firano La Ngari,2006080053
+11,Zwingli Leonardo Mira Mangngi,2006080054
+11,Agustinus Hendrus Tutfaut,2006080055
+11,Untung Samwicaksono Haning,2006080083
+11,Yoshua Marthino Aldio Ati,2006080084
+11,Zulkifli Yusuf Abdullah,2006080085
+12,Alfanny Zhandra,2006080056
+12,Ariel Syaloom Toi,2006080057
+12,Carlo Camerro Ganggas,2006080058
+12,Debora Destriana Luwu,2006080059
+12,Febrianti Belandina Sopaba,2006080060
+12,Agri Edison Oematan,2006080086
+12,Norman Wiliam Andri Meda Peni,2006080087

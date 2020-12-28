@@ -6,6 +6,7 @@ export default async function updateSession () {
   const result = await apolloClient.query({
     query: GQLSessionData
   })
+
   const {
     user,
     setting
@@ -25,4 +26,7 @@ export default async function updateSession () {
   stores.periode.set(periode);
   stores.phase.set(phase);
   stores.user.set(user);
+
+  console.log('periode');
+  console.log(periode);
 }

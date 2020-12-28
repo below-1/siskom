@@ -69,7 +69,7 @@
     {#each dataMenuItems as menu (menu.path)}
       <li>
         <a 
-          class="block p-4 py-2 hover:bg-indigo-700 font-bold" 
+          class="block p-4 py-2 hover:bg-indigo-700 font-bold visited:text-gray-100" 
           href={`/#/admin/data/${menu.path}`}
         >{menu.label}</a>
       </li>
@@ -83,7 +83,7 @@
     {#each userMenus as menu (menu.path)}
       <li>
         <a 
-          class="block p-4 py-2 hover:bg-indigo-700 font-bold" 
+          class="block p-4 py-2 hover:bg-indigo-700 font-bold visited:text-gray-100" 
           href={menu.path}
         >{menu.label}</a>
       </li>
@@ -91,7 +91,7 @@
   </ul>
 
   <a 
-    class="block p-4 py-3 hover:bg-indigo-700 font-bold" 
+    class="block p-4 py-3 hover:bg-indigo-700 font-bold visited:text-gray-100" 
     href='/#/admin/settings'
   >Pengaturan</a>
 </nav>

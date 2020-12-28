@@ -5,6 +5,7 @@
   import Mk from './mk/index.svelte';
   import Kelas from './kelas/index.svelte';
   import Periode from './periode/index.svelte';
+  import Ruangan from './room/index.svelte';
 
   const routes = {
     '/mahasiswa': Mahasiswa,
@@ -16,7 +17,9 @@
     '/kelas': Kelas,
     '/kelas/*': Kelas,
     '/periode': Periode,
-    '/periode/*': Periode
+    '/periode/*': Periode,
+    '/room': Ruangan,
+    '/room/*': Ruangan
   };
 
   const prefix = '/admin/data';

@@ -1,6 +1,10 @@
 module.exports = {
   purge: [],
   theme: {},
-  variants: {},
+  variants: {
+    extend: {
+      textColor: ['visited']
+    }
+  },
   plugins: [],
 };

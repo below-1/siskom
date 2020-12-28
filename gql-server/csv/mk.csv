@@ -1,0 +1,61 @@
+pref_schedule,kode,nama,sks,prasyarat,min_sks,tipe_mk
+1,MPK4101,Pendidikan Pancasila,2,,,umum
+1,STKOM41204,Bahasa Inggris,2,,,umum
+1,STKOM41206,Logika Matematika,2,,,wajib
+1,STKOM41305,Aljabar Linear dan Matriks,3,,,wajib
+1,STKOM41308,Organisasi dan Asitektur Komputer,3,,,wajib
+1,STKOM41309,Kalkulus,3,,,wajib
+1,STKOM41407,Algoritma dan Pemrogaman I,4,,,wajib
+2,MPK4201,Pendidikan Agama,2,,,umum
+2,MPK4203,Pendidikan Kewarganegaraan,2,,,umum
+2,STKOM42204,Etika Profesi,2,,,wajib
+2,STKOM42205,Interaksi Manusia dan Komputer,2,,,wajib
+2,STKOM42303,Kecerdasan Buatan,3,,,wajib
+2,STKOM42306,Statistika,3,,,wajib
+2,STKOM42307,Matematika Diskrit,3,,,wajib
+2,STKOM42408,Algoritma dan Pemrogaman II,4,,,wajib
+2,MKP1221,"Budaya Lahan Kering, Kepulauan dan Pariwisata",2,,,umum
+3,STKOM43302,Riset Operasi,3,,,wajib
+3,STKOM43303,Metode Numerik ,3,STKOM41305- STKOM41407- STKOM41309,,wajib
+3,STKOM43309,Sistem Informasi,3,,,wajib
+3,STKOM43401,Sistem Operasi,4,,,wajib
+3,STKOM43404,Basis Data,4,,,wajib
+3,STKOM43406,Struktur Data,4,STKOM41407- STKOM42408,,wajib
+4,MPK4402,Bahasa Indonesia,2,,,umum
+4,STKOM44301,Grafika Komputer,3,STKOM41305- STKOM41303,,wajib
+4,STKOM44304,Rekayasa Perangkat Lunak,3,STKOM43404- STKOM43309,,wajib
+4,STKOM44307,Teori Bahasa dan Automata,3,STKOM42307- STKOM41206,,wajib
+4,STKOM44308,Jaringan Syaraf Tiruan,3,,30,wajib
+4,STKOM44403,Jaringan Komputer dan Komunikasi Data,4,,30,wajib
+4,STKOM44405,Pemrogaman Berorientasi Obyek,4,STKOM42408- STKOM41407,,wajib
+5,STKOM45201,Manajemen Proyek,2,,,wajib
+5,STKOM45302,Data Warehouse,3,STKOM43404,,wajib
+5,STKOM45303,Analisis Algoritma,3,STKOM42307- STKOM42408- STKOM41407,,wajib
+5,STKOM45306,Logika Fuzzy,3,STKOM41206,,wajib
+5,STKOM45307,Web Programming,3,STKOM41407- STKOM42408,,wajib
+6,MKP1621,Pendidikan Anti Korupsi,1,,,umum
+6,MPK4603,Kuliah Kerja Nyata,4,,100,umum
+6,STKOM46302,Proyek Sistem Informasi Manajemen,3,STKOM44304- STKOM43404- STKOM43309,,wajib
+6,STKOM46305,Sistem Pendukung Keputusan,3,,40,wajib
+6,STKOM46306,Pengolahan Citra Digital,3,STKOM41305,,wajib
+7,STKOM47201,Metodologi Penelitian,2,,70,wajib
+7,STKOM47303,Kerja Praktek,3,,70,wajib
+7,STKOM47304,E-Bussiness/Tourism,3,STKOM43404- STKOM45307,,wajib
+8,STKOM48601,Tugas Akhir,6,,100,wajib
+,STKOM45311,Kriptografi,3,STKOM42307,,pilihan
+,STKOM45312,Teknik Kompilasi,3,STKOM44307,,pilihan
+,STKOM45313,Basis Data Lanjutan,3,STKOM42307- STKOM43404- STKOM44301,,pilihan
+,STKOM46311,Sistem Informasi Geografis,3,STKOM43309,,pilihan
+,STKOM46312,Sistem Pakar,3,STKOM42303,,pilihan
+,STKOM46313,Wavelet,3,STKOM41305,,pilihan
+,STKOM46314,Data Mining,3,STKOM44308- STKOM42303,,pilihan
+,STKOM46315,Keamanan Jaringan,3,STKOM43401- STKOM44403,,pilihan
+,STKOM46316,Multimedia ,3,,40,pilihan
+,STKOM47311,Algoritma Genetik,3,STKOM42303,,pilihan
+,STKOM47312,Neuro Fuzzy,3,STKOM44308- STKOM45306,,pilihan
+,STKOM47313,Penalaran Berbasis Kasus,3,STKOM42303,,pilihan
+,STKOM47314,Pengenalan Pola,3,STKOM44301- STKOM46306,,pilihan
+,STKOM47315,Semantik WEB,3,STKOM45307,,pilihan
+,STKOM47316,Mobile Computing,3,,40,pilihan
+,STKOM47317,Swarm Inteligent,3,STKOM42303,,pilihan
+,STKOM47318,Inteligent Agent,3,STKOM42030,,pilihan

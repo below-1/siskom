@@ -25,6 +25,8 @@ case $1 in
 		echo "seeding database"
 		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres -a -1 -f sql/data.sql
 		;;
+	db:seed-csv)
+		echo "seeding database from csv folder";
 	db:repair)
 		echo "repairing sequence"
 		psql --host=127.0.0.1 --port=5432 -U postgres -d postgres -a -1 -f sql/repair_seq.sql

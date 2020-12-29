@@ -1,9 +1,8 @@
 <script>
   import { onMount } from 'svelte';
+  import {wrap} from 'svelte-spa-router/wrap'
   import Router, { push } from 'svelte-spa-router';
   import apolloClient from 'siskom-web-user/apolloClient.js';
-  import App from './app/index.svelte';
-  import Login from './auth/Login.svelte';
   import { 
     JoAsyncContent,
     JoNotification,
@@ -16,9 +15,15 @@
 
   let initDone = false;
   const routes = {
-    '/': Login,
-    '/app': App,
-    '/app/*': App
+    '/': wrap({
+      asyncComponent: () => import('./auth/Login.svelte')
+    }),
+    '/app': wrap({
+      asyncComponent: () => import('./app/index.svelte')
+    }),
+    '/app/*': wrap({
+      asyncComponent: () => import('./app/index.svelte')
+    })
   }
 
 

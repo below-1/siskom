@@ -54,10 +54,10 @@
       <span class="font-bold tracking-wider text-xl">siskom</span>
     </div>
     <div class="flex-grow"></div>
-    <a href="/#/about" class="hidden md:block mr-8 font-bold">
+    <a href="#/about" class="hidden md:block mr-8 font-bold">
       jadwal
     </a>
-    <a href="/#/about" class="hidden md:block mr-8 font-bold">
+    <a href="#/about" class="hidden md:block mr-8 font-bold">
       about us
     </a>
     <button 

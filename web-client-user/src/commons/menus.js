@@ -13,32 +13,32 @@ import FaSignOutAlt from 'svelte-icons/fa/FaSignOutAlt.svelte'
 
 export const mahasiswa = [
   { header: true, label: 'personal' },
-  { label: 'Info', path: '/#/app/me_mhs/info', icon: IoIosContact },
-  { label: 'IPK', path: '/#/app/me_mhs/schedule', icon: IoIosCube },
-  { label: 'Jadwal', path: '/#/app/me_mhs/schedule', icon: IoIosCalendar },
-  { label: 'Transkrip Nilai', path: '/#/app/me_mhs/transkrip', icon: FaCheckDouble },
-  { label: 'KRS', path: '/#/app/me_mhs/krs', icon: FaFileExport },
-  { label: 'KHS', path: '/#/app/me_mhs/khs', icon: FaFileImport },
+  { label: 'Info', path: '#/app/me_mhs/info', icon: IoIosContact },
+  { label: 'IPK', path: '#/app/me_mhs/schedule', icon: IoIosCube },
+  { label: 'Jadwal', path: '#/app/me_mhs/schedule', icon: IoIosCalendar },
+  { label: 'Transkrip Nilai', path: '#/app/me_mhs/transkrip', icon: FaCheckDouble },
+  { label: 'KRS', path: '#/app/me_mhs/krs', icon: FaFileExport },
+  { label: 'KHS', path: '#/app/me_mhs/khs', icon: FaFileImport },
   { header: true, label: 'prodi' },
-  { label: 'Dosen', path: '/#/app/ilkom/dosens', icon: FaUserSecret },
-  { label: 'Mata Kuliah', path: '/#/app/ilkom/mks', icon: FaBook },
-  { label: 'Kelas', path: '/#/app/ilkom/kelas', icon: FaBezierCurve },
-  { label: 'Periode', path: '/#/app/ilkom/periodes', icon: FaCalendarDay },
+  { label: 'Dosen', path: '#/app/ilkom/dosens', icon: FaUserSecret },
+  { label: 'Mata Kuliah', path: '#/app/ilkom/mks', icon: FaBook },
+  { label: 'Kelas', path: '#/app/ilkom/kelas', icon: FaBezierCurve },
+  { label: 'Periode', path: '#/app/ilkom/periodes', icon: FaCalendarDay },
   { header: true, label: '' },
-  { label: 'Logout', path: '/#/app/auth/logout', icon: FaSignOutAlt }
+  { label: 'Logout', path: '#/app/auth/logout', icon: FaSignOutAlt }
 ]
 
 export const dosen = [
   { header: true, label: 'personal' },
-  { label: 'Info', path: '/#/app/me_dos/info', icon: IoIosContact },
-  { label: 'Jadwal', path: '/#/app/me_dos/schedules', icon: IoIosCalendar },
-  { label: 'Bimbingan Akademik', path: '/#/app/me_dos/pas', icon: IoIosCube },
+  { label: 'Info', path: '#/app/me_dos/info', icon: IoIosContact },
+  { label: 'Jadwal', path: '#/app/me_dos/schedules', icon: IoIosCalendar },
+  { label: 'Bimbingan Akademik', path: '#/app/me_dos/pas', icon: IoIosCube },
   { header: true, label: 'ilkom' },
-  { label: 'Kelas', path: '/#/app/ilkom/kelas', icon: FaBezierCurve },
-  { label: 'Dosen', path: '/#/app/ilkom/dosens', icon: FaUserSecret },
-  { label: 'Mata Kuliah', path: '/#/app/ilkom/mks', icon: FaBook },
-  { label: 'Mahasiswa', path: '/#/app/ilkom/mahasiswas', icon: FaBezierCurve },
+  { label: 'Kelas', path: '#/app/ilkom/kelas', icon: FaBezierCurve },
+  { label: 'Dosen', path: '#/app/ilkom/dosens', icon: FaUserSecret },
+  { label: 'Mata Kuliah', path: '#/app/ilkom/mks', icon: FaBook },
+  { label: 'Mahasiswa', path: '#/app/ilkom/mahasiswas', icon: FaBezierCurve },
   { header: true, label: '' },
-  { label: 'Bantuan', path: '/#/app/etc/help' },
-  { label: 'Logout', path: '/#/app/auth/logout', icon: FaSignOutAlt }
+  { label: 'Bantuan', path: '#/app/etc/help' },
+  { label: 'Logout', path: '#/app/auth/logout', icon: FaSignOutAlt }
 ];

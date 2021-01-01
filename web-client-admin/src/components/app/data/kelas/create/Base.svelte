@@ -151,11 +151,11 @@
     }));
     mks = result.data.allMataKuliahs.nodes;
 
-    const inputPayload = get_input_payload();
-    if (!inputPayload) return;
-    if (inputPayload.mkId) mkId = inputPayload.mkId;
-    if (inputPayload.periodeId) periodeId = inputPayload.periodeId;
-    if (inputPayload.label) label = inputPayload.label;
+    // const inputPayload = get_input_payload();
+    // if (!inputPayload) return;
+    // if (inputPayload.mkId) mkId = inputPayload.mkId;
+    // if (inputPayload.periodeId) periodeId = inputPayload.periodeId;
+    // if (inputPayload.label) label = inputPayload.label;
   });
 </script>
 

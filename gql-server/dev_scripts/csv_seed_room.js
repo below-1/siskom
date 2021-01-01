@@ -1,27 +1,20 @@
 const path = require('path');
 const csvtojson = require('csvtojson');
-const file_path = path.join(process.cwd(), "csv", "dosen.csv");
+const file_path = path.join(process.cwd(), "csv", "room.csv");
 const db = require('./db');
 
-async function load_dosen () {
+async function load_room () {
 	const data = await csvtojson().fromFile(file_path);
-	const parsed_data = data.map((row, i) => {
-		return {
-			id: i + 1,
-			...row
-		}
-	});
 	await db.transaction(async (tx) => {
-		await tx('dosen').delete();
-		const result = await tx('dosen').insert(parsed_data);
-		console.log(result);
+		await tx('room').delete();
+		const result = await tx('room').insert(data);
 	});
 
 	// console.log(atomic_data);
-	return parsed_data;
+	return data;
 }
 
-module.exports = load_dosen;
+module.exports = load_room;
 
 // load_mk()
 // 	.catch(err => {

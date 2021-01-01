@@ -392,6 +392,10 @@
     {
       "packageName": "siskom-web-admin",
       "projectFolder": "web-client-admin"
+    },
+    {
+      "packageName": "siskom-web-sch",
+      "projectFolder": "web-client-scheduling"
     }
     // {
     //   /**

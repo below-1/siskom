@@ -2,7 +2,9 @@ const { range } = require('lodash');
 const db = require('./db');
 const load_dosen = require('./csv_seed_dosen');
 const load_mk = require('./csv_seed_mk');
+const load_room = require('./csv_seed_room');
 const load_mahasiswa = require('./csv_seed_mahasiswa');
+const load_kelas_prep_schedule = require('./csv_seed_kelas_prep_schedule');
 
 function generate_periode () {
 	let data = [];
@@ -31,9 +33,11 @@ async function load_periode (data) {
 async function main () {
 	const data_periode = generate_periode();
 	await load_periode(data_periode);
-	await load_dosen();
-	await load_mk();
+	const dosen_list = await load_dosen();
+	const mk_list = await load_mk();
+	const room_list = await load_room();
 	await load_mahasiswa(data_periode);
+	await load_kelas_prep_schedule({ dosen_list, mk_list });
 
 	await db.raw(`
 		call new_user(

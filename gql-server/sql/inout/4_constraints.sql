@@ -21,6 +21,10 @@ alter table scheduled_kelas
   add constraint schedule_dosen_fk foreign key (id_dosen) references dosen (id) on delete restrict,
   add constraint schedule_ruangan_fk foreign key (ruangan) references room (nama) on delete restrict;
 
+alter table schedule_params
+  add constraint schedule_params_mk foreign key (id_mk) references mata_kuliah (id) on delete restrict,
+  add constraint schedule_params_dosen foreign key (id_dosen) references dosen (id) on delete restrict;
+
 alter table mahasiswa_kelas
   add constraint anggota_kelas_fk foreign key (id_kelas) references kelas (id) on delete restrict,
   add constraint anggota_mahasiswa_fk foreign key (id_mhs) references mahasiswa (id) on delete restrict;

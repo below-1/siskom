@@ -23,7 +23,7 @@ async function load_mk () {
 		await tx('mata_kuliah').delete();
 		await tx('mata_kuliah').insert(atomic_data);
 	});
-
+	return atomic_data;
 	// console.log(atomic_data);
 }
 

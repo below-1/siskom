@@ -15,8 +15,10 @@
     JoButton
   } from 'siskom-web-commons';
   import { notification } from 'siskom-web-admin/stores/index.js';
+  import { get_input_payload, set_input_payload } from '../commons';
   import filterDosen from 'siskom-web-admin/services/filterDosen.js';
   import * as GQL from 'siskom-web-admin/graphql/KelasSchedule.js';
+  import GQLMkById from 'siskom-web-admin/graphql/MkById.js';
   import { ClashError, CLASHES, FORM } from '../commons.js';
 
   let dosenId = null;
@@ -69,6 +71,19 @@
         label: it.nama,
         value: it.nama
       }))
+
+      const base_input = get_input_payload();
+      if (base_input) {
+        console.log('base_input');
+        console.log(base_input);
+        const result_mk = await apolloClient.query({
+          query: GQLMkById,
+          variables: {
+            id: base_input.mkId
+          }
+        });
+        totalMenit = 50 * result_mk.data.mataKuliahById.sks;
+      }
 
       const rawPrevData = localStorage.getItem(FORM);
       if (!rawPrevData) return;

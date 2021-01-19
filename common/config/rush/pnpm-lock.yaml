@@ -1,5 +1,6 @@
 dependencies:
   '@apollo/client': 3.1.3_graphql@15.3.0
+  '@polka/redirect': 1.0.0-next.0
   '@polka/send-type': 0.5.2
   '@popperjs/core': 2.4.4
   '@rollup/plugin-alias': 3.1.1_rollup@2.26.5
@@ -107,6 +108,10 @@ packages:
       node: '>=8.6'
     resolution:
       integrity: sha512-/8a8qBItKbpoDkoiUcNPiLcn91wAniDA23ZsxTxoC51YD/FORF0znsISL19XGqw5Iq5b0jlFbDIpgtN0fQEbqQ==
+  /@polka/redirect/1.0.0-next.0:
+    dev: false
+    resolution:
+      integrity: sha512-ym6ooqMr09+cV+y52p5kszJ0jYcX+nJfm8POrQb7QYowvpPPuneZ71EclHrQSB7a50lcytgR/xtL6AUFdvyEkg==
   /@polka/send-type/0.5.2:
     dev: false
     resolution:
@@ -4766,6 +4771,7 @@ packages:
       integrity: sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==
   'file:projects/siskom-gql.tgz':
     dependencies:
+      '@polka/redirect': 1.0.0-next.0
       '@polka/send-type': 0.5.2
       '@types/body-parser': 1.19.0
       '@types/connect-redis': 0.0.14
@@ -4795,7 +4801,7 @@ packages:
     dev: false
     name: '@rush-temp/siskom-gql'
     resolution:
-      integrity: sha512-jVBoODdjLfaUh9IZM0SXIqwq/rA2EINkkqLp+OfJxWf1E0Vn2emUJ1buYCt0TQoRa7z0QEAHznasek/GWpI1EA==
+      integrity: sha512-n+aP6jyn3VgdoqIQKTM0wY4RlfztdWyf9/HNCuN76Up8ciYldIpNmundld6PLOiCciCmNSccz5SpJA6WVK9d5w==
       tarball: 'file:projects/siskom-gql.tgz'
     version: 0.0.0
   'file:projects/siskom-web-admin.tgz':
@@ -4900,6 +4906,7 @@ packages:
 registry: ''
 specifiers:
   '@apollo/client': ~3.1.3
+  '@polka/redirect': ~1.0.0-next.0
   '@polka/send-type': ~0.5.2
   '@popperjs/core': ^2.4.4
   '@rollup/plugin-alias': ~3.1.1

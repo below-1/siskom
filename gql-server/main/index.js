@@ -5,6 +5,7 @@ const session = require('./middleware/session')
 const postgraphile = require('./middleware/postgraphile')
 const routesAuth = require('./routes/auth')
 const cors = require('cors')
+const send = require('@polka/send-type')
 
 const app = Polka()
 
@@ -14,6 +15,9 @@ app
 		origin: ['http://localhost:5002','http://localhost:5001'],
 		credentials: true
 	}))
+	.get('/', (req, resp) => {
+		send(resp, 200, { message: 'okay' })
+	})
 	.use('/api', postgraphile)
 
 routesAuth(app)

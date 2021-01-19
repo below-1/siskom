@@ -141,12 +141,12 @@ declare
   id_periode int;
   n_overlap int;
 begin
-  select k.id_periode into strict id_periode from kelas k where id = _id;
-  select count(id) into strict n_overlap 
-    from list_clash_courses(id_periode, _dosen_id, _ruangan, _hari_kul, _waktu_kul, _total_menit);
-  if n_overlap > 0 then
-    RAISE EXCEPTION 'CLASH';
-  end if;
+  -- select k.id_periode into strict id_periode from kelas k where id = _id;
+  -- select count(id) into strict n_overlap 
+  --   from list_clash_courses(id_periode, _dosen_id, _ruangan, _hari_kul, _waktu_kul, _total_menit);
+  -- if n_overlap > 0 then
+  --   RAISE EXCEPTION 'CLASH';
+  -- end if;
   update scheduled_kelas 
     set 
       id_dosen = _dosen_id,

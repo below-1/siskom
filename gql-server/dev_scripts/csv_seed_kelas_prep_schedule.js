@@ -45,7 +45,6 @@ async function load_kelas ({ dosen_list, mk_list }) {
 		const x = {
 			id: i + 1,
 			id_mk: mk.id,
-			id_periode,
 			label,
 			id_dosen: dosen.id,
 			semester,
@@ -53,19 +52,11 @@ async function load_kelas ({ dosen_list, mk_list }) {
 		}
 		xs.push(x);
 	});
+	console.log(xs);
 
 	await db.transaction(async (tx) => {
-		await tx("app_settings").where("setting_key", "=", "schedule_params").delete();
-		await tx("app_settings").insert({
-			setting_key: "schedule_params",
-			setting_value: {
-				id_periode: 25,
-				xs
-			}
-		});
-		await tx("scheduled_kelas").delete();
-		await tx("kelas").insert(kelas_list);
-		await tx("scheduled_kelas").insert(scheduled_kelas_list);
+		await tx('schedule_params').delete();
+		await tx('schedule_params').insert(xs);
 	});
 }
 

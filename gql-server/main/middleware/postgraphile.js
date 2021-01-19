@@ -17,8 +17,11 @@ module.exports = postgraphile(
     graphileBuildOptions: {
       connectionFilterAllowNullInput: true
     },
-    pgSettings: async req => ({
-      'siskom.user_id': req.session.user_id
-    })
+    pgSettings: async req => {
+      console.log(req.session);
+      return {
+        'siskom.user_id': req.session.user_id
+      }
+    }
   }
 )

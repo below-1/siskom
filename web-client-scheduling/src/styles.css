@@ -2,6 +2,30 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/*@font-face {
+  font-family: 'Titillium';
+  font-weight: 400;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 600;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 700;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Titillium';
+  font-weight: 900;
+  src: url('/fonts/Titillium_Web/TitilliumWeb-Black.ttf');
+}*/
+
 body {
   margin: 0 !important;
   padding: 0 !important;
@@ -33,29 +57,3 @@ input[type="radio"]:checked.jo-radio {
     transform: rotate(360deg);
   }
 }
-
-  .jo-dialog {
-    display: none;
-    background: red !important;
-  }
-  .jo-dialog.show {
-    display: block;
-  }
-  .jo-dialog .layer {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-.jo-notification {
-    bottom: 8px;
-    left: 8px;
-    z-index: 100;
-  }

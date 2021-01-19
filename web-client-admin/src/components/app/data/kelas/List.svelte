@@ -38,6 +38,12 @@
   $: getListKelas({ selectedPeriode });
   $: onKeywordChange({ keyword, classes });
 
+  $: {
+    if ($periode && (idPeriode == null)) {
+      idPeriode = $periode.id;
+    }
+  };
+
   async function getListKelas ({ selectedPeriode }) {
     if (selectedPeriode == null) return;
     let result;
@@ -49,7 +55,8 @@
     try {
       result = await apolloClient.query({ 
         query: GQLListKelas, 
-        variables: { idPeriode: selectedPeriode }
+        variables: { idPeriode: selectedPeriode },
+        fetchPolicy: 'network-only'
       });
 
       optionsPeriode = result.data.allPeriodes.nodes.map(it => ({

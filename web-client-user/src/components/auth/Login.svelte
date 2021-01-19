@@ -32,7 +32,7 @@
         pushRoute('/app/me_mhs/info');
         break;
       case 'DOSEN':
-        pushRoute('/app/me_dosen/info');
+        pushRoute('/app/me_dos/info');
         break;
       case 'ADMIN':
         pushRoute('/admin');

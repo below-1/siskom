@@ -24,6 +24,8 @@
   };
 
   $: hidden = $notification.value ? 'flex' : 'hidden';
+  // This line for debugging
+  // $: hidden = $notification.value ? 'flex' : 'flex';
   $: classes = `jo-notification h-16 w-full md:w-1/3 md:rounded md:shadow-xl fixed text-white items-center justify-start p-4 bg-gray-800 text-white text-lg ${hidden}`;
 
 </script>

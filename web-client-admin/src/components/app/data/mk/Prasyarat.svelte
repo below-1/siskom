@@ -104,6 +104,10 @@
       // Refetch data
       .then(() => loadData({ id }));
   }
+
+  onMount(() => {
+    console.log('showAddForm = ', showAddForm);
+  });
 </script>
 
 <JoAsyncContent {networkStatus}>

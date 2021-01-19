@@ -5,7 +5,7 @@
   import {
     JoAsyncContent,
     mahasiswa as globalMahasiswa, 
-    user 
+    user
   } from 'siskom-web-commons';
   import * as context_key from './context.js';
   import AvatarScope from './AvatarScope.svelte';
@@ -15,6 +15,12 @@
   const prefix = getContext(context_key.prefix);
 
   function userCanSeeDetail ({ user, mahasiswa, globalMahasiswa }) {
+    console.log('globalMahasiswa');
+    console.log(globalMahasiswa);
+    console.log('user');
+    console.log(user);
+    console.log('mahasiswa');
+    console.log(mahasiswa);
     if (!user) return false;
     if (!globalMahasiswa) return false;
     if (!mahasiswa) return false;

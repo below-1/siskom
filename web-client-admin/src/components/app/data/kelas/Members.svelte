@@ -13,8 +13,9 @@
   } from 'siskom-web-commons';
   import GQLKelasMembers from 'siskom-web-admin/graphql/KelasMembers.js';
   import GQLDeleteMember from 'siskom-web-admin/graphql/DeleteMember.js';
-  import { notification } from 'siskom-web-admin/stores/index.js';
+  import { notification, phase } from 'siskom-web-admin/stores/index.js';
   import MemberGradeDialog from './MemberGrade.svelte';
+  import * as GQL from 'siskom-web-admin/graphql/KelasSchedule.js';
 
   const perPage = 10
   export let params = {};
@@ -23,6 +24,7 @@
   let keyword = '';
   let items = [];
   let take = perPage;
+  let kelas = {};
   $: selectedId = items
     .filter(it => it.selected)
     .map(it => it.id);
@@ -64,13 +66,26 @@
         query: GQLKelasMembers,
         variables: {
           idKelas
-        }
+        },
+        fetchPolicy: 'network-only'
       })
       items = result.data.allMahasiswaKelas.nodes.map(it => ({
         ...it,
         selected: false,
         formattedNilai: formatNilai(it.nilai)
       }));
+
+      // Load kelas
+      const kelas_result = await apolloClient.query({
+        query: GQL.ScheduleById,
+        variables: {
+          id: idKelas
+        },
+        fetchPolicy: 'network-only'
+      })
+      kelas = kelas_result.data.scheduledKelaByIdKelas;
+      console.log('kelas');
+      console.log(kelas);
       networkStatus = 'success';
     } catch (err) {
       console.log(err);
@@ -86,12 +101,18 @@
           idMahasiswaKelas
         }
       })
+      notification.show({
+        type: 'success',
+        message: 'sukses menghapus data anggota kelas'
+      })
     } catch (err) {
       console.log(err)
       notification.show({
         type: 'error',
-        message: 'gagal menghapus data mahasiswa'
+        message: 'gagal menghapus data anggota kelas'
       })
+    } finally {
+      await loadData();
     }
   }
 
@@ -102,11 +123,13 @@
   <div class="font-semibold text-lg">Data Anggota Kelas</div>
   <div class="text-sm my-4 flex items-stretch">
     <JoInput bind:value={keyword} placeholder="cari.." />
-    <JoLink
-      to={`/#/admin/data/kelas/${idKelas}/add-member`}
-      cls="ml-2"
-      label="tambah"
-    />
+    {#if items.length < kelas.kapasitas}
+      <JoLink
+        to={`/#/admin/data/kelas/${idKelas}/add-member`}
+        cls="ml-2"
+        label="tambah"
+      />
+    {/if}
   </div>
 </div>
 
@@ -148,19 +171,21 @@
                   <MdDelete />
                 </div>
               </JoButton>
-              <JoButton
-                label="nilai"
-                action={() => {
-                  gradeDialogData = {
-                    id: it.id,
-                    idMahasiswa: it.mahasiswa.id,
-                    idKelas,
-                    currentGrade: it.nilai,
-                    show: true
-                  }
-                }}
-              >
-              </JoButton>
+              {#if (($phase === 'GRADING') || ($phase == 'REVISE'))}
+                <JoButton
+                  label="nilai"
+                  action={() => {
+                    gradeDialogData = {
+                      id: it.id,
+                      idMahasiswa: it.mahasiswa.id,
+                      idKelas,
+                      currentGrade: it.nilai,
+                      show: true
+                    }
+                  }}
+                >
+                </JoButton>
+              {/if}
             </td>
           </tr>
         {/each}

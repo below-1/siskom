@@ -29,7 +29,8 @@
     "chance": "^1.1.6",
     "knex": "^0.21.2",
     "lodash": "^4.17.19",
-    "pg": "^8.3.3"
+    "pg": "^8.3.3",
+    "@polka/redirect": "~1.0.0-next.0"
   },
   "devDependencies": {
     "csvtojson": "~2.0.10",

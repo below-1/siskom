@@ -84,7 +84,8 @@
       query: GQL.ClashCourse,
       variables
     })
-    const clashes = result.data.listClashCourses.nodes
+    // remove current class from list clashed courses.
+    const clashes = result.data.listClashCourses.nodes.filter(node => node.id != id);
 
     if (clashes.length > 0) {
       throw new ClashError(clashes)
@@ -150,10 +151,10 @@
       })
       popRoute()
     } catch (err) {
-      console.log(err)
+      console.log(err.clashes)
       if (err.clashes) {
-        setStorage(CLASHES, err.clashes)
-        pushRoute('/admin/kelas/error-clashes')
+        localStorage.setItem(CLASHES, JSON.stringify(err.clashes));
+        pushRoute('/admin/data/kelas/error-clashes');
         return
       } else {
         notification.show({

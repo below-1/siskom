@@ -33,6 +33,18 @@ async function load_mahasiswa (data_periode) {
 		await tx('mahasiswa').insert(parsed_data);
 		await tx('periode_mahasiswa').delete();
 		await tx('periode_mahasiswa').insert(list_periode_mahasiswa);
+
+		const app_users = parsed_data.map(m => {
+			return {
+				username: m.nim,
+				password: tx.raw(`crypt('${m.nim}', gen_salt('bf'))`),
+				scopes: `{mahasiswa}`,
+				tipe_user: 'mahasiswa',
+				target_id: m.id
+			}
+		});
+
+		await tx('app_user').insert(app_users);
 	});
 }
 

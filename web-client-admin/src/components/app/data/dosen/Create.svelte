@@ -43,7 +43,7 @@
     networkStatus = 'loading';
     return mutateResult
       .then(() => {
-        pushRoute('/admin/dosen');
+        pushRoute('/admin/data/dosen');
       })
       .catch(err => {
         networkStatus = 'error';

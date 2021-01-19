@@ -4,7 +4,8 @@ import * as stores from 'siskom-web-admin/stores/index.js';
 
 export default async function updateSession () {
   const result = await apolloClient.query({
-    query: GQLSessionData
+    query: GQLSessionData,
+    fetchPolicy: 'network-only'
   })
 
   const {

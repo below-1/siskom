@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { gql } from '@apollo/client/core';
   import apolloClient from 'siskom-web-admin/apolloClient.js';
   import { push as pushRoute, pop as popRoute } from 'svelte-spa-router';
   import {
@@ -15,12 +16,24 @@
   import isEmpty from 'validator/es/lib/isEmpty';
   import trim from 'validator/es/lib/trim';
 
+  const GQLAllDosen = gql`
+    query AllDosen {
+      allDosens {
+        nodes {
+          nama
+          id
+        }
+      }
+    }
+  `;
+
   let tahunAjaranOptions = [];
   let _sex = 'PEREMPUAN';
   let _nama = '';
   let _nim = '';
   let _thMasuk = 2007;
   let networkStatus = 'ready';
+  let optionsDosen = [];
 
   $: errors = {
     _nama: isEmpty(_nama) ? 'nama tidak boleh kosong' : null,
@@ -28,6 +41,21 @@
     _thMasuk: !_thMasuk ? 'tahun masuk tidak boleh kosong' : null
   };
   $: invalid = !allIsNull(errors);
+
+  async function loadDosen () {
+    try {
+      const result = await apolloClient.query({
+        query: GQLAllDosen
+      });
+      optionsDosen = result.data.allDosens.nodes.map(it => ({
+        value: it.id,
+        label: it.nama
+      }));
+    } catch (err) {
+      networkStatus = 'error';
+      console.log(err);
+    }
+  }
 
   function save () {
     networkStatus = 'loading';
@@ -49,7 +77,7 @@
           type: 'info',
           message: 'sukses menambah mahasiswa'
         })
-        pushRoute('/admin/mahasiswa');
+        pushRoute('/admin/data/mahasiswa');
       })
       .catch(err => {
         console.log(err);
@@ -82,7 +110,10 @@
       });
   }
 
-  onMount(loadAllYears);
+  onMount(async () => {
+    await loadAllYears();
+    // await loadDosen();
+  });
 </script>
 
 <div>

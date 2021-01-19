@@ -15,6 +15,20 @@
     JoButton
   } from 'siskom-web-commons';
 
+  const GQLPeriodeById = gql`
+    query PeriodeById($id: Int!) {
+      periodeById(id: $id) {
+        akhir
+        awal
+        id
+        idKetua
+        idSekretaris
+        semester
+        tahun
+      }
+    }
+  `;
+
   const GQLAllDosens = gql`
     query CreateDataQuery {
       allDosens {
@@ -35,6 +49,10 @@
       }
     }
   `;
+
+  export let params = {};
+
+  $: id = params.id ? parseInt(params.id) : null;
 
   let tahun = 2018;
   let semester = 1;
@@ -57,16 +75,18 @@
   $: disabled = !allIsNull(errors);
 
   function validate (trigs) {
-    if (isEmpty(awal)) {
+    console.log(trigs);
+    if (!awal || isEmpty(awal)) {
       errors.awal = 'Tanggal Mulai tidak boleh kosong';
     } else {
       errors.awal = null;
     }
-    if (isEmpty(akhir)) {
+    if (!akhir || isEmpty(akhir)) {
       errors.akhir = 'Tanggal Berakhir tidak boleh kosong';
     } else {
       errors.akhir = null;
     }
+
     if (isAfter(awal, akhir)) {
       errors.awal = 'Tanggal Mulai dan Berakhir tidak valid';
       errors.akhir = 'Tanggal Mulai dan Berakhir tidak valid';
@@ -84,8 +104,6 @@
       errors.semester = null;
     }
   }
-
-  $: validate({ awal, akhir, idSekretaris, idKetua, tahun, semester });
 
   async function onSave () {
     let payload = {
@@ -125,6 +143,26 @@
           label: it.nama
         }
       });
+
+      // Load periode
+      const periodeResp = await apolloClient.query({
+        query: GQLPeriodeById,
+        variables: {
+          id
+        }
+      });
+      console.log('periode');
+      console.log(periodeResp.data);
+      const x = periodeResp.data.periodeById;
+
+      // Set periode data
+      tahun = x.tahun;
+      semester = x.semester;
+      awal = x.awal;
+      akhir = x.akhir;
+      idKetua = x.idKetua;
+      idSekretaris = x.idSekretaris;
+
       networkStatus = 'success';
     } catch (err) {
       networkStatus = 'error';

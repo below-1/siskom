@@ -121,6 +121,7 @@
   onMount(async () => {
     // Check current store
     let currentUser = get(user);
+    console.log(currentUser);
 
     // If fail check from server.
     if (!currentUser) {

@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser')
 const Pool = require('../storage/pg')
 const send = require('@polka/send-type')
+const redirect = require('@polka/redirect')
 
 class AuthError extends Error {
 	constructor () {
@@ -30,8 +31,6 @@ async function login (request, response) {
 		}
 		const user = pgResult.rows[0]
 		request.session.user_id = user.id
-		console.log("here");
-		console.log(request.session);
 		result = user
 	} catch (err) {
 		console.log(err)
@@ -55,7 +54,11 @@ async function test_session (request, response) {
 
 async function logout (request, response) {
 	request.session.destroy((err) => {
-		response.end('logout');
+		if (err) {
+			console.log(err);
+		}
+		// response.end('logout');
+		redirect(response, '/');
 	});
 
 }

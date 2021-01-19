@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from 'svelte';
   import MdClose from 'svelte-icons/md/MdClose.svelte'
   import JoButton from './JoButton.svelte';
 
@@ -6,14 +7,19 @@
   export let width = 500;
   export let title = '';
 
+  onMount(() => {
+    console.log('show = ', show);
+  })
+
   function onClose () {
     
   }
 </script>
 
-<style type="text/css">
+<style>
   .jo-dialog {
     display: none;
+    background: red !important;
   }
   .jo-dialog.show {
     display: block;
@@ -33,8 +39,7 @@
 </style>
 
 <div 
-  class="jo-dialog"
-  class:show
+  class={`jo-dialog ${show ? 'show' : ''}`}
 >
   <!-- Layer -->
   <div class="layer">

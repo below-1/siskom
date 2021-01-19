@@ -158,10 +158,6 @@
     placeholder='keyword'
     class="bg-white border-gray-400 border p-2 py-1 text-sm font-semibold rounded"
   />
-  <JoButton label="info" cls="ml-2">
-  </JoButton>
-  <JoButton label="print" cls="ml-2">
-  </JoButton>
 </div>
 
 <JoAsyncContent networkStatus={infoNetworkStatus}>

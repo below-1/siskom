@@ -11,7 +11,7 @@
   let logoSize = 24;
 
   let menuItems = [
-    { label: 'pengaturan', path: 'settings', icon: FaCogs  }
+    { label: 'pengaturan', path: 'setting', icon: FaCogs  }
   ];
   const dataMenuItems = [
     { label: 'mahasiswa', path: 'mahasiswa' },
@@ -76,22 +76,18 @@
     {/each}
   </ul>
 
-  <ul 
-    class="bg-indigo-800 text-sm text-white flex flex-col"
-  >
-      <li class="text-lg font-black text-gray-400 p-4">Akun</li>
-    {#each userMenus as menu (menu.path)}
-      <li>
-        <a 
-          class="block p-4 py-2 hover:bg-indigo-700 font-bold visited:text-gray-100" 
-          href={menu.path}
-        >{menu.label}</a>
-      </li>
-    {/each}
-  </ul>
+  <a 
+    class="block p-4 py-3 hover:bg-indigo-700 font-bold visited:text-gray-100 text-sm" 
+    href='/#/admin/scheduler'
+  >penjadwalan</a>
 
   <a 
-    class="block p-4 py-3 hover:bg-indigo-700 font-bold visited:text-gray-100" 
-    href='/#/admin/settings'
-  >Pengaturan</a>
+    class="block p-4 py-3 hover:bg-indigo-700 font-bold visited:text-gray-100 text-sm" 
+    href='/#/admin/setting'
+  >pengaturan</a>
+
+  <a 
+    class="block p-4 py-3 hover:bg-indigo-700 font-bold visited:text-gray-100 text-sm" 
+    href='/#/admin/logout'
+  >logout</a>
 </nav>

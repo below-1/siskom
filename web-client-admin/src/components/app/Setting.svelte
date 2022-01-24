@@ -128,32 +128,22 @@
 	})
 </script>
 
-<div class="h-full">
+<div class="w-1/3 p-4 bg-white rounded shadow-lg mx-auto mt-20">
 
-  <div class="border-b border-gray-300 bg-white h-16 fixed top-0 right-0" style="left: 14rem;">
-    <div class="flex items-center px-12 h-full">
-      <img src={Logo} height={24} width={24} class="mr-4" />
-      <span class="font-bold text-lg">Pengaturan</span>
-    </div>
+  <span class="font-black text-lg mb-12">Pengaturan</span>
+
+	<div class="mb-6 flex flex-col">
+    <label>Periode Aktif</label>
+    <JoSelect label="Pilih Periode" options={periodes} bind:value={idPeriode} />
   </div>
 
-  <div class="mx-12 mt-16 py-4">
-  	<div class="w-2/3">
-
-	  	<div class="mb-6 flex flex-col">
-	      <label>Periode Aktif</label>
-	      <JoSelect label="Pilih Periode" options={periodes} bind:value={idPeriode} />
-	    </div>
-
-	    <div class="mb-6 flex flex-col">
-	      <label>Fase</label>
-	      <JoSelect label="Pilih Fase" options={phases} bind:value={phase} />
-	    </div>
-
-	    <JoButton 
-	    	action={save}
-	    	cls="bg-blue-600 text-white rounded">Simpan</JoButton>
-
-  	</div>
+  <div class="mb-6 flex flex-col">
+    <label>Fase</label>
+    <JoSelect label="Pilih Fase" options={phases} bind:value={phase} />
   </div>
+
+  <JoButton 
+  	action={save}
+  	cls="bg-blue-600 text-white rounded">Simpan</JoButton>
+
 </div>

@@ -13,7 +13,7 @@
     JoSelect,
     JoButton
   }from 'siskom-web-commons';
-  import { warning } from 'siskom-web-admin/stores/index.js';
+  import { warning, periode } from 'siskom-web-admin/stores/index.js';
   import 'siskom-web-admin/styles/jo-table.css';
 
   const perPage = 2;
@@ -32,8 +32,16 @@
     take
   });
 
+  $: {
+    if ($periode) {
+      tahunMasuk = $periode.tahun;
+    }
+  };
+
   onMount(() => {
     networkStatus = 'loading';
+    console.log(`$periode in mahasiswa/List.svelte`);
+    console.log($periode);
     return loadTahunAjaran().then(reloadMahasiswa);
   });
 
@@ -139,55 +147,62 @@
   }
 </script>
 
-<div class="py-4 text-gray-800 text-sm flex items-stretch">
-  <JoSelect bind:value={tahunMasuk} options={tahunAjaranOptions} />
-  <JoInput bind:value={keyword} placeholder='keyword...' cls="mx-2" />
-  <JoLink to={"/#/admin/data/mahasiswa/create"} label="tambah" />
+<div class="p-4 bg-white">
+  <div class="text-xl mb-2 font-black">Data Mahasiswa</div>
+  <div class=" text-gray-800 text-sm flex items-stretch">
+    <JoSelect label="Pilih Periode" bind:value={tahunMasuk} options={tahunAjaranOptions} />
+    <JoInput bind:value={keyword} placeholder='keyword...' cls="mx-2" />
+    <div class="flex-grow"></div>
+    <JoLink cls="bg-blue-600 font-semibold text-white" to={"/#/admin/data/mahasiswa/create"} label="tambah" />
+  </div>
 </div>
 
-<table class="jo-table">
-  <thead>
-    <tr>
-      <th>NIM</th>
-      <th>Nama</th>
-      <th>Tahun Masuk</th>
-      <th>Dosen PA</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    {#each items as student (student.id)}
+<div class="p-4 bg-white mt-8">
+  <table class="jo-table">
+    <thead>
       <tr>
-        <td class="font-semibold">{student.nim}</td>
-        <td class="font-semibold">{student.nama}</td>
-        <td>{student.tahunMasuk}</td>
-        <td>{student.pa.nama}</td>
-        <td class="text-xs flex items-center justify-end">
-          <JoLink to={`/#/admin/data/mahasiswa/edit/${student.id}`} cls="mr-2">
-            <div class="h-4 w-4 text-blue-700">
-              <MdCreate />
-            </div>
-          </JoLink>
-          <JoButton action={() => onDelete(student)}>
-            <div class="h-4 w-4 text-red-700">
-              <MdDelete />
-            </div>
-          </JoButton>
-        </td>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Tahun Masuk</th>
+        <th>Dosen PA</th>
+        <th>Status</th>
+        <th></th>
       </tr>
-    {/each}
-  </tbody>
-</table>
-
-<div class="mt-2 text-xs py-2">
-  <JoButton
-    label="lebih banyak"
-    disabled={!hasMore}
-    action={onNext}
-  />
-  <JoButton
-    label="kurangi"
-    disabled={!canLessen}
-    action={onPrevious}
-  />
+    </thead>
+    <tbody>
+      {#each items as student (student.id)}
+        <tr>
+          <td class="font-semibold">{student.nim}</td>
+          <td class="font-semibold">{student.nama}</td>
+          <td>{student.tahunMasuk}</td>
+          <td>{student.pa.nama}</td>
+          <td class="lowercase">{student.status}</td>
+          <td class="text-xs flex items-center justify-end">
+            <JoLink to={`/#/admin/data/mahasiswa/edit/${student.id}`} cls="mr-2">
+              <div class="h-4 w-4 text-blue-700">
+                <MdCreate />
+              </div>
+            </JoLink>
+            <JoButton action={() => onDelete(student)}>
+              <div class="h-4 w-4 text-red-700">
+                <MdDelete />
+              </div>
+            </JoButton>
+          </td>
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+  <div class="mt-2 text-xs py-2">
+    <JoButton
+      label="lebih banyak"
+      disabled={!hasMore}
+      action={onNext}
+    />
+    <JoButton
+      label="kurangi"
+      disabled={!canLessen}
+      action={onPrevious}
+    />
+  </div>
 </div>

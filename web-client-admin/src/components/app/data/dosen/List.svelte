@@ -78,8 +78,9 @@
   };
 </script>
 
-<div class="my-8 mx-auto">
-  <div class="text-sm text-gray-800 my-4 flex items-stretch">
+<div class="p-4 bg-white mb-8">
+  <div class="text-xl mb-2 font-black">Data Dosen</div>
+  <div class="text-sm text-gray-800 flex items-stretch">
     <JoInput bind:value={keyword} placeholder="cari..." />
     <JoLink
       to="/#/admin/data/dosen/create" 
@@ -87,6 +88,9 @@
       label="tambah"
     />
   </div>
+</div>
+
+<div class="p-4 bg-white">
   <JoAsyncContent {networkStatus}>
     <table slot="success" class="jo-table">
       <thead>

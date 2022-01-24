@@ -140,7 +140,7 @@
 
         dosenPaOptions = allDosens.nodes.map(dosen => ({
           value: dosen.id,
-          label: `${dosen.nama} - ${dosen.nip}`
+          label: dosen.nama
         }));
 
         networkStatus = 'ready';
@@ -152,82 +152,78 @@
   }
 </script>
 
-<div>
+<div class="mx-auto my-12 px-4 w-1/3 py-6 border border-gray-400 bg-white rounded shadow-lg">
   <div class="h-12 text-xl font-bold flex justify-center items-center text-sm border-b border-gray-300">
-    Input Data Mahasiswa
+    Edit Data Mahasiswa
   </div>
-  <div class="mx-auto my-12 px-4 w-1/3 py-6 border border-gray-400">
-    <form>
-      <div class="mb-6 flex flex-col">
-        <label class="text-sm">Nama</label>
-        <JoInput bind:value={nama} placeholder="nama mahasiswa..." />
-        {#if errors.nama}
-        <p class="text-red-700 font-semibold text-xs">
-          {errors.nama}
-        </p>
-        {/if}
+  <form>
+    <div class="mb-6 flex flex-col">
+      <label class="text-sm">Nama</label>
+      <JoInput bind:value={nama} placeholder="nama mahasiswa..." />
+      {#if errors.nama}
+      <p class="text-red-700 font-semibold text-xs">
+        {errors.nama}
+      </p>
+      {/if}
+    </div>
+    <div class="mb-6 flex flex-col">
+      <label class="text-sm">NIM</label>
+      <JoInput bind:value={nim} placeholder="NIM..." />
+      {#if errors.nim}
+      <p class="text-red-700 font-semibold text-xs">
+        {errors.nim}
+      </p>
+      {/if}
+    </div>
+    <div class="mb-6 flex flex-col text-sm">
+      <label class="mb-1 text-sm">Jenis Kelamin</label>
+      <div class="flex items-center text-gray-800 mb-1">
+        <input 
+          bind:group={sex}
+          type="radio"
+          value="LAKI_LAKI"
+          class="jo-radio appearance-none rounded-full border-2 border-gray-600 p-2 mr-2"
+        />
+        <label>Laki - Laki</label>
       </div>
-      <div class="mb-6 flex flex-col">
-        <label class="text-sm">NIM</label>
-        <JoInput bind:value={nim} placeholder="NIM..." />
-        {#if errors.nim}
-        <p class="text-red-700 font-semibold text-xs">
-          {errors.nim}
-        </p>
-        {/if}
+      <div class="flex items-center text-gray-800">
+        <input 
+          bind:group={sex}
+          type="radio"
+          value="PEREMPUAN"
+          class="jo-radio appearance-none rounded-full border-2 border-gray-600 p-2 mr-2" 
+        />
+        <label>Perempuan</label>
       </div>
-      <div class="mb-6 flex flex-col text-sm">
-        <label class="mb-1 text-sm">Jenis Kelamin</label>
-        <div class="flex items-center text-gray-800 mb-1">
-          <input 
-            bind:group={sex}
-            type="radio"
-            value="LAKI_LAKI"
-            class="jo-radio appearance-none rounded-full border-2 border-gray-600 p-2 mr-2"
-          />
-          <label>Laki - Laki</label>
-        </div>
-        <div class="flex items-center text-gray-800">
-          <input 
-            bind:group={sex}
-            type="radio"
-            value="PEREMPUAN"
-            class="jo-radio appearance-none rounded-full border-2 border-gray-600 p-2 mr-2" 
-          />
-          <label>Perempuan</label>
-        </div>
-      </div>
+    </div>
 
-      <div class="mb-6 flex flex-col">
-        <label class="text-sm">Tahun Masuk</label>
-        <JoSelect bind:value={tahunMasuk} options={tahunAjaranOptions} />
-        {#if errors.tahunMasuk}
-        <p class="text-red-700 font-semibold text-xs">
-          {errors.tahunMasuk}
-        </p>
-        {/if}
-      </div>
+    <div class="mb-6 flex flex-col">
+      <JoSelect label="Tahun Masuk" bind:value={tahunMasuk} options={tahunAjaranOptions} />
+      {#if errors.tahunMasuk}
+      <p class="text-red-700 font-semibold text-xs">
+        {errors.tahunMasuk}
+      </p>
+      {/if}
+    </div>
 
-      <div class="mb-6 flex flex-col text-sm">
-        <label class="text-sm">Dosen PA</label>
-        <JoSelect bind:value={idPa} options={dosenPaOptions} />
-        {#if errors.idPa}
-        <p class="text-red-700 font-semibold text-xs">
-          {errors.idPa}
-        </p>
-        {/if}
-      </div>
+    <div class="mb-6 flex flex-col text-sm">
+      <JoSelect label="Dosen Pa" bind:value={idPa} options={dosenPaOptions} />
+      {#if errors.idPa}
+      <p class="text-red-700 font-semibold text-xs">
+        {errors.idPa}
+      </p>
+      {/if}
+    </div>
 
-      <div>
-        <JoButton 
-          dark 
-          color='blue' 
-          action={onSave}
-          disabled={invalid}
-        >
-          simpan
-        </JoButton>
-      </div>
-    </form>
-  </div>
+    <div>
+      <JoButton 
+        dark 
+        color='blue' 
+        action={onSave}
+        disabled={invalid}
+      >
+        simpan
+      </JoButton>
+    </div>
+  </form>
 </div>

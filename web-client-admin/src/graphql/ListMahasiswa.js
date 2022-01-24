@@ -22,6 +22,7 @@ export default gql`
         nim
         sex
         tahunMasuk
+        status
       }
       pageInfo {
         hasNextPage

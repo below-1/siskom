@@ -2,9 +2,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+svg {
+  fill: currentColor;
+}
+
 body {
   margin: 0 !important;
   padding: 0 !important;
+  background: rgb(235, 235, 235);
 }
 
 input[type="radio"].jo-radio {
